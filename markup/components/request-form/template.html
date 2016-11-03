@@ -1,0 +1,30 @@
+
+<!-- start /components/request-form/-->
+<link rel="stylesheet" href="/components/request-form/style.css"/>
+<script src="/components/request-form/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<div class="b-request-form__message b-h2 center"></div>
+<div class="b-request-form__success center">
+  <div class="b-h2">Мы перезвоним вам<br>за <b>29</b> секунд!</div>
+  <hr/>
+  <button class="btn btn-default">Отправить снова</button>
+</div>
+<div class="b-request-form__error center">
+  <p id="requestFormError">При отправлении формы возникла ошибка</p>
+  <button class="btn btn-default">Отправить снова</button>
+</div>
+<div class="b-request-form__form">
+  <h2 class="b-h1 center">Остались вопросы?</h2>
+  <form action="/json/submit.json" method="GET">
+    <p class="text-large text-muted">Введите Ваш номер телефона и мы перезвоним Вам за <b>29 </b>секунд!</p>
+    <hr/>
+    <div class="form-group">
+      <input type="tel" value="+7(" required="required" class="form-control"/>
+    </div>
+    <hr/>
+    <div class="center">
+      <button type="submit" class="btn btn-default">Жду звонка!</button>
+    </div>
+  </form>
+</div>
+<!-- end /components/request-form/-->

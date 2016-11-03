@@ -1,0 +1,64 @@
+﻿.fotorama( data-width="100%" data-ratio="940/859" data-arrows="true" data-loop="true" data-swipe="false" )
+  div
+    - var i=0
+      while i < 2
+        - i++
+        
+        .row
+        
+          - var j=0
+          while j < 3
+            - j++
+            .col-sm-4.center
+            
+              a( href="" )
+                img( src="/upload/products/#{j}.jpg" alt="" data-big-image="/upload/products/2.jpg" ).img-responsive.center-block
+              
+              p.b-size 1000 x 500 x 500
+              p от 
+                b.b-price 46,91
+                | руб
+              p
+                a.btn.btn-default.btn-sm.btn-disabled( href="" ) В корзине
+  div
+    - var i=0
+      while i < 2
+        - i++
+        
+        .row.b-products-list
+        
+          - var j=1
+          while j < 3
+            - j++
+            .col-sm-4.center
+            
+              a( href="" )
+                img( src="/upload/products/#{j}.jpg" alt="" ).img-responsive.center-block
+              
+              p.b-size 1000 x 500 x 500
+              p от 
+                b.b-price 46,91
+                | руб
+              p
+                a.btn.btn-default.btn-sm( href="/json/add2cart.json?id=456" ) В корзину
+  div
+    - var i=0
+      while i < 2
+        - i++
+        
+        .row.b-products-list
+        
+          - var j=1
+          while j < 3
+            - j++
+            .col-sm-4.center
+            
+              a( href="" )
+                img( src="/upload/products/#{j}.jpg" alt="" ).img-responsive.center-block
+              
+              p.b-size 1000 x 500 x 500
+              p от 
+                b.b-price 46,91
+                | руб
+              p
+                a.btn.btn-default.btn-sm( href="/json/add2cart.json?id=456" ) В корзину

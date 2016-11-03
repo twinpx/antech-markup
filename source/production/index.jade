@@ -1,0 +1,183 @@
+﻿extends ../layouts/main.jade
+
+block title
+  title Main page | antech
+
+block content
+    
+  include ../modules/breadcrumbs/include
+  
+  include ../modules/video-banner/include
+  
+  section
+    .container
+      h2.b-h1.center 3 этапа нашей работы
+      
+      p.text-muted.text-large.center Нашим заказчикам не о чем беспокоится
+      
+      include ../modules/menu-list/include4
+        
+  section.i-gray
+    .container
+      h2.b-h1.center Экономим время и деньги
+      
+      hr.i-size-XS
+      
+      .b-nav-tabs.nav.nav-tabs( role="tablist" )
+        .btn-group( role="group" )
+          a( href="#page1" aria-controls="page1" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu.active
+            span Консультация и выезд эксперта
+          a( href="#page2" aria-controls="page2" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu
+            span Разработка упаковки
+          a( href="#page3" aria-controls="page3" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu
+            span 3D-модель и испытательный образец
+            
+      hr
+            
+      p.text-muted.text-large.center Воспользуйтесь бесплатно услугой выезда нашего эксперта
+  
+      hr
+      
+      include ../modules/checkbox-block/include
+      
+      hr.i-size-M
+                  
+      .center
+        a.btn.btn-default( href="" ) Воспользоваться
+        
+  section
+    .container
+      h2.b-h1.center 12 бесплатных цветов
+        
+      p.text-muted.text-large.center У нас вы можете воспользоваться бесплатными базовыми<br>цветами для нанесения печати
+      
+      hr
+      
+      include ../modules/palette/include
+        
+  section.i-gray.i-gallery-top
+    .container
+    
+      h2.b-h1.center Примеры выполненных заказов
+      
+      p.text-muted.text-large.center В галерее представлены работы, которые<br>позволят оценить наши возможности.
+      
+  .b-gallery
+      
+    include ../modules/gallery/fotorama
+    include ../modules/gallery/include
+    include ../modules/gallery/mob
+  
+  section.i-gray.i-gallery-bottom
+    .container
+      .b-gallery-link.center
+        a( href="" ).b-icon
+        br
+        a( href="" ) Галерея работ
+                
+  section
+    .container
+      h2.b-h1.center Мы делали упаковку для:
+      hr
+      
+      - var n = 0
+        while n < 2
+          - n++
+          .row
+            - var k = 0
+              while k < 6
+                - k++
+                .col-sm-2.col-xs-4
+                  a( href="" )
+                    img( src="/upload/clients/1.jpg" alt="" ).img-responsive.center-block
+                    
+                if k==3
+                  hr.hidden-sm.visible-xs-block.clearfix
+              
+          hr
+          
+      #clientsAccordion      
+        a.accordion-toggle.collapsed( data-toggle="collapse" href="#clientsCollapse" data-parent="#clientsAccordion" )
+        
+        #clientsCollapse.collapse
+          - var n = 0
+            while n < 2
+              - n++
+              .row
+                - var k = 0
+                  while k < 6
+                    - k++
+                    .col-sm-2.col-xs-4
+                      a( href="" )
+                        img( src="/upload/clients/1.jpg" alt="" ).img-responsive.center-block
+                        
+                    if k==3
+                      hr.hidden-sm.visible-xs-block.clearfix
+              
+              hr
+          
+  section.i-gray
+    .container
+      h2.b-h1.center Заказать на раз-два-три
+      
+      p.text-muted.text-large.center Сделать заказ очень легко
+      
+      include ../modules/menu-list/include5
+                    
+      .center
+        a.btn.btn-default( href="" ) Сделать заказ
+        
+  section
+    .container
+      h2.b-h1.center Подробнее об изготовлении
+      
+      include ../modules/accordion/include
+    
+  section.b-request-form.i-gradient
+    .container
+      include ../components/request-form/template
+  
+  section.i-gray.i-stext
+    .container
+        
+      .row
+        .col-sm-6
+          h4
+            b Антэк. Изготовление картонных коробок
+
+          p Специалисты нашей компании разрабатывают и изготавливают упаковку из картона более 15 лет. Колоссальный опыт в этой сфере позволяет нам выполнять любые заказы на производство картонных упаковок независимо от сложности конструкции и объема работ.
+
+          p Принцип бережливого производства позволяет не расходовать материал впустую! При этом производственный процесс автоматизирован, а качество продукции проверяется на всех этапах изготовления – от выбора картона до выхода товара в тираж. Благодаря этому наши клиенты получают качественную продукцию точно в срок.
+
+          h4
+            b  Антэк. Новые возможности
+
+          p Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!
+
+          h4
+            b  Антэк. Новые возможности
+
+          p Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!
+
+        .col-sm-6
+          h4
+            b  Антэк. Ценность предложения
+
+          p Вы можете заказать изготовление упаковочных коробок «под ключ» – от разработки макета до серийного производства и печати бренда на упаковке. Мы разрабатываем и изготавливаем на заказ коробки любых размеров и форм-факторов.
+
+          p Наши специалисты помогут создать удобную упаковку оптимальной конструкции, отвечающей необходимым параметрам (форма, размер, вес, ценность) и требованиям бережного хранения и транспортировки.
+
+          h4
+            b  Антэк. Покоряем вершины вместе
+
+          p Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.
+
+          p Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!
+
+          h4
+            b  Антэк. Покоряем вершины вместе
+
+          p Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.
+
+          p Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!
+          

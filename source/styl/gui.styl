@@ -1,0 +1,323 @@
+body
+  background #fff
+  font-size 10.5pt
+  font-family pragmatica, 'Open Sans', sans !important
+  font-weight 100
+  line-height 1.3
+  
+.i-menu-open
+
+  html&,
+  & body
+    overflow hidden
+    
+  /*& body
+  
+    &,
+    .b-header-fixed
+      padding-right 17px*/
+  
+html.i-cart-modal-open
+  .modal-backdrop
+    background transparent
+    
+  & body.modal-open
+    overflow auto !important
+    padding-right 0 !important
+    
+    .modal
+      overflow hidden
+      position absolute
+      top 90px
+      left auto
+      bottom auto
+      box-shadow 0 0 25px rgba(0,0,0,.1)
+      padding-right 0 !important
+      
+      @media (max-width: 767px)
+        border-radius 0
+        position fixed
+        width 100vw
+        height 100vh
+        position fixed
+        top 0
+        left 0
+        boxshadow none
+        overflow auto
+  
+a
+  color #3c4c54
+  text-decoration none
+  
+  &:hover
+    color #3c4c54
+    
+  &:focus
+    outline none
+  
+p
+  margin 20px 0
+  
+button
+  border none
+  font-family pragmatica, 'Open Sans', sans !important
+  
+hr
+  border-color transparent
+  padding 20px 0
+  margin 0
+  
+hr.i-size-XS
+  padding 5px 0 !important
+  
+hr.i-size-S
+  padding 11px 0 !important
+  
+hr.i-size-M
+  padding 30px 0 !important
+  
+hr.i-size-L
+  padding 45px 0 !important
+  
+hr.i-size-XL
+  padding 60px 0 !important
+  
+hr.i-line
+  height 1px
+  background embedurl( 'img/hr.png' ) no-repeat center center
+  background-size contain
+  padding 70px 0
+  
+h1,
+.b-h1
+  font-size 38pt
+  font-weight 100
+  margin-top 0
+  margin-bottom 57px
+  
+h2.b-h1
+  margin-bottom 34px
+  
+h2,
+.b-h2
+  font-size 30pt
+  font-weight 100
+  
+h4,
+.b-h4
+  font-size 18pt
+  
+.inner-container
+  margin 0 auto
+        
+  @media (min-width: 768px)
+    width 645px
+  
+  @media (min-width: 992px)
+    width 645px
+  
+  @media (min-width: 1200px)
+    width 944px
+  
+.text-xlarge
+  font-size 17pt
+  
+.text-large
+  font-size 16pt
+  
+.text-middle
+  font-size 17px
+  
+.text-danger
+  color #de1f26
+  
+.center
+  text-align center
+  
+.text-muted
+  color #999999
+  
+.clearfix
+  clear both
+  float none
+  
+.btn
+  background-color #ffcd00
+  border none
+  font-weight 200
+  text-decoration none
+  
+  &:hover
+    background-color darken( #ffcd00, 5% )
+    
+  &:focus,
+  &:active,
+  &:focus:active
+    outline none
+  
+  &-default
+    padding 0 33px
+    font-size 17pt
+    border-radius 35px
+    line-height 69px
+      
+  &-disabled
+    background-color #cccccc
+    cursor default
+  
+    &:hover
+      background-color #cccccc
+    
+  &-sm
+    padding 0 20px
+    font-size 13pt
+    border-radius 35px
+    line-height 39px
+    
+  &-md
+    font-size 14pt
+    border-radius 25px
+    line-height 50px
+    
+    
+  &-menu
+    background-color #fff
+    border 1px solid #9c9c9c
+  
+    &:not(.active):hover
+      background-color lighten( #000, 95% )
+    
+    &.active
+      &,
+      &:hover,
+      &:focus
+        background-color #42515e
+        border-color #42515e
+        color #fff
+        outline none
+        box-shadow none
+  
+section
+  padding 80px 0
+
+  &.i-gray
+    background-color #f2f2f2
+    
+  &.i-blue
+    background-color #80abb5
+    padding-top 0
+    
+    h2
+      margin-top 0
+      padding 30px 0
+    
+    .b-h1
+      background-color rgba( 255,255,255,0.11 )
+    
+  &.i-clients,
+  &.i-gradient
+    background url( 'images/clients-bg.png' ) no-repeat center top
+    background-size contain
+  
+.b-size
+  font-size 17pt
+  
+.b-price
+  font-size 19pt
+  
+.b-gallery-link,
+.b-store-link
+  font-size 14pt
+  
+  .b-icon
+    display inline-block
+    vertical-align top
+    width 40px
+    height 40px
+    background-size contain
+    margin-bottom 13px
+    
+  a
+    color #2799d4
+    
+    &:hover
+      color lighten( #2799d4, 20% )
+    
+.b-gallery-link .b-icon
+    background url( 'images/svg/gallery.svg' ) no-repeat center center
+    
+.b-store-link .b-icon
+    background url( 'images/svg/go_to_shop.svg' ) no-repeat center center
+    
+.valign-wrapper
+  display -webkit-flex
+  display -ms-flexbox
+  display flex
+  -webkit-align-items center
+  -ms-flex-align center
+  align-items center
+  
+.valign-wrapper .valign
+  display block
+  
+.valign-center
+  text-align center
+  vertical-align middle
+  
+blockquote
+  margin 0
+  border 0
+  
+#clientsAccordion .accordion-toggle
+  display none
+  width 46px
+  height 14px
+  background embedurl( 'img/clients-toggle.png' ) no-repeat center center
+  margin 0 auto
+  
+  &.collapsed
+    display block
+  
+.nav-tabs
+  border none
+  text-align center
+  
+.b-nav-tabs
+  text-align center
+  
+  @media ( max-width 767px )
+    margin-right -15px
+    margin-left -15px
+      
+  .btn-group
+  
+    @media ( max-width 767px )
+      width 100%
+  
+    .btn-default
+      font-size 14pt
+      font-weight 200
+      
+      @media (max-width: 991px) and (min-width: 768px)
+        font-size 12pt
+        line-height 46px
+        
+        span
+          display inline-block
+          line-height 46px
+          vertical-align middle
+    
+      @media ( max-width 767px )
+        font-size 11pt
+        width 33.42%
+        white-space normal
+        padding 0 10px
+        border-radius 0
+        
+        span
+          display inline-block
+          line-height 19px
+          vertical-align middle
+          
+      @media (max-width: 991px) and (min-width: 768px)
+        padding 0 23px

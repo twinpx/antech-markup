@@ -1,0 +1,39 @@
+﻿.tab-content
+  - var i = 0
+  while i < 3
+    - i++
+    - var className="tab-pane"
+    
+    if i==1
+      - className="tab-pane active"
+    div( id="page#{i}" role="tabpanel" class="#{className}" )
+
+      .row
+      
+        .col-sm-4.col-sm-offset-2
+          .b-checkbox-block
+            i
+            p Проведем анализ вашей задачи и предложим оптимальное решение
+        
+        hr.i-size-XS.visible-xs-block.clearfix
+        
+        .col-sm-4
+          .b-checkbox-block
+            i
+            p Сориентируем вас по тонкостям упаковки и ответим на все вопросы
+      
+      hr.i-size-XS
+      
+      .row
+      
+        .col-sm-4.col-sm-offset-2
+          .b-checkbox-block
+            i
+            p Представим образцы материала, печати, конструкций
+        
+        hr.i-size-XS.visible-xs-block.clearfix
+        
+        .col-sm-4
+          .b-checkbox-block
+            i
+            p Поможем определиться с выбором максимально подходящей упаковки

@@ -1,0 +1,149 @@
+@import '../../styl/component-include.styl'
+
+.b-gallery
+  background #000
+      
+  .container
+    @media ( max-width 767px )
+      padding 0
+
+.b-gallery .fotorama
+  .row
+    margin 0
+    
+  .col-sm-7
+    padding 0
+    width 63.7%
+    
+  .col-sm-5
+    padding 0
+    width 36.3%
+    
+  &__nav--dots &__nav__frame
+    width 25px !important
+    
+  &__nav__frame.fotorama__active .fotorama__dot
+    background-color #ffce00 !important
+    
+  &__nav-wrap
+    position relative
+    
+  &__nav--dots
+    position absolute !important
+    width 100% !important
+    bottom 0
+    height 90px
+    background rgba( 0,0,0,0.49 )
+    
+  &__dot
+    border-color #ffce00 !important
+    width 16px !important
+    height 16px !important
+    border-radius 8px !important
+    margin-top 26px
+    
+  &__nav--dots .fotorama__nav__frame
+    width 25px
+    
+  &.i-mob
+    .b-gallery-picture
+      padding-top 90%
+
+.b-gallery-picture
+  position relative
+  background-repeat no-repeat
+  background-position center top
+  background-size cover
+  
+  .col-sm-7 &
+    padding-top 80.6%
+  
+  .col-sm-5 &
+    padding-top 64%
+  
+  .col-sm-5 &:first-of-type
+    padding-top 78%
+  
+  strong
+    display block
+    position absolute
+    top 50%
+    margin-top -10px
+    width 100%
+    color #fff
+    font-size 20pt
+    font-weight 400
+    padding-left 65px
+    
+.b-comments hr.i-size-L
+  @media ( max-width 1200px )
+    display none
+    
+section.i-blue
+
+  blockquote
+    display block
+    color #fff
+    font-size 23pt
+    font-weight 200
+    padding 0 200px
+    background embedurl( 'img/laquo.png' ) no-repeat left center, embedurl( 'img/raquo.png' ) no-repeat right center
+    min-height 110px
+    
+    @media ( max-width 992px )
+      font-size 15pt
+    
+  .i-mob blockquote
+    background none
+    padding 0
+    font-size 17pt
+    
+  .fotorama__dot
+    width 14px
+    height 14px
+    top 12px
+    left 6px
+    border-radius 7px
+    background #bfd5da
+    border none
+    
+  .fotorama__nav--dots .fotorama__nav__frame
+    width 23px
+    
+  .fotorama__nav__frame.fotorama__active .fotorama__dot
+    background-color #ffcd00
+    width 14px
+    height 14px
+    
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows
+  .fotorama__fullscreen-icon:not(:focus),
+  .fotorama__arr--prev:not(:focus),
+  .fotorama__arr--next:not(:focus)
+    transform( none !important )
+
+.fotorama__wrap--css3.fotorama__wrap--video
+  .fotorama__fullscreen-icon,
+  .fotorama__arr--prev,
+  .fotorama__arr--next
+    transform( none !important )
+    
+.fotorama__nav:before,
+.fotorama__stage:before
+  display none !important
+      
+.b-comments
+  
+  @media( max-width: 767px ) and ( orientation: landscape )
+    &.hidden-xs
+      display block !important
+      
+      blockquote
+        padding 0
+        background none
+      
+      h3,
+      p
+        margin 8px 0
+      
+    &.visible-xs-block
+      display none !important

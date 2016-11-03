@@ -1,0 +1,299 @@
+﻿#bx-panel( style="height: 20px; background-color: pink;" )
+
+header.b-header
+  .b-header-fixed
+    .container
+      
+      .row
+        .col-lg-3.col-sm-4.col-xs-12
+          span.b-header__menu( style="background-image: url(/template/images/svg/menu_open.svg)" )
+          
+          span.b-header__search.hidden-xs( style="background-image: url(/template/images/svg/search.svg)" )
+        
+          a( href="/" ).b-header__logo
+            img.hidden-xs( src="/template/images/svg/logo.svg" width="155" height="69" alt="" )
+            img.visible-xs-inline-block( src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" )
+      
+        .col-lg-3.col-md-2.col-sm-3.hidden-xs
+          .b-header__phone 8 800 555-55-70
+          
+        .col-md-6.col-sm-4.col-xs-12
+          
+          div.b-header__basket
+            
+            // Modal
+            #cartModal.modal(tabindex='-1', role='dialog', aria-labelledby='cartModalLabel')
+              .modal-dialog(role='document')
+                .modal-content.text-middle
+                
+                  .close(type='button', data-dismiss='modal', aria-label='Close')
+                  .modal-body.center
+                  
+                    .b-modal-container
+                  
+                      .b-modal-signin
+                    
+                        .b-h2 Вход в аккаунт
+                        
+                        .text-danger.center
+                        
+                        .row
+                          .col-sm-8.col-sm-offset-2
+                            form( action="/json/signin.json" method="GET" )
+                              .form-group
+                                input.form-control( type="text" value="" placeholder="Логин" required )
+                              .form-group
+                                input.form-control( type="password" value="" placeholder="Пароль" required )
+                              .row
+                                .col-xs-6
+                                  .checkbox
+                                    label
+                                      input( type="checkbox" value="" )
+                                      | Запомнить
+                                .col-xs-6.text-right
+                                  a( href="" ) Забыли пароль?
+                              .center.b-form-buttom
+                                button.btn.btn-default.btn-md( type="submit" ) Войти
+                              div
+                                a( href="" ) Регистрация
+                                
+                      .b-modal-social.i-hidden
+                        .row
+                          .col-xs-4
+                            | Livejournal
+                          .col-xs-4
+                            | Mail.Ru
+                          .col-xs-4
+                            | Liveinternet
+                        hr.i-size-XS
+                        .row
+                          .col-xs-4
+                            | Blogger
+                          .col-xs-4
+                            | OpenID
+                              
+                      .b-modal-user
+                      
+                        .b-signin-button
+                          .b-user-icon
+                          div Войти
+                        hr.i-size-M.hidden-xs
+                        
+                        p.text-large
+                          b#cartModalCount 12
+                          | 
+                          span#cartModalHasProducts товаров на сумму
+                          span#cartModalNoProducts( style="display: none;" ) Корзина пуста
+                          | 
+                          b#cartModalPrice 2990
+                          | 
+                          | руб
+                          | 
+                          b 00
+                          | 
+                          | коп
+                        
+                        hr.i-size-XS
+                        a#cartModalButton.btn.btn-default.btn-md( href="" ) Оформить заказ
+                        hr.i-line.i-size-L.hidden-xs
+                        hr.i-line.i-size-M.visible-xs-block
+                        nav.row
+                          .col-xs-3
+                            span
+                              span.b-cart-icon
+                              | Корзина
+                          .col-xs-3
+                            a( href="" )
+                              span.b-fav-icon
+                              | Избранное
+                          .col-xs-3
+                            span
+                              span.b-order-icon
+                              | Заказы
+                          .col-xs-3
+                            span
+                              span.b-account-icon
+                              | Учетная запись
+                              
+            a.b-header__basket__icon( data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
+              .count_in_cart 121
+              
+                              
+          menu.hidden-xs
+            li
+              a( href="" ) Изготовление упаковки
+            li.hidden-sm
+              a( href="" ) Готовые коробки
+            li.hidden-sm
+              a( href="" ) Контакты
+
+            
+    .b-header-menu
+      .b-header
+        .container
+          
+          .row
+            .col-sm-6
+              span.b-header-menu__close.b-close-button
+            
+              a( href="/" ).b-header__logo
+                img.hidden-xs( src="/template/images/svg/logo.svg" width="155" height="69" alt="" )
+                img.visible-xs-inline-block( src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" )
+          
+            .col-sm-6
+              .b-header__phone 8 800 555-55-70
+                | 
+                span (для звонков по РФ)
+                
+      .container        
+        .b-header-menu__search
+          form.form-inline( action="" method="GET" )
+            .form-group
+              label.b-search-icon( for="title-search-input" )
+              input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
+          
+        .b-header-menu__links
+          .row
+            .col-sm-4.col-sm-offset-2
+              h4
+                a( href="") Изготовление коробок на заказ
+              
+              ul
+                li
+                  a( href="") Как заказать?
+                li
+                  a( href="") Разработка упаковки
+                li
+                  a( href="") Консультация и выезд эксперта
+                li
+                  a( href="") 3D-модель и пробный образец
+                li
+                  a( href="") Сроки изготовления
+                li
+                  a( href="") Доставка
+                li
+                  a( href="") Гарантии
+                li
+                  a( href="") Оплата
+                li
+                  a( href="") Примеры работ
+                li
+                  a( href="") Типовые конструкции
+              
+            .col-sm-6
+              h4
+                a( href="") Магазин картонных коробок
+              ul
+                li
+                  a.b-collapse-link( role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" ) Картонные коробки
+                    i
+                  
+                  ul#headerMenuCollapse1.collapse
+                    li
+                      a( href="") Транспортные
+                    li
+                      a( href="") Для переезда
+                    li
+                      a( href="") Под пиццу
+                    li
+                      a( href="") Архивные
+                    li
+                      a( href="") Крупногабаритные
+                    li
+                      a( href="") Под одежду
+                    li
+                      a( href="") Почтовые коробки
+                    li
+                      a( href="") Маленькие
+                    li
+                      a( href="") Для цветов
+                      
+                li
+                  a.b-collapse-link( role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" ) Гофрокартон
+                    i
+                  
+                  ul#headerMenuCollapse2.collapse
+                    li
+                      a( href="") Гофронаполнитель
+                    li
+                      a( href="") Гофролисты
+                    li
+                      a( href="") Изделия из гофрокартона
+                      
+                li
+                  a.b-collapse-link( role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" ) Вспомогательная упаковка
+                    i
+                  
+                  ul#headerMenuCollapse3.collapse
+                    li
+                      a( href="") Упаковочные материалы
+                    li
+                      a( href="") Упаковочные инструменты
+                    li
+                      a( href="") Упаковочный наполнитель
+                      
+                li
+                  a( href="") Прайс-лист
+                li
+                  a( href="") Где купить?
+                li
+                  a( href="") Доставка
+                li
+                  a( href="") Гарантии
+                li
+                  a( href="") Оплата
+
+          .row
+            .col-sm-4.col-sm-offset-2
+              h4
+                a( href="") Компания
+              ul
+                li
+                  a( href="") Руководство
+                li
+                  a( href="") Вакансии
+                li
+                  a( href="") Документы
+                li
+                  a( href="") Схема проезда
+                li
+                  a( href="") Контакты
+                li
+                  a( href="") Видео о компании
+              
+            .col-sm-6
+              h4
+                a( href="") Помощь
+              ul
+                li
+                  a( href="") ГОСТ
+                li
+                  a( href="") FEFCO
+                li
+                  a( href="") Словарь
+                li
+                  a( href="") Упаковочный обзор
+                li
+                  a( href="") Правила приемки
+                li
+                  a( href="") Методы испытания
+                li
+                  a( href="") Видеоинструкции
+                li
+                  a( href="") Задать вопрос роботу
+
+          .row
+            .col-sm-4.col-sm-offset-2
+            
+              h4
+                a( href="") Корзина
+              ul
+                li
+                  a( href="") Избранное
+                li
+                  a( href="") История заказов
+                li
+                  a( href="") Учетная запись
+                
+              
+

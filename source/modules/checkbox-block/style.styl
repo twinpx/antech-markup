@@ -1,0 +1,19 @@
+@import '../../styl/component-include.styl'
+
+.b-checkbox-block
+  font-size 16pt
+  text-align center
+  
+  i
+    display inline-block
+    width 35px
+    height 35px
+    background embedurl( 'img/checkbox.png' ) no-repeat center center
+    margin-bottom -7px
+    transform translateY(-40px)
+    opacity 0
+    transition( all 0.5s ease )
+    
+  &.i-move i
+      opacity 1
+      transform translateY(0)

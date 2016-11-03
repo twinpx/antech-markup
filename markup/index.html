@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page | antech</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/template/jscript.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
+    <header class="b-header">
+      <div class="b-header-fixed">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/menu_open.svg)" class="b-header__menu"></span><span style="background-image: url(/template/images/svg/search.svg)" class="b-header__search hidden-xs"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-lg-3 col-md-2 col-sm-3 hidden-xs">
+              <div class="b-header__phone">8 800 555-55-70</div>
+            </div>
+            <div class="col-md-6 col-sm-4 col-xs-12">
+              <div class="b-header__basket">
+                <!-- Modal-->
+                <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content text-middle">
+                      <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+                      <div class="modal-body center">
+                        <div class="b-modal-container">
+                          <div class="b-modal-signin">
+                            <div class="b-h2">Вход в аккаунт</div>
+                            <div class="text-danger center"></div>
+                            <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                <form action="/json/signin.json" method="GET">
+                                  <div class="form-group">
+                                    <input type="text" value="" placeholder="Логин" required class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" value="" placeholder="Пароль" required class="form-control">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="">Запомнить
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
+                                  </div>
+                                  <div class="center b-form-buttom">
+                                    <button type="submit" class="btn btn-default btn-md">Войти</button>
+                                  </div>
+                                  <div><a href="">Регистрация</a></div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-modal-social i-hidden">
+                            <div class="row">
+                              <div class="col-xs-4">Livejournal</div>
+                              <div class="col-xs-4">Mail.Ru</div>
+                              <div class="col-xs-4">Liveinternet</div>
+                            </div>
+                            <hr class="i-size-XS">
+                            <div class="row">
+                              <div class="col-xs-4">Blogger</div>
+                              <div class="col-xs-4">OpenID</div>
+                            </div>
+                          </div>
+                          <div class="b-modal-user">
+                            <div class="b-signin-button">
+                              <div class="b-user-icon"></div>
+                              <div>Войти</div>
+                            </div>
+                            <hr class="i-size-M hidden-xs">
+                            <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
+                              руб
+                               <b>00</b> 
+                              коп
+                            </p>
+                            <hr class="i-size-XS"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-line i-size-L hidden-xs">
+                            <hr class="i-line i-size-M visible-xs-block">
+                            <nav class="row">
+                              <div class="col-xs-3"><span><span class="b-cart-icon"></span>Корзина</span></div>
+                              <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
+                              <div class="col-xs-3"><span><span class="b-order-icon"></span>Заказы</span></div>
+                              <div class="col-xs-3"><span><span class="b-account-icon"></span>Учетная запись</span></div>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+                  <div class="count_in_cart">121</div></a>
+              </div>
+              <menu class="hidden-xs">
+                <li><a href="">Изготовление упаковки</a></li>
+                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
+            </div>
+          </div>
+        </div>
+        <div class="b-header-menu">
+          <div class="b-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+                <div class="col-sm-6">
+                  <div class="b-header__phone">
+                    8 800 555-55-70
+                     <span>(для звонков по РФ)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">       
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="b-header-menu__links">
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Изготовление коробок на заказ</a></h4>
+                  <ul>
+                    <li><a href="">Как заказать?</a></li>
+                    <li><a href="">Разработка упаковки</a></li>
+                    <li><a href="">Консультация и выезд эксперта</a></li>
+                    <li><a href="">3D-модель и пробный образец</a></li>
+                    <li><a href="">Сроки изготовления</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Примеры работ</a></li>
+                    <li><a href="">Типовые конструкции</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Магазин картонных коробок</a></h4>
+                  <ul>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" class="b-collapse-link">Картонные коробки<i></i></a>
+                      <ul id="headerMenuCollapse1" class="collapse">
+                        <li><a href="">Транспортные</a></li>
+                        <li><a href="">Для переезда</a></li>
+                        <li><a href="">Под пиццу</a></li>
+                        <li><a href="">Архивные</a></li>
+                        <li><a href="">Крупногабаритные</a></li>
+                        <li><a href="">Под одежду</a></li>
+                        <li><a href="">Почтовые коробки</a></li>
+                        <li><a href="">Маленькие</a></li>
+                        <li><a href="">Для цветов</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" class="b-collapse-link">Гофрокартон<i></i></a>
+                      <ul id="headerMenuCollapse2" class="collapse">
+                        <li><a href="">Гофронаполнитель</a></li>
+                        <li><a href="">Гофролисты</a></li>
+                        <li><a href="">Изделия из гофрокартона</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" class="b-collapse-link">Вспомогательная упаковка<i></i></a>
+                      <ul id="headerMenuCollapse3" class="collapse">
+                        <li><a href="">Упаковочные материалы</a></li>
+                        <li><a href="">Упаковочные инструменты</a></li>
+                        <li><a href="">Упаковочный наполнитель</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Где купить?</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Компания</a></h4>
+                  <ul>
+                    <li><a href="">Руководство</a></li>
+                    <li><a href="">Вакансии</a></li>
+                    <li><a href="">Документы</a></li>
+                    <li><a href="">Схема проезда</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Видео о компании</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Помощь</a></h4>
+                  <ul>
+                    <li><a href="">ГОСТ</a></li>
+                    <li><a href="">FEFCO</a></li>
+                    <li><a href="">Словарь</a></li>
+                    <li><a href="">Упаковочный обзор</a></li>
+                    <li><a href="">Правила приемки</a></li>
+                    <li><a href="">Методы испытания</a></li>
+                    <li><a href="">Видеоинструкции</a></li>
+                    <li><a href="">Задать вопрос роботу</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Корзина</a></h4>
+                  <ul>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">История заказов</a></li>
+                    <li><a href="">Учетная запись</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="b-video-banner">
+      <div data-width="100%" data-height="668" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
+        <div style="background-color: orange;" class="i-fotorama-video">
+          <div class="container">
+            <div id="b-video-player-container">
+              <div id="b-video-player"></div>
+            </div>
+          </div>
+          <div id="b-video-cover" class="b-video-banner__cover">
+            <div class="container">
+              <div id="b-video-button"><span class="i-icon"></span></div>
+              <div class="text-large">Посмотрите<br>видеопрезентацию</div>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: violet;">
+          <div class="b-video-banner__cover">
+            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
+            <div class="container">
+              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
+              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: pink;">
+          <div class="b-video-banner__cover">
+            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
+            <div class="container">
+              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
+              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <h1 class="center">Изготовление упаковки</h1>
+        <p class="text-muted text-large center">Изготовим упаковку быстро, качественно, точно в срок.<br>С учетом всех особенностей и пожеланий.</p>
+        <div class="row b-menu-list">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-1"></span></span>
+            <p><b>Приезжаем<br>и консультируем</b></p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-2"></span></span>
+            <p><b>Разрабатываем дизайн<br>и конструкцию </b></p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-3"></span></span>
+            <p><b>Изготавливаем 3D-модель<br>и пробный образец</b></p>
+          </div>
+        </div>
+        <div class="center"><a href="" class="btn btn-default">Заказать изготовление</a></div>
+      </div>
+    </section>
+    <section class="i-gray i-gallery-top">
+      <div class="container">
+        <h2 class="b-h1 center">Наши работы</h2>
+        <p class="text-muted text-large center">В галерее представлены работы, которые<br>позволят оценить наши возможности.</p>
+      </div>
+    </section>
+    <div class="b-gallery">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+      <div data-width="100%" data-ratio="1300/669" data-arrows="false" class="fotorama hidden-xs">
+        <div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+            </div>
+            <div class="col-sm-5">
+              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+            </div>
+            <div class="col-sm-5">
+              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-width="100%" data-ratio="422/380" data-arrows="false" class="fotorama visible-xs-block i-mob">
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+      </div>
+    </div>
+    <section class="i-gray i-gallery-bottom">
+      <div class="container">
+        <div class="b-gallery-link center"><a href="" class="b-icon"></a><br><a href="">Галерея работ</a></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="b-h1 center">Нужны готовые коробки?</h2>
+        <p class="text-muted text-large center">В нашем интернет-магазине представлен большой выбор<br>коробок и упаковочных материалов.</p>
+        <hr>
+        <!-- start /components/products-list/-->
+        <link rel="stylesheet" href="/components/products-list/style.css">
+        <script src="/components/products-list/script.js"></script>
+        <div class="b-products-list">
+          <div role="tablist" class="b-products-list__nav nav nav-tabs">
+            <div role="group" class="btn-group"><a href="#boxes" aria-controls="boxes" role="tab" data-toggle="tab" class="btn btn-default btn-menu active"><span>Картонные коробки</span></a><a href="#gofro" aria-controls="gofro" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>Гофрокартон</span></a><a href="#pack" aria-controls="pack" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>Упаковочные материалы</span></a></div>
+          </div>
+          <div class="tab-content">
+            <div id="boxes" div role="tabpanel" class="tab-pane active">
+              <div class="visible-md-block visible-lg-block">
+                <div data-width="100%" data-ratio="940/859" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-sm-block">
+                <div data-width="100%" data-ratio="720/962" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-xs-block">
+                <div data-width="100%" data-ratio="290/420" data-arrows="true" data-loop="true" data-swipe="true" class="fotorama">
+                  <div>
+                    <div class="center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="gofro" div role="tabpanel" class="tab-pane">
+              <div class="visible-md-block visible-lg-block">
+                <div data-width="100%" data-ratio="940/859" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-sm-block">
+                <div data-width="100%" data-ratio="720/962" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-xs-block">
+                <div data-width="100%" data-ratio="290/420" data-arrows="true" data-loop="true" data-swipe="true" class="fotorama">
+                  <div>
+                    <div class="center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="pack" div role="tabpanel" class="tab-pane">
+              <div class="visible-md-block visible-lg-block">
+                <div data-width="100%" data-ratio="940/859" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/1.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-4 center"><a href=""><img src="/upload/products/3.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-sm-block">
+                <div data-width="100%" data-ratio="720/962" data-arrows="true" data-loop="true" data-swipe="false" class="fotorama">
+                  <div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                    <div class="row b-products-list">
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/1.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                      <div class="col-sm-6 center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                        <p class="b-size">1000 x 500 x 500</p>
+                        <p>от <b class="b-price">46,91</b>руб</p>
+                        <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="visible-xs-block">
+                <div data-width="100%" data-ratio="290/420" data-arrows="true" data-loop="true" data-swipe="true" class="fotorama">
+                  <div>
+                    <div class="center"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="" class="btn btn-default btn-sm btn-disabled">В корзине</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="center b-products-list"><a href=""><img src="/upload/products/2.jpg" alt="" class="img-responsive center-block"></a>
+                      <p class="b-size">1000 x 500 x 500</p>
+                      <p>от <b class="b-price">46,91</b>руб</p>
+                      <p><a href="/json/add2cart.json?id=456" class="btn btn-default btn-sm">В корзину</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end /components/products-list/-->
+        <hr>
+        <div class="b-store-link center"><a href="" class="b-icon"></a><br><a href="">Перейти в магазин</a></div>
+        <hr class="i-line">
+        <h2 class="b-h1 center">С нами удобно</h2>
+        <p class="text-muted text-large center">В нашем интернет-магазине  представлен самый широкий ассортимент<br>готовых коробок. По этому подобрать упаковку<br>под любые задачи легко и просто!</p>
+        <div class="row b-menu-list">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-4"></span></span>
+            <p><b>Лучшая цена</b></p>
+            <p class="text-muted text-middle">Вы получаете лучшее качество<br>по оптимальной цене</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-5"></span></span>
+            <p><b>Шоурум</b></p>
+            <p class="text-muted text-middle">Посмотреть, испытать и выбрать<br>всего в  2км от МКАД</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-6"></span></span>
+            <p><b>Быстрая доставка</b></p>
+            <p class="text-muted text-middle">Доставляем по Москве<br>и области</p>
+          </div>
+        </div>
+        <div class="center"><a href="" class="btn btn-default">Перейти в каталог</a></div>
+      </div>
+    </section>
+    <section class="i-clients">
+      <div class="container">
+        <h2 class="b-h1 center">Нас выбирают лучшие</h2>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <hr class="i-line">
+        <h2 class="b-h1 center">C нами надёжно</h2>
+        <p class="text-muted text-large center">Обратившись в нашу компанию вы обретете<br>надежного и верного поставщика.</p>
+        <div class="row b-menu-list">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-4"></span></span>
+            <p><b>Гарантированные сроки</b></p>
+            <p class="text-muted text-middle">Изготовим и отгрузим заказ точно в срок</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-5"></span></span>
+            <p><b>Высокое качество продукции</b></p>
+            <p class="text-muted text-middle">Используем только высококачественное сырье</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-6"></span></span>
+            <p><b>Внимательное обслуживание</b></p>
+            <p class="text-muted text-middle">Отвечаем быстро. Помогаем сразу. Находим лучшее решение.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="i-gray i-float-blocks">
+      <div class="row">
+        <div id="statistics-item1" class="col-xs-6 col-sm-3 col-sm-offset-2 center">
+          <div class="text-large">16 лет</div>на рынке упаковки
+        </div>
+        <div id="statistics-item2" class="col-xs-6 col-sm-3 col-sm-offset-2 center">
+          <div class="text-large">10</div>специализированых<br>выставок
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div id="statistics-item3" class="col-sm-3 center">
+          <div class="text-large">700 000</div>постоянных клиентов
+        </div>
+        <div id="statistics-item4" class="hidden-xs col-sm-3 col-sm-offset-3 center">
+          <div class="text-large">700 000</div>постоянных клиентов
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div id="statistics-item5" class="col-xs-6 col-sm-3 col-sm-offset-5 center">
+          <div class="text-large">12</div>сертификатов<br>и наград
+        </div>
+        <div id="statistics-item6" class="col-xs-6 col-sm-3 col-sm-offset-1 center">
+          <div class="text-large">700 000</div>постоянных клиентов
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div id="statistics-item7" class="col-sm-3 col-sm-offset-2 center">
+          <div class="text-large">1 000 000 </div>выполненных заказов
+        </div>
+      </div>
+      <div class="row">
+        <div id="statistics-item8" class="col-xs-6 col-sm-3 center">
+          <div class="text-large">12</div>сертификатов<br>и наград
+        </div>
+        <div id="statistics-item9" class="col-xs-6 col-sm-3 col-sm-offset-5 center">
+          <div class="text-large">100  </div>заказов в день
+        </div>
+      </div>
+      <div class="row">
+        <div id="statistics-item10" class="col-sm-3 col-sm-offset-9 center">
+          <div class="text-large">16 лет</div>на рынке упаковки
+        </div>
+      </div>
+    </section>
+    <section class="i-blue">
+      <h2 class="b-h1 center">Отзывы наших клиентов</h2>
+      <div class="container center">
+        <div class="b-comments hidden-xs">
+          <div data-width="100%" data-ratio="1100/500" data-arrows="false" class="fotorama">
+            <div>
+              <div class="b-comments__img"><img src="/upload/comments.png"></div>
+              <h3>Степанов Олег Николаевич</h3>
+              <p class="text-middle">Генеральный Директор ООО”Техамаш”</p>
+              <hr class="i-size-L">
+              <blockquote>С компанией “Антэк” мы работаем с 2000 года.<br>Большой путь мы проделали вместе с ними.<br>И мы убеждены - они отличные ребята!</blockquote>
+            </div>
+            <div>
+              <div class="b-comments__img"><img src="/upload/comments.png"></div>
+              <h3>Степанов Олег Николаевич</h3>
+              <p class="text-middle">Генеральный Директор ООО”Техамаш”</p>
+              <hr class="i-size-L">
+              <blockquote>С компанией “Антэк” мы работаем с 2000 года.<br>Большой путь мы проделали вместе с ними.<br>И мы убеждены - они отличные ребята!</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="b-comments i-mob visible-xs-block">
+          <div data-width="100%" data-ratio="427/550" data-arrows="false" class="fotorama">
+            <div>
+              <div class="b-comments__img"><img src="/upload/comments.png"></div>
+              <h3>Степанов Олег Николаевич</h3>
+              <p class="text-middle">Генеральный Директор ООО”Техамаш”</p>
+              <hr class="i-size-XS">
+              <blockquote>С компанией “Антэк” мы работаем с 2000 года. Большой путь мы проделали вместе с ними. И мы убеждены - они отличные ребята!</blockquote>
+            </div>
+            <div>
+              <div class="b-comments__img"><img src="/upload/comments.png"></div>
+              <h3>Степанов Олег Николаевич</h3>
+              <p class="text-middle">Генеральный Директор ООО”Техамаш”</p>
+              <hr class="i-size-XS">
+              <blockquote>С компанией “Антэк” мы работаем с 2000 года. Большой путь мы проделали вместе с ними. И мы убеждены - они отличные ребята!</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="b-request-form">
+      <div class="container">
+        <!-- start /components/request-form/-->
+        <link rel="stylesheet" href="/components/request-form/style.css">
+        <script src="/components/request-form/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <div class="b-request-form__message b-h2 center"></div>
+        <div class="b-request-form__success center">
+          <div class="b-h2">Мы перезвоним вам<br>за <b>29</b> секунд!</div>
+          <hr>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__error center">
+          <p id="requestFormError">При отправлении формы возникла ошибка</p>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__form">
+          <h2 class="b-h1 center">Остались вопросы?</h2>
+          <form action="/json/submit.json" method="GET">
+            <p class="text-large text-muted">Введите Ваш номер телефона и мы перезвоним Вам за <b>29 </b>секунд!</p>
+            <hr>
+            <div class="form-group">
+              <input type="tel" value="+7(" required class="form-control">
+            </div>
+            <hr>
+            <div class="center">
+              <button type="submit" class="btn btn-default">Жду звонка!</button>
+            </div>
+          </form>
+        </div>
+        <!-- end /components/request-form/-->
+      </div>
+    </section>
+    <section class="i-gray i-stext">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Антэк. Изготовление картонных коробок</b></h4>
+            <p>Специалисты нашей компании разрабатывают и изготавливают упаковку из картона более 15 лет. Колоссальный опыт в этой сфере позволяет нам выполнять любые заказы на производство картонных упаковок независимо от сложности конструкции и объема работ.</p>
+            <p>Принцип бережливого производства позволяет не расходовать материал впустую! При этом производственный процесс автоматизирован, а качество продукции проверяется на всех этапах изготовления – от выбора картона до выхода товара в тираж. Благодаря этому наши клиенты получают качественную продукцию точно в срок.</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+          </div>
+          <div class="col-sm-6">
+            <h4><b> Антэк. Ценность предложения</b></h4>
+            <p>Вы можете заказать изготовление упаковочных коробок «под ключ» – от разработки макета до серийного производства и печати бренда на упаковке. Мы разрабатываем и изготавливаем на заказ коробки любых размеров и форм-факторов.</p>
+            <p>Наши специалисты помогут создать удобную упаковку оптимальной конструкции, отвечающей необходимым параметрам (форма, размер, вес, ценность) и требованиям бережного хранения и транспортировки.</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 b-footer__phone">
+            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a></div>
+          </div>
+        </div>
+        <nav><a href="">О компании</a> <a href="">Обзор упаковки</a> <a href="">Помощь</a> <a href="">Контакты</a> <a href="">Схема проезда</a> <a href="">Вакансии</a></nav>
+        <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+@import '../../styl/component-include.styl'
+
+.b-accordion
+  border-bottom 1px solid #e9e9e9
+  
+  .accordion-heading
+    border-top 1px solid #e9e9e9
+    text-align center
+    color #4c4c4c
+    
+    a
+      display block
+      font-size 20pt
+      padding 30px 92px
+      position relative
+      
+      @media ( max-width 767px )
+        padding 20px 40px
+      
+      &,
+      &:hover,
+      &:focus,
+      &:active
+        text-decoration none
+        color #4c4c4c
+        
+      &:before
+        content ''
+        display block
+        width 23px
+        height 23px
+        margin-top -11px
+        background embedurl( 'img/close.gif' ) no-repeat center
+        position absolute
+        top 50%
+        right 56px
+        z-index 1
+        transform rotate(315deg)
+        transition( transform 0.5s ease )
+        
+        @media ( max-width 767px )
+          right 8px
+        
+      &.collapsed
+        &:before
+          transform rotate(0)
+          
+  .accordion-body
+    font-size 14pt
+    
+table.data-table
+  width 100%
+  td
+    padding 10px
+    vertical-align top
+    
+    &:first-of-type
+      padding-left 0
+      
+    &:last-of-type
+      padding-right 0
+      
+  tr
+    &:first-of-type
+      td
+        padding-top 0
+    &:last-of-type
+      td
+        padding-bottom 0

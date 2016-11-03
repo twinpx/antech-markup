@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page | antech</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/template/jscript.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
+    <header class="b-header">
+      <div class="b-header-fixed">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/menu_open.svg)" class="b-header__menu"></span><span style="background-image: url(/template/images/svg/search.svg)" class="b-header__search hidden-xs"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-lg-3 col-md-2 col-sm-3 hidden-xs">
+              <div class="b-header__phone">8 800 555-55-70</div>
+            </div>
+            <div class="col-md-6 col-sm-4 col-xs-12">
+              <div class="b-header__basket">
+                <!-- Modal-->
+                <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content text-middle">
+                      <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+                      <div class="modal-body center">
+                        <div class="b-modal-container">
+                          <div class="b-modal-signin">
+                            <div class="b-h2">Вход в аккаунт</div>
+                            <div class="text-danger center"></div>
+                            <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                <form action="/json/signin.json" method="GET">
+                                  <div class="form-group">
+                                    <input type="text" value="" placeholder="Логин" required class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" value="" placeholder="Пароль" required class="form-control">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="">Запомнить
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
+                                  </div>
+                                  <div class="center b-form-buttom">
+                                    <button type="submit" class="btn btn-default btn-md">Войти</button>
+                                  </div>
+                                  <div><a href="">Регистрация</a></div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-modal-social i-hidden">
+                            <div class="row">
+                              <div class="col-xs-4">Livejournal</div>
+                              <div class="col-xs-4">Mail.Ru</div>
+                              <div class="col-xs-4">Liveinternet</div>
+                            </div>
+                            <hr class="i-size-XS">
+                            <div class="row">
+                              <div class="col-xs-4">Blogger</div>
+                              <div class="col-xs-4">OpenID</div>
+                            </div>
+                          </div>
+                          <div class="b-modal-user">
+                            <div class="b-signin-button">
+                              <div class="b-user-icon"></div>
+                              <div>Войти</div>
+                            </div>
+                            <hr class="i-size-M hidden-xs">
+                            <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
+                              руб
+                               <b>00</b> 
+                              коп
+                            </p>
+                            <hr class="i-size-XS"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-line i-size-L hidden-xs">
+                            <hr class="i-line i-size-M visible-xs-block">
+                            <nav class="row">
+                              <div class="col-xs-3"><span><span class="b-cart-icon"></span>Корзина</span></div>
+                              <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
+                              <div class="col-xs-3"><span><span class="b-order-icon"></span>Заказы</span></div>
+                              <div class="col-xs-3"><span><span class="b-account-icon"></span>Учетная запись</span></div>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+                  <div class="count_in_cart">121</div></a>
+              </div>
+              <menu class="hidden-xs">
+                <li><a href="">Изготовление упаковки</a></li>
+                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
+            </div>
+          </div>
+        </div>
+        <div class="b-header-menu">
+          <div class="b-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+                <div class="col-sm-6">
+                  <div class="b-header__phone">
+                    8 800 555-55-70
+                     <span>(для звонков по РФ)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">       
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="b-header-menu__links">
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Изготовление коробок на заказ</a></h4>
+                  <ul>
+                    <li><a href="">Как заказать?</a></li>
+                    <li><a href="">Разработка упаковки</a></li>
+                    <li><a href="">Консультация и выезд эксперта</a></li>
+                    <li><a href="">3D-модель и пробный образец</a></li>
+                    <li><a href="">Сроки изготовления</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Примеры работ</a></li>
+                    <li><a href="">Типовые конструкции</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Магазин картонных коробок</a></h4>
+                  <ul>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" class="b-collapse-link">Картонные коробки<i></i></a>
+                      <ul id="headerMenuCollapse1" class="collapse">
+                        <li><a href="">Транспортные</a></li>
+                        <li><a href="">Для переезда</a></li>
+                        <li><a href="">Под пиццу</a></li>
+                        <li><a href="">Архивные</a></li>
+                        <li><a href="">Крупногабаритные</a></li>
+                        <li><a href="">Под одежду</a></li>
+                        <li><a href="">Почтовые коробки</a></li>
+                        <li><a href="">Маленькие</a></li>
+                        <li><a href="">Для цветов</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" class="b-collapse-link">Гофрокартон<i></i></a>
+                      <ul id="headerMenuCollapse2" class="collapse">
+                        <li><a href="">Гофронаполнитель</a></li>
+                        <li><a href="">Гофролисты</a></li>
+                        <li><a href="">Изделия из гофрокартона</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" class="b-collapse-link">Вспомогательная упаковка<i></i></a>
+                      <ul id="headerMenuCollapse3" class="collapse">
+                        <li><a href="">Упаковочные материалы</a></li>
+                        <li><a href="">Упаковочные инструменты</a></li>
+                        <li><a href="">Упаковочный наполнитель</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Где купить?</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Компания</a></h4>
+                  <ul>
+                    <li><a href="">Руководство</a></li>
+                    <li><a href="">Вакансии</a></li>
+                    <li><a href="">Документы</a></li>
+                    <li><a href="">Схема проезда</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Видео о компании</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Помощь</a></h4>
+                  <ul>
+                    <li><a href="">ГОСТ</a></li>
+                    <li><a href="">FEFCO</a></li>
+                    <li><a href="">Словарь</a></li>
+                    <li><a href="">Упаковочный обзор</a></li>
+                    <li><a href="">Правила приемки</a></li>
+                    <li><a href="">Методы испытания</a></li>
+                    <li><a href="">Видеоинструкции</a></li>
+                    <li><a href="">Задать вопрос роботу</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Корзина</a></h4>
+                  <ul>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">История заказов</a></li>
+                    <li><a href="">Учетная запись</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="b-breadcrumbs">
+      <div class="container"><a href="">Главная</a> <span class="b-breadcrumbs__sep">/</span> <span>Производство</span></div>
+    </div>
+    <div class="b-video-banner">
+      <div data-width="100%" data-height="668" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
+        <div style="background-color: orange;" class="i-fotorama-video">
+          <div class="container">
+            <div id="b-video-player-container">
+              <div id="b-video-player"></div>
+            </div>
+          </div>
+          <div id="b-video-cover" class="b-video-banner__cover">
+            <div class="container">
+              <div id="b-video-button"><span class="i-icon"></span></div>
+              <div class="text-large">Посмотрите<br>видеопрезентацию</div>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: violet;">
+          <div class="b-video-banner__cover">
+            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
+            <div class="container">
+              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
+              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: pink;">
+          <div class="b-video-banner__cover">
+            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
+            <div class="container">
+              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
+              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <h2 class="b-h1 center">3 этапа нашей работы</h2>
+        <p class="text-muted text-large center">Нашим заказчикам не о чем беспокоится</p>
+        <div class="row b-menu-list">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-7"></span></span>
+            <p><b>1. Разработка</b></p>
+            <p class="text-muted text-middle">Разработаем конструкцию и дизайн с учетом ваших пожеланий и технических требований</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-8"></span></span>
+            <p><b>2. Производство</b></p>
+            <p class="text-muted text-middle">Изготовим упаковку от 3 до 5 дней любого размера, формы и нанесем печать.</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-9"></span></span>
+            <p><b>3. Отгрузка</b></p>
+            <p class="text-muted text-middle">Мы можем доставить заказ по Москве и МО. Или отгрузить с нашего склада.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="i-gray">
+      <div class="container">
+        <h2 class="b-h1 center">Экономим время и деньги</h2>
+        <hr class="i-size-XS">
+        <div role="tablist" class="b-nav-tabs nav nav-tabs">
+          <div role="group" class="btn-group"><a href="#page1" aria-controls="page1" role="tab" data-toggle="tab" class="btn btn-default btn-menu active"><span>Консультация и выезд эксперта</span></a><a href="#page2" aria-controls="page2" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>Разработка упаковки</span></a><a href="#page3" aria-controls="page3" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>3D-модель и испытательный образец</span></a></div>
+        </div>
+        <hr>
+        <p class="text-muted text-large center">Воспользуйтесь бесплатно услугой выезда нашего эксперта</p>
+        <hr>
+        <div class="tab-content">
+          <div id="page1" role="tabpanel" class="tab-pane active">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Проведем анализ вашей задачи и предложим оптимальное решение</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Сориентируем вас по тонкостям упаковки и ответим на все вопросы</p>
+                </div>
+              </div>
+            </div>
+            <hr class="i-size-XS">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Представим образцы материала, печати, конструкций</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Поможем определиться с выбором максимально подходящей упаковки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="page2" role="tabpanel" class="tab-pane">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Проведем анализ вашей задачи и предложим оптимальное решение</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Сориентируем вас по тонкостям упаковки и ответим на все вопросы</p>
+                </div>
+              </div>
+            </div>
+            <hr class="i-size-XS">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Представим образцы материала, печати, конструкций</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Поможем определиться с выбором максимально подходящей упаковки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="page3" role="tabpanel" class="tab-pane">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Проведем анализ вашей задачи и предложим оптимальное решение</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Сориентируем вас по тонкостям упаковки и ответим на все вопросы</p>
+                </div>
+              </div>
+            </div>
+            <hr class="i-size-XS">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Представим образцы материала, печати, конструкций</p>
+                </div>
+              </div>
+              <hr class="i-size-XS visible-xs-block clearfix">
+              <div class="col-sm-4">
+                <div class="b-checkbox-block"><i></i>
+                  <p>Поможем определиться с выбором максимально подходящей упаковки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="i-size-M">
+        <div class="center"><a href="" class="btn btn-default">Воспользоваться</a></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="b-h1 center">12 бесплатных цветов</h2>
+        <p class="text-muted text-large center">У нас вы можете воспользоваться бесплатными базовыми<br>цветами для нанесения печати</p>
+        <hr>
+        <div class="row b-palette">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="row">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #c53830;" class="b-palette-color"></span>
+                <p class="text-large"><b>Красный</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>RED 032 U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #104d95;" class="b-palette-color"></span>
+                <p class="text-large"><b>Синий</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Rflex Blue U</p>
+              </div>
+              <hr class="i-size-S visible-xs-block clearfix">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #ffe727;" class="b-palette-color"></span>
+                <p class="text-large"><b>Желтый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Yellow U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #ee6b33;" class="b-palette-color"></span>
+                <p class="text-large"><b>Оранжевый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Orange 021 U</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #c4db32;" class="b-palette-color"></span>
+                <p class="text-large"><b>Салатовый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>RED 032 U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #5fb2e4;" class="b-palette-color"></span>
+                <p class="text-large"><b>Голубой</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Rflex Blue U</p>
+              </div>
+              <hr class="i-size-S visible-xs-block clearfix">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #267836;" class="b-palette-color"></span>
+                <p class="text-large"><b>Зеленый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Yellow U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #ad52b1;" class="b-palette-color"></span>
+                <p class="text-large"><b>Лиловый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Orange 021 U</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #2a271b;" class="b-palette-color"></span>
+                <p class="text-large"><b>Черный</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>RED 032 U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #fff; border: 1px solid #ddd;" class="b-palette-color"></span>
+                <p class="text-large"><b>Белый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Rflex Blue U</p>
+              </div>
+              <hr class="i-size-S visible-xs-block clearfix">
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #000000;" class="b-palette-color"></span>
+                <p class="text-large"><b>Коричневый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Yellow U</p>
+              </div>
+              <div class="col-sm-3 col-xs-6"><span style="background-color: #7159ad;" class="b-palette-color"></span>
+                <p class="text-large"><b>Фиолетовый</b></p>
+                <p class="text-muted text-middle">Pantone solide uncoated<br>Orange 021 U</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="i-gray i-gallery-top">
+      <div class="container">
+        <h2 class="b-h1 center">Примеры выполненных заказов</h2>
+        <p class="text-muted text-large center">В галерее представлены работы, которые<br>позволят оценить наши возможности.</p>
+      </div>
+    </section>
+    <div class="b-gallery">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+      <div data-width="100%" data-ratio="1300/669" data-arrows="false" class="fotorama hidden-xs">
+        <div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+            </div>
+            <div class="col-sm-5">
+              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-sm-7">
+              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+            </div>
+            <div class="col-sm-5">
+              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-width="100%" data-ratio="422/380" data-arrows="false" class="fotorama visible-xs-block i-mob">
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+      </div>
+    </div>
+    <section class="i-gray i-gallery-bottom">
+      <div class="container">
+        <div class="b-gallery-link center"><a href="" class="b-icon"></a><br><a href="">Галерея работ</a></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="b-h1 center">Мы делали упаковку для:</h2>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <hr class="hidden-sm visible-xs-block clearfix">
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+          <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+        </div>
+        <hr>
+        <div id="clientsAccordion">     <a data-toggle="collapse" href="#clientsCollapse" data-parent="#clientsAccordion" class="accordion-toggle collapsed"></a>
+          <div id="clientsCollapse" class="collapse">
+            <div class="row">
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <hr class="hidden-sm visible-xs-block clearfix">
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <hr class="hidden-sm visible-xs-block clearfix">
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+              <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="i-gray">
+      <div class="container">
+        <h2 class="b-h1 center">Заказать на раз-два-три</h2>
+        <p class="text-muted text-large center">Сделать заказ очень легко</p>
+        <div class="row b-menu-list">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-10"></span></span>
+            <p class="text-middle">Обращаетесь удобным вам способом:<br>звоните <b>8 800 555-55-70</b><br>или <a href="">закажите звонок</a></p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-11"></span></span>
+            <p class="text-middle">Затем вы ставите нам задачу<br>в удобном для вас<br>формате</p>
+          </div>
+          <hr class="visible-xs-block">
+          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-12"></span></span>
+            <p class="text-middle">Далее все необходимые<br>работы осуществляем<br>мы</p>
+          </div>
+        </div>
+        <div class="center"><a href="" class="btn btn-default">Сделать заказ</a></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="b-h1 center">Подробнее об изготовлении</h2>
+        <div class="b-accordion">
+          <div id="accordionFAQ" class="accordion">
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ1" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Что нужно знать чтобы разработать упаковку?</a></div>
+              <div id="accordionFAQ1" style="height: 0px;" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <table width="100%" cellpadding="5" cellspacing="5" class="data-table">
+                        <tbody>
+                          <tr>
+                            <td nowrap="" width="1%" align="right">
+                              <p><b>Форма</b></p>
+                            </td>
+                            <td>
+                              <p>Для правильного выбора конструкции необходимо определить следующие параметры:</p>
+                              <ul style="margin: 0; padding: 0;">
+                                <li>В каких целях будет использоваться упаковка: хранение, транспортировка, продажа с витрины.</li>
+                                <li>Определить удобный способ загрузки товара: сверху, сбоку, снизу или оборачиванием.</li>
+                                <li>Взвесить предмет.</li>
+                                <li>Определить дополнительные опции упаковки: отверстия для рук, вентиляционные и презентационные окна.</li>
+                                <li>Определить требуется ли усилить функции упаковки.</li>
+                                <li>Определить нужно ли фиксировать внутри упаковки товар, или отдельные компоненты.</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td nowrap="" width="1%" align="right">
+                              <p><b>Размеры</b></p>
+                            </td>
+                            <td>
+                              <p>Нужно измерить габаритные размеры упаковываемого предмета по трем направлениям: длина, ширина, высота (в миллиметрах). В дальнейшем это будут внутренние размеры упаковки. Если товар сыпучий - определите размер упаковки, наиболее подходящий Вам для транспортировки и складирования.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td nowrap="" width="1%" align="right">
+                              <p><b>Оформление</b></p>
+                            </td>
+                            <td>
+                              <p>Определить требуется ли печать, на каких сторонах коробки и какие функции она должна выполнять.</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ2" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Из чего складывается цена упаковки?</a></div>
+              <div id="accordionFAQ2" style="height: 0px;" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <p>Цена коробки складывается из нескольких составляющих: затраты на сырье и затраты на изготовление. Затраты сырья определяются площадью заготовки.</p>
+                      <p>Площадь заготовки зависит от выбранной конструкции. Чем сложнее конструкция и больше площадь заготовки тем выше стоимость заготовки. Так же при раскрое заготовок могут образовываться обрезки, которые невозможно исключить из стоимости изделия. Затраты на производства складываются из операций необходимых для изготовления. Изготовление упаковки включает следующие операции: нарезка листа на заготовки; нанесение печати на заготовку; просечка в заготовке раскроя коробки; склейка и/или скобирование; связка в пачки и палетизация.</p>
+                      <p>Каждая операция требует приладки оборудования, поэтому чем больше тираж - тем ниже стоимость упаковки в расчете не одно изделие.</p>
+                      <p>Проявите бдительность, если Вам предлагают очень низкую цену!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ3" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Сроки изготовления заказов</a></div>
+              <div id="accordionFAQ3" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <p>Постоянно совершенствуя производственные процессы, мы достигли максимально сжатых сроков исполнения заказов. В плановом порядке заказы выполняются в течение 3-5 рабочих дней.</p>
+                      <p>Если у вас возникнет потребность получить товар в сжатые сроки, мы постараемся оперативно посодействовать в этом. В 80% случаев мы имеем возможность изготовить заказ за 24 часа.</p>
+                      <p style="font-size: 0.8em;"><span class="color-red">* - Срочное изготовление распространяется только на производство четырехклапанных коробок, без дополнительной оснастки, (простые коробки, без печати), при тиражах от 1 до 500 штук.</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ4" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Оплата</a></div>
+              <div id="accordionFAQ4" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <p>Приобретая у нас картонные коробки и упаковочные товары, вы можете воспользоваться любым удобным для Вас способом оплаты:</p>
+                      <div class="font5 bold">Частным лицам</div>
+                      <ul>
+                        <li>оплата банковской картой. Через сайт, или в офисе.</li>
+                        <li>оплата наличными при получении заказа. Оплата производится в рублях в момент получения заказа. Вместе с заказом вы получите расходную накладную и товарный чек.</li>
+                        <li>банковским переводом, перевод может занять до 10-ти дней и может взыматься комиссия за перевод (зависит от банка).</li>
+                      </ul>
+                      <div class="font5 bold">Юридическим лицам</div>
+                      <ul>
+                        <li>оплата по безналичному расчету. Оригиналы необходимых документов (накладная и счет-фактура) будут переданы вместе с заказом. При оформлении заказа на сайте необходимо указать реквизиты компании.</li>
+                      </ul>
+                      <p style="margin-top: 1em;">При оплате товара банковским переводом или по безналичному расчету доставка заказов осуществляется только после поступления денег на расчетный счет.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ5" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Гарантии</a></div>
+              <div id="accordionFAQ5" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <p>Наша компания сертифицированна по ISO 9001:2008, поэтому мы гарантируем высокое качество продукции, четкие сроки и качество предоставляемыхнами услуг. Товар ненадлежащего качества мы заменим в кратчайшие сроки. Если вы обнаружили брак, то вам нужно сообщить об этом по почте <a href="mailto:control@antech.ru" target="_blank">control@antech.ru</a>, указав количество бракованного товара и приложить фото.</p>
+                      <p>Мы прилагаем все усилия чтобы вы были довольны, тем не менее, если вдруг вам что-то не понравится, вы можете сразу обратится к директору по телефону +7 (903) 768-55-70.</p>
+                      <p>Мы решим ваш вопрос в течение часа.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading"><a href="#accordionFAQ6" data-toggle="collapse" data-parent="#accordionFAQ" class="accordion-toggle collapsed">Доставка</a></div>
+              <div id="accordionFAQ6" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                      <p class="color-red">Внимание!<br>Заявки на доставку принимаются для заказов/покупок стоимостью от 3000 рублей.</p>
+                      <p><br></p>
+                      <ul class="list-style-defis">
+                        <li>Доставка производится с Пн-Сб с 9-00 до 17-00</li>
+                        <li>Доставка осуществляется до подъезда</li>
+                        <li>Стоимость доставки зависит от объема заказа (м<span class="grade">3</span>) и километража</li>
+                        <li>Минимальная стоимость доставки в пределах МКАД (+5 км) и объемом до 1 м<span class="grade">3</span> равна 950 рублей.</li>
+                        <li>Свыше 1 м<span class="grade">3</span> к минимальной стоимости доставки прибавляется 150 рублей.</li>
+                        <li>За каждый дополнительный километр за пределами МКАД 25 рублей в одну сторону.</li>
+                      </ul>
+                      <p><br></p>
+                      <p><b>Тарифы на разгрузку заказа</b></p>
+                      <ul class="list-style-defis">
+                        <li>Ручной подъем - 50 руб упаковка (пачка) за каждый этаж</li>
+                        <li>Подъем на лифте - 50 руб упаковка (пачка)</li>
+                      </ul>
+                      <div style="margin: 20px; padding: 20px; border: 1px solid; text-align: center;">Пример расчета стоимости доставки груза объемом 3,8 м<span class="grade">3</span> в аэропорт Домодедово:<br>				        950 руб + (150 руб × 3 м<span class="grade">3</span>) + (25 руб × 16 км) = 1800 руб.</div>
+                      <div class="align-center padding"><img src="/images/a93/dostavka.png"></div>
+                      <p><br></p>
+                      <p>Во все регионы Российской Федерации доставка осуществляется через транспортные компании.<br>Услуги транспортной компании оплачивает заказчик.</p>
+                      <p><br></p>
+                      <p>При самовывозе проконсультируйтесь, пожалуйста, с менеджером относительно особенностей, которыми обладает упаковка из гофрокартона и которые необходимо учитывать при выборе транспортного средства (гофрокороба имеют малый вес, но имеют большой объем и габариты).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="b-request-form i-gradient">
+      <div class="container">
+        <!-- start /components/request-form/-->
+        <link rel="stylesheet" href="/components/request-form/style.css">
+        <script src="/components/request-form/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <div class="b-request-form__message b-h2 center"></div>
+        <div class="b-request-form__success center">
+          <div class="b-h2">Мы перезвоним вам<br>за <b>29</b> секунд!</div>
+          <hr>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__error center">
+          <p id="requestFormError">При отправлении формы возникла ошибка</p>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__form">
+          <h2 class="b-h1 center">Остались вопросы?</h2>
+          <form action="/json/submit.json" method="GET">
+            <p class="text-large text-muted">Введите Ваш номер телефона и мы перезвоним Вам за <b>29 </b>секунд!</p>
+            <hr>
+            <div class="form-group">
+              <input type="tel" value="+7(" required class="form-control">
+            </div>
+            <hr>
+            <div class="center">
+              <button type="submit" class="btn btn-default">Жду звонка!</button>
+            </div>
+          </form>
+        </div>
+        <!-- end /components/request-form/-->
+      </div>
+    </section>
+    <section class="i-gray i-stext">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Антэк. Изготовление картонных коробок</b></h4>
+            <p>Специалисты нашей компании разрабатывают и изготавливают упаковку из картона более 15 лет. Колоссальный опыт в этой сфере позволяет нам выполнять любые заказы на производство картонных упаковок независимо от сложности конструкции и объема работ.</p>
+            <p>Принцип бережливого производства позволяет не расходовать материал впустую! При этом производственный процесс автоматизирован, а качество продукции проверяется на всех этапах изготовления – от выбора картона до выхода товара в тираж. Благодаря этому наши клиенты получают качественную продукцию точно в срок.</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+          </div>
+          <div class="col-sm-6">
+            <h4><b> Антэк. Ценность предложения</b></h4>
+            <p>Вы можете заказать изготовление упаковочных коробок «под ключ» – от разработки макета до серийного производства и печати бренда на упаковке. Мы разрабатываем и изготавливаем на заказ коробки любых размеров и форм-факторов.</p>
+            <p>Наши специалисты помогут создать удобную упаковку оптимальной конструкции, отвечающей необходимым параметрам (форма, размер, вес, ценность) и требованиям бережного хранения и транспортировки.</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 b-footer__phone">
+            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a></div>
+          </div>
+        </div>
+        <nav><a href="">О компании</a> <a href="">Обзор упаковки</a> <a href="">Помощь</a> <a href="">Контакты</a> <a href="">Схема проезда</a> <a href="">Вакансии</a></nav>
+        <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+@import '../../styl/component-include.styl'
+
+.i-float-blocks
+  color #666666
+  font-size 18pt
+  overflow hidden
+  padding 82px 0 32px
+    
+  @media ( max-width 767px )
+    font-size 11pt
+
+  .text-large
+    white-space nowrap
+    font-size 40pt
+    font-weight 100
+    color #42515e
+    line-height normal
+    margin-bottom -14px
+    
+    @media ( max-width 767px )
+      font-size 18pt
+    
+  .row
+    margin -50px 0 0
+    
+    @media ( max-width 1024px )
+      margin -80px 0 0
+    
+  @media ( max-width 767px )
+    text-align center
+    font-weight 100
+    
+//Animation
+    
+@keyframes opacity-statistics
+  0%
+    opacity 1
+  30%
+    opacity 0
+  100%
+    opacity 1
+    
+#statistics-item1
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics1 34s infinite linear, opacity-statistics 15s infinite linear
+    
+@keyframes x-statistics1
+  0%
+    transform translateX( 0% )
+  50%
+    transform translateX( 300% )
+  90%
+    transform translateX( -100% )
+  100%
+    transform translateX( 0% )
+    
+#statistics-item2
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics2 28s infinite linear, opacity-statistics 32s infinite linear
+    
+@keyframes x-statistics2
+  0%
+    transform translateX( 0% )
+  40%
+    transform translateX( 150% )
+  80%
+    transform translateX( -300% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item3
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics3 34s infinite linear, opacity-statistics 45s infinite linear
+    
+@keyframes x-statistics3
+  0%
+    transform translateX( 0% )
+  20%
+    transform translateX( -50% )
+  80%
+    transform translateX( 400% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item4
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics4 24s infinite linear, opacity-statistics 15s infinite linear
+    
+@keyframes x-statistics4
+  0%
+    transform translateX( 0% )
+  30%
+    transform translateX( 150% )
+  90%
+    transform translateX( -300% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item5
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics5 27s infinite linear, opacity-statistics 25s infinite linear
+    
+@keyframes x-statistics5
+  0%
+    transform translateX( 0% )
+  30%
+    transform translateX( 200% )
+  70%
+    transform translateX( -200% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item6
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics6 28s infinite linear, opacity-statistics 59s infinite linear
+    
+@keyframes x-statistics6
+  0%
+    transform translateX( 0% )
+  40%
+    transform translateX( -400% )
+  90%
+    transform translateX( 50% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item7
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics7 35s infinite linear, opacity-statistics 15s infinite linear
+    
+@keyframes x-statistics7
+  0%
+    transform translateX( 0% )
+  20%
+    transform translateX( 400% )
+  60%
+    transform translateX( -100% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item8
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics8 29s infinite linear, opacity-statistics 40s infinite linear
+    
+@keyframes x-statistics8
+  0%
+    transform translateX( 0% )
+  40%
+    transform translateX( 400% )
+  90%
+    transform translateX( -50% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item9
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics9 32s infinite linear, opacity-statistics 27s infinite linear
+    
+@keyframes x-statistics9
+  0%
+    transform translateX( 0% )
+  30%
+    transform translateX( 50% )
+  70%
+    transform translateX( -500% )
+  100%
+    transform translateX( 0% )
+  
+#statistics-item10
+  transform translateX( 0 )
+  opacity 1
+  animation x-statistics10 30s infinite linear, opacity-statistics 55s infinite linear
+    
+@keyframes x-statistics10
+  0%
+    transform translateX( 0% )
+  10%
+    transform translateX( 20% )
+  55%
+    transform translateX( -400% )
+  100%
+    transform translateX( 0% )

@@ -1,0 +1,46 @@
+﻿// start /components/products-list/
+
+link( rel="stylesheet", href="/components/products-list/style.css" )
+script( src="/components/products-list/script.js" )
+
+.b-products-list
+  .b-products-list__nav.nav.nav-tabs( role="tablist" )
+    .btn-group( role="group" )
+      a( href="#boxes" aria-controls="boxes" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu.active
+        span Картонные коробки
+      a( href="#gofro" aria-controls="gofro" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu
+        span Гофрокартон
+      a( href="#pack" aria-controls="pack" role="tab" data-toggle="tab" ).btn.btn-default.btn-menu
+        span Упаковочные материалы
+
+    //-.btn-group( role="group" )
+      a( href="" ).btn.btn-default.btn-menuКартонные коробки
+      a( href="" ).btn.btn-default.btn-menu Гофрокартон
+      a( href="" ).btn.btn-default.btn-menu Упаковочные материалы
+
+  .tab-content
+    #boxes.tab-pane.active( div role="tabpanel" )
+      .visible-md-block.visible-lg-block
+        include ../../modules/gallery/product-list-md
+      .visible-sm-block
+        include ../../modules/gallery/product-list-sm
+      .visible-xs-block
+        include ../../modules/gallery/product-list-xs
+      
+    #gofro.tab-pane( div role="tabpanel" )
+      .visible-md-block.visible-lg-block
+        include ../../modules/gallery/product-list-md
+      .visible-sm-block
+        include ../../modules/gallery/product-list-sm
+      .visible-xs-block
+        include ../../modules/gallery/product-list-xs
+                
+    #pack.tab-pane( div role="tabpanel" )
+      .visible-md-block.visible-lg-block
+        include ../../modules/gallery/product-list-md
+      .visible-sm-block
+        include ../../modules/gallery/product-list-sm
+      .visible-xs-block
+        include ../../modules/gallery/product-list-xs
+
+// end /components/products-list/
