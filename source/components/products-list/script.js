@@ -3,12 +3,6 @@
   'use strict';
   
   $( function() {
-  
-    $('.b-products-list__nav a').click(function (e) {
-      e.preventDefault();
-      $('.b-products-list__nav a').removeClass( 'active' );
-      $(this).addClass( 'active' ).tab('show');
-    });
     
     $( '.b-products-list .tab-content' ).delegate( '.btn-default', 'click', function(e) {
       e.preventDefault();
@@ -57,18 +51,5 @@
       BX.addCustomEvent( "onFrameDataReceived", function () {});
     }*/
   });
-  
-  setTimeout( function() {
-    if (window.devicePixelRatio > 1) {
-      var $lowresImages = $('.b-products-list img');
-
-      $lowresImages.each(function(i) {
-        var $img = $( this ), highres = $img.attr('data-big-image');
-        if( highres && highres !== '' ) {
-          $img.attr('src', highres);
-        }
-      });
-    }
-  }, 10);
 
 }( jQuery ));

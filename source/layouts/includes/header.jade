@@ -39,7 +39,7 @@ header.b-header
                         
                         .row
                           .col-sm-8.col-sm-offset-2
-                            form( action="/json/signin.json" method="GET" )
+                            form( action="" method="GET" )
                               .form-group
                                 input.form-control( type="text" value="" placeholder="Логин" required )
                               .form-group
@@ -77,7 +77,8 @@ header.b-header
                         .b-signin-button
                           .b-user-icon
                           div Войти
-                        hr.i-size-M.hidden-xs
+                          
+                        hr.i-size-S.hidden-xs
                         
                         p.text-large
                           b#cartModalCount 12
@@ -93,13 +94,14 @@ header.b-header
                           | 
                           | коп
                         
-                        hr.i-size-XS
+                        hr.i-size-S
                         a#cartModalButton.btn.btn-default.btn-md( href="" ) Оформить заказ
+                        hr.i-size-S.hidden-xs
                         hr.i-line.i-size-L.hidden-xs
                         hr.i-line.i-size-M.visible-xs-block
                         nav.row
                           .col-xs-3
-                            span
+                            a( href="" )
                               span.b-cart-icon
                               | Корзина
                           .col-xs-3
@@ -107,11 +109,11 @@ header.b-header
                               span.b-fav-icon
                               | Избранное
                           .col-xs-3
-                            span
+                            a( href="" )
                               span.b-order-icon
                               | Заказы
                           .col-xs-3
-                            span
+                            a( href="" )
                               span.b-account-icon
                               | Учетная запись
                               
@@ -145,7 +147,7 @@ header.b-header
                 | 
                 span (для звонков по РФ)
                 
-      .container        
+      .container
         .b-header-menu__search
           form.form-inline( action="" method="GET" )
             .form-group

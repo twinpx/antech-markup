@@ -44,7 +44,7 @@ function closeMenu() {
   $( '.b-header-fixed' ).attr({ style: '' });
 }
 
-$( '.b-modal-signin form' ).submit( function(e) {
+/*$( '.b-modal-signin form' ).submit( function(e) {
   e.preventDefault();
   
   var $form = $( this );
@@ -72,7 +72,7 @@ $( '.b-modal-signin form' ).submit( function(e) {
       }
     }
   });
-});
+});*/
 
 $( '.b-modal-user' ).delegate( '.b-signout-icon', 'click', function(e) {
   e.preventDefault();
@@ -100,8 +100,14 @@ $( '.b-modal-user' ).delegate( '.b-signout-icon', 'click', function(e) {
 }).delegate( '.b-signin-button div', 'click', function() {
   $( '.b-modal-user' ).removeClass( 'i-visible' ).addClass( 'i-hidden' );
   $( '.b-modal-signin, .b-modal-social' ).removeClass( 'i-hidden' ).addClass( 'i-visible' );
-  $( '.b-modal-signin input' ).val('');
+  $( '.b-modal-signin .form-control' ).val('');
   $( '.b-modal-signin input:first' ).focus();
 });
 
 $( '.b-request-form input.form-control' ).mask("+7 999 999-99-99");
+
+$('.nav-tabs a').click(function (e) {
+  e.preventDefault();
+  $('.nav-tabs a').removeClass( 'active' );
+  $(this).addClass( 'active' ).tab('show');
+});

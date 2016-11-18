@@ -4,7 +4,11 @@ $( window ).bind( 'scroll', function(e) {
     $menu.find( '.col-sm-4:first' ).each( function() {
       var $col = $( this );
       var bottom = $col.offset().top + $col.outerHeight();
-      var scrollToScreen = bottom - document.documentElement.clientHeight;
+      var extra = 0;
+      if( window.matchMedia("(max-width: 767px)").matches ) {
+        extra = 250;
+      }
+      var scrollToScreen = bottom - document.documentElement.clientHeight - extra;
       if( window.pageYOffset > scrollToScreen ) {
         $menu.addClass( 'i-animate' );
       }

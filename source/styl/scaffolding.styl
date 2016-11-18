@@ -113,14 +113,12 @@
   
   &__basket
     float right
-    margin-right 20px
     position relative
       
     @media (max-width: 767px)
       position absolute
       bottom 0
       right 20px
-      margin-right 0
     
     &__icon
       width 33px
@@ -306,7 +304,7 @@
     
   .b-modal-social
     position absolute
-    bottom -58px
+    bottom -32px
     left 0
     width 100%
     box-sizing content-box
@@ -339,12 +337,23 @@
     &.i-visible
       opacity 1
       
-    .i-size-M.hidden-xs
-      margin-top -20px
+    .i-size-S.hidden-xs
+      margin-top -6px
+      
+    hr.i-line.i-size-L
+      margin-bottom -3px
+      
+    .btn-md
+      margin 8px 0 -8px
+      
+    nav
+      margin-right 0
+      margin-left 0
     
   .b-modal-signin
     opacity 0
     z-index 2
+    margin-top 20px
     
     .col-xs-6.text-right
       padding-left 0
@@ -404,7 +413,7 @@
       width 583px
       
   .modal-body
-    padding 30px 40px 58px
+    padding 30px 40px 32px
   
   .close
     width 24px
@@ -412,13 +421,12 @@
     background url( 'images/svg/menu_close.svg' ) no-repeat center center
     background-size contain
     position absolute
-    top 15px
-    right 15px
+    top 28px
+    right 28px
     opacity 1
     z-index 5
     
   .b-signin-button
-    margin-top 20px
     height 180px
       
     div
@@ -427,7 +435,6 @@
       text-decoration underline
     
   .b-signout-button
-    margin-top 20px
     height 180px
     
     img
@@ -467,18 +474,20 @@
   .b-fav-icon,
   .b-order-icon,
   .b-account-icon
-    background-color #d9dcdf
     width 51px
     height 51px
     border-radius 51%
     margin 0 auto 13px
     position relative
+    background-size contain
     
     &:before
       content ''
       display inline-block
-      width 33%
+      width 100%
       padding-top 100%
+      background-size contain
+      opacity 0
     
       @media ( max-width 767px )
         position absolute
@@ -500,22 +509,40 @@
       .b-fav-icon,
       .b-order-icon,
       .b-account-icon
-        background-color #42515e
+      
+         &:before
+          opacity 1
+    
+  .b-cart-icon
+    background url( 'images/svg/modal/bag.svg' ) no-repeat center center
+    background-size contain
+    
+  .b-fav-icon
+    background url( 'images/svg/modal/star.svg' ) no-repeat center center
+    background-size contain
+    
+  .b-order-icon
+    background url( 'images/svg/modal/orders.svg' ) no-repeat center center
+    background-size contain
+    
+  .b-account-icon 
+    background url( 'images/svg/modal/profile.svg' ) no-repeat center center
+    background-size contain
     
   .b-cart-icon:before
-    background url( 'images/svg/bag.svg' ) no-repeat center center
+    background url( 'images/svg/modal/bag.svg' ) no-repeat center center
     background-size contain
     
   .b-fav-icon:before
-    background url( 'images/svg/star.svg' ) no-repeat center center
+    background url( 'images/svg/modal/star.svg' ) no-repeat center center
     background-size contain
     
   .b-order-icon:before
-    background url( 'images/svg/orders.svg' ) no-repeat center center
+    background url( 'images/svg/modal/orders.svg' ) no-repeat center center
     background-size contain
     
   .b-account-icon:before
-    background url( 'images/svg/profile.svg' ) no-repeat center center
+    background url( 'images/svg/modal/profile.svg' ) no-repeat center center
     background-size contain
     
   nav a,

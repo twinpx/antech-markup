@@ -14,6 +14,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
+  
+    <script charset="UTF-8" src="//www.plasters.ru/banner/plasters.js"></script>
+    
     <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
     <header class="b-header">
       <div class="b-header-fixed">
@@ -37,7 +40,7 @@
                             <div class="text-danger center"></div>
                             <div class="row">
                               <div class="col-sm-8 col-sm-offset-2">
-                                <form action="/json/signin.json" method="GET">
+                                <form action="" method="GET">
                                   <div class="form-group">
                                     <input type="text" value="" placeholder="Логин" required class="form-control">
                                   </div>
@@ -79,20 +82,21 @@
                               <div class="b-user-icon"></div>
                               <div>Войти</div>
                             </div>
-                            <hr class="i-size-M hidden-xs">
+                            <hr class="i-size-S hidden-xs">
                             <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
                               руб
                                <b>00</b> 
                               коп
                             </p>
-                            <hr class="i-size-XS"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-size-S"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-size-S hidden-xs">
                             <hr class="i-line i-size-L hidden-xs">
                             <hr class="i-line i-size-M visible-xs-block">
                             <nav class="row">
-                              <div class="col-xs-3"><span><span class="b-cart-icon"></span>Корзина</span></div>
+                              <div class="col-xs-3"><a href=""><span class="b-cart-icon"></span>Корзина</a></div>
                               <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
-                              <div class="col-xs-3"><span><span class="b-order-icon"></span>Заказы</span></div>
-                              <div class="col-xs-3"><span><span class="b-account-icon"></span>Учетная запись</span></div>
+                              <div class="col-xs-3"><a href=""><span class="b-order-icon"></span>Заказы</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-account-icon"></span>Учетная запись</a></div>
                             </nav>
                           </div>
                         </div>
@@ -124,7 +128,7 @@
               </div>
             </div>
           </div>
-          <div class="container">       
+          <div class="container">
             <div class="b-header-menu__search">
               <form action="" method="GET" class="form-inline">
                 <div class="form-group">
@@ -297,22 +301,22 @@
         <div>
           <div class="row">
             <div class="col-sm-7">
-              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+              <div style="background-image: url(/upload/gallery/1.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>Dazzle</strong></div>
             </div>
             <div class="col-sm-5">
-              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
-              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+              <div style="background-image: url(/upload/gallery/2.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>CHEF</strong></div>
             </div>
           </div>
         </div>
         <div>
           <div class="row">
             <div class="col-sm-7">
-              <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+              <div style="background-image: url(/upload/gallery/1.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>Dazzle</strong></div>
             </div>
             <div class="col-sm-5">
-              <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
-              <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+              <div style="background-image: url(/upload/gallery/2.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+              <div style="background-image: url(/upload/gallery/3.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>CHEF</strong></div>
             </div>
           </div>
         </div>
