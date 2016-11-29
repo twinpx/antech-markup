@@ -74,7 +74,7 @@ function closeMenu() {
   });
 });*/
 
-$( '.b-modal-user' ).delegate( '.b-signout-icon', 'click', function(e) {
+$( '.b-modal-user' )/*.delegate( '.b-signout-icon', 'click', function(e) {
   e.preventDefault();
   
   var $link = $( this );
@@ -97,7 +97,7 @@ $( '.b-modal-user' ).delegate( '.b-signout-icon', 'click', function(e) {
     }
   });
   
-}).delegate( '.b-signin-button div', 'click', function() {
+})*/.delegate( '.b-signin-button div', 'click', function() {
   $( '.b-modal-user' ).removeClass( 'i-visible' ).addClass( 'i-hidden' );
   $( '.b-modal-signin, .b-modal-social' ).removeClass( 'i-hidden' ).addClass( 'i-visible' );
   $( '.b-modal-signin .form-control' ).val('');

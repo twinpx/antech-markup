@@ -1,0 +1,137 @@
+.b-video-banner2
+  height 735px
+
+  .b-laquo
+    display inline-block
+    width 12px
+    height 13px
+    background embedurl( 'img/laquot.png' ) no-repeat center center
+    background-size contain
+    margin -6px 15px 0 0
+    vertical-align middle
+
+    @media ( max-width 767px )
+      width 8px
+      height 9px
+      margin -4px 5px 0 0
+      
+  .b-raquo
+    display inline-block
+    width 12px
+    height 13px
+    background embedurl( 'img/raquot.png' ) no-repeat center center
+    background-size contain
+    margin -6px 0 0 15px
+    vertical-align middle
+
+    @media ( max-width 767px )
+      width 8px
+      height 9px
+      margin -4px 0 0 5px
+
+  &__ill
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-repeat no-repeat
+    background-position center center
+    background-color #000
+    background-size contain
+    opacity 0
+    z-index 1
+    
+    @media ( min-width 1025px )
+      background-position 90% center
+      
+    @media ( max-width 1024px ) and ( min-width 768px )
+      background-size 150%
+    
+    @media ( max-width 767px )
+      background-size cover
+      
+    &.i-show
+      opacity 1
+      animation ill-fade-in 3s 1
+    
+  &__cover
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-size cover
+    background-repeat no-repeat
+    background-position center
+    background-color #000
+    text-align center
+    color #fff
+    padding-top 250px
+    z-index 2
+    
+    .b-h1
+    
+      @media ( min-width 1025px )
+        text-align left
+        text-indent -27px
+        max-width 415px
+        margin-right 0
+        margin-left 0
+        margin-bottom 14px
+        font-size 28pt
+        line-height 44px
+        
+      @media ( max-width 1024px ) and ( min-width 768px )
+        max-width 430px
+        margin-top 37px
+        margin-bottom 17px
+        
+      @media ( max-width 767px )
+        margin-bottom 10px
+        
+    .b-video-banner__sign
+    
+      @media ( min-width 1025px )
+        text-align left
+        
+      @media ( max-width 767px )
+        font-size 12pt
+        margin-top 10px
+    
+    .container
+      position relative
+      z-index 2
+      
+    #b-video-button2-text
+      color #319ed6
+      font-size 14pt
+      vertical-align middle
+      text-align left
+      margin-top 86px
+      
+      .i-icon
+        display inline-block
+        width 25px
+        height 25px
+        border-radius 51%
+        border 1px solid #319ed6
+        vertical-align middle
+        margin-right 13px
+        
+        &:after
+          display block
+          content ''
+          width 4px
+          height 8px
+    
+      @media ( max-width 1024px )
+        display none
+  
+    @media ( max-width 767px )
+      height 586px
+      padding-top 290px
+  
+    @media ( max-width 1024px ) and ( min-width 768px )
+      height 679px
+      padding-top 340px

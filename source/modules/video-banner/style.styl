@@ -10,14 +10,14 @@
 
 .b-video-banner
   position relative
-  height 668px
+  height 735px
   background-color #000
     
   @media ( max-width 767px )
-    height 300px
+    height 586px
     
   @media ( max-width 1024px ) and ( min-width 768px )
-    height 500px
+    height 679px
     
   .fotorama__nav-wrap
     position absolute
@@ -98,12 +98,12 @@
       z-index 2
   
     @media ( max-width 767px )
-      height 300px
-      padding-top 100px
+      height 586px
+      padding-top 350px
   
     @media ( max-width 1024px ) and ( min-width 768px )
-      height 500px
-      padding-top 200px
+      height 679px
+      padding-top 379px
   
   .b-h1
     margin 0 auto 74px
@@ -113,9 +113,9 @@
     text-shadow 0 2px 5px rgba(0,0,0,0.68)
   
     @media ( max-width 767px )
-      font-size 14pt
+      font-size 22pt
       margin-top 20px
-      margin-bottom 24px 
+      margin-bottom 10px 
   
     @media ( max-width 1024px ) and ( min-width 768px )
       font-size 23pt
@@ -155,9 +155,120 @@
     font-family 'Palatino', Georgia
     font-style italic
     font-size 14pt
-    
+        
+    @media ( max-width 767px )
+      font-size 12pt
+      margin-top 10px
+  
   .fotorama__nav:after,.fotorama__nav:before,.fotorama__stage:after,.fotorama__stage:before
     display none
+    
+.b-video-banner2
+
+  &__ill
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-repeat no-repeat
+    background-position center center
+    background-color #000
+    background-size contain
+    opacity 0
+    z-index 1
+    
+    @media ( min-width 1025px )
+      background-position 90% center
+      
+    @media ( max-width 1024px ) and ( min-width 768px )
+      background-size 150%
+    
+    @media ( max-width 767px )
+      background-size cover
+      
+    &.i-show
+      opacity 1
+      animation ill-fade-in 3s 1
+    
+  &__cover
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background url( 'images/fotorama-video-bg.png' ) no-repeat center #000
+    background-size cover
+    text-align center
+    color #fff
+    padding-top 250px
+    z-index 2
+    
+    .b-h1
+    
+      @media ( min-width 1025px )
+        text-align left
+        text-indent -27px
+        max-width 415px
+        margin-right 0
+        margin-left 0
+        margin-bottom 14px
+        font-size 28pt
+        line-height 44px
+        
+      @media ( max-width 1024px ) and ( min-width 768px )
+        max-width 430px
+        margin-top 37px
+        margin-bottom 17px
+        
+      @media ( max-width 767px )
+        margin-bottom 10px
+        
+    .b-video-banner__sign
+    
+      @media ( min-width 1025px )
+        text-align left
+        
+      @media ( max-width 767px )
+        font-size 12pt
+        margin-top 10px
+    
+    .container
+      position relative
+      z-index 2
+      
+    #b-video-button2-text
+      color #319ed6
+      font-size 14pt
+      vertical-align middle
+      text-align left
+      margin-top 86px
+      
+      .i-icon
+        display inline-block
+        width 25px
+        height 25px
+        border-radius 51%
+        border 1px solid #319ed6
+        vertical-align middle
+        margin-right 13px
+        
+        &:after
+          display block
+          content ''
+          width 4px
+          height 8px
+    
+      @media ( max-width 1024px )
+        display none
+  
+    @media ( max-width 767px )
+      height 586px
+      padding-top 290px
+  
+    @media ( max-width 1024px ) and ( min-width 768px )
+      height 679px
+      padding-top 340px
     
 #b-video-button
   display inline-block
@@ -211,3 +322,41 @@
   height 100%
   z-index 1
   
+#b-video-button2
+  color #319dd5
+  font-size 13pt
+  
+  &,
+  &:hover,
+  &:focus
+    outline none
+  
+  .i-icon
+    display inline-block
+    background #131315
+    width 60px
+    height 60px
+    border-radius 51%
+    border 1px solid #319dd5
+    padding 0
+    
+    &:after
+      content ''
+      width 0
+      height 0
+      border-style solid
+      border-width 11px 0 11px 19px
+      border-color transparent transparent transparent #319dd5
+      display inline-block
+      margin-top 18px
+      margin-left 6px
+    
+    @media ( max-width 1024px ) and ( min-width 768px )
+      width 25px
+      height 25px
+      display block
+      margin 0 auto 8px
+    
+  @media ( min-width 1025px )
+    display none
+    

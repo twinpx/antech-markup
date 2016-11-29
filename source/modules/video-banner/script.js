@@ -9,26 +9,41 @@ $('.b-video-banner .fotorama').on('fotorama:ready', function (e, fotorama) {
     }
   });
   
+  function bannerVideoPlay( id ) {
+    var $cover = $( id );
+    fotorama.show( fotorama.activeIndex );
+    $cover.addClass( "i-play" );
+    setTimeout( function() { $cover.hide(); }, 1000 );
+    $('.b-video-banner .fotorama').data('fotorama').stopAutoplay();
+  }
+  
   if (document.getElementById( 'b-video-button' )) {
     document.getElementById( 'b-video-button' ).onclick=function(e) {
       e.stopPropagation();
-      var $cover = $( '#b-video-cover' );
-      fotorama.show(0);
-      $cover.addClass( "i-play" );
-      setTimeout( function() { $cover.hide(); }, 1000 );
-      $('.b-video-banner .fotorama').data('fotorama').stopAutoplay();
-      player.playVideo();
+      bannerVideoPlay( '#b-video-cover' );
+      player.playVideo(); 
     };
     document.getElementById( 'b-video-button' )
       .addEventListener('touchend', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        var $cover = $( '#b-video-cover' );
-        fotorama.show(0);
-        $cover.addClass( "i-play" );
-        setTimeout( function() { $cover.hide(); }, 1000 );
-        $('.b-video-banner .fotorama').data('fotorama').stopAutoplay();
-        player.playVideo();
+        bannerVideoPlay( '#b-video-cover' );
+      player.playVideo();
+    }, false);
+  }
+  
+  if (document.getElementById( 'b-video-button2' )) {
+    document.getElementById( 'b-video-button2' ).onclick=function(e) {
+      e.stopPropagation();
+      bannerVideoPlay( '#b-video-cover2' );
+      player2.playVideo();
+    };
+    document.getElementById( 'b-video-button2' )
+      .addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        bannerVideoPlay( '#b-video-cover2' );
+        player2.playVideo();
     }, false);
   }
   
@@ -38,24 +53,30 @@ $('.b-video-banner .fotorama').on('fotorama:ready', function (e, fotorama) {
     };
   }
   
+  if (document.getElementById( 'b-video-cover2' )) {
+    document.getElementById( 'b-video-cover2' ).onclick=function(e) {
+      e.stopPropagation();
+    };
+  }
+  
   $( this ).on( 'fotorama:show', function (e, fotorama, extra) {
-    $( '.b-video-banner__ill' ).removeClass( 'i-show' );
+    $( '.b-video-banner__ill, .b-video-banner2__ill' ).removeClass( 'i-show' );
     
     if ( $( '#b-video-cover' ).hasClass( 'i-play' )) {
       $('.b-video-banner .fotorama').data('fotorama').stopAutoplay( 3000 );
       player.pauseVideo();
     }
   }).on( 'fotorama:showend', function(e) {
-    $( '.b-video-banner__ill' ).addClass( 'i-show' );
+    $( '.b-video-banner__ill, .b-video-banner2__ill' ).addClass( 'i-show' );
   });
   
   function resizeGallery() {
     if( window.matchMedia("(max-width: 767px)").matches ) {
-      fotorama.resize({height: 300});
+      fotorama.resize({height: 586});
     } else if( window.matchMedia("(max-width: 1024px)").matches ) {
-      fotorama.resize({height: 500});
+      fotorama.resize({height: 679});
     } else {
-      fotorama.resize({height: 668});
+      fotorama.resize({height: 735});
     }
   }
 

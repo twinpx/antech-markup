@@ -7,6 +7,7 @@
     border-top 1px solid #e9e9e9
     text-align center
     color #4c4c4c
+    font-weight 400
     
     a
       display block
@@ -42,16 +43,22 @@
           right 8px
         
       &.collapsed
+        font-weight 100
+        
         &:before
           transform rotate(0)
           
   .accordion-body
     font-size 14pt
     
+  .accordion-inner
+    padding-bottom 45px
+    
 table.data-table
   width 100%
   td
     padding 10px
+    padding-right 50px
     vertical-align top
     
     &:first-of-type

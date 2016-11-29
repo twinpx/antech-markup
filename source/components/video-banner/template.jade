@@ -1,0 +1,110 @@
+﻿// start /components/video-banner/
+
+link( rel="stylesheet", href="/components/video-banner/style.css" )
+script( src="/components/video-banner/script.js" )
+
+style
+  | .b-video-banner2 h1 {
+  |    font-size: 2em;
+  |    margin: 0.67em 0;
+  | }
+  | 
+  | .b-video-banner2 b,.b-video-banner2 strong {
+  |    font-weight: inherit;
+  |    font-weight: bolder;
+  | }
+  | 
+  | .b-video-banner2 img {
+  |    border-style: none;
+  | }
+  | 
+  | .b-video-banner2 button {
+  |    font-family: sans-serif;
+  |    font-size: 100%;
+  |    line-height: 1.15;
+  |    margin: 0;
+  |    overflow: visible;
+  |    text-transform: none;
+  |    -webkit-appearance: button;
+  | }
+  | 
+  | .b-video-banner2 button::-moz-focus-inner {
+  |    border-style: none;
+  |    padding: 0;
+  | }
+  | 
+  | .b-video-banner2 button::-moz-focusring {
+  |    outline: 1px dotted ButtonText;
+  | }
+  | 
+  | .b-video-banner2 {
+  |    font-size: 10.5pt;
+  |    font-family: pragmatica, 'Open Sans', sans !important;
+  |    font-weight: 100;
+  |    line-height: 1.3;
+  |    position: relative;
+  | }
+  | 
+  | .b-video-banner2 a {
+  |    color: #3c4c54;
+  |    text-decoration: none;
+  |    background-color: transparent;
+  |    -webkit-text-decoration-skip: objects;
+  | }
+  | 
+  | .b-video-banner2 a:hover, .b-video-banner a:active {
+  |    color: #3c4c54;
+  |    outline-width: 0;
+  | }
+  | 
+  | .b-video-banner2 a:focus {
+  |    outline: none;
+  | }
+  | 
+  | .b-video-banner2 .b-h1 {
+  |    font-size: 38pt;
+  |    font-weight: 100;
+  |    margin-top: 0;
+  |    margin-bottom: 57px;
+  | }
+  | 
+  | .b-video-banner2 p {
+  |    margin: 20px 0;
+  | }
+  
+script
+  | //(function($) {$( function() {$( '.b-video-banner2__ill' ).addClass( 'i-show' );});}(jQuery));
+  | ( function($) {
+  |  'use strict';
+  |  $( function() {
+  |    $( '.b-video-banner2__ill' ).addClass( 'i-show' );
+  |  });
+  | }( jQuery ));
+  
+
+.b-video-banner2
+  div( style="background-color: pink;" )
+    .container
+      .b-video-player2-container
+        #b-video-player2
+          
+    #b-video-cover2.b-video-banner2__cover( style="background-image: url( '/template/images/fotorama-video-bg.png' );")
+      .b-video-banner2__ill( style="background-image: url( '/template/images/video-banner2-ill.jpg' );" )
+      .container
+      
+        #b-video-button2
+          span.i-icon
+          .hidden-xs Смотреть презентацию
+          
+        .b-h1
+          span.b-laquo
+          | Если упаковка особенная, то и содержимое становится особенным
+          span.b-raquo
+        p.b-video-banner__sign
+          em Антон Блинов. Основатель компании
+      
+        #b-video-button2-text
+          span.i-icon
+          | Смотреть презентацию
+
+// end /components/video-banner/
