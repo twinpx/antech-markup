@@ -1,5 +1,57 @@
 .b-video-banner2
+  font-size 10.5pt
+  font-family pragmatica, 'Open Sans', sans !important
+  font-weight 100
+  line-height 1.3
+  position relative
   height 735px
+  
+  //normalize styles
+  h1
+    font-size 2em
+    margin 0.67em 0
+        
+  b, strong
+    font-weight inherit
+    font-weight bolder
+     
+  img
+    border-style none
+     
+  button
+    font-family sans-serif
+    font-size 100%
+    line-height 1.15
+    margin 0
+    overflow visible
+    text-transform none
+    -webkit-appearance button
+     
+    &::-moz-focus-inner
+      border-style none
+      padding 0
+       
+    &::-moz-focusring
+      outline 1px dotted ButtonText
+     
+  a
+    color #3c4c54;
+    text-decoration none
+    background-color transparent
+    -webkit-text-decoration-skip objects
+     
+    &:hover,
+    &:active
+      color #3c4c54
+      outline-width 0
+       
+    &:focus
+      outline none
+    
+  //component styles
+      
+  p
+    margin 20px 0
 
   .b-laquo
     display inline-block
@@ -43,10 +95,10 @@
     z-index 1
     
     @media ( min-width 1025px )
-      background-position 90% center
+      background-position right center
       
     @media ( max-width 1024px ) and ( min-width 768px )
-      background-size 150%
+      background-size 120%
     
     @media ( max-width 767px )
       background-size cover
@@ -54,6 +106,13 @@
     &.i-show
       opacity 1
       animation ill-fade-in 3s 1
+    
+  .container
+    position relative
+    z-index 2
+    
+    iframe
+      display block
     
   &__cover
     position absolute
@@ -71,6 +130,10 @@
     z-index 2
     
     .b-h1
+      font-size 28pt
+      font-weight 100
+      margin-top 0
+      margin-bottom 57px
     
       @media ( min-width 1025px )
         text-align left
@@ -79,16 +142,16 @@
         margin-right 0
         margin-left 0
         margin-bottom 14px
-        font-size 28pt
         line-height 44px
         
       @media ( max-width 1024px ) and ( min-width 768px )
         max-width 430px
-        margin-top 37px
-        margin-bottom 17px
+        margin 37px auto 17px
+        line-height 1.2
         
       @media ( max-width 767px )
         margin-bottom 10px
+        font-size 18pt
         
     .b-video-banner__sign
     
@@ -98,40 +161,95 @@
       @media ( max-width 767px )
         font-size 12pt
         margin-top 10px
+      
+    .b-video-button2
+      cursor pointer
+      text-align center
+      opacity 0
+      transition opacity 0.5s ease
+      
+      &.i-visible
+        opacity 1
+            
+      @media ( min-width 1025px )
+        display none
     
-    .container
-      position relative
-      z-index 2
-      
-    #b-video-button2-text
-      color #319ed6
-      font-size 14pt
-      vertical-align middle
-      text-align left
-      margin-top 86px
-      
       .i-icon
-        display inline-block
-        width 25px
-        height 25px
         border-radius 51%
         border 1px solid #319ed6
-        vertical-align middle
-        margin-right 13px
+        width 60px
+        height 60px
+        position relative
+        margin 0 auto 30px
         
+        &:before
+          display block
+          content ''
+          width 0
+          height 0
+          border-style solid
+          border-width 10px 0 10px 11px
+          border-color transparent transparent transparent #319fd6
+          position absolute
+          top 19px
+          left 26px
+          
         &:after
           display block
           content ''
-          width 4px
-          height 8px
-    
-      @media ( max-width 1024px )
+          width 0
+          height 0
+          border-style solid
+          border-width 8px 0 8px 8px
+          border-color transparent transparent transparent #000
+          position absolute
+          top 21px
+          left 27px
+        
+        @media ( min-width 768px )
+          width 25px
+          height 25px
+          margin-bottom 10px
+          
+          &:before
+            border-width 4px 0 4px 4px
+            top 8px
+            left 10px
+          
+          &:after
+            border-width 2px 0 2px 2px
+            top 10px
+            left 11px
+          
+      &__text
+        font-size 13pt
+        color #319fd6
         display none
+        
+        @media ( min-width 768px )
+          display block
+      
+    .b-video-button2.i-text
+      text-align left
+      margin-top 86px
+      display none
+            
+      @media ( min-width 1025px )
+        display block
+      
+      .i-icon
+        display inline-block
+        vertical-align middle
+        margin 0 13px 0 0
+          
+      .b-video-button2__text
+        display inline-block
+        vertical-align middle
   
     @media ( max-width 767px )
       height 586px
       padding-top 290px
   
     @media ( max-width 1024px ) and ( min-width 768px )
-      height 679px
-      padding-top 340px
+      //height 679px
+      padding-top 376px

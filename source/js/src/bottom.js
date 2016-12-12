@@ -9,43 +9,47 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player, player2;
+var playerIdArray = [];
+var playerArray = [];
+
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('b-video-player', {
-    height: '390',
-    width: '640',
-    videoId: '7DBxtut7Mpw',
-    events: {
-      'onReady': function() {
-        document.getElementById( 'b-video-button' ).className='i-visible';
-      },
-      'onStateChange': function( event ) {
-        if ( event.data === YT.PlayerState.PAUSED ) {
-          $( '#b-video-cover' ).removeClass( 'i-play' );
-        } else if ( event.data === YT.PlayerState.PLAYING ) {
-          $( '#b-video-cover' ).addClass( 'i-play' );
+  if ( $( 'body' ).hasClass( 'i-video-ready' )) {
+    for ( var i = 0; i < playerIdArray.length; i++ ) {
+      var $elem = $( '#' + playerIdArray[i]);
+      var $banner = $( '.b-video-banner2:eq(' + i + ')' );
+      playerArray[i] = new YT.Player( playerIdArray[i], {
+        height: '735',
+        width: '100%',
+        videoId: $elem.data( 'video-id' ),
+        events: {
+          'onReady': videoReady( $banner ),
+          'onStateChange': videoStateChange( $banner )
+        },
+        playerVars: {            
+          rel: 0,
+          controls: 0
         }
-      }
+      });
     }
-  });
+  } else {
+    setTimeout( function() { onYouTubeIframeAPIReady(); }, 500);
+  }
   
-  player2 = new YT.Player('b-video-player2', {
-    height: '390',
-    width: '640',
-    videoId: '7DBxtut7Mpw',
-    events: {
-      'onReady': function() {
-        document.getElementById( 'b-video-button2' ).className='i-visible';
-      },
-      'onStateChange': function( event ) {
-        if ( event.data === YT.PlayerState.PAUSED ) {
-          $( '#b-video-cover2' ).removeClass( 'i-play' );
-        } else if ( event.data === YT.PlayerState.PLAYING ) {
-          $( '#b-video-cover2' ).addClass( 'i-play' );
-        }
+  function videoReady( $banner ) {
+    return function() {
+      $banner.find( '.b-video-button2' ).addClass( 'i-visible' );
+    };
+  }
+  
+  function videoStateChange( $banner ) {
+    return function( event ) {
+      if ( event.data === YT.PlayerState.PAUSED ) {
+        $banner.find( 'b-video-banner2__cover' ).removeClass( 'i-play' );
+      } else if ( event.data === YT.PlayerState.PLAYING ) {
+        $banner.find( 'b-video-banner2__cover' ).addClass( 'i-play' );
       }
-    }
-  });
+    };
+  }
 }
 
 

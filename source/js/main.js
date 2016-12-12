@@ -104,7 +104,9 @@ $( '.b-modal-user' )/*.delegate( '.b-signout-icon', 'click', function(e) {
   $( '.b-modal-signin input:first' ).focus();
 });
 
-$( '.b-request-form input.form-control' ).mask("+7 999 999-99-99");
+if ( $.mask ) {
+  $( '.b-request-form input.form-control' ).mask("+7 999 999-99-99");
+}
 
 $('.nav-tabs a').click(function (e) {
   e.preventDefault();

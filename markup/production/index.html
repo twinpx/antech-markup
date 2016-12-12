@@ -19,11 +19,11 @@
       <div class="b-header-fixed">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/menu_open.svg)" class="b-header__menu"></span><span style="background-image: url(/template/images/svg/search.svg)" class="b-header__search hidden-xs"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
-            <div class="col-lg-3 col-md-2 col-sm-3 hidden-xs">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-lg-3 col-md-4 col-sm-3 hidden-xs">
               <div class="b-header__phone">8 800 555-55-70</div>
             </div>
-            <div class="col-md-6 col-sm-4 col-xs-12">
+            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
               <div class="b-header__basket">
                 <!-- Modal-->
                 <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
@@ -100,7 +100,7 @@
                       </div>
                     </div>
                   </div>
-                </div><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+                </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs"></span><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
                   <div class="count_in_cart">121</div></a>
               </div>
               <menu class="hidden-xs">
@@ -237,16 +237,16 @@
       </div>
     </div>
     <div class="b-video-banner">
-      <div data-width="100%" data-height="668" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
+      <div data-width="100%" data-height="735" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
         <div style="background-color: orange;" class="i-fotorama-video">
           <div class="container">
             <div id="b-video-player-container">
-              <div id="b-video-player"></div>
+              <div class="b-video-player"></div>
             </div>
           </div>
           <div id="b-video-cover" class="b-video-banner__cover">
             <div class="container">
-              <div id="b-video-button"><span class="i-icon"></span></div>
+              <div class="b-video-button"><span class="i-icon"></span></div>
               <div class="text-large">Посмотрите<br>видеопрезентацию</div>
             </div>
           </div>
@@ -261,11 +261,20 @@
           </div>
         </div>
         <div style="background-color: pink;">
-          <div class="b-video-banner__cover">
-            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
+          <div class="container">
+            <div id="b-video-player2-container">
+              <div id="b-video-player2"></div>
+            </div>
+          </div>
+          <div id="b-video-cover2" class="b-video-banner2__cover">
+            <div style="background-image: url( '/template/images/video-banner2-ill.jpg' );" class="b-video-banner2__ill"></div>
             <div class="container">
+              <div id="b-video-button2"><span class="i-icon"></span>
+                <div class="hidden-xs">Смотреть презентацию</div>
+              </div>
               <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
               <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+              <div id="b-video-button2-text"><span class="i-icon"></span>Смотреть презентацию</div>
             </div>
           </div>
         </div>
@@ -603,16 +612,17 @@
               <div id="accordionFAQ1" style="height: 0px;" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <table width="100%" cellpadding="5" cellspacing="5" class="data-table">
                         <tbody>
                           <tr>
-                            <td nowrap="" width="1%" align="right">
+                            <td nowrap="" width="26%" align="right">
                               <p><b>Форма</b></p>
                             </td>
                             <td>
-                              <p>Для правильного выбора конструкции необходимо определить следующие параметры:</p>
-                              <ul style="margin: 0; padding: 0;">
+                              <p style="margin-bottom: 0;">Для правильного выбора конструкции необходимо определить следующие параметры:</p>
+                              <ul style="margin: 0 0 20px; padding: 0;">
                                 <li>В каких целях будет использоваться упаковка: хранение, транспортировка, продажа с витрины.</li>
                                 <li>Определить удобный способ загрузки товара: сверху, сбоку, снизу или оборачиванием.</li>
                                 <li>Взвесить предмет.</li>
@@ -623,7 +633,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td nowrap="" width="1%" align="right">
+                            <td nowrap="" width="26%" align="right">
                               <p><b>Размеры</b></p>
                             </td>
                             <td>
@@ -631,7 +641,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td nowrap="" width="1%" align="right">
+                            <td nowrap="" width="26%" align="right">
                               <p><b>Оформление</b></p>
                             </td>
                             <td>
@@ -650,7 +660,8 @@
               <div id="accordionFAQ2" style="height: 0px;" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <p>Цена коробки складывается из нескольких составляющих: затраты на сырье и затраты на изготовление. Затраты сырья определяются площадью заготовки.</p>
                       <p>Площадь заготовки зависит от выбранной конструкции. Чем сложнее конструкция и больше площадь заготовки тем выше стоимость заготовки. Так же при раскрое заготовок могут образовываться обрезки, которые невозможно исключить из стоимости изделия. Затраты на производства складываются из операций необходимых для изготовления. Изготовление упаковки включает следующие операции: нарезка листа на заготовки; нанесение печати на заготовку; просечка в заготовке раскроя коробки; склейка и/или скобирование; связка в пачки и палетизация.</p>
                       <p>Каждая операция требует приладки оборудования, поэтому чем больше тираж - тем ниже стоимость упаковки в расчете не одно изделие.</p>
@@ -665,7 +676,8 @@
               <div id="accordionFAQ3" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <p>Постоянно совершенствуя производственные процессы, мы достигли максимально сжатых сроков исполнения заказов. В плановом порядке заказы выполняются в течение 3-5 рабочих дней.</p>
                       <p>Если у вас возникнет потребность получить товар в сжатые сроки, мы постараемся оперативно посодействовать в этом. В 80% случаев мы имеем возможность изготовить заказ за 24 часа.</p>
                       <p style="font-size: 0.8em;"><span class="color-red">* - Срочное изготовление распространяется только на производство четырехклапанных коробок, без дополнительной оснастки, (простые коробки, без печати), при тиражах от 1 до 500 штук.</span></p>
@@ -679,7 +691,8 @@
               <div id="accordionFAQ4" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <p>Приобретая у нас картонные коробки и упаковочные товары, вы можете воспользоваться любым удобным для Вас способом оплаты:</p>
                       <div class="font5 bold">Частным лицам</div>
                       <ul>
@@ -702,7 +715,8 @@
               <div id="accordionFAQ5" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <p>Наша компания сертифицированна по ISO 9001:2008, поэтому мы гарантируем высокое качество продукции, четкие сроки и качество предоставляемыхнами услуг. Товар ненадлежащего качества мы заменим в кратчайшие сроки. Если вы обнаружили брак, то вам нужно сообщить об этом по почте <a href="mailto:control@antech.ru" target="_blank">control@antech.ru</a>, указав количество бракованного товара и приложить фото.</p>
                       <p>Мы прилагаем все усилия чтобы вы были довольны, тем не менее, если вдруг вам что-то не понравится, вы можете сразу обратится к директору по телефону +7 (903) 768-55-70.</p>
                       <p>Мы решим ваш вопрос в течение часа.</p>
@@ -716,7 +730,8 @@
               <div id="accordionFAQ6" class="accordion-body collapse">
                 <div class="accordion-inner">
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <hr class="i-size-S">
                       <p class="color-red">Внимание!<br>Заявки на доставку принимаются для заказов/покупок стоимостью от 3000 рублей.</p>
                       <p><br></p>
                       <ul class="list-style-defis">

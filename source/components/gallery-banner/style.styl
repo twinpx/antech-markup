@@ -1,0 +1,32 @@
+@import '../../styl/component-include.styl'
+
+.b-gallery-banner
+
+  .fotorama__nav-wrap
+    position absolute
+    width 100%
+    bottom 0
+    left 0
+    
+  .fotorama__dot
+    width 12px
+    height 12px
+    background-color #575757
+    border none
+    top auto
+    left 3px
+    
+  .fotorama__nav__frame.fotorama__active .fotorama__dot
+    background-color #ffcc00
+    width 12px
+    height 12px
+    
+  .fotorama__nav--dots .fotorama__nav__frame
+    height 65px
+    width 24px
+    
+    @media ( max-width 767px )
+      height 35px
+      
+    @media ( max-width 1024px ) and ( min-width 768px )
+      height 45px
