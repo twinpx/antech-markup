@@ -11,4 +11,9 @@ $('.b-gallery .fotorama').on('fotorama:ready', function (e, fotorama) {
       });
     }
   }, 10);
+  
+  $( this ).find( 'a' ).click( function(e) {
+    e.stopPropagation();
+    //alert('');
+  });
 });

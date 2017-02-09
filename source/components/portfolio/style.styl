@@ -1,0 +1,172 @@
+@import '../../styl/component-include.styl'
+
+.b-portfolio
+  margin 0 -8px
+  
+  &:after
+    content ''
+    display table
+    clear both
+    
+  &__wrapper
+    
+    &:after
+      content ''
+      display table
+      clear both
+  
+  section
+    clear both
+    float none
+    padding 0
+  
+    &:last-of-type
+      display none
+    
+    &:after
+      content ''
+      display table
+      clear both
+  
+  &__item
+    float left
+    width 33.3%
+    padding 0 4px
+    margin-bottom 8px
+    cursor pointer
+    
+    div
+      background-repeat no-repeat
+      background-position 0 center
+      background-size cover
+      background-color #fcfcfc
+    
+    @media( max-width 767px )
+      width 100%
+      float none
+    
+    img
+      width 100%
+      height auto
+      
+  &__detail
+    padding 25px 4px 33px
+    float none
+    clear both
+    display none
+    width 99.9%
+    
+  &__body
+    background-color #333
+    padding 40px
+    position relative
+    
+    @media( max-width 767px )
+      padding 40px 15px
+    
+    img
+      width 100%
+      height auto
+    
+  &__title
+    font-size 14pt
+    font-weight 400
+    color #fff
+    margin-bottom 30px
+    text-align center
+    
+  &__ill
+    width 66.6%
+    margin 0 auto
+    
+    @media( max-width 1199px )
+      width 85%
+    
+    @media( max-width 1023px )
+      width 100%
+  
+  &__pointer
+    width 0
+    height 0
+    border-style solid
+    border-width 0 14px 17px 14px
+    border-color transparent transparent #333 transparent
+    margin-left -14px
+    position absolute
+    top -17px
+    left 83.1%
+    
+    .i-first &
+      left 16.5%
+    
+    .i-second &
+      left 49.8%
+    
+    @media( max-width 767px )
+      left 49.8% !important
+      
+  &__button
+    text-align center
+    margin-top 45px
+    
+    .btn
+      min-width 216px
+    
+  &__load
+    padding 36px 4px 0
+    clear both
+    
+    div
+      border 1px solid #d8d8d8
+      border-radius 5px
+      width 99.9%
+      min-height 55px
+      line-height 55px
+      padding 0 20px
+      font-size 12pt
+      cursor pointer
+      text-align center
+    
+      &:hover
+        background-color #ffcc00
+        border-color #ffcc00
+        
+    &.i-preloader div
+      background-color #f6f6f6
+      border-color #f6f6f6
+      color #d0d0d0
+    
+//fotorama
+.fotorama__nav-wrap
+  display none
+  
+/*.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr, .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon
+  opacity( 1 !important )*/
+  
+.fotorama__arr
+    
+  .fotorama__arr&--next
+    width 71px 
+    height 71px
+    background embedurl( 'img/arrow-right-white.svg' ) no-repeat center
+    margin-top -35px
+    right 20px
+
+    .fotorama__wrap--css3 &
+      transform( translate3d(-38px,0,0) !important)
+      
+    @media( max-width 1024px )
+      display none !important
+  
+  .fotorama__arr&--prev
+    width 71px 
+    height 71px
+    background embedurl( 'img/arrow-left-white.svg' ) no-repeat center
+    margin-top -35px
+    left 20px
+
+    .fotorama__wrap--css3 &
+      transform( translate3d(38px,0,0) !important)
+      
+    @media( max-width 1024px )
+      display none !important

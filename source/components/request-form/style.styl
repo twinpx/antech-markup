@@ -2,11 +2,19 @@
 
 .b-request-form
   position relative
+  height 585px
   
   &__form
     transition( opacity 0.5s ease )
     visibility visible
     z-index 2
+  
+    .i-counter &,
+    .i-feedback &,
+    .i-thankyou &,
+    .i-once-more &,
+    .i-callback &
+      display none
     
   &__success
     visibility hidden
@@ -51,8 +59,8 @@
       opacity 1
       z-index 3
 
-  form
-    width 320px
+  .b-request-form__form form
+    width 360px
     margin 0 auto
     text-align center
     
@@ -84,3 +92,130 @@
     &:focus
       outline none
       border-color #a2a2a2 !important
+      
+  &__counter
+    font-size 140px
+    font-weight bold
+    text-align center
+    display none
+    padding 90px 0 0 0
+    
+    @media (max-width 991px)
+      padding 90px 0 0 0
+    
+    .i-counter &
+      display block
+    
+  &__feedback
+    width 360px
+    margin 0 auto
+    display none
+    
+    h2
+      text-align center
+    
+    .i-feedback &
+      display block
+      
+    textarea
+      width 100%
+      height 100px
+      color #000
+      font-size 14pt
+      
+      @media (max-width 991px)
+        width 100%
+      
+    .btn
+      margin 0 auto
+      display block
+      width 143px
+      
+    form > a
+      display block
+      text-align center
+      margin-top 20px
+      
+  &__smiles
+    margin-bottom 5px !important
+    text-align center
+    
+    label
+      width 44px
+      height 44px
+      cursor pointer
+      margin 0 15px
+      position relative
+      
+      &:nth-of-type(1)
+      
+        span
+          background embedurl( 'img/bad-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/bad-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(2)
+      
+        span
+          background embedurl( 'img/normal-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/normal-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(3)
+      
+        span
+          background embedurl( 'img/good-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/good-orange.svg' ) no-repeat 0 0
+          
+      span
+        display inline-block
+        width 44px
+        height 44px
+        position absolute
+        top 0
+        left 0
+      
+      input
+        opacity 0
+    
+  &__thankyou
+    display none
+    height 100%
+    padding-top 150px
+    text-align center
+    
+    .i-thankyou &
+      display flex
+      justify-content center
+      align-items center
+      
+    @media (max-width 991px)
+      padding-right 0
+    
+  &__callback
+    display none
+    height 100%
+    text-align center
+    padding-top 130px
+    
+    .i-callback &
+      display flex
+      justify-content center
+      align-items center
+      
+    @media (max-width 991px)
+      padding-right 0
+    
+  &__once-more
+    display none
+    text-align center
+    
+    .i-once-more &
+      display block

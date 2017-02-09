@@ -1,0 +1,58 @@
+@import '../../styl/component-include.styl'
+
+.b-portfolio-detail
+
+  .ya-share2__container
+    text-align center
+
+  &__buttons
+  
+    @media ( max-width 767px )
+      
+      .col-sm-6
+        text-align center !important
+    
+  .btn
+    min-width 216px
+    
+.fotorama__thumb-border
+  border 1px solid #4299e7 !important
+  
+.fotorama__stage
+  border 1px solid #d8d8d8 !important
+  margin-bottom 2px !important
+  
+.fotorama__thumb
+  border 1px solid #d8d8d8 !important
+  width 177px !important
+  height 106px !important
+  
+.fotorama__nav:after,
+.fotorama__nav:before,
+.fotorama__stage:after,
+.fotorama__stage:before
+  display none !important
+  
+.fotorama__nav-wrap
+  
+  @media ( max-width 767px )
+    display none !important
+    
+.fotorama__arr
+  width 71px !important
+  height 71px !important
+  margin-top -36px !important
+  
+  &--prev
+    background embedurl( 'img/arrow-left-grey.svg' ) center center !important
+  
+  &--next
+    background embedurl( 'img/arrow-right-grey.svg' ) center center !important
+    
+.fotorama__fullscreen-icon
+
+  @media ( min-width 768px )
+    display none !important
+
+  @media ( max-width 767px )
+    display block !important

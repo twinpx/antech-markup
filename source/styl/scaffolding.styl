@@ -47,9 +47,8 @@
       margin-right 0
   
   &__search
-    width 16px
-    height 16px
-    height 16px
+    width 24px
+    height 24px
     background-repeat no-repeat
     background-position center center
     background-size contain
@@ -67,6 +66,12 @@
     display inline-block
     vertical-align top
     line-height 90px
+    
+    .hidden-xs
+      transition( all 0.3s linear )
+      
+      &:hover
+        transform( scale(1.1))
     
     @media (max-width: 991px) and (min-width: 768px)
       img.hidden-xs
@@ -132,8 +137,8 @@
       right 20px
     
     &__icon
-      width 33px
-      height 33px
+      width 24px
+      height 24px
       display inline-block
       vertical-align middle
       position relative
@@ -142,17 +147,20 @@
       background-position center center
       background-size contain
         
-      .count_in_cart
-        position absolute
-        top 0
-        left 38%
-        text-align center
-        border none
-        font-size 6.5pt
-        color #fff
-        width 18px
-        line-height 10px
-        padding 5px 0
+  .count_in_cart
+    position absolute
+    top -2px
+    left 16px
+    text-align center
+    border none
+    font-size 6.5pt
+    color #fff
+    width 18px
+    height 18px
+    background-color #ff0000
+    border-radius 51%
+    line-height 12px
+    padding 4px 0 0
       
 .b-header-menu
   position absolute
@@ -226,9 +234,9 @@
     .b-search-icon
       display inline-block
       vertical-align middle
-      width 15px
-      height 15px
-      background embedurl( 'img/search.png' ) no-repeat center center
+      width 24px
+      height 24px
+      background url(/template/images/svg/search-icon.svg) no-repeat center center
       margin 2px 25px 0 0        
       
     .form-control
@@ -586,8 +594,8 @@
   
 .b-close-button
   display inline-block
-  width 32px
-  height 29px
+  width 24px
+  height 24px
   background url( 'images/svg/menu_close.svg' ) no-repeat center center
   background-size contain
     

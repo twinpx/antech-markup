@@ -1,0 +1,199 @@
+@import '../../styl/component-include.styl'
+
+@media (min-width 992px)
+  .modal-lg
+      width 900px !important
+
+.b-call-me
+
+  h2
+    @media (max-width 767px)
+      font-size 20pt
+
+  .cb_btn_teaser
+    height 7em
+    width 7em
+    display block
+    position absolute
+    top -26px
+    left -130px
+    
+    @media (max-width 991px)
+      left 0
+    
+    @media (max-width 767px)
+      display none
+    
+  .cb_btn_teaser .st0
+    opacity 0.5
+    fill #369bcf
+    
+  .cb_btn_teaser .st1
+    fill #369bcf
+    
+  .cb_btn_teaser .st2
+    fill #FFFFFF
+  
+  .modal-dialog
+    margin-top calc( 50vh - 200px )
+  
+  .modal-content
+    border-radius 0
+    background-repeat no-repeat
+    background-position right bottom
+    height 400px
+    
+    @media (max-width 991px)
+      background-image none !important
+      text-align center
+      height 450px
+      
+  .modal-body
+    height 100%
+  
+  &__form
+    padding 40px 0 0 120px
+    
+    @media (max-width 991px)
+      padding 20px 0 0 0
+  
+    .i-counter &,
+    .i-feedback &,
+    .i-thankyou &,
+    .i-once-more &,
+    .i-callback &
+      display none
+      
+    .form-group
+      position relative
+      
+    .form-control[ type="tel"]
+      box-shadow none
+      height 69px
+      border-radius 3px
+      border 1px solid #a2a2a2
+      color #000
+      font-size 14pt
+      padding-left 25px
+      padding-right 25px
+      width 220px
+      display inline-block
+      margin 0 10px 20px 0
+      
+      @media (max-width 991px)
+        display block
+        margin 0 auto 20px
+        
+    select
+      font-size 12pt
+
+  &__counter
+    font-size 140px
+    font-weight bold
+    text-align center
+    display none
+    padding 75px 250px 0 0
+    
+    @media (max-width 991px)
+      padding 90px 0 0 0
+    
+    .i-counter &
+      display block
+    
+  &__feedback
+    display none
+    
+    .i-feedback &
+      display block
+      
+    textarea
+      width 60%
+      height 100px
+      color #000
+      font-size 14pt
+      
+      @media (max-width 991px)
+        width 100%
+      
+    .btn
+      margin-right 30px
+      
+  &__smiles
+    margin-bottom 5px !important
+    
+    label
+      width 44px
+      height 44px
+      cursor pointer
+      margin-right 30px
+      position relative
+      
+      &:nth-of-type(1)
+      
+        span
+          background embedurl( 'img/bad-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/bad-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(2)
+      
+        span
+          background embedurl( 'img/normal-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/normal-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(3)
+      
+        span
+          background embedurl( 'img/good-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/good-orange.svg' ) no-repeat 0 0
+          
+      span
+        display inline-block
+        width 44px
+        height 44px
+        position absolute
+        top 0
+        left 0
+      
+      input
+        opacity 0
+    
+  &__thankyou
+    display none
+    height 100%
+    padding-right 250px
+    
+    .i-thankyou &
+      display flex
+      justify-content center
+      align-items center
+      
+    @media (max-width 991px)
+      padding-right 0
+    
+  &__callback
+    display none
+    height 100%
+    padding-right 250px
+    
+    .i-callback &
+      display flex
+      justify-content center
+      align-items center
+      
+    @media (max-width 991px)
+      padding-right 0
+    
+  &__once-more
+    display none
+    
+    .i-once-more &
+      display block

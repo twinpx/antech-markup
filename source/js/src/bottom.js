@@ -18,7 +18,7 @@ function onYouTubeIframeAPIReady() {
       var $elem = $( '#' + playerIdArray[i]);
       var $banner = $( '.b-video-banner2:eq(' + i + ')' );
       playerArray[i] = new YT.Player( playerIdArray[i], {
-        height: '735',
+        height: '641',
         width: '100%',
         videoId: $elem.data( 'video-id' ),
         events: {
@@ -27,7 +27,8 @@ function onYouTubeIframeAPIReady() {
         },
         playerVars: {            
           rel: 0,
-          controls: 0
+          controls: 0,
+          showinfo: 0
         }
       });
     }
@@ -47,6 +48,9 @@ function onYouTubeIframeAPIReady() {
         $banner.find( 'b-video-banner2__cover' ).removeClass( 'i-play' );
       } else if ( event.data === YT.PlayerState.PLAYING ) {
         $banner.find( 'b-video-banner2__cover' ).addClass( 'i-play' );
+      } else if ( event.data === YT.PlayerState.ENDED ) {
+        $banner.find( '.b-video-banner2__cover' ).removeClass( "i-play" ).show();
+        $banner.find( '.b-video-banner2__ill' ).addClass( 'i-show' );
       }
     };
   }

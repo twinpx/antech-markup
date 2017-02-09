@@ -1,0 +1,32 @@
+﻿extends ../../../layouts/main.jade
+
+block title
+  title Portfolio Detail | Antech
+
+block content
+  
+  .b-top-panel
+    .container
+      -var header = "Портфолио"
+      include ../../../modules/top-header/include
+      include ../../../modules/top-menu/include
+      
+  .container
+    include ../../../modules/breadcrumbs/portfolio
+    
+    hr
+    
+    h1.text-center Упаковка для центра «Как здорово»
+  
+  hr.i-size-S
+  
+  .container
+    
+    include ../../../components/portfolio.detail/template
+    
+    hr.i-size-L
+    hr.i-line.i-size-S
+    
+  section.b-request-form
+    .container
+      include ../../../components/request-form/template

@@ -4,10 +4,19 @@
   color #666666
   font-size 18pt
   overflow hidden
-  padding 82px 0 32px
+  padding-top 40%
+  position relative
+  line-height 28px
     
   @media ( max-width 767px )
     font-size 11pt
+    
+  .center
+    position absolute
+    top 0
+    left 0
+    width 243px
+    height 112px
 
   .text-large
     white-space nowrap
@@ -15,7 +24,7 @@
     font-weight 100
     color #42515e
     line-height normal
-    margin-bottom -14px
+    margin-bottom -12px
     
     @media ( max-width 767px )
       font-size 18pt
@@ -30,162 +39,75 @@
     text-align center
     font-weight 100
     
-//Animation
     
-@keyframes opacity-statistics
-  0%
-    opacity 1
-  30%
-    opacity 0
-  100%
-    opacity 1
-    
-#statistics-item1
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics1 34s infinite linear, opacity-statistics 15s infinite linear
-    
-@keyframes x-statistics1
-  0%
-    transform translateX( 0% )
-  50%
-    transform translateX( 300% )
-  90%
-    transform translateX( -100% )
-  100%
-    transform translateX( 0% )
-    
-#statistics-item2
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics2 28s infinite linear, opacity-statistics 32s infinite linear
-    
-@keyframes x-statistics2
-  0%
-    transform translateX( 0% )
-  40%
-    transform translateX( 150% )
-  80%
-    transform translateX( -300% )
-  100%
-    transform translateX( 0% )
+random(min,max)
+  return floor(math(0, 'random')*(max - min + 1) + min)
   
-#statistics-item3
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics3 34s infinite linear, opacity-statistics 45s infinite linear
-    
-@keyframes x-statistics3
-  0%
-    transform translateX( 0% )
-  20%
-    transform translateX( -50% )
-  80%
-    transform translateX( 400% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(1)
+  animation anim-1 20s infinite linear;
+  //transform: translate3d( 10%, 10%, 0);
+  margin 7% 0 0 20%
   
-#statistics-item4
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics4 24s infinite linear, opacity-statistics 15s infinite linear
-    
-@keyframes x-statistics4
-  0%
-    transform translateX( 0% )
-  30%
-    transform translateX( 150% )
-  90%
-    transform translateX( -300% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(2)
+  animation anim-2 22s infinite linear;
+  //transform: translate3d( 50%, 50%, 0);
+  margin 20% 0 0 10%
   
-#statistics-item5
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics5 27s infinite linear, opacity-statistics 25s infinite linear
-    
-@keyframes x-statistics5
-  0%
-    transform translateX( 0% )
-  30%
-    transform translateX( 200% )
-  70%
-    transform translateX( -200% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(3)
+  animation anim-3 21s infinite linear;
+  //transform: translate3d( 100%, 100%, 0);
+  margin 35% 0 0 30%
   
-#statistics-item6
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics6 28s infinite linear, opacity-statistics 59s infinite linear
-    
-@keyframes x-statistics6
-  0%
-    transform translateX( 0% )
-  40%
-    transform translateX( -400% )
-  90%
-    transform translateX( 50% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(4)
+  animation anim-4 22s infinite linear;
+  //transform: translate3d( 140%, 140%, 0);
+  margin 10% 0 0 80%
   
-#statistics-item7
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics7 35s infinite linear, opacity-statistics 15s infinite linear
-    
-@keyframes x-statistics7
-  0%
-    transform translateX( 0% )
-  20%
-    transform translateX( 400% )
-  60%
-    transform translateX( -100% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(5)
+  animation anim-5 20s infinite linear;
+  //transform: translate3d( 200%, 200%, 0);
+  margin 15% 0 0 50%
   
-#statistics-item8
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics8 29s infinite linear, opacity-statistics 40s infinite linear
-    
-@keyframes x-statistics8
-  0%
-    transform translateX( 0% )
-  40%
-    transform translateX( 400% )
-  90%
-    transform translateX( -50% )
-  100%
-    transform translateX( 0% )
-  
-#statistics-item9
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics9 32s infinite linear, opacity-statistics 27s infinite linear
-    
-@keyframes x-statistics9
-  0%
-    transform translateX( 0% )
-  30%
-    transform translateX( 50% )
-  70%
-    transform translateX( -500% )
-  100%
-    transform translateX( 0% )
-  
-#statistics-item10
-  transform translateX( 0 )
-  opacity 1
-  animation x-statistics10 30s infinite linear, opacity-statistics 55s infinite linear
-    
-@keyframes x-statistics10
-  0%
-    transform translateX( 0% )
-  10%
-    transform translateX( 20% )
-  55%
-    transform translateX( -400% )
-  100%
-    transform translateX( 0% )
+.i-float-blocks .center:nth-child(6)
+  animation anim-6 23s infinite linear;
+  //transform: translate3d( 260%, 260%, 0);
+  margin 30% 0 0 70%
+
+@keyframes anim-1 {
+  50% {margin: 40% 0 0 55%; opacity:(random(0,50)/100)%;}
+  60% {margin: 15% 0 0 87%;}
+  80% {margin: 0% 0 0 50%;}
+  100% {margin: 7% 0 0 20%;}
+}
+@keyframes anim-2 {
+  15% {margin: 10% 0 0 0%; opacity:(random(0,50)/100)%;}
+  50% {margin: 0% 0 0 60%;}
+  70% {margin: 30% 0 0 87%;}
+  100% {margin: 20% 0 0 10%;}
+}
+@keyframes anim-3 {
+  25% {margin: 25% 0 0 0%; opacity:(random(0,50)/100)%;}
+  60% {margin: 0% 0 0 20%;}
+  90% {margin: 40% 0 0 50%;}
+  100% {margin: 35% 0 0 30%;}
+}
+@keyframes anim-4 {
+  15% {margin: 30% 0 0 87%; opacity:(random(0,50)/100)%;}
+  25% {margin: 40% 0 0 70%;}
+  65% {margin: 0% 0 0 40%;}
+  80% {margin: 40% 0 0 60%;}
+  100% {margin: 10% 0 0 80%;}
+}
+@keyframes anim-5 {
+  22% {margin: 0% 0 0 70%; opacity:(random(0,50)/100)%;}
+  34% {margin: 20% 0 0 87%;}
+  55% {margin: 40% 0 0 25%;}
+  75% {margin: 15% 0 0 0%;}
+  100% {margin: 15% 0 0 50%;}
+}
+@keyframes anim-6 {
+  30% {margin: 0% 0 0 20%; opacity:(random(0,50)/100)%;}
+  55% {margin: 0% 0 0 55%;}
+  70% {margin: 40% 0 0 10%;}
+  100% {margin: 30% 0 0 70%;}
+}

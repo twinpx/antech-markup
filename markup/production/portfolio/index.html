@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Portfolio | Antech</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/template/jscript.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
+    <header class="b-header">
+      <div class="b-header-fixed">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-lg-3 col-md-4 col-sm-3 hidden-xs">
+              <div class="b-header__phone">8 800 555-55-70</div>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+              <div class="b-header__basket">
+                <!-- Modal-->
+                <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content text-middle">
+                      <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+                      <div class="modal-body center">
+                        <div class="b-modal-container">
+                          <div class="b-modal-signin">
+                            <div class="b-h2">Вход в аккаунт</div>
+                            <div class="text-danger center"></div>
+                            <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                <form action="" method="GET">
+                                  <div class="form-group">
+                                    <input type="text" value="" placeholder="Логин" required class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" value="" placeholder="Пароль" required class="form-control">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="">Запомнить
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
+                                  </div>
+                                  <div class="center b-form-buttom">
+                                    <button type="submit" class="btn btn-default btn-md">Войти</button>
+                                  </div>
+                                  <div><a href="">Регистрация</a></div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-modal-social i-hidden">
+                            <div class="row">
+                              <div class="col-xs-4">Livejournal</div>
+                              <div class="col-xs-4">Mail.Ru</div>
+                              <div class="col-xs-4">Liveinternet</div>
+                            </div>
+                            <hr class="i-size-XS">
+                            <div class="row">
+                              <div class="col-xs-4">Blogger</div>
+                              <div class="col-xs-4">OpenID</div>
+                            </div>
+                          </div>
+                          <div class="b-modal-user">
+                            <div class="b-signin-button">
+                              <div class="b-user-icon"></div>
+                              <div>Войти</div>
+                            </div>
+                            <hr class="i-size-S hidden-xs">
+                            <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
+                              руб
+                               <b>00</b> 
+                              коп
+                            </p>
+                            <hr class="i-size-S"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-size-S hidden-xs">
+                            <hr class="i-line i-size-L hidden-xs">
+                            <hr class="i-line i-size-M visible-xs-block">
+                            <nav class="row">
+                              <div class="col-xs-3"><a href=""><span class="b-cart-icon"></span>Корзина</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-order-icon"></span>Заказы</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-account-icon"></span>Учетная запись</a></div>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs"></span><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+                  <div class="count_in_cart">121</div></a>
+              </div>
+              <menu class="hidden-xs">
+                <li><a href="">Изготовление упаковки</a></li>
+                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
+            </div>
+          </div>
+        </div>
+        <div class="b-header-menu">
+          <div class="b-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+                <div class="col-sm-6">
+                  <div class="b-header__phone">
+                    8 800 555-55-70
+                     <span>(для звонков по РФ)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="b-header-menu__links">
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Изготовление коробок на заказ</a></h4>
+                  <ul>
+                    <li><a href="">Как заказать?</a></li>
+                    <li><a href="">Разработка упаковки</a></li>
+                    <li><a href="">Консультация и выезд эксперта</a></li>
+                    <li><a href="">3D-модель и пробный образец</a></li>
+                    <li><a href="">Сроки изготовления</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Примеры работ</a></li>
+                    <li><a href="">Типовые конструкции</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Магазин картонных коробок</a></h4>
+                  <ul>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" class="b-collapse-link">Картонные коробки<i></i></a>
+                      <ul id="headerMenuCollapse1" class="collapse">
+                        <li><a href="">Транспортные</a></li>
+                        <li><a href="">Для переезда</a></li>
+                        <li><a href="">Под пиццу</a></li>
+                        <li><a href="">Архивные</a></li>
+                        <li><a href="">Крупногабаритные</a></li>
+                        <li><a href="">Под одежду</a></li>
+                        <li><a href="">Почтовые коробки</a></li>
+                        <li><a href="">Маленькие</a></li>
+                        <li><a href="">Для цветов</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" class="b-collapse-link">Гофрокартон<i></i></a>
+                      <ul id="headerMenuCollapse2" class="collapse">
+                        <li><a href="">Гофронаполнитель</a></li>
+                        <li><a href="">Гофролисты</a></li>
+                        <li><a href="">Изделия из гофрокартона</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" class="b-collapse-link">Вспомогательная упаковка<i></i></a>
+                      <ul id="headerMenuCollapse3" class="collapse">
+                        <li><a href="">Упаковочные материалы</a></li>
+                        <li><a href="">Упаковочные инструменты</a></li>
+                        <li><a href="">Упаковочный наполнитель</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Где купить?</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Компания</a></h4>
+                  <ul>
+                    <li><a href="">Руководство</a></li>
+                    <li><a href="">Вакансии</a></li>
+                    <li><a href="">Документы</a></li>
+                    <li><a href="">Схема проезда</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Видео о компании</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Помощь</a></h4>
+                  <ul>
+                    <li><a href="">ГОСТ</a></li>
+                    <li><a href="">FEFCO</a></li>
+                    <li><a href="">Словарь</a></li>
+                    <li><a href="">Упаковочный обзор</a></li>
+                    <li><a href="">Правила приемки</a></li>
+                    <li><a href="">Методы испытания</a></li>
+                    <li><a href="">Видеоинструкции</a></li>
+                    <li><a href="">Задать вопрос роботу</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Корзина</a></h4>
+                  <ul>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">История заказов</a></li>
+                    <li><a href="">Учетная запись</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="b-top-panel">
+      <div class="container">
+        <div class="b-top-header">Портфолио</div>
+        <div class="b-top-menu hidden-xs"><a id="order-link" href="">Как заказать?</a> <a id="payment-link" href="">Оплата</a> <a id="warranty-link" href="">Гарантии</a> <a id="delivery-link" href="">Доставка</a></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="b-breadcrumbs"><a href="">Главная</a> <span class="b-breadcrumbs__sep">/</span> <a href="">Производство</a> <span class="b-breadcrumbs__sep">/</span> <span>Портфолио</span></div>
+      <hr>
+      <h1 class="text-center">Наши работы</h1>
+      <nav class="b-page-menu"><span>Все</span><a href="">Новые</a><a href="">С печатью</a><a href="">Сложной конструкции</a></nav>
+    </div>
+    <hr class="i-size-S">
+    <div class="container">
+      <!-- start /components/portfolio/-->
+      <link rel="stylesheet" href="/components/portfolio/style.css">
+      <script src="/components/portfolio/script.js"></script>
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+      <div class="b-portfolio">
+        <div class="b-portfolio__detail">
+          <div class="b-portfolio__body">
+            <div class="b-portfolio__pointer"></div>
+            <div class="b-portfolio__title">Упаковка для центра &laquo;Как Здорово&raquo;</div>
+            <div class="b-portfolio__ill">
+              <div data-ratio="3/2" data-width="100%" data-loop="true" class="fotorama"><img src="/upload/portfolio/1.jpg" alt=""><img src="/upload/portfolio/2.jpg" alt=""></div>
+            </div>
+            <div class="b-portfolio__button"><a href="detail/" class="btn btn-default">Подробнее</a></div>
+          </div>
+        </div>
+        <div class="b-portfolio__wrapper">
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковочная коробка для Estivale Champagne&quot;, &quot;button&quot;:&quot;detail/&quot;,&quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/18e/960_720_0/18e9b9eb56fd9db2efb630cc410f6094.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/ba9/960_720_0/ba9505821e28e66facdd70f38ad581a4.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/437/960_720_0/4376a0cebab64d9f3c5ed18a1b7a63c8.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/2a2/960_720_0/2a26d04fbb360a42fdaf3a82750ff9eb.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/1.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для термобелья PATAGONIA&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/948/960_720_0/94807c88440c74d6aa4f2b928b944989.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/81b/960_720_0/81b52024b43cceaa074a1f01558097a2.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/c4c/960_720_0/c4cbc71ff8a8b094aea3b53470673ecc.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/35c/960_720_0/35c3ff1acea08709280a9e5b78ab63cd.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/2.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Улыбчивая упаковка для чайного фарфора STAKK Ceramics&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/ffe/960_720_0/ffe361c69029ce2d5fc8e3f1bcfefc7c.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/867/960_720_0/867f49f205ed57891900bbf44334fbac.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cbb/960_720_0/cbb4770ef07df903be6bd3486fd7b859.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/3.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для четырех сортов меда wild honey&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/387/960_720_0/387d3b980bd4193da2a6b87b57558296.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/434/960_720_0/434aa7b553d6306b995a542a99be555b.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/e93/960_720_0/e93f3d77ef66f894f5f56bd30255e0dc.png&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/08b/960_720_0/08b7467f1f83323e7e038ee55cfc774f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cf6/960_720_0/cf62065f3609805ecd7fb6c2b4c01bd1.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/4.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Tiffin проект бренда и упаковки&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/0cf/960_720_0/0cfc23ca7175887079af270eb11d7437.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/0d4/960_720_0/0d4d78bc3a59d623620fa9f75389c2fd.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/947/960_720_0/94772c66f01faa9b15009d52c99d1f1f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/9cd/960_720_0/9cde40fa1f1976c215507e5b97d2dede.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7ef/960_720_0/7efa832f983de9d85b5fb2c6a71f54c2.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cd8/960_720_0/cd87d1b36859accac354e7787816d7ef.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/5.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для молочного стаута La Vache Folle&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/8b2/960_720_0/8b202069688c79dbe83e9861878b0e0a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/0b7/960_720_0/0b7906dc1c5dfdad308d53d2b3feaffc.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/399/960_720_0/39931427a62a1797f76cbd148a4b412f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/2b8/960_720_0/2b8a26bbff76507129132767d2a49894.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7e5/960_720_0/7e54426308b3169a2be34eef78a6852b.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/fd1/960_720_0/fd19ba8e58bd86933983b7dff59772f6.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/6.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для наушников Urbanears&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/8ac/960_720_0/8ac4beddecad0c0710087ac71c222558.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/32b/960_720_0/32b5ca537dc7a0135db4e5e1c302d58e.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/8a1/960_720_0/8a10627bbc232f8424de8f5b45270d04.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/8b3/960_720_0/8b39c691e5c1cfe12d237adc3ad86c5a.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/7.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для доставки сэндвичей GoAir&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/d52/960_720_0/d52b15f136e68d7bb518e9a7f1826a39.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/def/960_720_0/def86526a9969285bcc7af03a2c077e1.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/a33/960_720_0/a33866d5eee3f33b92a1edbca1cf25b8.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/8.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка для комплекта средств от простуды Get Well&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/614/960_720_0/614395b8c63513818d5e88b5f5a98ed6.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/82d/960_720_0/82d010060eae746acf020d84aa508a07.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/01b/960_720_0/01b1c851df06bcaef8ccfb87f7b1f5b9.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7c5/960_720_0/7c52cbf10e52ceb017a8e11cf8217e34.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/75f/960_720_0/75f2dacd709a14c1882554581515f94a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7b9/960_720_0/7b95000d4f88116a6f0e5bf9462b8de4.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/9.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Коробки для упаковки драгоценностей DARI JEWELLERY&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/343/960_720_0/34394f4e0294abfb154f8397d20cab5d.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/9bb/960_720_0/9bb0340863d257935878b9d55d388c1a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/222/960_720_0/222782c45eab80b8a0b556389b9ea254.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/242/960_720_0/24217d53fdc579417140e413169adfbe.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/904/960_720_0/9047e43464939744961b5d74c93ee194.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/597/960_720_0/597913235d98ef7fcd6b6c3a6cf3424e.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/10.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Упаковка как экологически безопасная скатерть-самобранка&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/e58/960_720_0/e58272d659a4da0cacee64730ce95c21.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/e73/960_720_0/e734a96692df7d7e323a29bf583bcb81.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/42e/960_720_0/42e2b23b189f28e4d4fbbf17d4bb9fd5.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/fee/960_720_0/feee9d2e37ac4de07a76889d77dfa732.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/11.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-gallery="{&quot;title&quot;: &quot;Ювелирная упаковка для изделий Welfe&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/46e/960_720_0/46e17378ffc6ce1457981020bbc7cb82.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/b45/960_720_0/b459aa72d437f82047e9262139e94239.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/100/960_720_0/1008335bcb9828917903a4ee62921a6d.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/41e/960_720_0/41ea3135c19bd2de3e062512c70e1e8c.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/a59/960_720_0/a59bafff6bbc3a52e98dbbd3a9627a12.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/564/960_720_0/564fbe80222f135285cec62e7f0156d4.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/25c/960_720_0/25c3de0a198d9a1e5d68531b4256d485.jpg&quot;]}" class="b-portfolio__item">
+            <div data-original="/upload/portfolio/12.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
+          </div>
+          <div data-page="2" data-ajax="/components/portfolio/load.html" class="b-portfolio__load">
+            <div>Показать ещё</div>
+          </div>
+        </div>
+      </div>
+      <!-- end /components/portfolio/-->
+    </div>
+    <section class="b-request-form">
+      <div class="container">
+        <!-- start /components/request-form/-->
+        <link rel="stylesheet" href="/components/request-form/style.css">
+        <script src="/components/request-form/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <div class="b-request-form__message b-h2 center"></div>
+        <div class="b-request-form__success center">
+          <div class="b-h2">Мы перезвоним вам<br>за <b>20</b> секунд!</div>
+          <hr>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__error center">
+          <p id="requestFormError">При отправлении формы возникла ошибка</p>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__form">
+          <h2 class="b-h1 center">Остались вопросы?</h2>
+          <form action="/json/call-me.json" method="GET">
+            <p class="text-large text-muted">Введите Ваш номер телефона и мы перезвоним Вам за <b>20 </b>секунд!</p>
+            <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
+              <select name="HOUR" class="select">
+                <option value="9">9</option>
+                <option value="10" selected="">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+              </select> 
+              :
+               
+              <select name="MINUTE" class="select">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+            </div>
+            <hr>
+            <div class="form-group">
+              <input name="phone" type="tel" value="+7(" required class="form-control">
+            </div>
+            <hr>
+            <div class="center">
+              <button type="submit" class="btn btn-default">Жду звонка!</button>
+            </div>
+          </form>
+        </div>
+        <div data-num="20" class="b-request-form__counter"></div>
+        <div class="b-request-form__feedback">
+          <h2>Был ли наш специалист полезен?</h2>
+          <hr class="i-size-S">
+          <form action="/json/call-me.json" method="GET">
+            <div class="form-group b-request-form__smiles">
+              <label>
+                <input type="radio" name="mark" value="1"><span></span>
+              </label>
+              <label>
+                <input type="radio" name="mark" value="2"><span></span>
+              </label>
+              <label>
+                <input type="radio" name="mark" value="3"><span></span>
+              </label>
+            </div>
+            <div class="form-group">
+              <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+            </div>
+            <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+          </form>
+        </div>
+        <div class="b-request-form__thankyou">
+          <h2>Благодарим за Вашу оценку</h2>
+        </div>
+        <div class="b-request-form__once-more">
+          <h2>Приносим свои извинения</h2>
+          <hr class="i-size-S">
+          <p>Возможно, произошел технический сбой.</p>
+          <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+          <hr class="i-size-S">
+          <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+        </div>
+        <div class="b-request-form__callback">
+          <div>
+            <h2>Ваша заявка принята!</h2>
+            <p class="text-large">
+              Мы перезвоним Вам в первый рабочий день в
+               <span id="requestHour"></span>:<span id="requestMinute"></span>
+            </p>
+          </div>
+        </div>
+        <!-- end /components/request-form/-->
+      </div>
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 b-footer__phone">
+            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a></div>
+          </div>
+        </div>
+        <nav><a href="">О компании</a> <a href="">Обзор упаковки</a> <a href="">Помощь</a> <a href="">Контакты</a> <a href="">Схема проезда</a> <a href="">Вакансии</a></nav>
+        <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
+      </div>
+    </footer>
+  </body>
+</html>

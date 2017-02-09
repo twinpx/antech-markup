@@ -7,7 +7,8 @@ block content
   
   .b-top-panel
     .container
-      include ../modules/breadcrumbs/include
+      -var header = "Портфолио"
+      include ../modules/top-header/include
       include ../modules/top-menu/include
   
   include ../modules/video-banner/include
@@ -46,7 +47,9 @@ block content
       hr.i-size-M
                   
       .center
-        a.btn.btn-default( href="" ) Воспользоваться
+        a.btn.btn-default( href="#" data-toggle="modal" data-target="#callMe" ) Воспользоваться
+        
+  include ../modules/call-me/include
         
   section
     .container
@@ -119,7 +122,7 @@ block content
               
               hr
           
-  section.i-gray
+  section#order-block.i-gray
     .container
       h2.b-h1.center Заказать на раз-два-три
       
@@ -128,7 +131,7 @@ block content
       include ../modules/menu-list/include5
                     
       .center
-        a.btn.btn-default( href="" ) Сделать заказ
+        a.btn.btn-default( href="#" data-toggle="modal" data-target="#callMe" ) Сделать заказ
         
   section
     .container
