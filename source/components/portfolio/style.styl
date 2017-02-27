@@ -1,4 +1,4 @@
-@import '../../styl/component-include.styl'
+﻿@import '../../styl/component-include.styl'
 
 .b-portfolio
   margin 0 -8px
@@ -116,7 +116,9 @@
     padding 36px 4px 0
     clear both
     
-    div
+    i,
+    b
+      display block
       border 1px solid #d8d8d8
       border-radius 5px
       width 99.9%
@@ -126,15 +128,25 @@
       font-size 12pt
       cursor pointer
       text-align center
+      font-style normal
+      font-weight 100
     
       &:hover
-        background-color #ffcc00
-        border-color #ffcc00
+        background-color #eceaec
+        border-color #eceaec
         
-    &.i-preloader div
-      background-color #f6f6f6
-      border-color #f6f6f6
-      color #d0d0d0
+    b
+      display none
+        
+    &.i-preloader
+    
+      i
+        display none
+        
+      b
+        display block
+        background-color #f4f6f4
+        border-color #f4f6f4
     
 //fotorama
 .fotorama__nav-wrap
