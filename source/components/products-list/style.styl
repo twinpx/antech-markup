@@ -4,7 +4,8 @@
   font-size 14pt
   
   p
-    margin 6px 0
+    margin 0
+    line-height 38px
     
   .btn
     margin-top 12px
@@ -14,7 +15,6 @@
   
   .nav-tabs
     border-bottom 0
-    margin-bottom 30px
   
   &__nav
     text-align center
@@ -31,6 +31,8 @@
       .btn-default
         font-size 14pt
         font-weight 200
+        min-width 238px
+        padding 0 45px
         
         @media (max-width: 991px) and (min-width: 768px)
           font-size 12pt
@@ -53,58 +55,44 @@
             line-height 19px
             vertical-align middle
           
-  .fotorama
-    padding-top 50px
+  &__item
+    padding 0 22px 25px
     
-  .fotorama__nav,
-  .fotorama__stage
-    overflow visible
+    img
+      margin-bottom 10px
     
-  .fotorama__nav-wrap
-    display none
+  &__load
+    padding 36px 4px 0
+    clear both
     
-  .fotorama__wrap--css3 .fotorama__arr
-    top -50px
-    margin 0
-    transition none
-    background #e5e5e5
-    border-radius 42px
-    width 42px
-    height 42px
-    text-align center
+    i,
+    b
+      display block
+      border 1px solid #d8d8d8
+      border-radius 5px
+      width 99.9%
+      min-height 55px
+      line-height 55px
+      padding 0 20px
+      font-size 12pt
+      cursor pointer
+      text-align center
+      font-style normal
+      font-weight 100
     
-  .fotorama__wrap--css3 .fotorama__arr.fotorama__arr--prev
-    left 50%
-    margin-left -56px
+      &:hover
+        background-color #eceaec
+        border-color #eceaec
+        
+    b
+      display none
+        
+    &.i-preloader
     
-    &:before
-      content ' '
-      display inline-block
-      vertical-align top
-      width 6px
-      height 6px
-      transform: rotate(45deg)
-      border-bottom 1px solid #a0a0a0
-      border-left 1px solid #a0a0a0
-      margin-top 17px
-    
-  .fotorama__wrap--css3 .fotorama__arr.fotorama__arr--next
-    left 50%
-    margin-left 14px
-    
-    &:before
-      content ' '
-      display inline-block
-      vertical-align top
-      width 6px
-      height 6px
-      transform: rotate(45deg)
-      border-top 1px solid #a0a0a0
-      border-right 1px solid #a0a0a0
-      margin-top 17px
-      
-  .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr
-    opacity 1
-    
-  .fotorama__arr--disabled
-    opacity( 0.5 !important)
+      i
+        display none
+        
+      b
+        display block
+        background-color #f4f6f4
+        border-color #f4f6f4
