@@ -1,23 +1,24 @@
-﻿- var i=0
-  while i < 2
-    - i++
-    
-    .row
-    
-      - var j=0
-      while j < 3
-        - j++
-        .col-sm-4
-          .b-products-list__item.center( style="background-color: pink;" )
-          
-            a( href="" )
-              img( src="/upload/products/#{j}.jpg" alt="" data-big-image="/upload/products/2.jpg" ).img-responsive.center-block
+﻿.b-products-list__wrapper
+  - var i=0
+    while i < 2
+      - i++
+      
+      .row
+      
+        - var j=0
+        while j < 3
+          - j++
+          .col-sm-4
+            .b-products-list__item.center
             
-            p.b-size 1000 x 500 x 500
-            p от 
-              b.b-price 46,91
-              | руб
-            p
-              a.btn.btn-default.btn-sm.btn-disabled( href="" ) В корзине
+              a( href="" )
+                img( src="/upload/products/#{j}.jpg" alt="" data-big-image="/upload/products/2.jpg" ).img-responsive.center-block
               
-    hr
+              p.b-size 1000 x 500 x 500
+              p от 
+                b.b-price 46,91
+                | руб
+              p
+                a.btn.btn-default.btn-sm.btn-disabled( href="" ) В корзине
+                
+      hr
