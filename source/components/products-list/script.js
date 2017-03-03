@@ -24,7 +24,9 @@
               $( '#cartModalPrice' ).text( data.DATA.TOTAL_PRICE );
               $( '#cartModalNoProducts' ).hide();
               $( '#cartModalHasProducts' ).text( store(data.DATA.COUNT) + ' \u043D\u0430 \u0441\u0443\u043C\u043C\u0443' );
-              $( '.count_in_cart' ).text( data.DATA.COUNT );
+              $( '.count_in_cart' ).show().text( data.DATA.COUNT );
+            } else {
+              $( '.count_in_cart' ).hide().text( data.DATA.COUNT );
             }
           } else if ( data.STATUS === 'E' ) {
             $button.removeClass( 'btn-disabled' ).text( '\u0412 \u043A\u043E\u0440\u0437\u0438\u043D\u0443' );
@@ -46,6 +48,10 @@
       else if (/[2-4]$/.test(num)) {return '\u0442\u043E\u0432\u0430\u0440\u0430';}
       else {return '\u0442\u043E\u0432\u0430\u0440\u043E\u0432';}
     }
+    
+    $( '.b-products-list__image' ).lazyload({
+      effect : "fadeIn"
+    });
     
     $( '.b-products-list' ).each( function() {
       var $list = $( this ),
@@ -73,10 +79,11 @@
             
             if ( $tab.hasClass( 'active' )) {
               $wrapper.find( 'section:last' ).slideDown();
-              /*.find( '.b-products-list__item div' ).lazyload({
-                effect : "fadeIn"
-              });*/
             }
+            
+            $wrapper.find( '.b-products-list__image' ).lazyload({
+              effect : "fadeIn"
+            });
               
             $load.remove();
             

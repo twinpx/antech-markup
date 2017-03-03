@@ -76,7 +76,7 @@ $('.b-video-banner .fotorama').on('fotorama:ready', function (e, fotorama) {
     } else if( window.matchMedia("(max-width: 1024px)").matches ) {
       fotorama.resize({height: 679});
     } else {
-      fotorama.resize({height: 735});
+      fotorama.resize({height: 614});
     }
   }
 

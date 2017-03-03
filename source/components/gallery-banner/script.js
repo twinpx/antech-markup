@@ -48,7 +48,7 @@
         });
       } else if ( window.matchMedia( "(min-width: 768px)" ).matches ) {
         fotorama.resize({
-          height: 735
+          height: 614
         });
       }
       
@@ -59,7 +59,7 @@
           });
         } else if ( window.matchMedia( "(min-width: 768px)" ).matches ) {
           fotorama.resize({
-            height: 735
+            height: 614
           });
         }
       });

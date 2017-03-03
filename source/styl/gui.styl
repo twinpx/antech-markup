@@ -193,18 +193,23 @@ h4,
     
   &-menu
     background-color #fff
-    border 1px solid #9c9c9c
+    border 1px solid #d8d8d9
   
-    &:not(.active):hover
-      background-color lighten( #000, 95% )
+    &:not(.active)
+    
+      &:active,
+      &:hover
+        background-color lighten( #000, 95% )
+        border-color #d8d8d9
+        box-shadow none
     
     &.active
       &,
       &:hover,
+      &:active,
       &:focus
-        background-color #42515e
-        border-color #42515e
-        color #fff
+        background-color #d8d8d9
+        border-color #d8d8d9
         outline none
         box-shadow none
   
