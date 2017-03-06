@@ -116,8 +116,10 @@
               fotoramaObj.destroy();
             }
             
-            for ( i = 0; i < galleryObj.images.length; i++ ) {
-              imgHtml += '<img src="' + galleryObj.images[i] + '" alt=""> ';
+            if ( galleryObj.images ) {
+              for ( i = 0; i < galleryObj.images.length; i++ ) {
+                imgHtml += '<img src="' + galleryObj.images[i] + '" alt=""> ';
+              }
             }
             
             $fotorama
