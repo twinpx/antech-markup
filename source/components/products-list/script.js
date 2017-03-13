@@ -77,9 +77,7 @@
           success: function( data ) {
             $wrapper.append( data );
             
-            if ( $tab.hasClass( 'active' )) {
-              $wrapper.find( 'section:last' ).slideDown();
-            }
+            $wrapper.find( 'section:last' ).slideDown();
             
             $wrapper.find( '.b-products-list__image' ).lazyload({
               effect : "fadeIn"
