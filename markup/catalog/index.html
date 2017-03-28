@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Catalog | antech</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/template/jscript.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
+    <header class="b-header">
+      <div class="b-header-fixed">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
+              <div class="b-header__phone">8 800 555-55-70</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
+              <div class="b-header__basket">
+                <!-- Modal-->
+                <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content text-middle">
+                      <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+                      <div class="modal-body center">
+                        <div class="b-modal-container">
+                          <div class="b-modal-signin">
+                            <div class="b-h2">Вход в аккаунт</div>
+                            <div class="text-danger center"></div>
+                            <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                <form action="" method="GET">
+                                  <div class="form-group">
+                                    <input type="text" value="" placeholder="Логин" required class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" value="" placeholder="Пароль" required class="form-control">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" value="">Запомнить
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
+                                  </div>
+                                  <div class="center b-form-buttom">
+                                    <button type="submit" class="btn btn-default btn-md">Войти</button>
+                                  </div>
+                                  <div><a href="">Регистрация</a></div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-modal-social i-hidden">
+                            <div class="row">
+                              <div class="col-xs-4">Livejournal</div>
+                              <div class="col-xs-4">Mail.Ru</div>
+                              <div class="col-xs-4">Liveinternet</div>
+                            </div>
+                            <hr class="i-size-XS">
+                            <div class="row">
+                              <div class="col-xs-4">Blogger</div>
+                              <div class="col-xs-4">OpenID</div>
+                            </div>
+                          </div>
+                          <div class="b-modal-user">
+                            <div class="b-signin-button">
+                              <div class="b-user-icon"></div>
+                              <div>Войти</div>
+                            </div>
+                            <hr class="i-size-S hidden-xs">
+                            <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
+                              руб
+                               <b>00</b> 
+                              коп
+                            </p>
+                            <hr class="i-size-S"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                            <hr class="i-size-S hidden-xs">
+                            <hr class="i-line i-size-L hidden-xs">
+                            <hr class="i-line i-size-M visible-xs-block">
+                            <nav class="row">
+                              <div class="col-xs-3"><a href=""><span class="b-cart-icon"></span>Корзина</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-order-icon"></span>Заказы</a></div>
+                              <div class="col-xs-3"><a href=""><span class="b-account-icon"></span>Учетная запись</a></div>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs"></span><a data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+                  <div class="count_in_cart">121</div></a>
+              </div>
+              <menu class="hidden-xs">
+                <li><a href="">Изготовление упаковки</a></li>
+                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
+            </div>
+          </div>
+        </div>
+        <div class="b-header-menu">
+          <div class="b-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+                <div class="col-sm-6">
+                  <div class="b-header__phone">
+                    8 800 555-55-70
+                     <span>(для звонков по РФ)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="b-header-menu__links">
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Изготовление коробок на заказ</a></h4>
+                  <ul>
+                    <li><a href="">Как заказать?</a></li>
+                    <li><a href="">Разработка упаковки</a></li>
+                    <li><a href="">Консультация и выезд эксперта</a></li>
+                    <li><a href="">3D-модель и пробный образец</a></li>
+                    <li><a href="">Сроки изготовления</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Примеры работ</a></li>
+                    <li><a href="">Типовые конструкции</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Магазин картонных коробок</a></h4>
+                  <ul>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" class="b-collapse-link">Картонные коробки<i></i></a>
+                      <ul id="headerMenuCollapse1" class="collapse">
+                        <li><a href="">Транспортные</a></li>
+                        <li><a href="">Для переезда</a></li>
+                        <li><a href="">Под пиццу</a></li>
+                        <li><a href="">Архивные</a></li>
+                        <li><a href="">Крупногабаритные</a></li>
+                        <li><a href="">Под одежду</a></li>
+                        <li><a href="">Почтовые коробки</a></li>
+                        <li><a href="">Маленькие</a></li>
+                        <li><a href="">Для цветов</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" class="b-collapse-link">Гофрокартон<i></i></a>
+                      <ul id="headerMenuCollapse2" class="collapse">
+                        <li><a href="">Гофронаполнитель</a></li>
+                        <li><a href="">Гофролисты</a></li>
+                        <li><a href="">Изделия из гофрокартона</a></li>
+                      </ul>
+                    </li>
+                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" class="b-collapse-link">Вспомогательная упаковка<i></i></a>
+                      <ul id="headerMenuCollapse3" class="collapse">
+                        <li><a href="">Упаковочные материалы</a></li>
+                        <li><a href="">Упаковочные инструменты</a></li>
+                        <li><a href="">Упаковочный наполнитель</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Где купить?</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Гарантии</a></li>
+                    <li><a href="">Оплата</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Компания</a></h4>
+                  <ul>
+                    <li><a href="">Руководство</a></li>
+                    <li><a href="">Вакансии</a></li>
+                    <li><a href="">Документы</a></li>
+                    <li><a href="">Схема проезда</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Видео о компании</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4><a href="">Помощь</a></h4>
+                  <ul>
+                    <li><a href="">ГОСТ</a></li>
+                    <li><a href="">FEFCO</a></li>
+                    <li><a href="">Словарь</a></li>
+                    <li><a href="">Упаковочный обзор</a></li>
+                    <li><a href="">Правила приемки</a></li>
+                    <li><a href="">Методы испытания</a></li>
+                    <li><a href="">Видеоинструкции</a></li>
+                    <li><a href="">Задать вопрос роботу</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <h4><a href="">Корзина</a></h4>
+                  <ul>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">История заказов</a></li>
+                    <li><a href="">Учетная запись</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="b-top-panel">
+      <div class="container">
+        <div class="b-top-header">Картонные коробки</div>
+        <div class="b-top-menu"><a href="">Четырехклапанные</a> <a href="">Самосборные коробки</a> <a href="">Архивные коробки</a> <a href="">Гофрокартон</a> <a href="">Упаковочные материалы</a> <a href="">Упаковочное оборудование</a><span style="background-image: url(/template/images/svg/sandwich-menu.svg);" class="b-top-menu__icon"></span></div>
+        <div class="b-top-submenu"><a href="">Четырехклапанные</a> <a href="">Самосборные коробки</a> <a href="">Архивные коробки</a> <a href="">Гофрокартон</a> <a href="">Упаковочные материалы</a> <a href="">Упаковочное оборудование</a></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="b-breadcrumbs"><a href="">Главная</a> <span class="b-breadcrumbs__sep">/</span> <span>Картонные коробки</span></div>
+        </div>
+        <div class="col-sm-6 text-right b-price-list">
+          <!-- Warning! Лёша, обрати, пожалуйста, внимание, тут должно вызываться модальное окно с функционалом на сервере, как на antech.ru--><a href="#">Получить прайс-лист</a>
+        </div>
+      </div>
+      <hr>
+      <h1 class="text-center">Картонные коробки</h1>
+    </div>
+    <div class="container">
+      <!-- start /components/catalog-masonry/-->
+      <link rel="stylesheet" href="/components/catalog-masonry/style.css">
+      <script src="/components/catalog-masonry/script.js"></script>
+      <div class="b-catalog-masonry">
+        <div class="row">
+          <div style="background-image: url( /upload/catalog-masonry/1.png ); background-color: #ffff70;" class="col-sm-6">
+            <div class="b-catalog-masonry__title">Четырехклапанные коробки</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/2.png ); background-color: #afe17f;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Самосборные коробки</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/3.png ); background-color: #98ddd3;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Архивные коробки</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/4.png ); background-color: #ffac70;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Гофрокартон</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/5.png ); background-color: #ffabab;" class="col-sm-6">
+            <div class="b-catalog-masonry__title">Упаковочные материалы</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/6.png ); background-color: #969bcf;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Упаковочные инструменты</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/7.png ); background-color: #98ddd3;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Коробки с печатью</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/8.png ); background-color: #ffff70;" class="col-md-3 col-sm-6">
+            <div class="b-catalog-masonry__title">Крупногабаритные коробки</div>
+          </div>
+          <div style="background-image: url( /upload/catalog-masonry/9.png ); background-color: #afe17f;" class="col-sm-6">
+            <div class="b-catalog-masonry__title">Маленькие коробки</div>
+          </div>
+        </div>
+        <div class="row b-catalog-masonry__sales">
+          <div class="col-sm-12">Распродажа</div>
+        </div>
+      </div>
+      <!-- end /components/catalog-masonry/-->
+      <div class="row b-menu-list">
+        <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-6"></span></span>
+          <p><b>Доставка</b></p>
+          <p class="text-muted text-middle">Удобная доставка по Москве<br>и Московской области</p>
+        </div>
+        <hr class="visible-xs-block">
+        <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-4"></span></span>
+          <p><b>Оплата</b></p>
+          <p class="text-muted text-middle">Оплата наличными при<br>получение или по счету.</p>
+        </div>
+        <hr class="visible-xs-block">
+        <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-7"></span></span>
+          <p><b>Возврат</b></p>
+          <p class="text-muted text-middle">Возврат осуществляется в течение 14 дней с момента покупки.</p>
+        </div>
+      </div>
+    </div>
+    <hr class="i-size-L">
+    <section class="b-request-form i-gradient">
+      <div class="container">
+        <!-- start /components/request-form/-->
+        <link rel="stylesheet" href="/components/request-form/style.css">
+        <script src="/components/request-form/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <div class="b-request-form__message b-h2 center"></div>
+        <div class="b-request-form__success center">
+          <div class="b-h2">Мы перезвоним вам<br>за <b>20</b> секунд!</div>
+          <hr>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__error center">
+          <p id="requestFormError">При отправлении формы возникла ошибка</p>
+          <button class="btn btn-default">Отправить снова</button>
+        </div>
+        <div class="b-request-form__form">
+          <h2 class="b-h1 center">Остались вопросы?</h2>
+          <form action="/json/call-me.json" method="GET">
+            <p class="text-large text-muted">Введите Ваш номер телефона и мы перезвоним Вам за <b>20 </b>секунд!</p>
+            <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
+              <select name="HOUR" class="select">
+                <option value="9">9</option>
+                <option value="10" selected="">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+              </select> 
+              :
+               
+              <select name="MINUTE" class="select">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+            </div>
+            <hr>
+            <div class="form-group">
+              <input name="phone" type="tel" value="+7(" required class="form-control">
+            </div>
+            <hr>
+            <div class="center">
+              <button type="submit" class="btn btn-default">Жду звонка!</button>
+            </div>
+          </form>
+        </div>
+        <div data-num="20" class="b-request-form__counter"></div>
+        <div class="b-request-form__feedback">
+          <h2>Был ли наш специалист полезен?</h2>
+          <hr class="i-size-S">
+          <form action="/json/call-me.json" method="GET">
+            <div class="form-group b-request-form__smiles">
+              <label>
+                <input type="radio" name="mark" value="1"><span></span>
+              </label>
+              <label>
+                <input type="radio" name="mark" value="2"><span></span>
+              </label>
+              <label>
+                <input type="radio" name="mark" value="3"><span></span>
+              </label>
+            </div>
+            <div class="form-group">
+              <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+            </div>
+            <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+          </form>
+        </div>
+        <div class="b-request-form__thankyou">
+          <h2>Благодарим за Вашу оценку</h2>
+        </div>
+        <div class="b-request-form__once-more">
+          <h2>Приносим свои извинения</h2>
+          <hr class="i-size-S">
+          <p>Возможно, произошел технический сбой.</p>
+          <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+          <hr class="i-size-S">
+          <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+        </div>
+        <div class="b-request-form__callback">
+          <div>
+            <h2>Ваша заявка принята!</h2>
+            <p class="text-large">
+              Мы перезвоним Вам в первый рабочий день в
+               <span id="requestHour"></span>:<span id="requestMinute"></span>
+            </p>
+          </div>
+        </div>
+        <!-- end /components/request-form/-->
+      </div>
+    </section>
+    <section class="i-gray i-stext">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Антэк. Изготовление картонных коробок</b></h4>
+            <p>Специалисты нашей компании разрабатывают и изготавливают упаковку из картона более 15 лет. Колоссальный опыт в этой сфере позволяет нам выполнять любые заказы на производство картонных упаковок независимо от сложности конструкции и объема работ.</p>
+            <p>Принцип бережливого производства позволяет не расходовать материал впустую! При этом производственный процесс автоматизирован, а качество продукции проверяется на всех этапах изготовления – от выбора картона до выхода товара в тираж. Благодаря этому наши клиенты получают качественную продукцию точно в срок.</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+            <h4><b> Антэк. Новые возможности</b></h4>
+            <p>Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!</p>
+          </div>
+          <div class="col-sm-6">
+            <h4><b> Антэк. Ценность предложения</b></h4>
+            <p>Вы можете заказать изготовление упаковочных коробок «под ключ» – от разработки макета до серийного производства и печати бренда на упаковке. Мы разрабатываем и изготавливаем на заказ коробки любых размеров и форм-факторов.</p>
+            <p>Наши специалисты помогут создать удобную упаковку оптимальной конструкции, отвечающей необходимым параметрам (форма, размер, вес, ценность) и требованиям бережного хранения и транспортировки.</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+            <h4><b> Антэк. Покоряем вершины вместе</b></h4>
+            <p>Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.</p>
+            <p>Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 b-footer__phone">
+            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a></div>
+          </div>
+        </div>
+        <nav><a href="">О компании</a> <a href="">Обзор упаковки</a> <a href="">Помощь</a> <a href="">Контакты</a> <a href="">Схема проезда</a> <a href="">Вакансии</a></nav>
+        <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
+      </div>
+    </footer>
+  </body>
+</html>

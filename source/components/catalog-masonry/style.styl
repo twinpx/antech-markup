@@ -1,0 +1,42 @@
+@import '../../styl/component-include.styl'
+
+.b-catalog-masonry
+
+  .col-md-12
+    width 100% !important
+
+  .col-md-9
+    width 75% !important
+
+  .col-md-6
+    width 50% !important
+    
+  .row
+    margin 0
+    
+  &__title
+    font-size 18pt
+    font-weight 400
+    padding 39px 25px
+    text-align right
+    line-height 29px
+    
+  [class*='col-']
+    height 330px
+    background-repeat no-repeat
+    background-position center bottom
+    
+  &__sales
+    background-color #000
+    color #fff
+    font-size 52pt
+    font-weight bold
+    text-align center
+    text-transform uppercase
+    line-height 161px
+    
+    .col-sm-12
+      height 161px
+    
+    @media ( max-width 767px )
+      font-size 36pt
