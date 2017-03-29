@@ -88,6 +88,10 @@ hr.i-line
   background-size contain
   padding 70px 0
   
+hr.i-line-simple
+  height 1px
+  background embedurl( 'img/hr-bg.gif' ) repeat-x center center
+  
 h1,
 .b-h1
   font-size 38pt
@@ -189,7 +193,7 @@ h4,
     padding 0 30px
     font-size 14pt
     border-radius 28px
-    line-height 56px
+    line-height 48px
     
   &-menu
     background-color #fff
@@ -212,6 +216,12 @@ h4,
         border-color #d8d8d9
         outline none
         box-shadow none
+        
+  &-cart
+    padding-left 69px
+    background-image embedurl( 'img/btn-cart.png' ) !important
+    background-repeat no-repeat
+    background-position 25px center
   
 section
   padding 80px 0
@@ -345,3 +355,15 @@ blockquote
     display table
     content ''
     clear both
+    
+.b-fav-icon
+  display inline-block
+  width 31px
+  height 24px
+  background embedurl( 'img/fav-icon.gif' ) no-repeat 0 0
+    
+.b-compare-icon
+  display inline-block
+  width 25px
+  height 22px
+  background embedurl( 'img/compare-icon.gif' ) no-repeat 0 0

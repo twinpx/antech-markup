@@ -1,0 +1,43 @@
+@import '../../styl/component-include.styl'
+
+.b-catalog-card
+  background #fff
+  transition( all 0.5s ease )
+  margin-bottom 18px
+  
+  &:hover
+    box-shadow 0 0 35px rgba( 0,0,0,0.1 )
+    
+  &__image
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+    padding-top 100%
+    
+  &__text
+    padding 23px 30px 30px
+    
+  &__title
+    margin-bottom 7px
+    text-overflow ellipsis
+    overflow hidden
+    
+    a
+      white-space nowrap
+    
+      &,
+      &:hover,
+      &:focus,
+      &:active
+        color #319ed6
+        
+  .b-compare-icon
+    margin 13px 0 0 20px
+    float right
+    
+  .b-fav-icon
+    float right
+    margin-top 12px
+    
+  hr
+    margin-top -16px !important
