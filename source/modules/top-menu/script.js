@@ -1,27 +1,45 @@
-$( '#order-link' ).click( function(e) {
+var $menu = $( '.b-top-menu' );
+var $submenu = $( '.b-top-submenu' );
+var $container = $menu.parent();
+var $header = $( '.b-top-header' );
+
+var menuHTML = $menu.html();
+
+$menu.delegate( '#order-link', 'click', function(e) {
   e.preventDefault();
   $.scrollTo( $('#order-block').offset().top - 120, 500 );
-});
-
-$( '#payment-link' ).click( function(e) {
+  
+}).delegate( '#payment-link', 'click', function(e) {
   e.preventDefault();
   $.scrollTo( $('#payment-block').offset().top - 120, 500 );
   $('#payment-block .accordion-toggle').click();
-});
-
-$( '#warranty-link' ).click( function(e) {
+  
+}).delegate( '#warranty-link', 'click', function(e) {
   e.preventDefault();
   $.scrollTo( $('#warranty-block').offset().top - 120, 500 );
   $('#warranty-block .accordion-toggle').click();
-});
-
-$( '#delivery-link' ).click( function(e) {
+  
+}).delegate( '#delivery-link', 'click', function(e) {
   e.preventDefault();
   $.scrollTo( $('#delivery-block').offset().top - 120, 500 );
   $('#delivery-block .accordion-toggle').click();
-});
-
-$( '.b-top-menu__icon' ).click( function(e) {
+  
+}).delegate( '.b-top-menu__icon', 'click', function(e) {
   $( '.b-top-submenu' ).slideToggle();
   e.preventDefault();
 });
+
+moveA();
+
+$( window ).resize( function() {
+  moveA();
+});
+
+function moveA() {
+  $menu.html( menuHTML );
+  $submenu.empty();
+  while ( ($container.width() - $header.width() - $menu.width()) < 0 ) {
+    $menu.find( 'a:last' ).prependTo( $submenu );
+    $submenu.prepend( ' ' );
+  }
+}
