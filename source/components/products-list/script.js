@@ -28,6 +28,8 @@
             } else {
               $( '.count_in_cart' ).hide().text( data.DATA.COUNT );
             }
+            //push id into the array and on the catalog.section page too
+            window.productsInCartIDArray.push( 'id' );
           } else if ( data.STATUS === 'E' ) {
             $button.removeClass( 'btn-disabled' ).text( '\u0412 \u043A\u043E\u0440\u0437\u0438\u043D\u0443' );
           }
@@ -82,6 +84,11 @@
             $wrapper.find( '.b-products-list__image' ).lazyload({
               effect : "fadeIn"
             });
+              
+            for ( var j = 0; j < window.productsInCartIDArray.length; j++ ) {
+              $( '#add_in_cart_' + window.productsInCartIDArray[j] ).hide();
+              $( '#added_in_cart_' + window.productsInCartIDArray[j] ).show();
+            }
               
             $load.remove();
             

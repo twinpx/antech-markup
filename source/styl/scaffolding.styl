@@ -19,7 +19,7 @@
   &-fixed
     position fixed
     width 100%
-    z-index 1050
+    z-index 996
     background-color rgba( 242, 242, 242, 0.85 )
   
   &__menu
@@ -57,9 +57,10 @@
     line-height 90px
     margin-right 23px
     
+    @media (max-width: 1199px)
+      margin-right 12px
+    
     @media (max-width: 991px) and (min-width: 768px)
-      width 15px
-      height 15px
       margin-right 16px
   
   &__logo
@@ -67,16 +68,14 @@
     vertical-align top
     line-height 90px
     
-    .hidden-xs
-      transition( all 0.3s linear )
-      
-      &:hover
-        transform( scale(1.1))
+    img.hidden-xs
+      width 219px
+      height 70px
     
     @media (max-width: 991px) and (min-width: 768px)
       img.hidden-xs
-        width 137px
-        height 60px
+        width 170px
+        height 55px
         
     @media (max-width: 767px)
       display block
@@ -92,7 +91,6 @@
     line-height 86px
     margin-top 4px
     color #000
-    padding-left 40px
     
     @media (max-width: 1199px) and (min-width: 768px)
       padding-left 0
@@ -110,8 +108,8 @@
       text-transform uppercase
       margin-right 20px
       
-      @media (max-width: 1200px)
-        margin-right 15px
+      @media (max-width: 1199px)
+        margin-right 11px
     
     @media (max-width: 1199px) and (min-width: 768px)
       
@@ -603,6 +601,7 @@
 .b-footer
   padding 34px 0
   font-weight 300
+  border-top 1px solid #f2f2f2
   
   a
     color #6e95b5
@@ -701,3 +700,6 @@
   @media ( max-width 767px )
     text-align center
     color #aaa
+    
+.modal-backdrop
+  z-index 994

@@ -4,11 +4,14 @@ link( rel="stylesheet", href="/components/catalog.section/style.css" )
 script( src="/components/catalog.section/script.js" )
 
 .b-catalog-section
-  
-  .b-catalog-section-ill
-      
+
+  .b-catalog-section__breadcrumbs
     .container
       include ../../modules/breadcrumbs/catalog 
+  
+  .b-catalog-section-ill( style="background: #ecc7ff;" )
+      
+    .container
       img( src="/upload/catalog-section-ill.jpg" )
       .b-h1.text-center Без скотча. Без клея. Без проблем.
   
@@ -27,23 +30,18 @@ script( src="/components/catalog.section/script.js" )
         
   section.i-gray
     .container
-      .row
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
-          
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
-          
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
-          
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
-          
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
-          
-        .col-md-4.col-sm-6
-          include ../../modules/catalog-card/include
+      .row.b-catalog-section-items
+        // важно выводить количество блоков кратное 6. Тогда на планшете и десктопе блоки выстраиваются в ряды без пробелов.
+        
+        .b-catalog-section__wrapper
+          - var i=0
+            while i < 6
+              - i++
+              .col-md-4.col-sm-6
+                include ../../modules/catalog-card/include
+                                  
+          .b-catalog-section__load( data-page="2" data-ajax="/components/catalog.section/load.html")
+            i Показать ещё
+            b Загрузка
 
 // end /components/catalog.section/

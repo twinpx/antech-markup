@@ -99,6 +99,9 @@ h1,
   margin-top 0
   margin-bottom 57px
   
+  @media( max-width 767px )
+    font-size 24pt
+    
 h2.b-h1
   margin-bottom 34px
   
@@ -110,6 +113,11 @@ h2,
 h4,
 .b-h4
   font-size 18pt
+  
+h5,
+.b-h5
+  font-size 14pt
+  font-weight bold
   
 .inner-container
   margin 0 auto
@@ -139,7 +147,7 @@ h4,
   text-align center
   
 .text-muted
-  color #999999
+  color #666666
   
 .clearfix
   clear both
@@ -218,10 +226,28 @@ h4,
         box-shadow none
         
   &-cart
-    padding-left 69px
-    background-image embedurl( 'img/btn-cart.png' ) !important
-    background-repeat no-repeat
-    background-position 25px center
+    padding-left 24px
+    
+    &:before
+      content ''
+      display inline-block
+      vertical-align middle
+      width 26px
+      height 26px
+      background embedurl( 'img/btn-cart.svg' ) no-repeat center !important
+      background-size cover
+      margin-right 15px
+      
+    
+  &-reset
+    
+    &,
+    &:hover,
+    &:active,
+    &:focus
+      box-shadow none
+      background none
+      color #ce312d
   
 section
   padding 80px 0
@@ -355,15 +381,41 @@ blockquote
     display table
     content ''
     clear both
+  
+.b-simple-nav
+  
+  .nav-tabs
+    border-bottom none
     
-.b-fav-icon
-  display inline-block
-  width 31px
-  height 24px
-  background embedurl( 'img/fav-icon.gif' ) no-repeat 0 0
-    
-.b-compare-icon
-  display inline-block
-  width 25px
-  height 22px
-  background embedurl( 'img/compare-icon.gif' ) no-repeat 0 0
+    > li
+      float none
+      display inline-block
+      margin 0 14px
+      
+      @media( max-width 767px )
+        display block
+        margin-bottom 10px
+
+      > a
+        margin-right 0
+        line-height normal
+        border none
+        border-bottom 1px solid transparent
+        border-radius 0
+        color #666666
+        padding 0 0 6px
+        
+        &:hover
+          border-color transparent
+          background transparent
+
+      &.active > a
+      
+        &,
+        &:hover,
+        &:focus
+          color #000
+          background-color transparent
+          border none
+          border-bottom 1px solid #ffcc00
+          cursor default

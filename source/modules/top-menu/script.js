@@ -29,6 +29,31 @@ $menu.delegate( '#order-link', 'click', function(e) {
   e.preventDefault();
 });
 
+var hash = window.location.hash;
+
+if ( $( hash ).length ) {
+  $.scrollTo( $( hash ).offset().top - 200, 500 );
+} else {
+  if ( hash === '#expert' ) {
+    $.scrollTo( $( '#economy' ).offset().top - 200, 500 );
+    $( 'a[href="#page1"]' ).click();
+    
+  } else if ( hash === '#razrabotka' ) {
+    $.scrollTo( $( '#economy' ).offset().top - 200, 500 );
+    $( 'a[href="#page2"]' ).click();
+    
+  } else if ( hash === '#model' ) {
+    $.scrollTo( $( '#economy' ).offset().top - 200, 500 );
+    $( 'a[href="#page3"]' ).click();
+    
+  } else if ( hash === '#sroki' ) {
+    $( 'a[href="#accordionFAQ3"]' ).click();
+    $.scrollTo( $( '#accordionFAQ3' ).offset().top - 300, 500 );
+    
+  }
+}
+
+//catalog menu
 moveA();
 
 $( window ).resize( function() {
@@ -36,10 +61,18 @@ $( window ).resize( function() {
 });
 
 function moveA() {
+
   $menu.html( menuHTML );
   $submenu.empty();
+  
   while ( ($container.width() - $header.width() - $menu.width()) < 0 ) {
     $menu.find( 'a:last' ).prependTo( $submenu );
     $submenu.prepend( ' ' );
+  }
+  
+  if ( !$submenu.find( 'a' ).length ) {
+    $( '.b-top-menu__icon' ).hide();
+  } else {
+    $( '.b-top-menu__icon' ).show();
   }
 }

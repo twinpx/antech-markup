@@ -5,17 +5,17 @@ header.b-header
     .container
       
       .row
-        .col-lg-3.col-md-3.col-sm-4.col-xs-12
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
           span.b-header__menu( style="background-image: url(/template/images/svg/sandwich-menu.svg)" )
           
           a( href="/" ).b-header__logo
             img.hidden-xs( src="/template/images/svg/logo.svg" width="155" height="69" alt="" )
             img.visible-xs-inline-block( src="/template/images/svg/logo_mobile.svg" width="203" height="57" alt="" )
       
-        .col-lg-3.col-md-3.col-sm-3.hidden-xs
+        .col-lg-2.col-md-3.col-sm-3.hidden-xs
           .b-header__phone 8 800 555-55-70
           
-        .col-lg-6.col-md-6.col-sm-5.col-xs-12
+        .col-lg-6.col-md-5.col-sm-5.col-xs-12
           
           div.b-header__basket
             
@@ -117,8 +117,11 @@ header.b-header
                               
             span.b-header__search.hidden-xs( style="background-image: url(/template/images/svg/search-icon.svg)" )
             
-            a.b-header__basket__icon( data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
+            a.b-header__basket__icon( href="#" data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
               .count_in_cart 121
+              
+              script
+                | var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];
                               
           menu.hidden-xs
             li
@@ -295,6 +298,3 @@ header.b-header
                   a( href="") История заказов
                 li
                   a( href="") Учетная запись
-                
-              
-

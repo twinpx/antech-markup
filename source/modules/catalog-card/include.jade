@@ -1,8 +1,8 @@
-﻿.b-catalog-card
-  .b-catalog-card__image( style="background-image: url( '/upload/catalog-card/1.jpg' );" )
+﻿.b-catalog-card( itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" )
+  .b-catalog-card__image( data-original="/upload/catalog-card/1.jpg" )
   .b-catalog-card__text
     .b-catalog-card__title
-      a( href="" ) 1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) 
+      a( href="" itemprop="name" ) 1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) 
     .b-catalog-card__price от
       | 
       b.b-price 46,91
@@ -10,8 +10,9 @@
       
     hr.i-size-M.i-line-simple
       
-    a.btn.btn-default.btn-md.btn-cart( href="" ) В корзину
+    a.btn.btn-default.btn-md.btn-cart( href="ajax-request-url" ) В корзину
     
-    a.b-compare-icon( href="" )
-    
-    a.b-fav-icon( href="" )
+    .b-catalog-card__icons
+      include ../../modules/fav-icon/include
+      
+      include ../../modules/compare-icon/include

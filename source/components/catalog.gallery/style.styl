@@ -1,0 +1,26 @@
+@import '../../styl/component-include.styl'
+
+.b-catalog-gallery
+
+  .fotorama__html
+    padding 0 50px !important
+  
+  .fotorama__nav__shaft
+    display none
+    
+  .fotorama__arr
+    width 20px
+    height 71px
+    margin-top -36px
+  
+  .fotorama__arr--prev
+    background embedurl( 'img/arrow-left.png' ) no-repeat center
+    
+    &:hover
+      background-image embedurl( 'img/arrow-left-hover.png' )
+  
+  .fotorama__arr--next
+    background embedurl( 'img/arrow-right.png' ) no-repeat center
+    
+    &:hover
+      background-image embedurl( 'img/arrow-right-hover.png' )

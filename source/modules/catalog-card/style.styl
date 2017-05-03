@@ -31,13 +31,33 @@
       &:active
         color #319ed6
         
-  .b-compare-icon
-    margin 13px 0 0 20px
+  .btn-cart
+    
+    @media( max-width 1199px )
+      width 100%
+      display block
+      
+      &:before
+        margin-right 10%
+      
+  &__icons
     float right
     
+    @media( max-width 1199px )
+      float none
+      text-align center
+        
+  .b-compare-icon
+    margin 9px 0 0 20px
+    
+    @media( max-width 1199px )
+      margin 13px 10px 0
+    
   .b-fav-icon
-    float right
-    margin-top 12px
+    margin-top 10px
+    
+    @media( max-width 1199px )
+      margin 12px 10px 0
     
   hr
     margin-top -16px !important

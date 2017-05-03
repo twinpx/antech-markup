@@ -1,11 +1,14 @@
 @import '../../styl/component-include.styl'
 
 .b-catalog-section
-
-  &-ill
-    text-align center
-    background-color #020202
-    position relative
+  position relative
+  
+  &__breadcrumbs
+    position absolute
+    top 0
+    left 0
+    width 100%
+    z-index 10
     
     .container
       position relative
@@ -20,10 +23,27 @@
       &,
       span,
       a
-        color #fff
+        color #aaa
+        mix-blend-mode difference
         
     .b-breadcrumbs
       text-align left
+      
+      @media( max-width 767px )
+        text-align center
+        
+    .b-price-list
+      
+      @media( max-width 767px )
+        text-align center
+        line-height normal
+        margin-top -20px
+
+  &-ill
+    text-align center
+    background-color #020202
+    position relative
+    min-height 614px
     
     img
       width 100%
@@ -36,6 +56,40 @@
       text-align center
       width 100%
       color #fff
+      mix-blend-mode difference
       
       @media( max-width 767px )
-        font-size 20pt
+        font-size 18pt
+        
+  article
+    float none
+    clear both
+    margin 0
+    padding 0
+    
+  &-items
+    margin-top 20px
+        
+  &__load
+    padding 10px 4px 0
+    clear both
+    
+    i,
+    b
+      display block
+      font-size 12pt
+      cursor pointer
+      text-align center
+      font-style normal
+      font-weight 100
+            
+    b
+      display none
+        
+    &.i-preloader
+    
+      i
+        display none
+        
+      b
+        display block
