@@ -11,16 +11,19 @@ $menu.delegate( '#order-link', 'click', function(e) {
   
 }).delegate( '#payment-link', 'click', function(e) {
   e.preventDefault();
+  $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#payment-block').offset().top - 120, 500 );
   $('#payment-block .accordion-toggle').click();
   
 }).delegate( '#warranty-link', 'click', function(e) {
   e.preventDefault();
+  $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#warranty-block').offset().top - 120, 500 );
   $('#warranty-block .accordion-toggle').click();
   
 }).delegate( '#delivery-link', 'click', function(e) {
   e.preventDefault();
+  $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#delivery-block').offset().top - 120, 500 );
   $('#delivery-block .accordion-toggle').click();
   

@@ -159,9 +159,27 @@ block content
         
   section
     .container
-      h2.b-h1.center Подробнее об изготовлении
+      h2.b-h1.center Наши возможности
       
-      include ../modules/accordion/include
+      .b-simple-nav
+        // Nav tabs
+        ul.nav.nav-tabs(role='tablist')
+          li.active(role='presentation')
+            a(href='#materials', aria-controls='materials', role='tab', data-toggle='tab') Материалы
+          li(role='presentation')
+            a(href='#facilities', aria-controls='facilities', role='tab', data-toggle='tab') Возможности
+            
+        hr
+            
+        // Tab panes
+        .tab-content
+          #materials.tab-pane.active(role='tabpanel')
+            include ../modules/accordion/include
+            
+          #facilities.tab-pane(role='tabpanel')
+            include ../modules/accordion/include2
+      
+      
     
   section.b-request-form.i-gradient
     .container
