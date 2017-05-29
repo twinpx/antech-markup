@@ -13,7 +13,7 @@ function FloatHint( elem ) {
         self.scrollIntervalEvent = undefined;
         self.scrollIntervalId = undefined;
         self.showTimeoutId = undefined;
-        self.showTime = 3000;
+        self.showTime = 200;
     }
     
     function e() {
@@ -59,9 +59,5 @@ function FloatHint( elem ) {
 }
 
 if ( !Cookies.get( 'hintClose' )) {
-  if ( window.matchMedia && window.matchMedia("(min-width: 500px)").matches ) {
-    new FloatHint("#b-float-hint");
-  } else if ( $(document).width() >= 500 ) {
-    new FloatHint("#b-float-hint");
-  }
+  new FloatHint("#b-float-hint");
 }
