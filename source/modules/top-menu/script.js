@@ -8,24 +8,28 @@ var menuHTML = $menu.html();
 $menu.delegate( '#order-link', 'click', function(e) {
   e.preventDefault();
   $.scrollTo( $('#order-block').offset().top - 120, 500 );
+  window.location.hash = 'order';
   
 }).delegate( '#payment-link', 'click', function(e) {
   e.preventDefault();
   $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#payment-block').offset().top - 120, 500 );
   $('#payment-block .accordion-toggle').click();
+  window.location.hash = 'payment';
   
 }).delegate( '#warranty-link', 'click', function(e) {
   e.preventDefault();
   $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#warranty-block').offset().top - 120, 500 );
   $('#warranty-block .accordion-toggle').click();
+  window.location.hash = 'warranty';
   
 }).delegate( '#delivery-link', 'click', function(e) {
   e.preventDefault();
   $( 'a[ href="#facilities"]' ).click();
   $.scrollTo( $('#delivery-block').offset().top - 120, 500 );
   $('#delivery-block .accordion-toggle').click();
+  window.location.hash = 'delivery';
   
 }).delegate( '.b-top-menu__icon', 'click', function(e) {
   $( '.b-top-submenu' ).slideToggle();
@@ -52,6 +56,18 @@ if ( $( hash ).length ) {
   } else if ( hash === '#sroki' ) {
     $( 'a[href="#accordionFAQ3"]' ).click();
     $.scrollTo( $( '#accordionFAQ3' ).offset().top - 300, 500 );
+    
+  } else if ( hash === '#order' ) {
+    $( '#order-link' ).click();
+    
+  } else if ( hash === '#payment' ) {
+    $( '#payment-link' ).click();
+    
+  } else if ( hash === '#warranty' ) {
+    $( '#warranty-link' ).click();
+    
+  } else if ( hash === '#delivery' ) {
+    $( '#delivery-link' ).click();
     
   }
 }

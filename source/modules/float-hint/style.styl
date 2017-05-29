@@ -1,0 +1,61 @@
+@import '../../styl/component-include.styl'
+
+#b-float-hint
+  position fixed
+  bottom -60px
+  left 0
+  width 100%
+  margin 0
+  text-align center
+  padding 15px 0
+  color #fff
+  font-size 16pt
+  height 60px
+  transition( bottom .2s ease )
+  z-index 997
+  
+  &.i-visible
+    bottom 0
+      
+  .glyphicon
+    margin-right 10px
+    line-height 60px
+
+.bx-touch
+  #b-float-hint
+    display none
+
+.b-float-hint__bg
+  background-color #a3add7
+  opacity .8
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 60px
+  z-index 998
+
+.b-float-hint__content
+  position absolute
+  top 0
+  left 0
+  width 100%
+  line-height 60px
+  z-index 999
+
+.b-float-hint
+
+  &__text
+    display inline-block
+    white-space nowrap
+    
+  &__close
+    display block
+    position absolute
+    top 18px
+    right 20px
+    width 24px
+    height 24px
+    background url( 'images/svg/menu_close.svg' ) no-repeat center center
+    background-size contain
+    cursor pointer

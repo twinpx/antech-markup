@@ -42,6 +42,12 @@ $form.find( 'form' ).submit( function(e) {
     dataType: "json",
     data: $this.serialize(),
     success: function(data) {
+      if ( window.ga ) {
+        ga('send', 'event', 'callback', 'new_callback');
+      }
+      if ( window.yaCounter103630 ) {
+        yaCounter103630.reachGoal('new_callback');
+      }
       //counter
       if ( $counter.length ) {
         $callMe.addClass( 'i-counter' );
