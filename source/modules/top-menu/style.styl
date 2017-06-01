@@ -8,71 +8,103 @@
   a
     color #000
     text-decoration none
-    margin-left 24px
-    //display none
+    margin-left 40px
     white-space nowrap
+    display inline-block
+    vertical-align top
     
-    /*&:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6)
-      display inline
-    
-    @media ( max-width 1199px )
+    @media( max-width 767px )
+      display none
       
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6)
-        display none
-    
-    @media ( max-width 767px )
-      
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3)
-        display none*/
+    &:hover
+      color #0086cd
 
   &__icon
     display inline-block
-    margin-left 37px
+    margin -4px 0 0 33px
     cursor pointer
-    font-size 20pt
+    font-size 40pt
+    display inline-block
+    vertical-align top
+    
+    .cls-1
+      fill #010101
+      
+    svg
+      width 22px
+      
+    &.i-open
+    
+      .cls-1
+        fill #0086cd
+      
     
 .b-top-submenu
   clear both
-  text-align right
   line-height 30px
-  font-size 11pt
+  font-size 10pt
   display none
-  margin-bottom 20px
+  padding-top 30px
   
   a
     color #000
     text-decoration none
-    margin-left 24px
     white-space nowrap
-    
-    /*&:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6)
-      display none
-    
-    @media ( max-width 1199px )
       
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6)
-        display inline
+    &:hover
+      color #0086cd
     
-    @media ( max-width 767px )
+  h3
+    text-transform uppercase
+    font-size 8pt
+    color #999
+    margin 0 0 13px
+    
+  ul,
+  li
+    list-style-type none
+    margin 0
+    padding 0
+    line-height normal
+    
+  li
+    margin 0 0 6px
+    
+  &__up
+    text-align center
+    padding 50px 0 14px
+    
+    .cls-1
+      fill none
+      stroke #010101
+      stroke-linecap round
+      stroke-linejoin round
+      stroke-width 5px
+    
+    svg
+      width 16px
+      cursor pointer
       
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3)
-        display inline*/
+  &__close
+    position relative
+    
+    .cls-1
+      fill none
+      stroke #010101
+      stroke-linecap round
+      stroke-linejoin round
+      stroke-width 5px
+    
+    svg
+      width 16px
+      cursor pointer
+      position fixed
+      top 190px
+      right 20px
+      
+  .i-important
+    color #c23629
+    
+    &:hover
+      color #f50238
   
