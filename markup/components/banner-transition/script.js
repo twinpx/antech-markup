@@ -1,0 +1,1 @@
+!function(a){"use strict";a(function(){var b=1;setInterval(function(){a(".b-banner-transition").removeClass("i-"+b),b>=5&&(b=0),a(".b-banner-transition").addClass("i-"+ ++b)},3e3)})}(jQuery);

@@ -1,0 +1,683 @@
+﻿
+<!-- start /components/banner-transition/-->
+<style>
+.b-banner-transition {
+  transition: all 0.5s ease 0.5s;
+  -webkit-transition: all 0.5s ease 0.5s;
+  -moz-transition: all 0.5s ease 0.5s;
+  -ms-transition: all 0.5s ease 0.5s;
+  height: 396px;
+}
+.b-banner-transition.i-1 {
+  background-color: #f4f4f4;
+}
+.b-banner-transition.i-1 .b-h1 .i-1 {
+  display: block;
+}
+.b-banner-transition.i-2 {
+  background-color: #484957;
+  color: #fff;
+}
+.b-banner-transition.i-2 .b-h1 .i-2 {
+  display: block;
+}
+.b-banner-transition.i-3 {
+  background-color: #a0a1a7;
+  color: #fff;
+}
+.b-banner-transition.i-3 .b-h1 .i-3 {
+  display: block;
+}
+.b-banner-transition.i-4 {
+  background-color: #000001;
+  color: #fff;
+}
+.b-banner-transition.i-4 .b-h1 .i-4 {
+  display: block;
+}
+.b-banner-transition.i-5 {
+  background-color: #fff;
+}
+.b-banner-transition.i-5 .b-h1 .i-5 {
+  display: block;
+}
+.b-banner-transition__text {
+  padding-left: 20%;
+}
+.b-banner-transition__img {
+  text-align: right;
+}
+.b-banner-transition__img img {
+  width: auto;
+  height: 300px;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.b-banner-transition__img-xs {
+  position: relative;
+  height: 120px;
+}
+.b-banner-transition__img-xs img {
+  height: 120px;
+  display: block;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+}
+.b-banner-transition .b-h1 {
+  height: 100px;
+  line-height: 1;
+  margin-top: 43px;
+  margin-bottom: 18px;
+  position: relative;
+}
+.b-banner-transition .b-h1 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+}
+.b-banner-transition .b-h1-typing {
+  overflow: hidden;
+  animation: typing 0.7s steps(15, end);
+}
+.b-banner-transition .b-h1-show {
+  animation: h1Show 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.b-banner-transition p {
+  margin: 18px 0;
+  font-size: 14pt;
+  line-height: 1.35;
+}
+.b-banner-transition__button {
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .b-banner-transition {
+    height: 430px;
+  }
+  .b-banner-transition .b-h1 {
+    height: 64px;
+    margin-top: 33px;
+  }
+  .b-banner-transition .b-h1-typing {
+    margin: 0 auto;
+  }
+  .b-banner-transition__text {
+    padding: 0;
+    text-align: center;
+  }
+  .b-banner-transition p {
+    font-size: 10pt;
+  }
+}
+.b-banner-transition.i-1 .b-banner-transition__img img.i-1 {
+  animation: bannerTransitionAnimationIn 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-2 .b-banner-transition__img img.i-1 {
+  animation: bannerTransitionAnimationOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-2 .b-banner-transition__img img.i-2 {
+  animation: bannerTransitionAnimationIn 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-3 .b-banner-transition__img img.i-2 {
+  animation: bannerTransitionAnimationOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-3 .b-banner-transition__img img.i-3 {
+  animation: bannerTransitionAnimationIn 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-4 .b-banner-transition__img img.i-3 {
+  animation: bannerTransitionAnimationOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-4 .b-banner-transition__img img.i-4 {
+  animation: bannerTransitionAnimationIn 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-5 .b-banner-transition__img img.i-4 {
+  animation: bannerTransitionAnimationOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-5 .b-banner-transition__img img.i-5 {
+  animation: bannerTransitionAnimationIn 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-1 .b-banner-transition__img img.i-5 {
+  animation: bannerTransitionAnimationOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-1 .b-banner-transition__img-xs img.i-1 {
+  animation: bannerTransitionAnimationInXs 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-2 .b-banner-transition__img-xs img.i-1 {
+  animation: bannerTransitionAnimationOutXs 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-2 .b-banner-transition__img-xs img.i-2 {
+  animation: bannerTransitionAnimationInXs 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-3 .b-banner-transition__img-xs img.i-2 {
+  animation: bannerTransitionAnimationOutXs 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-3 .b-banner-transition__img-xs img.i-3 {
+  animation: bannerTransitionAnimationInXs 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-4 .b-banner-transition__img-xs img.i-3 {
+  animation: bannerTransitionAnimationOutXs 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-4 .b-banner-transition__img-xs img.i-4 {
+  animation: bannerTransitionAnimationInXs 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-5 .b-banner-transition__img-xs img.i-4 {
+  animation: bannerTransitionAnimationOutXs 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-5 .b-banner-transition__img-xs img.i-5 {
+  animation: bannerTransitionAnimationInXs 0.5s 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.b-banner-transition.i-1 .b-banner-transition__img-xs img.i-5 {
+  animation: bannerTransitionAnimationOutXs 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes h1Show {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes h1Show {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes h1Show {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes h1Show {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-moz-keyframes bannerTransitionAnimationOut {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(0, -34px) scale(1.1);
+    -webkit-transform: translate(0, -34px) scale(1.1);
+    -moz-transform: translate(0, -34px) scale(1.1);
+    -ms-transform: translate(0, -34px) scale(1.1);
+  }
+}
+@-webkit-keyframes bannerTransitionAnimationOut {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(0, -34px) scale(1.1);
+    -webkit-transform: translate(0, -34px) scale(1.1);
+    -moz-transform: translate(0, -34px) scale(1.1);
+    -ms-transform: translate(0, -34px) scale(1.1);
+  }
+}
+@-o-keyframes bannerTransitionAnimationOut {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(0, -34px) scale(1.1);
+    -webkit-transform: translate(0, -34px) scale(1.1);
+    -moz-transform: translate(0, -34px) scale(1.1);
+    -ms-transform: translate(0, -34px) scale(1.1);
+  }
+}
+@keyframes bannerTransitionAnimationOut {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(0, -34px) scale(1.1);
+    -webkit-transform: translate(0, -34px) scale(1.1);
+    -moz-transform: translate(0, -34px) scale(1.1);
+    -ms-transform: translate(0, -34px) scale(1.1);
+  }
+}
+@-moz-keyframes bannerTransitionAnimationIn {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(0, 34px) scale(0.9);
+    -webkit-transform: translate(0, 34px) scale(0.9);
+    -moz-transform: translate(0, 34px) scale(0.9);
+    -ms-transform: translate(0, 34px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-webkit-keyframes bannerTransitionAnimationIn {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(0, 34px) scale(0.9);
+    -webkit-transform: translate(0, 34px) scale(0.9);
+    -moz-transform: translate(0, 34px) scale(0.9);
+    -ms-transform: translate(0, 34px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-o-keyframes bannerTransitionAnimationIn {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(0, 34px) scale(0.9);
+    -webkit-transform: translate(0, 34px) scale(0.9);
+    -moz-transform: translate(0, 34px) scale(0.9);
+    -ms-transform: translate(0, 34px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes bannerTransitionAnimationIn {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(0, 34px) scale(0.9);
+    -webkit-transform: translate(0, 34px) scale(0.9);
+    -moz-transform: translate(0, 34px) scale(0.9);
+    -ms-transform: translate(0, 34px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-moz-keyframes bannerTransitionAnimationOutXs {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(34px, 0) scale(1.1);
+    -webkit-transform: translate(34px, 0) scale(1.1);
+    -moz-transform: translate(34px, 0) scale(1.1);
+    -ms-transform: translate(34px, 0) scale(1.1);
+  }
+}
+@-webkit-keyframes bannerTransitionAnimationOutXs {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(34px, 0) scale(1.1);
+    -webkit-transform: translate(34px, 0) scale(1.1);
+    -moz-transform: translate(34px, 0) scale(1.1);
+    -ms-transform: translate(34px, 0) scale(1.1);
+  }
+}
+@-o-keyframes bannerTransitionAnimationOutXs {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(34px, 0) scale(1.1);
+    -webkit-transform: translate(34px, 0) scale(1.1);
+    -moz-transform: translate(34px, 0) scale(1.1);
+    -ms-transform: translate(34px, 0) scale(1.1);
+  }
+}
+@keyframes bannerTransitionAnimationOutXs {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    transform: translate(34px, 0) scale(1.1);
+    -webkit-transform: translate(34px, 0) scale(1.1);
+    -moz-transform: translate(34px, 0) scale(1.1);
+    -ms-transform: translate(34px, 0) scale(1.1);
+  }
+}
+@-moz-keyframes bannerTransitionAnimationInXs {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(-34px, 0) scale(0.9);
+    -webkit-transform: translate(-34px, 0) scale(0.9);
+    -moz-transform: translate(-34px, 0) scale(0.9);
+    -ms-transform: translate(-34px, 0) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-webkit-keyframes bannerTransitionAnimationInXs {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(-34px, 0) scale(0.9);
+    -webkit-transform: translate(-34px, 0) scale(0.9);
+    -moz-transform: translate(-34px, 0) scale(0.9);
+    -ms-transform: translate(-34px, 0) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-o-keyframes bannerTransitionAnimationInXs {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(-34px, 0) scale(0.9);
+    -webkit-transform: translate(-34px, 0) scale(0.9);
+    -moz-transform: translate(-34px, 0) scale(0.9);
+    -ms-transform: translate(-34px, 0) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes bannerTransitionAnimationInXs {
+  0% {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    transform: translate(-34px, 0) scale(0.9);
+    -webkit-transform: translate(-34px, 0) scale(0.9);
+    -moz-transform: translate(-34px, 0) scale(0.9);
+    -ms-transform: translate(-34px, 0) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    transform: translate(0, 0) scale(1);
+    -webkit-transform: translate(0, 0) scale(1);
+    -moz-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1);
+  }
+}
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+  (function($) {
+      "use strict";
+      $(function() {
+          var counter = 1;
+          var intervalId = setInterval(function() {
+              $(".b-banner-transition").removeClass("i-" + counter);
+              if (counter >= 5) {
+                  counter = 0;
+              }
+              $(".b-banner-transition").addClass("i-" + ++counter);
+          }, 3e3);
+      });
+  })(jQuery);
+</script>
+
+<div class="b-banner-transition i-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="b-banner-transition__text">
+          <div class="b-h1">
+            <div class="i-1">
+              <div class="b-h1-typing">Создадим</div>
+              <div class="b-h1-show">упаковку мечты</div>
+            </div>
+            <div class="i-2">
+              <div class="b-h1-typing">Разработаем</div>
+              <div class="b-h1-show">smart-дизайн</div>
+            </div>
+            <div class="i-3">
+              <div class="b-h1-typing">Создадим</div>
+              <div class="b-h1-show">3D-модель</div>
+            </div>
+            <div class="i-4">
+              <div class="b-h1-typing">Сделаем</div>
+              <div class="b-h1-show">прототип</div>
+            </div>
+            <div class="i-5">
+              <div class="b-h1-typing">Изготовим</div>
+              <div class="b-h1-show">пробную партию</div>
+            </div>
+          </div>
+          <div class="b-banner-transition__img-xs visible-xs"><img src="/upload/banner/1.png" class="i-1"/><img src="/upload/banner/2.png" class="i-2"/><img src="/upload/banner/3.png" class="i-3"/><img src="/upload/banner/4.png" class="i-4"/><img src="/upload/banner/5.png" class="i-5"/></div>
+          <p>Создавая совершенную упаковку, мы предлагаем безграничные возможности роста.<br>Начните создание упаковки в один клик!</p>
+          <div class="b-banner-transition__button"><a href="" class="btn btn-default">Перейти<span class="hidden-xs"> к созданию упаковки</span></a></div>
+        </div>
+      </div>
+      <div class="col-sm-5 col-sm-offset-1 hidden-xs">
+        <div class="b-banner-transition__img"><img src="/upload/banner/1.png" class="i-1"/><img src="/upload/banner/2.png" class="i-2"/><img src="/upload/banner/3.png" class="i-3"/><img src="/upload/banner/4.png" class="i-4"/><img src="/upload/banner/5.png" class="i-5"/></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end /components/banner-transition/-->

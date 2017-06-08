@@ -1,0 +1,270 @@
+@import '../../styl/component-include.styl'
+
+.b-banner-transition
+  transition( all .5s ease .5s )
+  height 396px
+
+  &.i-1
+    background-color #f4f4f4
+    
+    .b-h1 .i-1
+      display block
+    
+  &.i-2
+    background-color #484957
+    color #fff
+    
+    .b-h1 .i-2
+      display block
+
+  &.i-3
+    background-color #a0a1a7
+    color #fff
+    
+    .b-h1 .i-3
+      display block
+
+  &.i-4
+    background-color #000001
+    color #fff
+    
+    .b-h1 .i-4
+      display block
+
+  &.i-5
+    background-color #ffffff
+    
+    .b-h1 .i-5
+      display block
+
+  &__text
+    padding-left 20%
+
+  &__img
+    text-align right
+    
+    img
+      width auto
+      height 300px
+      opacity 0
+      position absolute
+      top 40px
+      right 0
+    
+  &__img-xs
+    position relative
+    height 120px
+    
+    img
+      height 120px
+      display block
+      opacity 0
+      position absolute
+      top 0
+      left calc( 50% - 75px )
+  
+  .b-h1
+    height 100px
+    line-height 1
+    margin-top 43px
+    margin-bottom 18px
+    position relative
+    
+    & > div
+      position absolute
+      top 0
+      left 0
+      display none
+      width 100%
+  
+  .b-h1-typing
+    overflow hidden
+    animation typing .7s steps(15, end)
+    
+  .b-h1-show
+    animation h1Show 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    opacity 0
+    
+  p
+    margin 18px 0
+    font-size 14pt
+    line-height 1.35
+    
+  &__button
+    margin-top 25px
+    
+  @media( max-width 767px )
+    height 430px
+  
+    .b-h1
+      height 64px
+      margin-top 33px
+  
+    .b-h1-typing
+      margin 0 auto
+  
+    &__text
+      padding 0
+      text-align center
+      
+    p
+      font-size 10pt
+      
+  &.i-1 .b-banner-transition__img img.i-1
+    animation bannerTransitionAnimationIn .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-2 .b-banner-transition__img img.i-1
+    animation bannerTransitionAnimationOut .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-2 .b-banner-transition__img img.i-2
+    animation bannerTransitionAnimationIn .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-3 .b-banner-transition__img img.i-2
+    animation bannerTransitionAnimationOut .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-3 .b-banner-transition__img img.i-3
+    animation bannerTransitionAnimationIn .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-4 .b-banner-transition__img img.i-3
+    animation bannerTransitionAnimationOut .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-4 .b-banner-transition__img img.i-4
+    animation bannerTransitionAnimationIn .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-5 .b-banner-transition__img img.i-4
+    animation bannerTransitionAnimationOut .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-5 .b-banner-transition__img img.i-5
+    animation bannerTransitionAnimationIn .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-1 .b-banner-transition__img img.i-5
+    animation bannerTransitionAnimationOut .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+      
+      
+      
+  &.i-1 .b-banner-transition__img-xs img.i-1
+    animation bannerTransitionAnimationInXs .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-2 .b-banner-transition__img-xs img.i-1
+    animation bannerTransitionAnimationOutXs .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-2 .b-banner-transition__img-xs img.i-2
+    animation bannerTransitionAnimationInXs .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-3 .b-banner-transition__img-xs img.i-2
+    animation bannerTransitionAnimationOutXs .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-3 .b-banner-transition__img-xs img.i-3
+    animation bannerTransitionAnimationInXs .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-4 .b-banner-transition__img-xs img.i-3
+    animation bannerTransitionAnimationOutXs .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-4 .b-banner-transition__img-xs img.i-4
+    animation bannerTransitionAnimationInXs .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-5 .b-banner-transition__img-xs img.i-4
+    animation bannerTransitionAnimationOutXs .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-5 .b-banner-transition__img-xs img.i-5
+    animation bannerTransitionAnimationInXs .5s 1s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+    
+  &.i-1 .b-banner-transition__img-xs img.i-5
+    animation bannerTransitionAnimationOutXs .5s
+    -webkit-animation-fill-mode forwards
+    animation-fill-mode forwards
+      
+@keyframes h1Show
+
+  0%
+    opacity 0
+
+  100%
+    opacity 1
+      
+@keyframes bannerTransitionAnimationOut
+
+  0%
+    opacity 1
+    transform( translate(0,0) scale(1))
+
+  100%
+    opacity 0
+    transform( translate(0,-34px) scale(1.1))
+    
+@keyframes bannerTransitionAnimationIn
+
+  0%
+    opacity .4
+    transform( translate(0,34px) scale(.9))
+      
+  100%
+    opacity 1
+    transform( translate(0,0) scale(1))
+      
+@keyframes bannerTransitionAnimationOutXs
+
+  0%
+    opacity 1
+    transform( translate(0,0) scale(1))
+
+  100%
+    opacity 0
+    transform( translate(34px,0) scale(1.1))
+    
+@keyframes bannerTransitionAnimationInXs
+
+  0%
+    opacity .4
+    transform( translate(-34px,0) scale(.9))
+      
+  100%
+    opacity 1
+    transform( translate(0,0) scale(1))
+    
+@keyframes typing
+
+  from
+    width 0
+  to
+    width 100%
