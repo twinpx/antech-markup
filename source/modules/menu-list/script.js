@@ -1,7 +1,7 @@
 $( window ).bind( 'scroll', function(e) {
   $( '.b-menu-list' ).not( '.i-animate' ).each( function() {
     var $menu = $( this );
-    $menu.find( '.col-sm-4:first' ).each( function() {
+    $menu.find( '.col-sm-4:first, .col-sm-3:first' ).each( function() {
       var $col = $( this );
       var bottom = $col.offset().top + $col.outerHeight();
       var extra = 0;

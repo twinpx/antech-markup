@@ -38,7 +38,7 @@
       margin-right 30px
     
     @media (max-width: 991px) and (min-width: 768px)
-      margin-right 22px
+      margin-right 20%
       
     @media (max-width: 767px)
       position absolute
@@ -87,30 +87,45 @@
       margin-left auto
   
   &__phone
-    font-size 13.5pt
+    float left
+    font-size 11pt
     text-align center
     line-height 86px
     margin-top 4px
     color #000
     
+    &-num
+      line-height 1.1
+      text-align center
+      display inline-block
+      vertical-align top
+      margin-top 35px
+    
+    &-popup
+      font-size 8pt
+      font-weight 400
+      color #309dd5
+      line-height normal
+    
     @media (max-width: 1199px) and (min-width: 768px)
       padding-left 0
   
   menu
-    float right
     line-height 86px
     margin 4px 5px 0 0
     padding 0
-    font-size 11pt
+    font-size 10.5pt
+    text-align center
     
     li
       list-style-type none
       display inline-block
       text-transform uppercase
-      margin-right 20px
+      margin 0 10px
       
       @media (max-width: 1199px)
         margin-right 11px
+      
     
     @media (max-width: 1199px) and (min-width: 768px)
       
@@ -122,10 +137,20 @@
           display inline-block
       
     a,
-    a:hover,
     a:focus,
     a:active
       color #000
+      text-decoration none
+        
+    a:hover
+      color #484848
+      text-decoration none
+      
+    .i-active
+      border-bottom 1px solid #ffcc01
+      display inline-block
+      line-height normal
+      padding-bottom 6px
   
   &__basket
     float right
@@ -133,7 +158,7 @@
       
     @media (max-width: 767px)
       position absolute
-      bottom 0
+      top 0
       right 20px
     
     &__icon

@@ -20,11 +20,15 @@
       <div class="b-header-fixed">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
-            <div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
-              <div class="b-header__phone">8 800 555-55-70</div>
+            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-sm-5 hidden-sm">
+              <menu class="hidden-xs">
+                <li><a href="">Создание упаковки</a></li>
+                <li class="hidden-sm"><a href="" class="i-active">Магазин</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
             </div>
-            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0">
               <div class="b-header__basket">
                 <!-- Modal-->
                 <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
@@ -105,11 +109,97 @@
                   <div class="count_in_cart">121</div>
                   <script>var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];</script></a>
               </div>
-              <menu class="hidden-xs">
-                <li><a href="">Изготовление упаковки</a></li>
-                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
-                <li class="hidden-sm"><a href="">Контакты</a></li>
-              </menu>
+              <div class="b-header__phone hidden-xs"><span class="b-header__phone-num">8 800 555-55-70<br><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a></span></div>
+            </div>
+          </div>
+          <div id="callMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="b-call-me modal fade">
+            <div role="document" class="modal-dialog modal-lg">
+              <div style="background-image: url('/upload/portfolio/bg.png')" class="modal-content">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+                <div class="modal-body">
+                  <div class="b-call-me__form">
+                    <h2>Готовы обсудить детали?</h2>
+                    <hr class="i-size-S">
+                    <form action="/json/call-me.json" method="GET">
+                      <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 800" class="cb_btn_teaser">
+                          <circle id="cb_bnt_circle_1" r="300" cx="400" cy="400" class="st0"></circle>
+                          <polygon points="665.2,315.2 796.8,398.4 672.3,481.6 " class="st1"></polygon>
+                          <circle r="300" cx="400" cy="400" class="st1"></circle>
+                          <path d="M479.9,437.8c-8.3,2.9-20.6,15.2-25.6,25.6l-12.6,24.4c-56.5-44-102.4-93.4-129.6-152.6l26.8-8.5 c10.2-1.9,24.2-10.4,30.1-19.9l-42.7-91.2c-7.3-2.3-22.8,2-33.3,7.3l0.2,0.4c-22.9,12.4-40.2,27.8-49.3,47.7 c20.7,180.6,124.5,254.2,251.5,297.9c24.6-12.3,44.5-26.9,54-46.8c4.6-6,9.7-19.9,12.9-29.2L479.9,437.8z" class="st2"></path>
+                          <animate xlink:href="#cb_bnt_circle_1" attributename="r" from="300" to="300" dur="2s" begin="0s" values="300; 400; 300" keytimes="0; 0.5; 1" repeatcount="indefinite"></animate>
+                        </svg>
+                        <input name="phone" type="tel" placeholder="Введите Ваш телефон" required class="form-control">
+                        <button type="submit" class="btn btn-default">Жду звонка!</button>
+                      </div>
+                    </form>
+                    <div class="text-large">Мы позвоним за <b>20</b> секунд</div>
+                    <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
+                      <select name="HOUR" class="select">
+                        <option value="9">9</option>
+                        <option value="10" selected="">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                      </select> 
+                      :
+                       
+                      <select name="MINUTE" class="select">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div data-num="20" class="b-call-me__counter"></div>
+                  <div class="b-call-me__feedback">
+                    <h2>Был ли наш специалист полезен?</h2>
+                    <hr class="i-size-S">
+                    <form action="/json/call-me.json" method="GET">
+                      <div class="form-group b-call-me__smiles">
+                        <label>
+                          <input type="radio" name="mark" value="1"><span></span>
+                        </label>
+                        <label>
+                          <input type="radio" name="mark" value="2"><span></span>
+                        </label>
+                        <label>
+                          <input type="radio" name="mark" value="3"><span></span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+                      </div>
+                      <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+                    </form>
+                  </div>
+                  <div class="b-call-me__thankyou">
+                    <h2>Благодарим за Вашу оценку</h2>
+                  </div>
+                  <div class="b-call-me__once-more">
+                    <h2>Приносим свои извинения</h2>
+                    <hr class="i-size-S">
+                    <p>Возможно, произошел технический сбой.</p>
+                    <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+                    <hr class="i-size-S">
+                    <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+                  </div>
+                  <div class="b-call-me__callback">
+                    <div>
+                      <h2>Ваша заявка принята!</h2>
+                      <p class="text-large">
+                        Мы перезвоним Вам в первый рабочий день в
+                         <span id="callMeHour"></span>:<span id="callMeMinute"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -237,9 +327,9 @@
         <div class="b-top-header">Картонные коробки</div>
         <div class="b-top-menu"><a href="">Картонные коробки</a> <a href="">Гофрокартон</a> <a href="">Упаковочные материалы</a><span class="b-top-menu__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 181.42 181.42">
-              <path d="M17.44,78.23A12.44,12.44,0,1,1,5,90.68,12.46,12.46,0,0,1,17.44,78.23m0-5A17.44,17.44,0,1,0,34.89,90.68,17.44,17.44,0,0,0,17.44,73.23Z" class="cls-1"></path>
-              <path d="M90.71,78.23A12.44,12.44,0,1,1,78.27,90.68,12.46,12.46,0,0,1,90.71,78.23m0-5a17.44,17.44,0,1,0,17.44,17.44A17.44,17.44,0,0,0,90.71,73.23Z" class="cls-1"></path>
-              <path d="M164,78.23a12.44,12.44,0,1,1-12.44,12.44A12.46,12.46,0,0,1,164,78.23m0-5a17.44,17.44,0,1,0,17.44,17.44A17.44,17.44,0,0,0,164,73.23Z" class="cls-1"></path>
+              <circle cx="20" cy="90" r="18"></circle>
+              <circle cx="90" cy="90" r="18"></circle>
+              <circle cx="160" cy="90" r="18"></circle>
             </svg></span></div>
       </div>
     </div>
@@ -417,7 +507,7 @@
         <div class="b-catalog-gallery">
           <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
           <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-          <h2 class="b-h1 text-center">Самосборные коробки</h2>
+          <h2 class="b-h1 text-center">Рекомендуем</h2>
           <div class="b-catalog-gallery__fotorama">
             <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
               <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>

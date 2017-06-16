@@ -2,6 +2,19 @@
 
 .b-catalog-gallery
 
+  &__button
+    text-align center
+    
+    .btn
+      padding-right 44px
+      padding-left 44px
+
+  section &
+    margin-top -30px
+
+  .b-h1
+    margin-bottom 45px
+
   .fotorama__html
     padding 0 50px !important
   
@@ -9,18 +22,26 @@
     display none
     
   .fotorama__arr
-    width 20px
-    height 71px
-    margin-top -36px
+    width 43px
+    height 121px
+    margin-top -61px
   
   .fotorama__arr--prev
+    left 0
     background embedurl( 'img/arrow-left.png' ) no-repeat center
     
-    &:hover
-      background-image embedurl( 'img/arrow-left-hover.png' )
+    &:hover,
+    &:focus
+      //background-image embedurl( 'img/arrow-left-hover.png' )
+      background-color rgba( 0,0,0,0.06 )
+      transform( translate3d(0,0,0)) !important
   
   .fotorama__arr--next
+    right 0
     background embedurl( 'img/arrow-right.png' ) no-repeat center
     
-    &:hover
-      background-image embedurl( 'img/arrow-right-hover.png' )
+    &:hover,
+    &:focus
+      //background-image embedurl( 'img/arrow-right-hover.png' )
+      background-color rgba( 0,0,0,0.06 )
+      transform( translate3d(0,0,0)) !important

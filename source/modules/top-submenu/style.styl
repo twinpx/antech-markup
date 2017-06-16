@@ -1,5 +1,80 @@
 @import '../../styl/component-include.styl'
 
 .b-top-submenu
-  //example
-  background: embedurl( 'img/blank.gif' );
+  clear both
+  line-height 30px
+  font-size 10pt
+  display none
+  padding-top 30px
+  
+  a
+    color #000
+    text-decoration none
+    white-space nowrap
+      
+    &:hover
+      color #0086cd
+    
+  h3
+    text-transform uppercase
+    font-size 8pt
+    color #999
+    margin 0 0 13px
+    
+  ul,
+  li
+    list-style-type none
+    margin 0
+    padding 0
+    line-height normal
+    
+  li
+    margin 0 0 6px
+    
+  &__up
+    text-align center
+    margin 50px 0 0
+    padding 12px 0 5px
+    cursor pointer
+    line-height 0
+    
+    &:hover
+      background-color #f1eff0
+    
+    .cls-1
+      fill none
+      stroke #010101
+      stroke-linecap round
+      stroke-linejoin round
+      stroke-width 5px
+    
+    svg
+      width 16px
+      display inline-block
+      vertical-align top
+      
+  &__close
+    position relative
+    
+    .cls-1
+      fill none
+      stroke #010101
+      stroke-linecap round
+      stroke-linejoin round
+      stroke-width 5px
+    
+    svg
+      width 16px
+      cursor pointer
+      position fixed
+      top 120px
+      right 30px
+      display none
+      z-index 10
+      
+  .i-important
+    color #c23629
+    
+    &:hover
+      color #f50238
+  

@@ -20,11 +20,15 @@
       <div class="b-header-fixed">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
-            <div class="col-lg-2 col-md-3 col-sm-3 hidden-xs">
-              <div class="b-header__phone">8 800 555-55-70</div>
+            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-sm-5 hidden-sm">
+              <menu class="hidden-xs">
+                <li><a href="">Создание упаковки</a></li>
+                <li class="hidden-sm"><a href="" class="i-active">Магазин</a></li>
+                <li class="hidden-sm"><a href="">Контакты</a></li>
+              </menu>
             </div>
-            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0">
               <div class="b-header__basket">
                 <!-- Modal-->
                 <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
@@ -105,11 +109,97 @@
                   <div class="count_in_cart">121</div>
                   <script>var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];</script></a>
               </div>
-              <menu class="hidden-xs">
-                <li><a href="">Изготовление упаковки</a></li>
-                <li class="hidden-sm"><a href="">Готовые коробки</a></li>
-                <li class="hidden-sm"><a href="">Контакты</a></li>
-              </menu>
+              <div class="b-header__phone hidden-xs"><span class="b-header__phone-num">8 800 555-55-70<br><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a></span></div>
+            </div>
+          </div>
+          <div id="callMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="b-call-me modal fade">
+            <div role="document" class="modal-dialog modal-lg">
+              <div style="background-image: url('/upload/portfolio/bg.png')" class="modal-content">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+                <div class="modal-body">
+                  <div class="b-call-me__form">
+                    <h2>Готовы обсудить детали?</h2>
+                    <hr class="i-size-S">
+                    <form action="/json/call-me.json" method="GET">
+                      <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 800" class="cb_btn_teaser">
+                          <circle id="cb_bnt_circle_1" r="300" cx="400" cy="400" class="st0"></circle>
+                          <polygon points="665.2,315.2 796.8,398.4 672.3,481.6 " class="st1"></polygon>
+                          <circle r="300" cx="400" cy="400" class="st1"></circle>
+                          <path d="M479.9,437.8c-8.3,2.9-20.6,15.2-25.6,25.6l-12.6,24.4c-56.5-44-102.4-93.4-129.6-152.6l26.8-8.5 c10.2-1.9,24.2-10.4,30.1-19.9l-42.7-91.2c-7.3-2.3-22.8,2-33.3,7.3l0.2,0.4c-22.9,12.4-40.2,27.8-49.3,47.7 c20.7,180.6,124.5,254.2,251.5,297.9c24.6-12.3,44.5-26.9,54-46.8c4.6-6,9.7-19.9,12.9-29.2L479.9,437.8z" class="st2"></path>
+                          <animate xlink:href="#cb_bnt_circle_1" attributename="r" from="300" to="300" dur="2s" begin="0s" values="300; 400; 300" keytimes="0; 0.5; 1" repeatcount="indefinite"></animate>
+                        </svg>
+                        <input name="phone" type="tel" placeholder="Введите Ваш телефон" required class="form-control">
+                        <button type="submit" class="btn btn-default">Жду звонка!</button>
+                      </div>
+                    </form>
+                    <div class="text-large">Мы позвоним за <b>20</b> секунд</div>
+                    <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
+                      <select name="HOUR" class="select">
+                        <option value="9">9</option>
+                        <option value="10" selected="">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                      </select> 
+                      :
+                       
+                      <select name="MINUTE" class="select">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div data-num="20" class="b-call-me__counter"></div>
+                  <div class="b-call-me__feedback">
+                    <h2>Был ли наш специалист полезен?</h2>
+                    <hr class="i-size-S">
+                    <form action="/json/call-me.json" method="GET">
+                      <div class="form-group b-call-me__smiles">
+                        <label>
+                          <input type="radio" name="mark" value="1"><span></span>
+                        </label>
+                        <label>
+                          <input type="radio" name="mark" value="2"><span></span>
+                        </label>
+                        <label>
+                          <input type="radio" name="mark" value="3"><span></span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+                      </div>
+                      <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+                    </form>
+                  </div>
+                  <div class="b-call-me__thankyou">
+                    <h2>Благодарим за Вашу оценку</h2>
+                  </div>
+                  <div class="b-call-me__once-more">
+                    <h2>Приносим свои извинения</h2>
+                    <hr class="i-size-S">
+                    <p>Возможно, произошел технический сбой.</p>
+                    <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+                    <hr class="i-size-S">
+                    <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+                  </div>
+                  <div class="b-call-me__callback">
+                    <div>
+                      <h2>Ваша заявка принята!</h2>
+                      <p class="text-large">
+                        Мы перезвоним Вам в первый рабочий день в
+                         <span id="callMeHour"></span>:<span id="callMeMinute"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,7 +325,7 @@
     <!-- start /components/banner-transition/-->
     <link rel="stylesheet" href="/components/banner-transition/style.css">
     <script src="/components/banner-transition/script.js"></script>
-    <div class="b-banner-transition i-1">
+    <div class="b-banner-transition i-0 i-text-0">
       <div class="container">
         <div class="row">
           <div class="col-sm-5">
@@ -275,25 +365,50 @@
     </div>
     <!-- end /components/banner-transition/-->
     <section>
-      <div class="container">
-        <h1 class="center">Изготовление упаковки</h1>
-        <p class="text-muted text-large center">Изготовим упаковку быстро, качественно, точно в срок.<br>С учетом всех особенностей и пожеланий.</p>
-        <div class="row b-menu-list">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-1"></span></span>
-            <p><b>Приезжаем<br>и консультируем</b></p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-2"></span></span>
-            <p><b>Разрабатываем дизайн<br>и конструкцию </b></p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-3"></span></span>
-            <p><b>Изготавливаем 3D-модель<br>и пробный образец</b></p>
+      <div class="b-about-block">
+        <div class="container">
+          <div class="row-flexbox">
+            <div class="col-sm-4">
+              <div class="b-h1">Бренд Антэк</div>
+              <p>Мы команда, которая стреимтся вместе с вами к созданию совершенной упаковки.</p>
+              <p>Наполнение идеями и внимательное сопровождение на пути создания совершенной упаковки, которая радует сердца.</p>
+              <p>Драйв от реализации задуманного. Внимательное обслуживание к пути реализации задуманного. Проводники к реализации задуманного. Внимательный сопровождение на пути к цели. Наполнение идеями. Забота теплота поддержка открытость свершение мечты расширение возможностей.</p>
+            </div>
+            <div class="col-sm-8"><img src="/upload/about.jpg"></div>
           </div>
         </div>
-        <div class="center"><a href="" class="btn btn-default">Заказать изготовление</a></div>
       </div>
     </section>
+    <section>
+      <div class="container">
+        <div class="row b-menu-list">
+          <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
+            <p class="text-muted text-middle">Приедем<br>и проконсультируем</p>
+          </div>
+          <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
+            <p class="text-muted text-middle">Проведем<br>анализ рынка</p>
+          </div>
+          <hr class="visible-xs-block clearfix">
+          <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
+            <p class="text-muted text-middle">Разработаем<br>дизайн и конструкцию</p>
+          </div>
+          <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
+            <p class="text-muted text-middle">Изготовим<br>3D-модель и прототип</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="b-call-me-block">
+      <div class="content">
+        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?</span>
+          <input name="phone" type="tel" required="" value="+7(" class="form-control">
+          <button type="submit" class="btn b-call-me-block__button">Жду звонка!</button>
+        </form>
+        <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
+          <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
+        </div>
+      </div>
+    </div>
     <section class="i-gray i-gallery-top">
       <div class="container">
         <!-- start /components/portfolio/-->
@@ -603,6 +718,256 @@
           </div>
         </div>
         <div class="center"><a href="" class="btn btn-default">Перейти в каталог</a></div>
+      </div>
+    </section>
+    <section class="i-gray">
+      <div class="container">
+        <!-- start /components/catalog.gallery/-->
+        <link rel="stylesheet" href="/components/catalog.gallery/style.css">
+        <script src="/components/catalog.gallery/script.js"></script>
+        <div class="b-catalog-gallery">
+          <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+          <h2 class="b-h1 text-center">Нужны готовые коробки?</h2>
+          <div class="b-catalog-gallery__fotorama">
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div itemscope itemtype="http://schema.org/SomeProducts" data-id="332255" class="b-catalog-card">
+              <div data-original="/upload/catalog-card/1.jpg" class="b-catalog-card__image"></div>
+              <div class="b-catalog-card__text">
+                <div class="b-catalog-card__title"><a href="" itemprop="name">1200 (Д) х 800 (Ш) х 1000 (В)  1200 (Д) х 800 (Ш) х 1000 (В) </a></div>
+                <div class="b-catalog-card__price">
+                  от
+                   <b class="b-price">46,91</b>руб
+                </div>
+                <hr class="i-size-M i-line-simple"><a href="ajax-request-url" class="btn btn-default btn-md btn-cart">В корзину</a>
+                <div class="b-catalog-card__icons"><a href="" title="Добавить в избранное" class="b-fav-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>favorite</title>
+                      <path d="M22.71,15.46s9.8-11.4,16.87-2.93C50.24,25.3,22.71,38.89,22.71,38.89"></path>
+                      <path d="M22.71,15.46s-9.8-11.4-16.87-2.93C-4.82,25.3,22.71,38.89,22.71,38.89"></path>
+                    </svg></a><a href="" title="Сравнить" class="b-compare-icon">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 45.35 45.35">
+                      <title>compare</title>
+                      <line x1="4" y1="6.19" x2="22.25" y2="6.19"></line>
+                      <line x1="4" y1="18.44" x2="22.25" y2="18.44"></line>
+                      <line x1="4.25" y1="29.3" x2="40.25" y2="29.3"></line>
+                      <line x1="4.25" y1="40.3" x2="40.25" y2="40.3"></line>
+                      <line x1="34.33" y1="6.88" x2="34.33" y2="20.19"></line>
+                      <line x1="40.99" y1="13.53" x2="27.67" y2="13.53"></line>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="b-catalog-gallery__button"><a href="" class="btn btn-default btn-scheme2 btn-md">Перейти в магазин</a></div>
+        </div>
+        <!-- end /components/catalog.gallery/-->
       </div>
     </section>
     <section class="i-clients">

@@ -1,5 +1,4 @@
-﻿
-<!-- start /components/banner-transition/-->
+﻿<!-- start /components/banner-transition/-->
 <style>
 .b-banner-transition {
   transition: all 0.5s ease 0.5s;
@@ -8,37 +7,39 @@
   -ms-transition: all 0.5s ease 0.5s;
   height: 396px;
 }
+.b-banner-transition.i-0,
 .b-banner-transition.i-1 {
   background-color: #f4f4f4;
 }
-.b-banner-transition.i-1 .b-h1 .i-1 {
+.b-banner-transition.i-text-0 .b-h1 .i-1,
+.b-banner-transition.i-text-1 .b-h1 .i-1 {
   display: block;
 }
 .b-banner-transition.i-2 {
   background-color: #484957;
   color: #fff;
 }
-.b-banner-transition.i-2 .b-h1 .i-2 {
+.b-banner-transition.i-text-2 .b-h1 .i-2 {
   display: block;
 }
 .b-banner-transition.i-3 {
   background-color: #a0a1a7;
   color: #fff;
 }
-.b-banner-transition.i-3 .b-h1 .i-3 {
+.b-banner-transition.i-text-3 .b-h1 .i-3 {
   display: block;
 }
 .b-banner-transition.i-4 {
   background-color: #000001;
   color: #fff;
 }
-.b-banner-transition.i-4 .b-h1 .i-4 {
+.b-banner-transition.i-text-4 .b-h1 .i-4 {
   display: block;
 }
 .b-banner-transition.i-5 {
   background-color: #fff;
 }
-.b-banner-transition.i-5 .b-h1 .i-5 {
+.b-banner-transition.i-text-5 .b-h1 .i-5 {
   display: block;
 }
 .b-banner-transition__text {
@@ -124,6 +125,7 @@
     font-size: 10pt;
   }
 }
+.b-banner-transition.i-0 .b-banner-transition__img img.i-1,
 .b-banner-transition.i-1 .b-banner-transition__img img.i-1 {
   animation: bannerTransitionAnimationIn 0.5s 1s;
   -webkit-animation-fill-mode: forwards;
@@ -627,22 +629,32 @@
 </style>
 
 <script>
-  (function($) {
-      "use strict";
-      $(function() {
-          var counter = 1;
-          var intervalId = setInterval(function() {
-              $(".b-banner-transition").removeClass("i-" + counter);
-              if (counter >= 5) {
-                  counter = 0;
-              }
-              $(".b-banner-transition").addClass("i-" + ++counter);
-          }, 3e3);
-      });
-  })(jQuery);
+(function($) {
+    "use strict";
+    $(function() {
+        var counter = 1;
+        var intervalId = setInterval(function() {
+            $(".b-banner-transition").removeClass("i-0").removeClass("i-" + counter);
+            if (counter >= 5) {
+                counter = 0;
+            }
+            $(".b-banner-transition").addClass("i-" + ++counter);
+            setTimeout(function() {
+                var prev = counter - 1;
+                if (counter === 1) {
+                    prev = 5;
+                }
+                $(".b-banner-transition").removeClass("i-text-0").removeClass("i-text-" + prev).addClass("i-text-" + counter);
+            }, 1e3);
+        }, 3e3);
+        setTimeout(function() {
+            $(".b-banner-transition img.i-5").show();
+        }, 1e3);
+    });
+})(jQuery);
 </script>
 
-<div class="b-banner-transition i-1">
+<div class="b-banner-transition i-0 i-text-0">
   <div class="container">
     <div class="row">
       <div class="col-sm-5">

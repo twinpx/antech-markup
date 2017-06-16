@@ -1,0 +1,74 @@
+@import '../../styl/component-include.styl'
+
+.b-call-me-block
+  background-color #ffcc00
+  text-align center
+  padding 27px 0 22px
+  
+  &__text,
+  &__message
+    font-size 14pt
+    font-weight 400
+    line-height 1.2
+    display inline-block
+    vertical-align middle
+    
+    @media ( max-width 767px )
+      margin-bottom 15px
+      display block
+    
+  &__message
+    display none
+    
+  .form-control
+    display inline-block
+    vertical-align middle
+    width 232px
+    border none
+    margin 0 23px 0 16px
+    height 50px
+    font-size 14pt
+    
+    @media ( max-width 767px )
+      margin 0 auto 23px
+      display block
+      width 80%
+    
+  .btn
+    line-height 44px
+    display inline-block
+    vertical-align middle
+    font-size 14pt
+    font-weight 400
+    border 2px solid #000
+    background-color transparent
+    transition( all 0.3s ease )
+    padding 0 33px
+    border-radius 35px
+    
+    &:hover
+      background-color #fff
+      border 2px solid #fff
+      
+    &:active,
+    &:focus
+      background-color rgba( 255,255,255,0.9 )
+      border 2px solid rgba( 255,255,255,0.9 )
+      box-shadow none
+    
+    
+  &.i-success
+    
+    form
+      display none
+      
+    .b-call-me-block__message
+      display block
+      line-height 48px
+      font-size 16pt
+    
+      @media ( max-width 767px )
+        font-size 18pt
+        line-height 1.2
+        margin 0 45px
+    

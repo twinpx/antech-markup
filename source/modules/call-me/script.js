@@ -20,7 +20,7 @@ $callMe.on('hidden.bs.modal', function (e) {
     .removeClass( 'i-thankyou' )
     .removeClass( 'i-once-more' )
     .removeClass( 'i-callback' )
-    .find( 'input' ).val('');
+    .find( 'input' ).not('[type=hidden]').val('');
     
   $callMe.find( 'textarea' ).text('');
   

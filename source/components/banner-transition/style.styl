@@ -4,15 +4,21 @@
   transition( all .5s ease .5s )
   height 396px
 
+  &.i-0,
   &.i-1
     background-color #f4f4f4
     
+  &.i-text-0,
+  &.i-text-1
+  
     .b-h1 .i-1
       display block
     
   &.i-2
     background-color #484957
     color #fff
+    
+  &.i-text-2
     
     .b-h1 .i-2
       display block
@@ -21,6 +27,8 @@
     background-color #a0a1a7
     color #fff
     
+  &.i-text-3
+    
     .b-h1 .i-3
       display block
 
@@ -28,11 +36,15 @@
     background-color #000001
     color #fff
     
+  &.i-text-4
+    
     .b-h1 .i-4
       display block
 
   &.i-5
     background-color #ffffff
+    
+  &.i-text-5
     
     .b-h1 .i-5
       display block
@@ -112,6 +124,7 @@
     p
       font-size 10pt
       
+  &.i-0 .b-banner-transition__img img.i-1,
   &.i-1 .b-banner-transition__img img.i-1
     animation bannerTransitionAnimationIn .5s 1s
     -webkit-animation-fill-mode forwards

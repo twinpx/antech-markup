@@ -1,0 +1,10 @@
+﻿.b-call-me-block
+
+  .content
+    form( action="/json/call-me.json" method="GET" )
+      span.b-call-me-block__text Хотите обсудить разработку или подбор упаковки?
+      input.form-control( name="phone" type="tel" required="" value="+7(" )
+      button.btn.b-call-me-block__button( type="submit" ) Жду звонка!
+    
+    .b-call-me-block__message Ваша заявка принята! Мы перезвоним вам через 30 секунд.
+      // Мы перезвоним Вам в первый рабочий день в 10:00

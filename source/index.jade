@@ -8,15 +8,14 @@ block content
   include ./components/banner-transition/template
   
   section
+  
+    include ./modules/about-block/include
+  
+  section
     .container
-      h1.center Изготовление упаковки
-      
-      p.text-muted.text-large.center Изготовим упаковку быстро, качественно, точно в срок.<br>С учетом всех особенностей и пожеланий.
-      
-      include ./modules/menu-list/include
-          
-      .center
-        a.btn.btn-default( href="" ) Заказать изготовление
+      include ./modules/menu-list/advantages
+        
+  include ./modules/call-me-block/include
         
   section.i-gray.i-gallery-top
     .container
@@ -72,6 +71,10 @@ block content
           
       .center
         a.btn.btn-default( href="" ) Перейти в каталог
+    
+  section.i-gray
+    .container
+      include ./components/catalog.gallery/index
         
   section.i-clients
     .container

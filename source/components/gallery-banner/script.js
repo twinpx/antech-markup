@@ -44,22 +44,22 @@
       
       if ( window.matchMedia( "(max-width: 767px)" ).matches ) {
         fotorama.resize({
-          height: 586
+          height: 430//586
         });
       } else if ( window.matchMedia( "(min-width: 768px)" ).matches ) {
         fotorama.resize({
-          height: 614
+          height: 396//614
         });
       }
       
       $( window ).bind( 'resize', function() {
         if ( window.matchMedia( "(max-width: 767px)" ).matches ) {
           fotorama.resize({
-            height: 586
+            height: 430//586
           });
         } else if ( window.matchMedia( "(min-width: 768px)" ).matches ) {
           fotorama.resize({
-            height: 614
+            height: 396//614
           });
         }
       });
