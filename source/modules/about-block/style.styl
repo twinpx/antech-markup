@@ -3,6 +3,10 @@
 .b-about-block
   background embedurl( 'img/bg.gif' ) repeat-y
   background-size contain
+  
+  @media( max-width 767px )
+    background #efefef
+    
 
   .b-h1
     margin-bottom 0
@@ -15,8 +19,11 @@
     
   .col-sm-8
     background-color #000
+    background-repeat no-repeat
+    background-position bottom center
     text-align center
     vertical-align bottom
     
-    img
-      max-width 100%
+    @media( max-width 767px )
+      background-size cover
+      display none
