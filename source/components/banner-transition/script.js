@@ -12,7 +12,7 @@
         .removeClass( 'i-0' )
         .removeClass( 'i-' + counter );
       
-      if ( counter >= 5) {
+      if ( counter >= 1) {
         counter = 0;
       }
       
@@ -22,7 +22,7 @@
         var prev = counter-1;
       
         if ( counter === 1) {
-          prev = 5;
+          prev = 1;
         }
       
         $( '.b-banner-transition' )
@@ -35,7 +35,7 @@
     }, 3000 );
     
     setTimeout( function() {
-      $( '.b-banner-transition img.i-5' ).show();
+      $( '.b-banner-transition img.i-1' ).show();
     }, 1000);
   
     /*if ( window.BX ) {

@@ -6,18 +6,20 @@
   
   @media( max-width 767px )
     background #efefef
-    
 
   .b-h1
     margin-bottom 0
     line-height 1.4
     
-  .col-sm-4
+  .col-sm-6:first-of-type
     background-color #efefef
     padding-top 20px
     padding-bottom 20px
     
-  .col-sm-8
+    @media( max-width 767px )
+      padding-top 40px
+    
+  .col-sm-6:last-of-type
     background-color #000
     background-repeat no-repeat
     background-position bottom center
@@ -26,4 +28,10 @@
     
     @media( max-width 767px )
       background-size cover
-      display none
+      padding 20px 0
+      
+    img
+      max-width 100%
+      
+  .row-flexbox
+    margin 0 -15px

@@ -1,6 +1,7 @@
 .b-header
   width auto
-  background-color #f2f2f2
+  background-color rgba( 255,255,255,0.9 )
+  border-bottom 1px solid rgba( 0,0,0,.07 )
   height 90px
   position relative
     
@@ -20,7 +21,8 @@
     position fixed
     width 100%
     z-index 996
-    background-color rgba( 242, 242, 242, 0.85 )
+    background-color rgba( 255, 255, 255, 0.9 )
+    border-bottom 1px solid rgba( 0,0,0,.07 )
   
   &__menu
     width 24px
@@ -88,7 +90,8 @@
   
   &__phone
     float left
-    font-size 11pt
+    font-size 13pt
+    font-weight 700
     text-align center
     line-height 86px
     margin-top 4px
@@ -106,6 +109,16 @@
       font-weight 400
       color #309dd5
       line-height normal
+      border-bottom 1px dashed #309dd5
+      
+      a&:hover,
+      a&:active,
+      a&:focus
+        text-decoration none
+        
+      a&:hover,
+      a&:focus
+        border-color #3c4c54
     
     @media (max-width: 1199px) and (min-width: 768px)
       padding-left 0
@@ -658,7 +671,7 @@
     a
       width 35px
       height 35px
-      margin-left 38px
+      margin-left 20px
       display inline-block
       vertical-align top
       background-size contain
@@ -701,7 +714,12 @@
         background url( 'images/svg/logo_YouTube_gray.svg' ) no-repeat center center
         span
           background url( 'images/svg/logo_YouTube_color.svg' ) no-repeat center center
+          
+      &.i-ok
+        background url("images/svg/logo_OK_gray.svg") no-repeat center center
         
+        span
+          background: url("images/svg/logo_OK_color.svg") no-repeat center center
   
     @media ( max-width 767px )
       text-align center
@@ -735,3 +753,52 @@
     
 .modal-backdrop
   z-index 994
+  
+.b-bottom-menu
+  clear both
+  line-height 30px
+  font-size 10pt
+  padding-top 30px
+  font-weight 100
+  
+  a
+    color #6e95b5
+    text-decoration none
+    white-space nowrap
+    font-size 10pt
+    
+    &:hover
+      color #0086cd
+          
+  h3
+    text-transform uppercase
+    font-size 11pt
+    color #999
+    margin 0 0 13px
+    font-weight 100
+    
+    a
+      font-size 11pt
+      color #999
+      
+      &:hover
+        color #999
+        text-decoration underline
+            
+  li
+    margin 0 0 6px
+      
+  .i-important
+    color #c23629
+      
+  &.i-important
+  
+    &:hover
+      color #f50238
+
+  ul,
+  li
+    list-style-type none
+    margin 0
+    padding 0
+    line-height normal

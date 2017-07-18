@@ -4,6 +4,10 @@
   background-color #ffcc00
   text-align center
   padding 27px 0 22px
+      
+  &__text
+    text-align left
+    width 40%
   
   &__text,
   &__message
@@ -13,9 +17,20 @@
     display inline-block
     vertical-align middle
     
+    .i-small
+      font-size 9pt
+      font-weight 100
+      
+      a
+        text-decoration underline
+        white-space nowrap
+    
     @media ( max-width 767px )
       margin-bottom 15px
       display block
+      width auto
+      text-align center
+      padding 0 20px
     
   &__message
     display none

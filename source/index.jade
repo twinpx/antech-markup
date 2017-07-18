@@ -7,21 +7,19 @@ block content
     
   include ./components/banner-transition/template
   
-  section
-  
-    include ./modules/about-block/include
+  include ./components/banner-transition/index
   
   .container
     include ./modules/menu-list/advantages
         
   include ./modules/call-me-block/include
         
-  section.i-gray.i-gallery-top
+  //-section.i-gray.i-gallery-top
     .container
     
       include ./components/portfolio/template
       
-  hr
+  //-hr
         
   section.i-gray.i-gallery-top
     .container
@@ -43,7 +41,7 @@ block content
         br
         a( href="" ) Галерея работ
         
-  section
+  //-section
     .container
       h2.b-h1.center Нужны готовые коробки?
       
@@ -75,6 +73,10 @@ block content
     .container
       include ./components/catalog.gallery/index
         
+  include ./modules/call-me-block/include
+  
+  include ./modules/about-block/include
+        
   section.i-clients
     .container
       h2.b-h1.center Нас выбирают лучшие
@@ -96,14 +98,14 @@ block content
             
           hr
           
-      hr.i-line
+      //-hr.i-line
       
-      h2.b-h1.center C нами надёжно
-      
-      p.text-muted.text-large.center Обратившись в нашу компанию вы обретете<br>надежного и верного поставщика.
-      
-      include ./modules/menu-list/include3
-      
+      //-h2.b-h1.center C нами надёжно
+        
+      //-p.text-muted.text-large.center Обратившись в нашу компанию вы обретете<br>надежного и верного поставщика.
+        
+      //-include ./modules/menu-list/include3
+        
   include ./modules/statistics/include
         
   section.i-blue

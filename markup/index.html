@@ -155,6 +155,7 @@
                         <option value="45">45</option>
                       </select>
                     </div>
+                    <div class="i-small">Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.<br><a href="">Пользовательское соглашение</a>.</div>
                   </div>
                   <div data-num="20" class="b-call-me__counter"></div>
                   <div class="b-call-me__feedback">
@@ -333,27 +334,27 @@
               <div class="b-h1">
                 <div class="i-1">
                   <div class="b-h1-typing">Создадим</div>
-                  <div class="b-h1-show">упаковку мечты</div>
+                  <div class="b-h1-show">совершенную совершенную мечты</div>
                 </div>
                 <div class="i-2">
                   <div class="b-h1-typing">Разработаем</div>
-                  <div class="b-h1-show">smart-дизайн</div>
+                  <div class="b-h1-show">совершенную smart-дизайн</div>
                 </div>
                 <div class="i-3">
                   <div class="b-h1-typing">Создадим</div>
-                  <div class="b-h1-show">3D-модель</div>
+                  <div class="b-h1-show">совершенную 3D-модель</div>
                 </div>
                 <div class="i-4">
                   <div class="b-h1-typing">Сделаем</div>
-                  <div class="b-h1-show">прототип</div>
+                  <div class="b-h1-show">совершенную прототип</div>
                 </div>
                 <div class="i-5">
                   <div class="b-h1-typing">Изготовим</div>
-                  <div class="b-h1-show">пробную партию</div>
+                  <div class="b-h1-show">совершенную пробную партию</div>
                 </div>
               </div>
               <div class="b-banner-transition__img-xs visible-xs"><img src="/upload/banner/1.png" class="i-1"><img src="/upload/banner/2.png" class="i-2"><img src="/upload/banner/3.png" class="i-3"><img src="/upload/banner/4.png" class="i-4"><img src="/upload/banner/5.png" class="i-5"></div>
-              <p>Создавая совершенную упаковку, мы предлагаем безграничные возможности роста.<br>Начните создание упаковки в один клик!</p>
+              <p class="hidden-xs">Создавая совершенную упаковку, мы предлагаем безграничные возможности роста.<br>Начните создание упаковки в один клик!</p>
               <div class="b-banner-transition__button"><a href="" class="btn btn-default">Перейти<span class="hidden-xs"> к созданию упаковки</span></a></div>
             </div>
           </div>
@@ -364,21 +365,32 @@
       </div>
     </div>
     <!-- end /components/banner-transition/-->
-    <section>
-      <div class="b-about-block">
-        <div class="container">
-          <div class="row-flexbox">
-            <div class="col-sm-4">
-              <div class="b-h1">Бренд Антэк</div>
-              <p>Мы команда, которая стреимтся вместе с вами к созданию совершенной упаковки.</p>
-              <p>Наполнение идеями и внимательное сопровождение на пути создания совершенной упаковки, которая радует сердца.</p>
-              <p>Драйв от реализации задуманного. Внимательное обслуживание к пути реализации задуманного. Проводники к реализации задуманного. Внимательный сопровождение на пути к цели. Наполнение идеями. Забота теплота поддержка открытость свершение мечты расширение возможностей.</p>
+    <!-- start /components/banner-transition/-->
+    <link rel="stylesheet" href="/components/banner-transition/style.css">
+    <script src="/components/banner-transition/script.js"></script>
+    <div class="b-banner-transition i-0 i-text-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="b-banner-transition__text">
+              <div class="b-h1">
+                <div class="i-1">
+                  <div class="b-h1-typing">Сделаем упаковку</div>
+                  <div class="b-h1-show">любых форм и размеров</div>
+                </div>
+              </div>
+              <div class="b-banner-transition__img-xs visible-xs"><img src="/upload/banner/1.jpg" class="i-1"></div>
+              <p class="hidden-xs">Мы изготавливаем упаковку высокого качества и любой сложности</p>
+              <div class="b-banner-transition__button"><a href="" class="btn btn-default">Заказать<span class="hidden-xs"> изготовление</span></a></div>
             </div>
-            <div style="background-image: url( '/upload/about.jpg' );" class="col-sm-8"></div>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 hidden-xs">
+            <div class="b-banner-transition__img"><img src="/upload/banner/1.jpg" class="i-1"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- end /components/banner-transition/-->
     <div class="container">
       <div class="row b-menu-list">
         <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
@@ -388,7 +400,7 @@
           <p class="text-muted text-middle">Проведем<br>анализ рынка</p>
         </div>
         <hr class="visible-xs-block clearfix">
-        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
+        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span class="i-6"></span></span>
           <p class="text-muted text-middle">Разработаем<br>дизайн и конструкцию</p>
         </div>
         <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
@@ -398,7 +410,9 @@
     </div>
     <div class="b-call-me-block">
       <div class="content">
-        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?</span>
+        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br><span class="i-small">
+              Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.
+               <a href="">Пользовательское соглашение</a>.</span></span>
           <input name="phone" type="tel" required="" value="+7(" class="form-control">
           <button type="submit" class="btn b-call-me-block__button">Жду звонка!</button>
         </form>
@@ -407,68 +421,6 @@
         </div>
       </div>
     </div>
-    <section class="i-gray i-gallery-top">
-      <div class="container">
-        <!-- start /components/portfolio/-->
-        <link rel="stylesheet" href="/components/portfolio/style.css">
-        <script src="/components/portfolio/script.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-        <div class="b-portfolio">
-          <div class="b-portfolio__detail">
-            <div class="b-portfolio__body">
-              <div class="b-portfolio__pointer"></div>
-              <div class="b-portfolio__title">Упаковка для центра &laquo;Как Здорово&raquo;</div>
-              <div class="b-portfolio__ill">
-                <div data-ratio="3/2" data-width="100%" data-loop="true" class="fotorama"><img src="/upload/portfolio/1.jpg" alt=""><img src="/upload/portfolio/2.jpg" alt=""></div>
-              </div>
-              <div class="b-portfolio__button"><a href="detail/" class="btn btn-default">Подробнее</a></div>
-            </div>
-          </div>
-          <div class="b-portfolio__wrapper">
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковочная коробка для Estivale Champagne&quot;, &quot;button&quot;:&quot;detail/?elem=1&quot;,&quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/18e/960_720_0/18e9b9eb56fd9db2efb630cc410f6094.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/ba9/960_720_0/ba9505821e28e66facdd70f38ad581a4.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/437/960_720_0/4376a0cebab64d9f3c5ed18a1b7a63c8.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/2a2/960_720_0/2a26d04fbb360a42fdaf3a82750ff9eb.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/1.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для термобелья PATAGONIA&quot;, &quot;button&quot;:&quot;detail/?elem=2&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/948/960_720_0/94807c88440c74d6aa4f2b928b944989.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/81b/960_720_0/81b52024b43cceaa074a1f01558097a2.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/c4c/960_720_0/c4cbc71ff8a8b094aea3b53470673ecc.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/35c/960_720_0/35c3ff1acea08709280a9e5b78ab63cd.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/2.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Улыбчивая упаковка для чайного фарфора STAKK Ceramics&quot;, &quot;button&quot;:&quot;detail/?elem=3&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/ffe/960_720_0/ffe361c69029ce2d5fc8e3f1bcfefc7c.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/867/960_720_0/867f49f205ed57891900bbf44334fbac.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cbb/960_720_0/cbb4770ef07df903be6bd3486fd7b859.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/3.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для четырех сортов меда wild honey&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/387/960_720_0/387d3b980bd4193da2a6b87b57558296.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/434/960_720_0/434aa7b553d6306b995a542a99be555b.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/e93/960_720_0/e93f3d77ef66f894f5f56bd30255e0dc.png&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/08b/960_720_0/08b7467f1f83323e7e038ee55cfc774f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cf6/960_720_0/cf62065f3609805ecd7fb6c2b4c01bd1.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/4.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Tiffin проект бренда и упаковки&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/0cf/960_720_0/0cfc23ca7175887079af270eb11d7437.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/0d4/960_720_0/0d4d78bc3a59d623620fa9f75389c2fd.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/947/960_720_0/94772c66f01faa9b15009d52c99d1f1f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/9cd/960_720_0/9cde40fa1f1976c215507e5b97d2dede.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7ef/960_720_0/7efa832f983de9d85b5fb2c6a71f54c2.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/cd8/960_720_0/cd87d1b36859accac354e7787816d7ef.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/5.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для молочного стаута La Vache Folle&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/8b2/960_720_0/8b202069688c79dbe83e9861878b0e0a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/0b7/960_720_0/0b7906dc1c5dfdad308d53d2b3feaffc.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/399/960_720_0/39931427a62a1797f76cbd148a4b412f.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/2b8/960_720_0/2b8a26bbff76507129132767d2a49894.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7e5/960_720_0/7e54426308b3169a2be34eef78a6852b.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/fd1/960_720_0/fd19ba8e58bd86933983b7dff59772f6.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/6.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для наушников Urbanears&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/8ac/960_720_0/8ac4beddecad0c0710087ac71c222558.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/32b/960_720_0/32b5ca537dc7a0135db4e5e1c302d58e.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/8a1/960_720_0/8a10627bbc232f8424de8f5b45270d04.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/8b3/960_720_0/8b39c691e5c1cfe12d237adc3ad86c5a.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/7.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для доставки сэндвичей GoAir&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/d52/960_720_0/d52b15f136e68d7bb518e9a7f1826a39.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/def/960_720_0/def86526a9969285bcc7af03a2c077e1.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/a33/960_720_0/a33866d5eee3f33b92a1edbca1cf25b8.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/8.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка для комплекта средств от простуды Get Well&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/614/960_720_0/614395b8c63513818d5e88b5f5a98ed6.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/82d/960_720_0/82d010060eae746acf020d84aa508a07.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/01b/960_720_0/01b1c851df06bcaef8ccfb87f7b1f5b9.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7c5/960_720_0/7c52cbf10e52ceb017a8e11cf8217e34.jpeg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/75f/960_720_0/75f2dacd709a14c1882554581515f94a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/7b9/960_720_0/7b95000d4f88116a6f0e5bf9462b8de4.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/9.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Коробки для упаковки драгоценностей DARI JEWELLERY&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/343/960_720_0/34394f4e0294abfb154f8397d20cab5d.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/9bb/960_720_0/9bb0340863d257935878b9d55d388c1a.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/222/960_720_0/222782c45eab80b8a0b556389b9ea254.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/242/960_720_0/24217d53fdc579417140e413169adfbe.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/904/960_720_0/9047e43464939744961b5d74c93ee194.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/597/960_720_0/597913235d98ef7fcd6b6c3a6cf3424e.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/10.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Упаковка как экологически безопасная скатерть-самобранка&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/e58/960_720_0/e58272d659a4da0cacee64730ce95c21.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/e73/960_720_0/e734a96692df7d7e323a29bf583bcb81.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/42e/960_720_0/42e2b23b189f28e4d4fbbf17d4bb9fd5.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/fee/960_720_0/feee9d2e37ac4de07a76889d77dfa732.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/11.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-gallery="{&quot;title&quot;: &quot;Ювелирная упаковка для изделий Welfe&quot;, &quot;button&quot;:&quot;detail/&quot;, &quot;images&quot;: [&quot;http://www.antech.ru/upload/resize_cache/iblock/46e/960_720_0/46e17378ffc6ce1457981020bbc7cb82.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/b45/960_720_0/b459aa72d437f82047e9262139e94239.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/100/960_720_0/1008335bcb9828917903a4ee62921a6d.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/41e/960_720_0/41ea3135c19bd2de3e062512c70e1e8c.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/a59/960_720_0/a59bafff6bbc3a52e98dbbd3a9627a12.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/564/960_720_0/564fbe80222f135285cec62e7f0156d4.jpg&quot;, &quot;http://www.antech.ru/upload/resize_cache/iblock/25c/960_720_0/25c3de0a198d9a1e5d68531b4256d485.jpg&quot;]}" class="b-portfolio__item">
-              <div data-original="/upload/portfolio/12.jpg"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" alt=""></div>
-            </div>
-            <div data-page="2" data-ajax="/components/portfolio/load.html" class="b-portfolio__load"><i>Показать ещё</i><b>Загрузка</b></div>
-          </div>
-        </div>
-        <!-- end /components/portfolio/-->
-      </div>
-    </section>
-    <hr>
     <section class="i-gray i-gallery-top">
       <div class="container">
         <h2 class="b-h1 center">Наши работы</h2>
@@ -516,206 +468,6 @@
     <section class="i-gray i-gallery-bottom">
       <div class="container">
         <div class="b-gallery-link center"><a href="" class="b-icon"></a><br><a href="">Галерея работ</a></div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <h2 class="b-h1 center">Нужны готовые коробки?</h2>
-        <p class="text-muted text-large center">В нашем интернет-магазине представлен большой выбор<br>коробок и упаковочных материалов.</p>
-        <hr class="i-size-XS">
-        <!-- start /components/products-list/-->
-        <link rel="stylesheet" href="/components/products-list/style.css">
-        <script src="/components/products-list/script.js"></script>
-        <div class="b-products-list">
-          <div role="tablist" class="b-products-list__nav nav nav-tabs">
-            <div role="group" class="btn-group"><a href="#boxes" aria-controls="boxes" role="tab" data-toggle="tab" class="btn btn-default btn-menu active"><span>Картонные коробки</span></a><a href="#gofro" aria-controls="gofro" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>Гофрокартон</span></a><a href="#pack" aria-controls="pack" role="tab" data-toggle="tab" class="btn btn-default btn-menu"><span>Упаковочные материалы</span></a></div>
-          </div>
-          <hr class="i-size-M">
-          <div class="tab-content">
-            <div id="boxes" div role="tabpanel" class="tab-pane active">
-              <div class="b-products-list__wrapper">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-              </div>
-              <div data-page="2" data-ajax="/components/products-list/load.html" class="b-products-list__load"><i>Показать ещё</i><b>Загрузка</b></div>
-            </div>
-            <div id="gofro" div role="tabpanel" class="tab-pane">
-              <div class="b-products-list__wrapper">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-              </div>
-              <div data-page="2" data-ajax="/components/products-list/load.html" class="b-products-list__load"><i>Показать ещё</i><b>Загрузка</b></div>
-            </div>
-            <div id="pack" div role="tabpanel" class="tab-pane">
-              <div class="b-products-list__wrapper">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/1.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/2.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="b-products-list__item center"><a href="" data-original="/upload/products/3.jpg" class="b-products-list__image"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" data-big-image="/upload/products/2.jpg" class="img-responsive center-block"></a>
-                      <p class="b-size">1000 x 500 x 500</p>
-                      <p>от <b class="b-price">46,91</b>руб</p>
-                      <p><a href="" class="btn btn-default btn-md btn-disabled">В корзине</a></p>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-              </div>
-              <div data-page="2" data-ajax="/components/products-list/load.html" class="b-products-list__load"><i>Показать ещё</i><b>Загрузка</b></div>
-            </div>
-          </div>
-        </div>
-        <!-- end /components/products-list/-->
-        <hr>
-        <div class="b-store-link center"><a href="" class="b-icon"></a><br><a href="">Перейти в магазин</a></div>
-        <hr class="i-line">
-        <h2 class="b-h1 center">С нами удобно</h2>
-        <p class="text-muted text-large center">В нашем интернет-магазине  представлен самый широкий ассортимент<br>готовых коробок. По этому подобрать упаковку<br>под любые задачи легко и просто!</p>
-        <div class="row b-menu-list">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-4"></span></span>
-            <p><b>Лучшая цена</b></p>
-            <p class="text-muted text-middle">Вы получаете лучшее качество<br>по оптимальной цене</p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-5"></span></span>
-            <p><b>Шоурум</b></p>
-            <p class="text-muted text-middle">Посмотреть, испытать и выбрать<br>всего в  2км от МКАД</p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-6"></span></span>
-            <p><b>Быстрая доставка</b></p>
-            <p class="text-muted text-middle">Доставляем по Москве<br>и области</p>
-          </div>
-        </div>
-        <div class="center"><a href="" class="btn btn-default">Перейти в каталог</a></div>
       </div>
     </section>
     <section class="i-gray">
@@ -968,6 +720,32 @@
         <!-- end /components/catalog.gallery/-->
       </div>
     </section>
+    <div class="b-call-me-block">
+      <div class="content">
+        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br><span class="i-small">
+              Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.
+               <a href="">Пользовательское соглашение</a>.</span></span>
+          <input name="phone" type="tel" required="" value="+7(" class="form-control">
+          <button type="submit" class="btn b-call-me-block__button">Жду звонка!</button>
+        </form>
+        <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
+          <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
+        </div>
+      </div>
+    </div>
+    <div class="b-about-block">
+      <div class="container">
+        <div class="row-flexbox">
+          <div class="col-sm-6">
+            <div class="b-h1">Бренд Антэк</div>
+            <p>Мы команда, которая стреимтся вместе с вами к созданию совершенной упаковки.</p>
+            <p>Наполнение идеями и внимательное сопровождение на пути создания совершенной упаковки, которая радует сердца.</p>
+            <p>Драйв от реализации задуманного. Внимательное обслуживание к пути реализации задуманного. Проводники к реализации задуманного. Внимательный сопровождение на пути к цели. Наполнение идеями. Забота теплота поддержка открытость свершение мечты расширение возможностей.</p>
+          </div>
+          <div style="background-image: url( '/upload/about.jpg' );" class="col-sm-6"><img src="/upload/about.jpg" class="visible-xs"></div>
+        </div>
+      </div>
+    </div>
     <section class="i-clients">
       <div class="container">
         <h2 class="b-h1 center">Нас выбирают лучшие</h2>
@@ -1012,25 +790,6 @@
           <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
         </div>
         <hr>
-        <hr class="i-line">
-        <h2 class="b-h1 center">C нами надёжно</h2>
-        <p class="text-muted text-large center">Обратившись в нашу компанию вы обретете<br>надежного и верного поставщика.</p>
-        <div class="row b-menu-list">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-4"></span></span>
-            <p><b>Гарантированные сроки</b></p>
-            <p class="text-muted text-middle">Изготовим и отгрузим заказ точно в срок</p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-5"></span></span>
-            <p><b>Высокое качество продукции</b></p>
-            <p class="text-muted text-middle">Используем только высококачественное сырье</p>
-          </div>
-          <hr class="visible-xs-block">
-          <div class="col-sm-4 center"><span class="b-ul-icon"><span class="i-6"></span></span>
-            <p><b>Внимательное обслуживание</b></p>
-            <p class="text-muted text-middle">Отвечаем быстро. Помогаем сразу. Находим лучшее решение.</p>
-          </div>
-        </div>
       </div>
     </section>
     <section class="i-gray i-float-blocks">
@@ -1143,9 +902,11 @@
             <div class="center">
               <button type="submit" class="btn btn-default">Жду звонка!</button>
             </div>
+            <div class="i-small">Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.<br><a href="">Пользовательское соглашение</a>.</div>
           </form>
         </div>
         <div data-num="20" class="b-request-form__counter"></div>
+        <div class="b-request-form__error"></div>
         <div class="b-request-form__feedback">
           <h2>Был ли наш специалист полезен?</h2>
           <hr class="i-size-S">

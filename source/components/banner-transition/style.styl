@@ -65,15 +65,15 @@
     
   &__img-xs
     position relative
-    height 120px
+    height 180px
     
     img
-      height 120px
+      height 180px
       display block
       opacity 0
       position absolute
       top 0
-      left calc( 50% - 75px )
+      left calc( 50% - 110px )
   
   .b-h1
     height 100px
@@ -107,11 +107,23 @@
   &__button
     margin-top 25px
     
+  @media( max-width 1199px ) and ( min-width 768px )
+  
+    .b-h1-typing,
+    .b-h1-show
+      font-size 26pt
+      
+    .b-banner-transition__text p
+      font-size 12pt
+      
+    .b-banner-transition__img img
+      height 230px
+    
   @media( max-width 767px )
     height 430px
   
     .b-h1
-      height 64px
+      height 96px
       margin-top 33px
   
     .b-h1-typing
@@ -123,6 +135,12 @@
       
     p
       font-size 10pt
+      
+    .btn
+      padding 0 30px
+      font-size 14pt
+      border-radius 28px
+      line-height 48px
       
   &.i-0 .b-banner-transition__img img.i-1,
   &.i-1 .b-banner-transition__img img.i-1
@@ -174,8 +192,6 @@
     animation bannerTransitionAnimationOut .5s
     -webkit-animation-fill-mode forwards
     animation-fill-mode forwards
-      
-      
       
   &.i-1 .b-banner-transition__img-xs img.i-1
     animation bannerTransitionAnimationInXs .5s 1s

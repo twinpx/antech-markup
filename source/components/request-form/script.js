@@ -11,6 +11,7 @@
       $thankyou = $( '.b-request-form__thankyou' ),
       $onceMore = $( '.b-request-form__once-more' ),
       $callback = $( '.b-request-form__callback' ),
+      $error = $( '.b-request-form__error' ),
       counterInterval;
   
     $form.submit( function(e) {
@@ -28,35 +29,41 @@
           if ( window.yaCounter103630 ) {
             yaCounter103630.reachGoal('new_callback');
           }
-          //counter
-          if ( $counter.length ) {
-            $requestForm.addClass( 'i-counter' );
-            var counter = $counter.data( 'num' );
-            $counter.text( counter-- );
-            counterInterval = setInterval( function() {
-              $counter.text( counter-- );
-              if ( counter < 0 ) {
-                clearInterval( counterInterval );
-                $requestForm.removeClass( 'i-counter' ).addClass( 'i-feedback' );
-                if ( data && data.ID ) {
-                  $feedback.find( 'form' ).append( '<input type="hidden" name="CB_ID" value="' + data.ID + '">' );
-                }
-              }
-            }, 1000 );
-          //callback
-          } else if ( $callback.length ) {
-            $( '#requestHour' ).text( $form.find( 'select:eq(0)' ).val());
-            $( '#requestMinute' ).text( $form.find( 'select:eq(1)' ).val());
-            $requestForm.addClass( 'i-callback' );
-          }
           
-          /*if ( data && data.STATUS.toUpperCase() === 'Y' ) {
+          if ( data && data.STATUS.toUpperCase() === 'Y' ) {
+          
             //$( '.b-request-form__success' ).html( data.MESSAGE );
-            $( '.b-request-form' ).addClass( 'i-success' );
+            $( '.b-request-form' ).removeClass( 'i-error' ).addClass( 'i-success' );
+            
+            //counter
+            if ( $counter.length ) {
+              $requestForm.addClass( 'i-counter' );
+              var counter = $counter.data( 'num' );
+              $counter.text( counter-- );
+              counterInterval = setInterval( function() {
+                $counter.text( counter-- );
+                if ( counter < 0 ) {
+                  clearInterval( counterInterval );
+                  $requestForm.removeClass( 'i-counter' ).addClass( 'i-feedback' );
+                  if ( data && data.ID ) {
+                    $feedback.find( 'form' ).append( '<input type="hidden" name="CB_ID" value="' + data.ID + '">' );
+                  }
+                }
+              }, 1000 );
+            //callback
+            } else if ( $callback.length ) {
+              $( '#requestHour' ).text( $form.find( 'select:eq(0)' ).val());
+              $( '#requestMinute' ).text( $form.find( 'select:eq(1)' ).val());
+              $requestForm.addClass( 'i-callback' );
+            }
+            
           } else if ( data && (data.STATUS.toUpperCase() === 'E' || data.STATUS.toUpperCase() === 'N' )) {
+          
             $( '#requestFormError' ).html( data.MESSAGE );
             $( '.b-request-form' ).addClass( 'i-error' );
-          }*/
+            
+          }
+          
         },
         error: function(a, b, c) {
           if ( window.console ) {
@@ -107,7 +114,7 @@
 
     $onceMore.find( '.btn' ).click( function(e) {
       e.preventDefault();
-      $requestForm.removeClass( 'i-once-more' );
+      $requestForm.removeClass( 'i-once-more' ).removeClass( 'i-success' );
     });
   
     /*if ( window.BX ) {
