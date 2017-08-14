@@ -31,3 +31,49 @@
       
     &:hover
       transform( scale(1.3))
+
+.preimushestva-block
+  display flex
+  justify-content flex-start
+  align-items stretch
+  flex-wrap wrap
+  margin 20px 0
+  
+.index-preim-item
+  
+  .preim-name
+    font-weight 300
+  
+  @media (min-width: 991px)
+    &
+      display flex
+      justify-content flex-start
+      align-items center
+      
+    img.img-responsive
+      display inline
+      float left
+    
+    .preim-name
+      display inline
+      float right
+
+  @media (min-width: 1201px)
+    img.img-responsive
+      max-width 115px
+      margin-right 20px
+
+  @media (max-width: 1200px) and  (min-width: 991px)
+    img.img-responsive
+      max-width 95px
+      margin-right 15px
+      
+  @media (max-width: 990px)
+    &
+      text-align center
+      
+    img.img-responsive
+      max-width 115px
+      text-align center
+      margin 0 auto
+      

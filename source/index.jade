@@ -5,13 +5,36 @@ block title
 
 block content
     
-  include ./components/banner-transition/template
-  
-  include ./components/banner-transition/index
-  
+  //-include ./components/banner-transition/template
+  //-include ./components/banner-transition/index
   .container
-    include ./modules/menu-list/advantages
-        
+    .col-md-9
+      div(style="height: 150px;")
+        Банер 1
+    
+    .col-md-3
+      div(style="height: 100px;")
+        Банер 2
+      div(style="height: 50px;")
+        Банер 3
+  .container
+    .row.preimushestva-block
+      .index-preim-item.col-sm-3.col-xs-6
+        img.img-responsive(src="/upload/preimushestva/1-house.svg")
+        .preim-name Производство и офис в одном месте в Красногорске
+      .index-preim-item.col-sm-3.col-xs-6
+        img.img-responsive(src="/upload/preimushestva/2-time.svg")
+        .preim-name Изготавливаем упаковку от 1 дня
+      .index-preim-item.col-sm-3.col-xs-6
+        img.img-responsive(src="/upload/preimushestva/3-garantii.svg")
+        .preim-name Гарантируем  сроки изготовления и качество продукции
+      .index-preim-item.col-sm-3.col-xs-6
+        img.img-responsive(src="/upload/preimushestva/4-bigsize.svg")
+        .preim-name Изготавливаем гофроупаковку больших размеров
+
+  //-.container
+    //-include ./modules/menu-list/advantages
+
   include ./modules/call-me-block/include
         
   //-section.i-gray.i-gallery-top
