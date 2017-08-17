@@ -1,0 +1,61 @@
+﻿// start /components/ideas/
+
+link( rel="stylesheet", href="/components/ideas/style.css" )
+script( src="/components/ideas/script.js" )
+
+.b-ideas
+
+  h2 Портфолио
+    .b-h-sup 1270
+      
+  a.btn-link.hidden-xs( href="/ideas/" ) Посмотреть все идеи
+
+  include ../../modules/gallery/fotorama
+  
+  .fotorama( data-width="100%" data-height="400" data-loop="true" )
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+          
+  hr.visible-xs-block
+      
+  .text-center.visible-xs-block
+    a.btn-link( href="/ideas/" ) Посмотреть все идеи
+
+// end /components/ideas/

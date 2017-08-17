@@ -1,0 +1,85 @@
+﻿@import '../../styl/component-include.styl'
+
+.b-ideas
+  
+  h2
+    display inline-block
+    vertical-align top
+    
+    .b-h-sup
+      font-size 9.5pt
+      margin 8px 0 0 12px
+      display inline-block
+      vertical-align top
+      color #585858
+      
+  .btn-link
+    display inline-block
+    vertical-align top
+    margin 31px 0 0 97px
+      
+    @media( max-width 767px )
+      margin 0
+    
+  &-card
+    background-color #fff
+    padding 15px 15px 70px
+    position relative
+    font-size 9.5pt
+    font-weight 300
+      
+    &__img
+      display block
+      padding-top 67.7%
+      background-repeat no-repeat
+      background-position center
+      background-size cover
+      
+    h3
+      margin-top 14px
+      
+    p
+      color #666666
+      margin 11px 0
+      
+    &__bottom
+      position absolute
+      bottom 25px
+      left 0
+      width 100%
+      padding 15px
+      
+      a
+        color #48789a
+        float left
+      
+      span
+        float right
+        
+      &:after
+        content ''
+        clear both
+      
+  .fotorama__arr
+    width 30px
+    height 100%
+    top 0
+    margin 0
+    transition( all 0.3s ease !important )
+    
+    &--prev
+      left 0
+      background embedurl( 'img/arrow-left.png' ) no-repeat center center transparent
+    
+    &--next
+      right 0
+      background embedurl( 'img/arrow-right.png' ) no-repeat center center transparent
+      
+    &:hover
+      background-color rgba( 204,204,204,.8)
+      
+    &:active
+      background-color rgba( 204,204,204,.5)
+      
+  .fotorama__nav-wrap
+    display none
