@@ -27,6 +27,7 @@
     position relative
     font-size 9.5pt
     font-weight 300
+    min-height 510px
       
     &__img
       display block
@@ -37,10 +38,15 @@
       
     h3
       margin-top 14px
+      max-height 90px
+      overflow hidden
+      line-height 1.25
       
     p
       color #666666
       margin 11px 0
+      max-height 66px
+      overflow hidden
       
     &__bottom
       position absolute
@@ -83,3 +89,6 @@
       
   .fotorama__nav-wrap
     display none
+    
+  .fotorama__html
+    padding 0 50px !important
