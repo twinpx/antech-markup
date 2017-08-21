@@ -1,9 +1,9 @@
 body
   background #fff
-  font-size 13pt
+  font-size 18px
   font-family pragmatica, 'Open Sans', sans !important
   font-weight 100
-  line-height 1.75
+  color $c-dark-grey
   
 .i-menu-open
 
@@ -46,18 +46,30 @@ html.i-cart-modal-open
         overflow auto
   
 a
-  color #3c4c54
+  color c-blue-5
   text-decoration none
   
   &:hover
-    color #3c4c54
     
   &:focus
     outline none
-  
+    
+  &.ajax-link
+    border-bottom 1px dashed
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus:active
+      text-decoration none
+
+
 p
-  margin 20px 0
-  
+  margin 0 0 20px
+  a
+    text-decoration underline
+    &.ajax-link
+      text-decoration none
+
 button
   border none
   font-family pragmatica, 'Open Sans', sans !important
@@ -93,31 +105,38 @@ hr.i-line-simple
   background embedurl( 'img/hr-bg.gif' ) repeat-x center center
   
 h1,
+.h1,
 .b-h1
-  font-size 38pt
-  font-weight 100
+  font-weight 400
   margin-top 0
-  margin-bottom 57px
   
-  @media( max-width 767px )
-    font-size 24pt
     
 h2.b-h1
   margin-bottom 34px
   
 h2,
+.h2,
 .b-h2
-  font-size 30pt
-  font-weight 100
-  
+  font-weight 400
+
+h3,
+.h3
+  font-weight 400
+
 h4,
+.h4,
 .b-h4
-  font-size 18pt
+  font-weight 600
   
 h5,
+.h5,
 .b-h5
-  font-size 14pt
-  font-weight bold
+  font-weight 600
+
+h6,
+.h6
+  font-weight 600
+
   
 .inner-container
   margin 0 auto
@@ -154,13 +173,13 @@ h5,
   float none
   
 .btn
-  background-color #ffcd00
+  background-color $c-yellow
   border none
-  font-weight 200
+  font-weight 600
   text-decoration none
   
   &:hover
-    background-color darken( #ffcd00, 5% )
+    background-color darken( $c-yellow, 5% )
     
   &:focus,
   &:active,
@@ -170,16 +189,17 @@ h5,
   &.i-inverse
     border 1px solid #ffcd00
     background-color #fff
-    line-height 67px
+    line-height 44px
     
     &:hover
       background-color #ffcd00
   
-  &-default
-    padding 0 33px
-    font-size 17pt
+  &-default,
+  &-type-1
+    padding 0 25px
+    font-size 18px
     border-radius 35px
-    line-height 69px
+    line-height 46px
     
     .btn-group &
       line-height 58px
@@ -193,13 +213,11 @@ h5,
     
   &-sm
     padding 0 20px
-    font-size 13pt
     border-radius 35px
     line-height 39px
     
   &-md
     padding 0 30px
-    font-size 14pt
     border-radius 28px
     line-height 48px
     
@@ -266,6 +284,30 @@ h5,
       box-shadow none
       background-color #fff !important
       color #319ed6 !important
+  
+  &-type-2
+    border-radius 5px
+    font-size 18px
+    color $c-black
+    padding 0 20px
+    line-height 50px
+
+  &-type-3
+    border-radius 5px
+    font-size 14px
+    color $c-blue-5
+    line-height 37px
+    background none
+    border-color $c-blue-5
+    border-width 1px
+    border-style solid
+    padding 0 14px
+    font-weight 400
+    &:hover
+      background-color $c-grey-2
+      color $c-blue-5
+      
+    
   
 section,
 .b-section
@@ -491,3 +533,60 @@ blockquote
         width: 1200px
     }
 }*/
+
+
+
+.row
+  &-xs
+    @media (max-width: 767px)
+      margin-left -15px
+      margin-right -15px
+  &-sm
+    @media (max-width: 991px)
+      margin-left -15px
+      margin-right -15px
+  &-md
+    @media (max-width: 1199px)
+      margin-left -15px
+      margin-right -15px
+
+.container-fulwidth
+  &-xs
+    @media (max-width: 767px)
+      width 100%
+      margin-right 0
+      margin-left 0
+      padding-left 0
+      padding-right 0
+  &-sm
+    @media (max-width: 991px)
+      width 100%
+      margin-right 0
+      margin-left 0
+      padding-left 0
+      padding-right 0
+  &-md
+    @media (max-width: 1199px)
+      width 100%
+      margin-right 0
+      margin-left 0
+      padding-left 0
+      padding-right 0
+
+.text-center
+  &-xs
+    @media (max-width: 767px)
+      text-align center
+  &-sm
+    @media (max-width: 991px)
+      text-align center
+  &-md
+    @media (max-width: 1199px)
+      text-align center
+
+
+.color-red
+  color $c-red
+
+.section
+  margin 20px 0
