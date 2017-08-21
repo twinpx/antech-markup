@@ -1,3 +1,4 @@
+
 .i-gallery
 
   &-top
@@ -32,6 +33,10 @@
     &:hover
       transform( scale(1.3))
 
+.index-baner-1
+  height 360px
+
+
 .preimushestva-block
   display flex
   justify-content flex-start
@@ -42,7 +47,7 @@
 .index-preim-item
   
   .preim-name
-    font-weight 300
+    font-weight 600
   
   @media (min-width: 991px)
     &
@@ -76,4 +81,91 @@
       max-width 115px
       text-align center
       margin 0 auto
-      
+
+.index-col-ord
+  display flex
+  flex-direction colum
+  flex-wrap wrap
+  margin-left -5px
+  
+  .bn-item
+    width 100%
+  
+  @media (max-width: 768px)
+    &
+      flex-direction column-reverse
+      margin-left -15px
+
+.index-baner-2
+  height 280px
+  margin-bottom 10px
+  background-color #f6f6f6
+  text-align center
+  padding 20px
+  
+  .ib2-name,
+  .ib2-text
+    margin 0 0 15px
+  
+  .ib2-text
+    font-size 18px
+  
+  
+  .ib2-img
+    max-height 150px
+    margin 0 auto
+
+.index-baner-3
+  a.play-link
+    color white
+    background-color red
+    height 70px
+    display block
+    display flex
+    justify-content center
+    align-items center
+    font-size 16px
+    font-weight 400
+    
+    @media (max-width: 768px)
+      &
+        height 60px
+    
+    &:hover
+      text-decoration none
+    
+    .play-icon
+      width 35px
+      height 35px
+      margin 0 10px
+
+.index-list-preim
+  list-style none
+  
+  @media (min-width: 991px)
+    &
+      display flex
+      flex-wrap wrap
+      align-content space-around
+      height calc(100%)
+  
+  li
+    background-image url(/img/index-list-img.png)
+    background-position 0 50%
+    background-repeat no-repeat
+    padding-left 50px
+    font-weight 400
+    
+  @media (max-width: 990px)
+    li
+      margin 10px 0
+    
+    &
+      padding-left 0
+
+.flex-container
+  display flex
+  justify-content flex-start
+  align-items stretch
+  flex-wrap wrap
+

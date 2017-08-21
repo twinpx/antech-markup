@@ -113,3 +113,36 @@ $('.nav-tabs a').click(function (e) {
   $('.nav-tabs a').removeClass( 'active' );
   $(this).addClass( 'active' ).tab('show');
 });
+
+
+/*
+var player = false;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('indexVideoPlay', {
+    events: {'onReady': onPlayerReady}
+  });
+}
+*/
+// function onPlayerReady(event) {
+//   alert('ready')
+/*
+  $('#aboutVideo').on('hide.bs.modal', function (e) {
+    player.pauseVideo();
+    alert('df')
+  });
+*/
+
+// }
+
+
+
+$('#aboutVideo').on('hide.bs.modal', function (e) {
+  
+  $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
+
+
+
+
+
