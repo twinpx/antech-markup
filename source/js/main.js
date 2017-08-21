@@ -118,6 +118,8 @@ $('.nav-tabs a').click(function (e) {
 
 $('#aboutVideo').on('hide.bs.modal', function (e) {
   $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}).on('show.bs.modal', function (e) {
+  $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 });
 
 
