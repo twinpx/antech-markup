@@ -413,7 +413,7 @@ module.exports = function( grunt ) {
     //js
     'concat:prod',
     'copy:prodComponents',
-    'jshint:prod',
+//     'jshint:prod',
     'uglify:prodTemplate',
     'concat:prodPluginsJS',
     'uglify:prodComponents',

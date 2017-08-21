@@ -7,6 +7,38 @@ block content
     
   //-include ./components/banner-transition/template
   //-include ./components/banner-transition/index
+  
+  .container
+    .col-md-12.row-xs(style="background-color: #f5f5f5; margin-top: 10px; padding-top: 10px;")
+      .col-md-6.col-lg-5.col-lg-offset-1.text-center-sm
+        
+        h2 Добро пожаловать в&nbsp;Антэк!
+        
+        div У&nbsp;нас вы&nbsp;можете 
+          a(href="/production/") сделать заказ
+          |  на&nbsp;изготовление индивидуальной упаковки или 
+          a(href="/catalog/") купить
+          |  типовые картонные коробки.
+        
+        a.hidden-xs.hidden-sm.index-play-btn(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
+      
+      .col-md-6  
+        img.img-responsive(src="/upload/banner/baner_anton.jpg")
+      
+      .col-md-12.visible-xs.visible-sm.text-center
+        a.index-play-btn-2(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
+  
+  
+  #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content.text-middle
+      
+        .close(type='button', data-dismiss='modal', aria-label='Close')
+        .modal-body.center
+          .embed-responsive.embed-responsive-16by9
+            iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=1" frameborder="0" allowfullscreen )
+  
+
   .container.container-fulwidth-xs(style="margin-top: 10px; margin-bottom: 10px;")
     .col-sm-9
       .row.row-xs
@@ -34,16 +66,16 @@ block content
   .container
     .row.preimushestva-block
       .index-preim-item.col-sm-3.col-xs-6
-        img.img-responsive(src="/upload/preimushestva/1-house.svg")
+        img.img-responsive(src="/img/preimushestva/1-house.svg")
         .preim-name Производство и&nbsp;офис в&nbsp;одном месте в&nbsp;Красногорске
       .index-preim-item.col-sm-3.col-xs-6
-        img.img-responsive(src="/upload/preimushestva/2-time.svg")
+        img.img-responsive(src="/img/preimushestva/2-time.svg")
         .preim-name Изготавливаем упаковку от&nbsp;1&nbsp;дня
       .index-preim-item.col-sm-3.col-xs-6
-        img.img-responsive(src="/upload/preimushestva/3-garantii.svg")
+        img.img-responsive(src="/img/preimushestva/3-garantii.svg")
         .preim-name Гарантируем сроки изготовления и&nbsp;качество продукции
       .index-preim-item.col-sm-3.col-xs-6
-        img.img-responsive(src="/upload/preimushestva/4-bigsize.svg")
+        img.img-responsive(src="/img/preimushestva/4-bigsize.svg")
         .preim-name Изготавливаем гофроупаковку больших размеров
 
   //-.container
