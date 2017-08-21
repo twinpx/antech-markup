@@ -20,7 +20,7 @@
       <div class="b-header-fixed">
         <div class="container">
           <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu hidden-md hidden-lg"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
             <div class="col-sm-5 hidden-sm">
               <menu class="hidden-xs">
                 <li><a href="">Создание упаковки</a></li>
@@ -323,88 +323,92 @@
         </div>
       </div>
     </header>
-    <!-- start /components/banner-transition/-->
-    <link rel="stylesheet" href="/components/banner-transition/style.css">
-    <script src="/components/banner-transition/script.js"></script>
-    <div class="b-banner-transition i-0 i-text-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="b-banner-transition__text">
-              <div class="b-h1">
-                <div class="i-1">
-                  <div class="b-h1-typing">Создадим</div>
-                  <div class="b-h1-show">совершенную совершенную мечты</div>
-                </div>
-                <div class="i-2">
-                  <div class="b-h1-typing">Разработаем</div>
-                  <div class="b-h1-show">совершенную smart-дизайн</div>
-                </div>
-                <div class="i-3">
-                  <div class="b-h1-typing">Создадим</div>
-                  <div class="b-h1-show">совершенную 3D-модель</div>
-                </div>
-                <div class="i-4">
-                  <div class="b-h1-typing">Сделаем</div>
-                  <div class="b-h1-show">совершенную прототип</div>
-                </div>
-                <div class="i-5">
-                  <div class="b-h1-typing">Изготовим</div>
-                  <div class="b-h1-show">совершенную пробную партию</div>
-                </div>
-              </div>
-              <div class="b-banner-transition__img-xs visible-xs"><img src="/upload/banner/1.png" class="i-1"><img src="/upload/banner/2.png" class="i-2"><img src="/upload/banner/3.png" class="i-3"><img src="/upload/banner/4.png" class="i-4"><img src="/upload/banner/5.png" class="i-5"></div>
-              <p class="hidden-xs">Создавая совершенную упаковку, мы предлагаем безграничные возможности роста.<br>Начните создание упаковки в один клик!</p>
-              <div class="b-banner-transition__button"><span onclick="window.location='/catalog/'" class="btn btn-default">Заказать<span class="hidden-xs"> изготовление</span></span></div>
-            </div>
-          </div>
-          <div class="col-sm-5 col-sm-offset-1 hidden-xs">
-            <div class="b-banner-transition__img"><img src="/upload/banner/1.png" class="i-1"><img src="/upload/banner/2.png" class="i-2"><img src="/upload/banner/3.png" class="i-3"><img src="/upload/banner/4.png" class="i-4"><img src="/upload/banner/5.png" class="i-5"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end /components/banner-transition/-->
-    <!-- start /components/banner-transition/-->
-    <link rel="stylesheet" href="/components/banner-transition/style.css">
-    <script src="/components/banner-transition/script.js"></script>
-    <div class="b-banner-transition i-0 i-text-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="b-banner-transition__text">
-              <div class="b-h1">
-                <div class="i-1">
-                  <div class="b-h1-typing">Сделаем упаковку</div>
-                  <div class="b-h1-show">любых форм и размеров</div>
-                </div>
-              </div>
-              <div class="b-banner-transition__img-xs visible-xs"><img src="/upload/banner/1.jpg" class="i-1"></div>
-              <p class="hidden-xs">Мы изготавливаем упаковку высокого качества и любой сложности</p>
-              <div class="b-banner-transition__button"><a href="" class="btn btn-default">Заказать<span class="hidden-xs"> изготовление</span></a></div>
-            </div>
-          </div>
-          <div class="col-sm-5 col-sm-offset-1 hidden-xs">
-            <div class="b-banner-transition__img"><img src="/upload/banner/1.jpg" class="i-1"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end /components/banner-transition/-->
     <div class="container">
-      <div class="row b-menu-list">
-        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
-          <p class="text-muted text-middle">Приедем<br>и проконсультируем</p>
+      <div style="background-color: #f5f5f5; margin-top: 10px; padding-top: 10px;" class="col-md-12 row-xs">
+        <div class="col-md-6 col-lg-5 col-lg-offset-1 text-center-sm">
+          <h2>Добро пожаловать в&nbsp;Антэк!</h2>
+          <div>У&nbsp;нас вы&nbsp;можете <a href="/production/">сделать заказ</a> на&nbsp;изготовление индивидуальной упаковки или <a href="/catalog/">купить</a> типовые картонные коробки.</div><a href="#" data-toggle="modal" data-target="#aboutVideo" class="hidden-xs hidden-sm index-play-btn">Посмотрите видеопрезентацию</a>
         </div>
-        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
-          <p class="text-muted text-middle">Проведем<br>анализ рынка</p>
+        <div class="col-md-6"> <img src="/upload/banner/baner_anton.jpg" class="img-responsive"></div>
+        <div class="col-md-12 visible-xs visible-sm text-center"><a href="#" data-toggle="modal" data-target="#aboutVideo" class="index-play-btn-2">Посмотрите видеопрезентацию</a></div>
+      </div>
+    </div>
+    <div id="aboutVideo" tabindex="-1" role="dialog" aria-labelledby="aboutVideoLabel" class="modal modal">
+      <div role="document" class="modal-dialog modal-lg">
+        <div class="modal-content text-middle">
+          <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+          <div class="modal-body center">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&amp;rel=0&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        <hr class="visible-xs-block clearfix">
-        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span class="i-6"></span></span>
-          <p class="text-muted text-middle">Разработаем<br>дизайн и конструкцию</p>
+      </div>
+    </div>
+    <div style="margin-top: 10px; margin-bottom: 10px;" class="container container-fulwidth-xs">
+      <div class="col-sm-9">
+        <div class="row row-xs">
+          <!-- start /components/banner-transition/-->
+          <link rel="stylesheet" href="/components/banner-carousel/style.css">
+          <script src="/components/banner-carousel/script.js"></script>
+          <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+          <div class="index-baner-1">
+            <div data-width="100%" data-height="360" data-arrows="true" data-loop="true" data-autoplay="5000" data-swipe="true" data-click="false" class="fotorama">
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
+              </div>
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
+              </div>
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
+              </div>
+            </div>
+          </div>
+          <!-- end /components/banner-transition/-->
         </div>
-        <div class="col-sm-3 col-xs-6 center"><span class="b-ul-icon"><span><img src="/upload/1.svg"></span></span>
-          <p class="text-muted text-middle">Изготовим<br>3D-модель и прототип</p>
+      </div>
+      <div class="col-sm-3">
+        <div class="row index-col-ord">
+          <div class="bn-item index-baner-2">
+            <div class="ib2-name h3">Упаковка в&nbsp;наличии</div><a href="#" class="ib2-text">Купить коробки<br>в&nbsp;один клик!</a><img src="/upload/banner/img_banner2_index.png" class="img-responsive ib2-img">
+          </div>
+          <div class="bn-item index-baner-3"><a href="#" data-toggle="modal" data-target="#aboutVideo" class="play-link"><img src="/upload/banner/play_button.svg" class="play-icon"><span>Посмотрите презентацию</span></a></div>
+        </div>
+        <div id="aboutVideo" tabindex="-1" role="dialog" aria-labelledby="aboutVideoLabel" class="modal modal">
+          <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content text-middle">
+              <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+              <div class="modal-body center">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row preimushestva-block">
+        <div class="index-preim-item col-sm-3 col-xs-6"><img src="/img/preimushestva/1-house.svg" class="img-responsive">
+          <div class="preim-name">Производство и&nbsp;офис в&nbsp;одном месте в&nbsp;Красногорске</div>
+        </div>
+        <div class="index-preim-item col-sm-3 col-xs-6"><img src="/img/preimushestva/2-time.svg" class="img-responsive">
+          <div class="preim-name">Изготавливаем упаковку от&nbsp;1&nbsp;дня</div>
+        </div>
+        <div class="index-preim-item col-sm-3 col-xs-6"><img src="/img/preimushestva/3-garantii.svg" class="img-responsive">
+          <div class="preim-name">Гарантируем сроки изготовления и&nbsp;качество продукции</div>
+        </div>
+        <div class="index-preim-item col-sm-3 col-xs-6"><img src="/img/preimushestva/4-bigsize.svg" class="img-responsive">
+          <div class="preim-name">Изготавливаем гофроупаковку больших размеров</div>
         </div>
       </div>
     </div>
@@ -412,10 +416,87 @@
       <div class="content">
         <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br></span>
           <input name="phone" type="tel" required="" value="+7(" class="form-control">
-          <button type="submit" class="btn b-call-me-block__button">Жду звонка!</button>
+          <button type="submit" class="btn btn-type-2">Жду звонка!</button>
         </form>
         <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
           <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="col-md-9 col-md-offset-3 text-center-sm">
+          <h2>Упаковка в наличии</h2>
+        </div>
+      </div>
+      <div class="container flex-container">
+        <div class="col-md-4"><img src="/img/img_katalog.png" class="img-responsive">
+          <hr class="visible-xs visible-sm">
+        </div>
+        <div class="col-md-5">
+          <p>Предлагаем большой ассортимент упаковки из&nbsp;гофрокартона и&nbsp;вспомогательных материалов: в&nbsp;наличии и&nbsp;под заказ, по&nbsp;вашим размерам, с&nbsp;нанесением изображения.</p>
+          <p>В&nbsp;каталоге представлен большой выбор обычных картонных коробок, функциональной гофроупаковки и&nbsp;гофроизделий, крупногабаритной гофротары для различного использования; а&nbsp;так&nbsp;же защитных упаковочных материалов, бумажных, полиэтиленовых и&nbsp;пенополистирольных наполнителей, полиэтиленовых пакетов и&nbsp;крафт-мешков.</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="index-list-preim">
+            <li>Скидка&nbsp;<span class="color-red">2%</span> при заказе с&nbsp;сайта</li>
+            <li>Можем нанести печать</li>
+            <li>Большой выбор форм и&nbsp;размеров</li>
+            <li>Самовывоз сегодня или доставка</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container text-center">
+        <div class="col-md-12">
+          <div class="h3">Как купить упаковку в&nbsp;наличии?</div><span>Купить упаковку на&nbsp;раз-два-три!</span>
+        </div>
+        <div class="col-md-12">
+          <div class="h3">Купить упаковку на&nbsp;раз-два-три!</div><span>Выбрать коробки из каталога и нанести изображение</span>
+        </div>
+      </div>
+    </div>
+    <div class="b-call-me-block">
+      <div class="content">
+        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br></span>
+          <input name="phone" type="tel" required="" value="+7(" class="form-control">
+          <button type="submit" class="btn btn-type-2">Жду звонка!</button>
+        </form>
+        <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
+          <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="col-md-9 col-md-offset-3 text-center-sm">
+          <h2>Изготовить гофроупаковку на&nbsp;заказ</h2>
+        </div>
+      </div>
+      <div class="container flex-container">
+        <div class="col-md-4"><img src="/img/index-bl3-img.png" class="img-responsive">
+          <hr class="visible-xs visible-sm">
+        </div>
+        <div class="col-md-5">
+          <p>Разрабатываем и&nbsp;производим упаковку из&nbsp;картона, гофроупаковку и&nbsp;крупногабаритную тару из&nbsp;трех, пяти, семислойного белого или бурого (крафт) гофрокартона и&nbsp;микрогофрокаратона, как простых конструкций, так и&nbsp;сложных вырубных конструкций в&nbsp;различных комбинациях с&nbsp;добавлением пластиковых окошек, ручек, деревянных, пластиковых и&nbsp;полимерных внешних и&nbsp;внутренних вставок и&nbsp;ложементов с&nbsp;возможностью нанесения многоцветной печати.</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="index-list-preim">
+            <li>Разработаем дизайн и&nbsp;конструкцию</li>
+            <li>Изготовим пробную партию или промышленный образец</li>
+            <li>Изготовим заказ от&nbsp;1&nbsp;дня</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container text-center">
+        <div class="col-md-12">
+          <div class="h3">Заказать изготовление стандартной конструкции</div><span>Выбрать конструкцию и&nbsp;заказать по&nbsp;своим размерам</span>
+        </div>
+        <div class="col-md-12">
+          <div class="h3">Изготовить индивидуальную упаковку</div><span>Заказать изготовление упаковки исключительно под свой продукт</span>
         </div>
       </div>
     </div>
@@ -722,7 +803,7 @@
       <div class="content">
         <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br></span>
           <input name="phone" type="tel" required="" value="+7(" class="form-control">
-          <button type="submit" class="btn b-call-me-block__button">Жду звонка!</button>
+          <button type="submit" class="btn btn-type-2">Жду звонка!</button>
         </form>
         <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
           <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
@@ -786,26 +867,6 @@
           <div class="col-sm-2 col-xs-4"><a href=""><img src="/upload/clients/1.jpg" alt="" class="img-responsive center-block"></a></div>
         </div>
         <hr>
-      </div>
-    </section>
-    <section class="i-gray i-float-blocks">
-      <div class="center">
-        <div class="text-large">16 лет</div>на рынке упаковки
-      </div>
-      <div class="center">
-        <div class="text-large">10</div>специализированых<br>выставок
-      </div>
-      <div class="center">
-        <div class="text-large">700 000</div>постоянных клиентов
-      </div>
-      <div class="center">
-        <div class="text-large">12</div>сертификатов<br>и наград
-      </div>
-      <div class="center">
-        <div class="text-large">1 000 000 </div>выполненных заказов
-      </div>
-      <div class="center">
-        <div class="text-large">100  </div>заказов в день
       </div>
     </section>
     <section class="i-blue">
