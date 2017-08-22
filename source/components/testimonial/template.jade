@@ -1,0 +1,55 @@
+﻿// start /components/testimonial/
+
+link( rel="stylesheet", href="/components/testimonial/style.css" )
+script( src="/components/testimonial/script.js" )
+
+.b-testimonial
+
+  h2 Отзывы наших клиентов
+  
+  hr.i-size-S
+
+  include ../../modules/gallery/fotorama
+  
+  .fotorama( data-width="100%" data-height="322" data-loop="true" )
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+  
+    div
+    
+      .row
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+        
+        .col-sm-4
+          include card
+
+// end /components/testimonial/
