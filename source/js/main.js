@@ -113,3 +113,16 @@ $('.nav-tabs a').click(function (e) {
   $('.nav-tabs a').removeClass( 'active' );
   $(this).addClass( 'active' ).tab('show');
 });
+
+
+
+$('#aboutVideo').on('hide.bs.modal', function (e) {
+  $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}).on('show.bs.modal', function (e) {
+  $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+});
+
+
+
+
+

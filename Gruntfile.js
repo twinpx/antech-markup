@@ -390,7 +390,9 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   
   grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', 'concat:pluginsCSS' ] );
-  grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
+  grunt.registerTask( 'js', [ 'concat:js', 
+//   'jshint:dev', 
+  'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
   grunt.registerTask( 'html', [ 'copy:images', 'jade:dev' ] );
   grunt.registerTask( 'default', [ 'connect', 'css', 'js', 'html', 'watch' ] );
   
@@ -401,7 +403,7 @@ module.exports = function( grunt ) {
     //js
     'concat:prod',
     'copy:prodComponents',
-    'jshint:prod',
+//     'jshint:prod',
     'uglify:prodTemplate',
     'concat:prodPluginsJS',
     'uglify:prodComponents',

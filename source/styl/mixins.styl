@@ -52,3 +52,62 @@ opacity( val )
   opacity val
   -webkit-opacity val
   -moz-opacity val
+
+justify-content(val)
+  -webkit-box-pack val
+  -webkit-justify-content val
+  justify-content val
+
+align-items(val)
+  -webkit-box-align val
+  -webkit-align-items val
+  align-items val
+
+flex-direction(val)
+  -webkit-flex-direction val
+  flex-direction val
+
+flex-wrap(val)
+  -webkit-flex-wrap val
+  -moz-flex-wrap val
+  -ms-flex-wrap val
+  -o-flex-wrap val
+  flex-wrap val
+
+flex-flow(val)
+  -webkit-flex-flow val
+  flex-flow val
+
+align-content(val)
+  -webkit-align-content val
+  align-content val
+
+flex-basis(val)
+  -webkit-flex-basis val
+  flex-basis val
+
+flex(val)
+  -webkit-flex val
+  -ms-flex val
+  flex val
+
+align-self(val)
+  -webkit-align-self val
+  align-self val
+
+
+
+calc() {
+  calc-vendors = webkit moz;
+
+  if current-property {
+
+    for prefix in calc-vendors {
+      add-property(current-property[0], s('-%s-calc(%s)', prefix, arguments));
+    }
+    s('calc(%s)', arguments);
+  } else {
+    error('calc() must be used within a property');
+  }
+}
+

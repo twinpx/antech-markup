@@ -20,7 +20,7 @@
       <div class="b-header-fixed">
         <div class="container">
           <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu hidden-md hidden-lg"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
             <div class="col-sm-5 hidden-sm">
               <menu class="hidden-xs">
                 <li><a href="">Создание упаковки</a></li>
@@ -329,46 +329,55 @@
         <div class="b-top-menu hidden-xs"><a id="order-link" href="">Как заказать?</a> <a id="payment-link" href="">Оплата</a> <a id="warranty-link" href="">Гарантии</a> <a id="delivery-link" href="">Доставка</a></div>
       </div>
     </div>
-    <div class="b-video-banner">
-      <div data-width="100%" data-height="735" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
-        <div style="background-color: orange;" class="i-fotorama-video">
-          <div class="container">
-            <div id="b-video-player-container">
-              <div class="b-video-player"></div>
-            </div>
-          </div>
-          <div id="b-video-cover" class="b-video-banner__cover">
-            <div class="container">
-              <div class="b-video-button"><span class="i-icon"></span></div>
-              <div class="text-large">Посмотрите<br>видеопрезентацию</div>
-            </div>
-          </div>
-        </div>
-        <div style="background-color: violet;">
-          <div class="b-video-banner__cover">
-            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
-            <div class="container">
-              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
-              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
+    <div style="margin-top: 10px; margin-bottom: 10px;" class="container container-fulwidth-xs">
+      <div class="col-sm-8 col-md-9">
+        <div class="row row-xs">
+          <div class="bn-item production-baner-1">
+            <div class="production-baner-1-plashka">
+              <div class="h2">Производство гофротары</div>
+              <ul>
+                <li style="list-style: none;">Мы&nbsp;производим гофротару из&nbsp;2-х, 3-х, 5-ти, 7-ми-слойного гофрокартона и&nbsp;микрогофрокартона белого или бурого (крафт) цветов</li>
+                <li>Наносим многоцветную флексопечать</li>
+                <li>Делаем вставки пластиковых окошек, ручек, деревянных, пластиковых или полимерных внешних и&nbsp;внутренних ложементов</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div style="background-color: pink;">
-          <div class="container">
-            <div id="b-video-player2-container">
-              <div id="b-video-player2"></div>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <div class="row index-col-ord">
+          <div class="bn-item production-baner-2">
+            <div class="ib2-name h3">Разработаем<br>конструкцию<br>и&nbsp;дизайн</div>
+            <div class="ib2-text">Уникальная упаковка&nbsp;&mdash;<br>эффективный инструмент<br>для увеличения продаж</div><a href="#" class="btn btn-type-2-sm">Подробнее о&nbsp;разработке</a>
+          </div>
+          <div class="bn-item production-baner-3"><a href="#" data-toggle="modal" data-target="#aboutVideo" class="play-link"><img src="/upload/banner/play_button.svg" class="play-icon"><span>90&nbsp;секунд о&nbsp;производстве</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutVideo" tabindex="-1" role="dialog" aria-labelledby="aboutVideoLabel" class="modal modal">
+      <div role="document" class="modal-dialog modal-lg">
+        <div class="modal-content text-middle">
+          <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+          <div class="modal-body center">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&amp;rel=0&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
-          <div id="b-video-cover2" class="b-video-banner2__cover">
-            <div style="background-image: url( '/template/images/video-banner2-ill.jpg' );" class="b-video-banner2__ill"></div>
-            <div class="container">
-              <div id="b-video-button2"><span class="i-icon"></span>
-                <div class="hidden-xs">Смотреть презентацию</div>
-              </div>
-              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
-              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
-              <div id="b-video-button2-text"><span class="i-icon"></span>Смотреть презентацию</div>
-            </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="col-md-6">
+          <div class="row">
+            <div style="background-image: url(/img/preimushestva/production/24hour.svg);" class="index-preim-item col-xs-6">Производим упаковку от&nbsp;1&nbsp;дня</div>
+            <div style="background-image: url(/img/preimushestva/production/ot1shtuki.svg);" class="index-preim-item col-xs-6">Делаем заказы от&nbsp;1&nbsp;штуки</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div style="background-image: url(/img/preimushestva/production/probnaya_partiya.svg);" class="index-preim-item col-xs-6">Изготавливаем пробную партию</div>
+            <div style="background-image: url(/img/preimushestva/production/big_size.svg);" class="index-preim-item col-xs-6">Делаем упаковку больших размеров</div>
           </div>
         </div>
       </div>

@@ -5,15 +5,138 @@ block title
 
 block content
     
-  include ./components/banner-transition/template
-  
-  include ./components/banner-transition/index
+  //-include ./components/banner-transition/template
+  //-include ./components/banner-transition/index
   
   .container
-    include ./modules/menu-list/advantages
+    .col-md-12.row-xs(style="background-color: #f5f5f5; margin-top: 10px; padding-top: 10px;")
+      .col-md-6.col-lg-5.col-lg-offset-1.text-center-sm
         
+        h2 Добро пожаловать в&nbsp;Антэк!
+        
+        div У&nbsp;нас вы&nbsp;можете 
+          a(href="/production/") сделать заказ
+          |  на&nbsp;изготовление индивидуальной упаковки или 
+          a(href="/catalog/") купить
+          |  типовые картонные коробки.
+        
+        a.hidden-xs.hidden-sm.index-play-btn(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
+      
+      .col-md-6  
+        img.img-responsive(src="/upload/banner/baner_anton.jpg")
+      
+      .col-md-12.visible-xs.visible-sm.text-center
+        a.index-play-btn-2(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
+  
+  
+  #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content.text-middle
+      
+        .close(type='button', data-dismiss='modal', aria-label='Close')
+        .modal-body.center
+          .embed-responsive.embed-responsive-16by9
+            iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
+  
+
+  .container.container-fulwidth-xs(style="margin-top: 10px; margin-bottom: 10px;")
+    .col-sm-9
+      .row.row-xs
+        include ./components/banner-carousel/template
+        
+    .col-sm-3
+      .row.index-col-ord
+        .bn-item.index-baner-2
+          .ib2-name.h3 Упаковка в&nbsp;наличии
+          a.ib2-text(href="#") Купить коробки<br>в&nbsp;один клик!
+          img.img-responsive.ib2-img(src="/upload/banner/img_banner2_index.png")
+        .bn-item.index-baner-3
+          a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
+            img.play-icon(src="/upload/banner/play_button.svg")
+            span Посмотрите презентацию
+      #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+        .modal-dialog.modal-lg(role='document')
+          .modal-content.text-middle
+          
+            .close(type='button', data-dismiss='modal', aria-label='Close')
+            .modal-body.center
+              .embed-responsive.embed-responsive-16by9
+                iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen )
+  
+  .section
+    .container
+        .col-md-6
+          .row
+            .index-preim-item.col-xs-6(style="background-image: url(/img/preimushestva/index/1_zdanie.svg);") Производство и&nbsp;офис в&nbsp;одном месте в&nbsp;Красногорске
+            .index-preim-item.col-xs-6(style="background-image: url(/img/preimushestva/index/2_time.svg);") Изготавливаем упаковку от&nbsp;1&nbsp;дня
+        .col-md-6
+          .row
+            .index-preim-item.col-xs-6(style="background-image: url(/img/preimushestva/index/3_garantii.svg);") Гарантируем сроки изготовления и&nbsp;качество продукции
+            .index-preim-item.col-xs-6(style="background-image: url(/img/preimushestva/index/4_big.svg);") Изготавливаем гофроупаковку больших размеров
+
+  //-.container
+    //-include ./modules/menu-list/advantages
+
   include ./modules/call-me-block/include
-        
+  
+  .section
+    .container
+      .col-md-8.col-md-offset-4.text-center-sm
+        h2 Упаковка в наличии
+    .container
+      .col-md-4
+        img.img-responsive(src="/img/img_katalog.png")
+        hr.visible-xs.visible-sm
+      .col-md-5
+        p Предлагаем большой ассортимент упаковки из&nbsp;гофрокартона и&nbsp;вспомогательных материалов: в&nbsp;наличии и&nbsp;под заказ, по&nbsp;вашим размерам, с&nbsp;нанесением изображения.
+        p В&nbsp;каталоге представлен большой выбор обычных картонных коробок, функциональной гофроупаковки и&nbsp;гофроизделий, крупногабаритной гофротары для различного использования; а&nbsp;так&nbsp;же защитных упаковочных материалов, бумажных, полиэтиленовых и&nbsp;пенополистирольных наполнителей, полиэтиленовых пакетов и&nbsp;крафт-мешков.
+      .col-md-3
+        ul.index-list-preim
+          li Скидка&nbsp;
+            span.color-red 2%
+            |  при заказе с&nbsp;сайта
+          li Можем нанести печать
+          li Большой выбор форм и&nbsp;размеров
+          li Самовывоз сегодня или доставка
+  
+  .section
+    .container.text-center
+      .col-md-12
+        .h3 Как купить упаковку в&nbsp;наличии?
+        span Купить упаковку на&nbsp;раз-два-три!
+      .col-md-12
+        .h3 Купить упаковку на&nbsp;раз-два-три!
+        span Выбрать коробки из каталога и нанести изображение
+  
+  
+  include ./modules/call-me-block/include
+  
+  
+  .section
+    .container
+      .col-md-8.col-md-offset-4.text-center-sm
+        h2 Изготовить гофроупаковку на&nbsp;заказ
+    .container
+      .col-md-4
+        img.img-responsive(src="/img/index-bl3-img.png")
+        hr.visible-xs.visible-sm
+      .col-md-5
+        p Разрабатываем и&nbsp;производим упаковку из&nbsp;картона, гофроупаковку и&nbsp;крупногабаритную тару из&nbsp;трех, пяти, семислойного белого или бурого (крафт) гофрокартона и&nbsp;микрогофрокаратона, как простых конструкций, так и&nbsp;сложных вырубных конструкций в&nbsp;различных комбинациях с&nbsp;добавлением пластиковых окошек, ручек, деревянных, пластиковых и&nbsp;полимерных внешних и&nbsp;внутренних вставок и&nbsp;ложементов с&nbsp;возможностью нанесения многоцветной печати.
+      .col-md-3
+        ul.index-list-preim
+          li Разработаем дизайн и&nbsp;конструкцию
+          li Изготовим пробную партию или промышленный образец
+          li Изготовим заказ от&nbsp;1&nbsp;дня
+  
+  .section
+    .container.text-center
+      .col-md-12
+        .h3 Заказать изготовление стандартной конструкции
+        span Выбрать конструкцию и&nbsp;заказать по&nbsp;своим размерам
+      .col-md-12
+        .h3 Изготовить индивидуальную упаковку
+        span Заказать изготовление упаковки исключительно под свой продукт
+  
   //-section.i-gray.i-gallery-top
     .container
     
@@ -106,7 +229,7 @@ block content
         
       //-include ./modules/menu-list/include3
         
-  include ./modules/statistics/include
+  //-include ./modules/statistics/include
         
   section.i-blue
     h2.b-h1.center Отзывы наших клиентов
