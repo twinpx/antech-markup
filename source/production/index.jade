@@ -17,29 +17,37 @@ block content
   
   
   .container.container-fulwidth-xs(style="margin-top: 10px; margin-bottom: 10px;")
-    .col-sm-9
+    .col-sm-8.col-md-9
       .row.row-xs
-        include ../components/banner-carousel/template
+        .bn-item.production-baner-1
+          .production-baner-1-plashka
+            .h2 Производство гофротары
+            ul
+              li(style="list-style: none;") Мы&nbsp;производим гофротару из&nbsp;2-х, 3-х, 5-ти, 7-ми-слойного гофрокартона и&nbsp;микрогофрокартона белого или бурого (крафт) цветов
+              li Наносим многоцветную флексопечать
+              li Делаем вставки пластиковых окошек, ручек, деревянных, пластиковых или полимерных внешних и&nbsp;внутренних ложементов
+          
         
-    .col-sm-3
+    .col-sm-4.col-md-3
       .row.index-col-ord
         .bn-item.production-baner-2
-          .ib2-name.h3 Разработаем конструкцию и&nbsp;дизайн
-          .ib2-text Уникальная упаковка&nbsp;&mdash; эффективный инструмент для увеличения продаж
-          a.btn.btn-type-2(href="#") Подробнее о&nbsp;разработке
+          .ib2-name.h3 Разработаем<br>конструкцию<br>и&nbsp;дизайн
+          .ib2-text Уникальная упаковка&nbsp;&mdash;<br>эффективный инструмент<br>для увеличения продаж
+          a.btn.btn-type-2-sm(href="#") Подробнее о&nbsp;разработке
         .bn-item.production-baner-3
           a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
             img.play-icon(src="/upload/banner/play_button.svg")
             span 90&nbsp;секунд о&nbsp;производстве
       
-      #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
-        .modal-dialog.modal-lg(role='document')
-          .modal-content.text-middle
-          
-            .close(type='button', data-dismiss='modal', aria-label='Close')
-            .modal-body.center
-              .embed-responsive.embed-responsive-16by9
-                iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen )
+
+  #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content.text-middle
+      
+        .close(type='button', data-dismiss='modal', aria-label='Close')
+        .modal-body.center
+          .embed-responsive.embed-responsive-16by9
+            iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
   
   
   //-include ../modules/video-banner/include

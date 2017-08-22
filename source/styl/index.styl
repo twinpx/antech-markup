@@ -139,6 +139,8 @@
     @media (max-width: 768px)
       &
         height 60px
+        margin-top 10px
+        margin-bottom 10px
     
     &:hover
       text-decoration none
@@ -213,16 +215,45 @@
   
 /* for production page */
 .production-baner-1
+  background-image url(/upload/banner/production-baner-1.jpg)
+  background-repeat no-repeat
+  background-position center center
+  background-size cover
+  color $c-white
+  padding 30px
+  padding-right 15%
+  
+  @media (max-width: 990px)
+    &
+      padding 0
+  
+  .production-baner-1-plashka
+    background-color rgba(0, 0, 0, 0.4)
+    padding 30px
+    
+    @media (max-width: 990px)
+      &
+        padding 10px 30px
+  
+      
+  
+  ul
+    list-style-image url(/img/production-baner-list-img.png)
+    margin 0
+    padding 0
+    
+    li
+      margin 10px 0;
 
 .production-baner-2
-  height 280px
   margin-bottom 10px
   text-align center
-  padding 20px
+  padding 25px 20px
   background-image url(/upload/banner/production-baner-2.jpg)
   background-repeat no-repeat
   background-position center center
   background-size cover
+  color $c-white
   
   .ib2-name,
   .ib2-text
@@ -235,3 +266,20 @@
   .ib2-img
     max-height 150px
     margin 0 auto
+
+
+@media (min-width: 769px)
+  .production-baner-1
+    height 360px
+  
+    .production-baner-1-plashka
+      height 360px
+  
+  .production-baner-2
+    height 280px
+
+
+@media (min-width: 990px)
+  .production-baner-1
+    .production-baner-1-plashka
+      height 300px
