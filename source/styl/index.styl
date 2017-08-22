@@ -38,19 +38,25 @@
 
 
 .preimushestva-block
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  
+  display -webkit-flex
   display flex
   justify-content flex-start
   align-items stretch
-  flex-wrap wrap
   margin 20px 0
   
 .index-preim-item
   
   .preim-name
     font-weight 600
+    font-size 14px
   
   @media (min-width: 991px)
     &
+      display -webkit-flex
       display flex
       justify-content flex-start
       align-items center
@@ -83,6 +89,7 @@
       margin 0 auto
 
 .index-col-ord
+  display -webkit-flex
   display flex
   flex-direction colum
   flex-wrap wrap
@@ -115,12 +122,14 @@
     max-height 150px
     margin 0 auto
 
-.index-baner-3
+.index-baner-3,
+.production-baner-3
   a.play-link
     color white
     background-color red
     height 70px
     display block
+    display -webkit-flex
     display flex
     justify-content center
     align-items center
@@ -144,6 +153,7 @@
   
   @media (min-width: 991px)
     &
+      display -webkit-flex
       display flex
       flex-wrap wrap
       align-content space-around
@@ -155,6 +165,11 @@
     background-repeat no-repeat
     padding-left 50px
     font-weight 400
+    margin-bottom 15px
+    line-height 1.1
+    
+    &:last-of-type
+      margin-bottom none
     
   @media (max-width: 990px)
     li
@@ -164,10 +179,14 @@
       padding-left 0
 
 .flex-container
+  display -webkit-flex
   display flex
   justify-content flex-start
   align-items stretch
   flex-wrap wrap
+  
+  &-nowrap
+    flex-wrap nowrap
   
 .index-play-btn
   padding-top 90px
@@ -191,3 +210,28 @@
   font-weight 400
   margin 10px 0
   
+  
+/* for production page */
+.production-baner-1
+
+.production-baner-2
+  height 280px
+  margin-bottom 10px
+  text-align center
+  padding 20px
+  background-image url(/upload/banner/production-baner-2.jpg)
+  background-repeat no-repeat
+  background-position center center
+  background-size cover
+  
+  .ib2-name,
+  .ib2-text
+    margin 0 0 15px
+  
+  .ib2-text
+    font-size 18px
+  
+  
+  .ib2-img
+    max-height 150px
+    margin 0 auto

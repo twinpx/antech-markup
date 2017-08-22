@@ -329,45 +329,53 @@
         <div class="b-top-menu hidden-xs"><a id="order-link" href="">Как заказать?</a> <a id="payment-link" href="">Оплата</a> <a id="warranty-link" href="">Гарантии</a> <a id="delivery-link" href="">Доставка</a></div>
       </div>
     </div>
-    <div class="b-video-banner">
-      <div data-width="100%" data-height="735" data-arrows="false" data-loop="true" data-autoplay="false" data-swipe="true" class="fotorama">
-        <div style="background-color: orange;" class="i-fotorama-video">
-          <div class="container">
-            <div id="b-video-player-container">
-              <div class="b-video-player"></div>
-            </div>
-          </div>
-          <div id="b-video-cover" class="b-video-banner__cover">
-            <div class="container">
-              <div class="b-video-button"><span class="i-icon"></span></div>
-              <div class="text-large">Посмотрите<br>видеопрезентацию</div>
-            </div>
-          </div>
-        </div>
-        <div style="background-color: violet;">
-          <div class="b-video-banner__cover">
-            <div style="background-image: url( '/template/images/video-banner-ill.jpg' );" class="b-video-banner__ill"></div>
-            <div class="container">
-              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
-              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
-            </div>
-          </div>
-        </div>
-        <div style="background-color: pink;">
-          <div class="container">
-            <div id="b-video-player2-container">
-              <div id="b-video-player2"></div>
-            </div>
-          </div>
-          <div id="b-video-cover2" class="b-video-banner2__cover">
-            <div style="background-image: url( '/template/images/video-banner2-ill.jpg' );" class="b-video-banner2__ill"></div>
-            <div class="container">
-              <div id="b-video-button2"><span class="i-icon"></span>
-                <div class="hidden-xs">Смотреть презентацию</div>
+    <div style="margin-top: 10px; margin-bottom: 10px;" class="container container-fulwidth-xs">
+      <div class="col-sm-9">
+        <div class="row row-xs">
+          <!-- start /components/banner-transition/-->
+          <link rel="stylesheet" href="/components/banner-carousel/style.css">
+          <script src="/components/banner-carousel/script.js"></script>
+          <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+          <div class="index-baner-1">
+            <div data-width="100%" data-height="360" data-arrows="true" data-loop="true" data-autoplay="5000" data-swipe="true" data-click="false" class="fotorama">
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
               </div>
-              <div class="b-h1"><span class="b-laquo"></span>Если упаковка особенная, то и содержимое становится особенным<span class="b-raquo"></span></div>
-              <p class="b-video-banner__sign"><em>Антон Блинов. Основатель компании</em></p>
-              <div id="b-video-button2-text"><span class="i-icon"></span>Смотреть презентацию</div>
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
+              </div>
+              <div style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item">
+                <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+                <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div>
+                <div class="btn btn-default">Выбрать конструкцию</div>
+              </div>
+            </div>
+          </div>
+          <!-- end /components/banner-transition/-->
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="row index-col-ord">
+          <div class="bn-item production-baner-2">
+            <div class="ib2-name h3">Разработаем конструкцию и&nbsp;дизайн</div>
+            <div class="ib2-text">Уникальная упаковка&nbsp;&mdash; эффективный инструмент для увеличения продаж</div><a href="#" class="btn btn-type-2">Подробнее о&nbsp;разработке</a>
+          </div>
+          <div class="bn-item production-baner-3"><a href="#" data-toggle="modal" data-target="#aboutVideo" class="play-link"><img src="/upload/banner/play_button.svg" class="play-icon"><span>90&nbsp;секунд о&nbsp;производстве</span></a></div>
+        </div>
+        <div id="aboutVideo" tabindex="-1" role="dialog" aria-labelledby="aboutVideoLabel" class="modal modal">
+          <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content text-middle">
+              <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
+              <div class="modal-body center">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
