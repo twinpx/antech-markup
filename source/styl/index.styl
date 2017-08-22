@@ -37,22 +37,14 @@
   height 360px
 
 
-.preimushestva-block
-  display -webkit-box
-  display -moz-box
-  display -ms-flexbox
-  
-  display -webkit-flex
-  display flex
-  justify-content flex-start
-  align-items stretch
-  margin 20px 0
-  
 .index-preim-item
-  
-  .preim-name
-    font-weight 600
-    font-size 14px
+  background-repeat no-repeat
+  background-position left center
+  background-size 70px 70px
+  font-weight 600
+  font-size 14px
+  vertical-align middle
+  padding-bottom 10px
   
   @media (min-width: 991px)
     &
@@ -60,33 +52,14 @@
       display flex
       justify-content flex-start
       align-items center
-      
-    img.img-responsive
-      display inline
-      float left
-    
-    .preim-name
-      display inline
-      float right
-
-  @media (min-width: 1201px)
-    img.img-responsive
-      max-width 115px
-      margin-right 20px
-
-  @media (max-width: 1200px) and  (min-width: 991px)
-    img.img-responsive
-      max-width 95px
-      margin-right 15px
+      padding-left 90px
+      min-height 70px
       
   @media (max-width: 990px)
     &
       text-align center
-      
-    img.img-responsive
-      max-width 115px
-      text-align center
-      margin 0 auto
+      background-position center top
+      padding-top 80px
 
 .index-col-ord
   display -webkit-flex
