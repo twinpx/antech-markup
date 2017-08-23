@@ -5,9 +5,9 @@
   $( function() {
   
     var $fotorama = $( '.b-team .fotorama' );
-    var $cards = $fotorama.find( '.b-testimonial-card' );
+    var $cards = $fotorama.find( '.b-team-card' );
     var html = '';
-    var i = 0, j = 0, n = 3, screen = '', resize = '', ratio = false;
+    var i = 0, j = 0, n = 4, screen = '', resize = '', ratio = false;
   
     $( window ).resize( resizeWindow );
     
@@ -36,14 +36,14 @@
       
       if ( screen === 'md' ) {
         
-        n = Math.ceil( $cards.length / 3 );
+        n = Math.ceil( $cards.length / 4 );
         
         for ( j = 0; j < n; j++ ) {
           html += '<div>\n';
           html += '<div class="row">\n';
           
-          for ( i = 0; i < 3; i++ ) {
-            html += '<div class="col-md-4"></div>\n';
+          for ( i = 0; i < 4; i++ ) {
+            html += '<div class="col-md-3"></div>\n';
           }
           
           html += '</div>\n';
