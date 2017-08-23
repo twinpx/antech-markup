@@ -1,0 +1,50 @@
+﻿@import '../../styl/component-include.styl'
+
+.a-fefco
+  @media (min-width: 991px)
+    .fefco-flex-line
+      display -webkit-flex
+      display flex
+      align-items center
+    
+  .a-fefco-card
+    padding 10px
+    position relative
+    border 1px solid $c-white
+    
+    .card-name-block
+      position absolute
+      width 100%
+      bottom 10px
+      left 0
+      font-size 14px
+      padding 10px
+      padding-left 60px
+      font-weight 400
+      
+      .card-code
+        background-color $c-blue-l
+        border-radius 100%
+        width 40px
+        height 40px
+        line-height 40px
+        text-align center
+        color $c-white
+        position absolute
+        left 10px
+        top 0
+        bottom 0
+        margin auto 0
+    
+    .image-second
+      display none
+
+    &:hover
+      border-color $border-gray
+      .image-first
+        display none
+        
+      .image-second
+        display block
+    
+        
