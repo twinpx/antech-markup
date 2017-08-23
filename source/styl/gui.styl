@@ -110,6 +110,12 @@ h1,
   font-weight 400
   margin-top 0
   
+  .h-counter
+    position relative
+    font-size 14px
+    font-weight 100
+    top -1.5em
+    
     
 h2.b-h1
   margin-bottom 34px
@@ -118,24 +124,54 @@ h2,
 .h2,
 .b-h2
   font-weight 400
+  
+  .h-counter
+    position relative
+    font-size 14px
+    font-weight 100
+    top -1.5em
 
 h3,
 .h3
   font-weight 400
+  
+  .h-counter
+    position relative
+    font-size 14px
+    font-weight 100
+    top -1em
 
 h4,
 .h4,
 .b-h4
   font-weight 600
   
+  .h-counter
+    position relative
+    font-size 12px
+    font-weight 100
+    top -0.8em
+  
 h5,
 .h5,
 .b-h5
   font-weight 600
+  
+  .h-counter
+    position relative
+    font-size 12px
+    font-weight 100
+    top -0.5em
 
 h6,
 .h6
   font-weight 600
+  
+  .h-counter
+    position relative
+    font-size 10px
+    font-weight 100
+    top -0.5em
 
   
 .inner-container
@@ -613,9 +649,32 @@ blockquote
   
   &-lg
     padding 50px 0
+  
+  &-lines-top
+    border-top 1px solid $border-gray
+
+.border-line-bottom
+  border-bottom 1px solid $border-gray
+  
+  &-xs
+    @media (max-width: 767px)
+      border-bottom 1px solid $border-gray
+  &-sm
+    @media (max-width: 991px)
+      border-bottom 1px solid $border-gray
+  &-md
+    @media (max-width: 1199px)
+      border-bottom 1px solid $border-gray
+    
+  
 
 .marker-red-round
   list-style-image url(/img/production-baner-list-img.png)
   
 .bg-gray-1
   background-color $c-gray-xxs
+
+
+.line-counter
+  color $c-high-gray
+  font-weight 100

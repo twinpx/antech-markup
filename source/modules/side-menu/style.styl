@@ -1,0 +1,61 @@
+@import '../../styl/component-include.styl'
+
+.side-menu
+  
+  .root-item
+    border-bottom 1px solid $border-gray
+    padding 15px
+    
+    .link
+      position relative
+    
+      .togleChildrenBloc
+        position absolute
+        top 0
+        bottom 0
+        margin auto 0
+        right -15px
+        width 16px
+        height 16px
+        font-size 10px
+        line-height 10px
+        transition transform 0.5s
+        background-image url(images/arrow_menu.svg)
+        background-position center center
+        background-repeat no-repeat
+        background-size 8px 8px
+        cursor pointer
+        transform rotate(0)
+        
+      &>a
+        font-weight 400
+        color $c-dark-gray
+        
+    &.opened-children
+      .togleChildrenBloc
+        transform rotate(180deg)
+      
+    
+    a
+      text-decoration none
+    
+    .children
+      list-style none
+      margin-left 0
+      padding-left 0
+      margin-bottom 0
+      
+      li
+        padding-top 15px
+        
+        .glyphicon
+          font-size 0.6em
+        
+        a
+          color $c-deep-gray
+          
+          &:hover,
+          &.selected
+            color $c-black
+
+  
