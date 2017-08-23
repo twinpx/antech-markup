@@ -29,12 +29,12 @@ block content
         .bn-item.production-baner-2
           .ib2-name.h3 Разработаем<br>конструкцию<br>и&nbsp;дизайн
           .ib2-text Уникальная упаковка&nbsp;&mdash;<br>эффективный инструмент<br>для увеличения продаж
-          a.btn.btn-type-2-sm(href="#") Подробнее о&nbsp;разработке
+          a#razrabotka-link.btn.btn-type-2-sm(href="#razrabotka") Подробнее о&nbsp;разработке
         .bn-item.production-baner-3
           a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
             img.play-icon(src="/upload/banner/play_button.svg")
             span 90&nbsp;секунд о&nbsp;производстве
-      
+    
 
   #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
     .modal-dialog.modal-lg(role='document')
@@ -141,8 +141,8 @@ block content
           .row
             .h4 Отгрузка
             img.img-responsive(src="/img/production/production-process-03.png")
-           
-  .section
+   
+  #razrabotka.section
     .container
       .col-md-8.col-md-offset-4.text-center-sm
         h3.h2 Разработка картонной упаковки
