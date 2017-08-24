@@ -7,36 +7,7 @@ block content
     
   //-include ./components/banner-transition/template
   //-include ./components/banner-transition/index
-  
-  .container
-    .col-md-12.row-xs(style="background-color: #f5f5f5; margin-top: 10px; padding-top: 10px;")
-      .col-md-6.col-lg-5.col-lg-offset-1.text-center-sm
-        
-        h2 Добро пожаловать в&nbsp;Антэк!
-        
-        div У&nbsp;нас вы&nbsp;можете 
-          a(href="/production/") сделать заказ
-          |  на&nbsp;изготовление индивидуальной упаковки или 
-          a(href="/catalog/") купить
-          |  типовые картонные коробки.
-        
-        a.hidden-xs.hidden-sm.index-play-btn(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
-      
-      .col-md-6  
-        img.img-responsive(src="/upload/banner/baner_anton.jpg")
-      
-      .col-md-12.visible-xs.visible-sm.text-center
-        a.index-play-btn-2(href="#" data-toggle="modal" data-target="#aboutVideo") Посмотрите видеопрезентацию
-  
-  
-  #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
-    .modal-dialog.modal-lg(role='document')
-      .modal-content.text-middle
-      
-        .close(type='button', data-dismiss='modal', aria-label='Close')
-        .modal-body.center
-          .embed-responsive.embed-responsive-16by9
-            iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
+
   
 
   .container.container-fulwidth-xs(style="margin-top: 10px; margin-bottom: 10px;")
@@ -48,7 +19,7 @@ block content
       .row.index-col-ord
         .bn-item.index-baner-2
           .ib2-name.h3 Упаковка в&nbsp;наличии
-          a.ib2-text(href="#") Купить коробки<br>в&nbsp;один клик!
+          a.ib2-text(href="/catalog/") Купить коробки<br>в&nbsp;один клик!
           img.img-responsive.ib2-img(src="/upload/banner/img_banner2_index.png")
         .bn-item.index-baner-3
           a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
@@ -62,6 +33,17 @@ block content
             .modal-body.center
               .embed-responsive.embed-responsive-16by9
                 iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen )
+  
+  
+  #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content.text-middle
+      
+        .close(type='button', data-dismiss='modal', aria-label='Close')
+        .modal-body.center
+          .embed-responsive.embed-responsive-16by9
+            iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
+  
   
   .section
     .container
@@ -77,145 +59,71 @@ block content
   //-.container
     //-include ./modules/menu-list/advantages
 
-  include ./modules/call-me-block/include
   
   
-  .section
+  .section.bg-gray-1
     .container
-      .col-md-8.col-md-offset-4.text-center-sm
-        h2 Упаковка в наличии
-    .container
-      .col-md-4
-        img.img-responsive(src="/img/img_katalog.png")
-        hr.visible-xs.visible-sm
-      .col-md-5
+      .col-md-8
+        h2.text-center-sm Упаковка в наличии
         p Предлагаем большой ассортимент упаковки из&nbsp;гофрокартона и&nbsp;вспомогательных материалов: в&nbsp;наличии и&nbsp;под заказ, по&nbsp;вашим размерам, с&nbsp;нанесением изображения.
         p В&nbsp;каталоге представлен большой выбор обычных картонных коробок, функциональной гофроупаковки и&nbsp;гофроизделий, крупногабаритной гофротары для различного использования; а&nbsp;так&nbsp;же защитных упаковочных материалов, бумажных, полиэтиленовых и&nbsp;пенополистирольных наполнителей, полиэтиленовых пакетов и&nbsp;крафт-мешков.
-      .col-md-3
+      .col-md-4
+        .h3(style="padding-left: 90px; line-height: 33px;") Преимущества:
         ul.index-list-preim.text-small
-          li Скидка&nbsp;
-            span.color-red 2%
-            |  при заказе с&nbsp;сайта
           li Можем нанести печать
           li Большой выбор форм и&nbsp;размеров
           li Самовывоз сегодня или доставка
-  
-   
-  .section.text-center
+          
     .container
-      .col-md-12
-        .h3 Как купить упаковку в&nbsp;наличии?
-        span Купить упаковку на&nbsp;раз-два-три!
-    .container.servputh.text-small.bold
-      .row.hidden-xs
-        .col-sm-4.col-sm-offset-4.dotted-line
-      .row
-        .col-sm-2.col-sm-offset-3.step-item
-          img.step-icon(src="/img/servput/1.svg")
-          .step-name 1. <br class="visible-sm">Выбираете упаковку из&nbsp;каталога
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/2.svg")
-          .step-name 2. <br class="visible-sm">Оформляете заказ онлайн
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/3.svg")
-          .step-name 3. <br class="visible-sm">Доставляем или отгружаем ваш заказ со&nbsp;склада
+      .h2 Как заказать упаковку?
+      
+      .hidden-xs
+        hr.i-size-S
+        include ./images/svg/SP_GOTOVAYA.svg
         
+      .visible-xs
+        include ./images/svg/SP_GOTOVAYA_XS_PUT1.svg
+        hr.i-size-S
+        include ./images/svg/SP_GOTOVAYA_XS_PUT2.svg
+    
+  
+
     .container
-      .col-md-12
-        .h3 Купить упаковку на&nbsp;раз-два-три!
-        span Выбрать коробки из каталога и нанести изображение
-    .container.servputh.text-small.bold
-      .row.hidden-xs
-        .col-sm-8.col-sm-offset-2.dotted-line
-      .row
-        .col-sm-2.col-sm-offset-1.step-item
-          img.step-icon(src="/img/servput/1.svg")
-          .step-name 1. <br class="visible-sm">Выбираете упаковку из&nbsp;каталога
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/4.svg")
-          .step-name 2. <br class="visible-sm">Согласовываем графическое оформление
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/5.svg")
-          .step-name 3. <br class="visible-sm">Согласовываем стоимость заказа
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/6.svg")
-          .step-name 4. <br class="visible-sm">Изготавливаем Ваш заказ
-        .col-sm-2.step-item
-          img.step-icon(src="/img/servput/3.svg")
-          .step-name 5. <br class="visible-sm">Доставляем заказ или отгружаем со&nbsp;склада
+      
+      include ./components/products-list/template
   
   
   
-  include ./modules/call-me-block/include
+  
   
   
   .section
     .container
-      .col-md-8.col-md-offset-4.text-center-sm
-        h2 Изготовить гофроупаковку на&nbsp;заказ
-    .container
-      .col-md-4
-        img.img-responsive(src="/img/index-bl3-img.png")
-        hr.visible-xs.visible-sm
-      .col-md-5
+      .col-md-8
+        h2.text-center-sm Изготовить гофроупаковку на&nbsp;заказ
         p Разрабатываем и&nbsp;производим упаковку из&nbsp;картона, гофроупаковку и&nbsp;крупногабаритную тару из&nbsp;трех, пяти, семислойного белого или бурого (крафт) гофрокартона и&nbsp;микрогофрокаратона, как простых конструкций, так и&nbsp;сложных вырубных конструкций в&nbsp;различных комбинациях с&nbsp;добавлением пластиковых окошек, ручек, деревянных, пластиковых и&nbsp;полимерных внешних и&nbsp;внутренних вставок и&nbsp;ложементов с&nbsp;возможностью нанесения многоцветной печати.
-      .col-md-3
+      .col-md-4
+        .h3(style="padding-left: 90px; line-height: 33px;") Преимущества:
         ul.index-list-preim.text-small
           li Разработаем дизайн и&nbsp;конструкцию
           li Изготовим пробную партию или промышленный образец
           li Изготовим заказ от&nbsp;1&nbsp;дня
+
           
-          
-  .section.text-center
     .container
-      .col-md-12
-        .h3 Заказать изготовление стандартной конструкции
-        span Выбрать конструкцию и&nbsp;заказать по&nbsp;своим размерам
-    .section
-      .container.servputh.text-small.bold
-        .row.hidden-xs
-          .col-sm-8.col-sm-offset-2.dotted-line
-        .row
-          .col-sm-2.col-sm-offset-1.step-item
-            img.step-icon(src="/img/servput/1.svg")
-            .step-name 1. <br class="visible-sm">Выбираете конструкцию из&nbsp;каталога
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/7.svg")
-            .step-name 2. <br class="visible-sm">Задаете размеры и&nbsp;выбираете опции
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/4.svg")
-            .step-name 3. <br class="visible-sm">Согласовываем графическое оформление
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/6.svg")
-            .step-name 4. <br class="visible-sm">Изготавливаем Ваш заказ
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/3.svg")
-            .step-name 5. <br class="visible-sm">Доставляем заказ или отгружаем со&nbsp;склада
+      .h2 Как заказать упаковку по&nbsp;своим размерам?
+      
+      .hidden-xs
+        hr.i-size-S
+        include ./images/svg/SP_PROIZVODSTVO.svg
         
-    .container
-      .col-md-12
-        .h3 Изготовить индивидуальную упаковку
-        span Заказать изготовление упаковки исключительно под свой продукт
-    .section
-      .container.servputh.text-small.bold
-        .row.hidden-xs
-          .col-sm-8.col-sm-offset-2.dotted-line
-        .row
-          .col-sm-2.col-sm-offset-1.step-item
-            img.step-icon(src="/img/servput/8.svg")
-            .step-name 1. <br class="visible-sm">Объясняете нам задачу
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/9.svg")
-            .step-name 2. <br class="visible-sm">Разрабатываем конструкцию и&nbsp;дизайн
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/10.svg")
-            .step-name 3. <br class="visible-sm">Согласовываем с&nbsp;Вами 3D-модель и&nbsp;пробный образец
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/6.svg")
-            .step-name 4. <br class="visible-sm">Изготавливаем Ваш заказ
-          .col-sm-2.step-item
-            img.step-icon(src="/img/servput/3.svg")
-            .step-name 5. <br class="visible-sm">Доставляем заказ или отгружаем со&nbsp;склада
+      .visible-xs
+        include ./images/svg/SP_PROIZVODSTVO_XS_PUT1.svg
+        hr.i-size-S
+        include ./images/svg/SP_PROIZVODSTVO_XS_PUT2.svg
+      
+      
+  include ./modules/call-me-block/include
   
   //-section.i-gray.i-gallery-top
     .container
@@ -319,51 +227,4 @@ block content
       .b-comments.i-mob.visible-xs-block
         include ./modules/gallery/comments-mob
     
-  section.b-request-form
-    .container
-      include ./components/request-form/template
-  
-  section.i-gray.i-stext
-    .container
-        
-      .row
-        .col-sm-6
-          h4
-            b Антэк. Изготовление картонных коробок
-
-          p Специалисты нашей компании разрабатывают и изготавливают упаковку из картона более 15 лет. Колоссальный опыт в этой сфере позволяет нам выполнять любые заказы на производство картонных упаковок независимо от сложности конструкции и объема работ.
-
-          p Принцип бережливого производства позволяет не расходовать материал впустую! При этом производственный процесс автоматизирован, а качество продукции проверяется на всех этапах изготовления – от выбора картона до выхода товара в тираж. Благодаря этому наши клиенты получают качественную продукцию точно в срок.
-
-          h4
-            b  Антэк. Новые возможности
-
-          p Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!
-
-          h4
-            b  Антэк. Новые возможности
-
-          p Упаковочная коробка из картона пользуется спросом больше века. Однако сегодня она выполняет не только «упаковочные» функции, но и помогает подчеркнуть индивидуальный стиль компании. Мы поможем воплотить самые смелые маркетинговые идеи и создать уникальную брендовую упаковку!
-
-        .col-sm-6
-          h4
-            b  Антэк. Ценность предложения
-
-          p Вы можете заказать изготовление упаковочных коробок «под ключ» – от разработки макета до серийного производства и печати бренда на упаковке. Мы разрабатываем и изготавливаем на заказ коробки любых размеров и форм-факторов.
-
-          p Наши специалисты помогут создать удобную упаковку оптимальной конструкции, отвечающей необходимым параметрам (форма, размер, вес, ценность) и требованиям бережного хранения и транспортировки.
-
-          h4
-            b  Антэк. Покоряем вершины вместе
-
-          p Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.
-
-          p Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!
-
-          h4
-            b  Антэк. Покоряем вершины вместе
-
-          p Наша миссия – создавать продукт, который приносит практическую пользу и позволяет сохранить экологию Земли. Мы изготавливаем функциональные картонные коробки из экологически чистого картона.
-
-          p Мы создаем не просто удобную упаковку, а изделия нового поколения в Москве. Мы рады, что вместе с вами поэтапно выходим на новый уровень!
           

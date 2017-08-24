@@ -5,16 +5,54 @@
   .item
     height 360px
     margin 0
-    padding 50px 0 80px
-    background-position center center
-    background-size cover
-    background-repeat no-repeat
-    text-align center
     
-    .bn-h1,
-    .bn-text
-      color #fff
-      margin 0 0 25px
+    &-slide-2
+      padding 50px 0 80px
+      background-position center center
+      background-size cover
+      background-repeat no-repeat
+      text-align center
+    
+      .bn-h1,
+      .bn-text
+        color #fff
+        margin 0 0 25px
+    
+    &-slide-1
+      background-position right bottom
+      background-size contain
+      background-repeat no-repeat
+      background-color #b1c5cc
+      background-image url(/upload/banner/baner_anton-3.jpg)
+      padding 50px 50% 50px 60px
+      
+      .bn-text
+        font-weight 300
+      
+      @media (max-width: 1200px)
+        &
+          padding 30px 50% 30px 60px
+          background-position 120% bottom
+      
+      @media (max-width: 991px)
+        &
+          padding 30px 40% 30px 50px
+          background-size auto 80%
+            
+      @media (max-width: 768px)
+        &
+          text-align center
+          background-image url(/upload/banner/baner_anton-mob.jpg)
+          background-position center bottom
+          background-size 100% auto
+          padding 20px
+        
+        .white-plashka
+          background-color rgba(255, 255, 250, 0.8)
+          padding 10px 30px 20px
+          height 320px
+          
+  
   .fotorama__nav-wrap
     position absolute
     bottom 30px
@@ -38,7 +76,10 @@
     background-repeat no-repeat
     background-size cover
     opacity 0.5
-    top calc(50% - 25px)
+    top 0
+    bottom 0
+    margin-top auto
+    margin-bottom auto
     &:hover
       opacity 1
     

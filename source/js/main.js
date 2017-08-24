@@ -123,6 +123,10 @@ $('#aboutVideo').on('hide.bs.modal', function (e) {
 });
 
 
-
+$( '#razrabotka-link').on('click', function(e) {
+  e.preventDefault();
+  $.scrollTo( $('#razrabotka-block').offset().top - 120, 500 );
+  window.location.hash = 'razrabotka';
+});
 
 
