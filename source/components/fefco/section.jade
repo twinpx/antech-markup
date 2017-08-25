@@ -4,7 +4,7 @@ link( rel="stylesheet", href="/components/fefco/style.css" )
 script( src="/components/fefco/script.js" )
 
 .a-fefco
-
+  
   .section.section-lines-top
     .row.fefco-flex-line
       .col-md-9
@@ -18,25 +18,15 @@ script( src="/components/fefco/script.js" )
       include advantages
   
   // fefco item greed start
-  .row.mord-grid
+  .row.section-grid
+    - var imgItem = 1;
+    - for (var i=0; i < 20; i++)
+      .col-md-6.border-line-bottom-xs
+        include card_section
+      - imgItem++
+      - if (imgItem > 3)
+        - imgItem = 1;
     
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
-    
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
-    
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
-    
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
-    
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
-    
-    .col-md-6.col-lg-4.border-line-bottom-xs
-      include card
   // fefco item greed end
 
 // end /components/fefco/

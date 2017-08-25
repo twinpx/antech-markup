@@ -1,0 +1,33 @@
+﻿extends ../../../layouts/main.jade
+
+block title
+  title Раздел каталога FEFCO | Antech
+
+block content 
+  .b-top-panel
+    .container
+      -var header = "FEFCO"
+      include ../../../modules/top-header/include
+      include ../../../modules/top-menu/include
+      
+  // breadcrumb & menu start
+  .container
+    include ../../../modules/breadcrumbs/portfolio
+  // breadcrumb & menu end
+    
+  
+  .container
+    .row
+      .col-md-3
+        .hidden-sm.hidden-xs
+          include ../../../modules/side-menu/include
+      .col-md-9
+        h1 Раздел каталога FEFCO
+          span.h-counter 1270
+        
+        include ../../../components/fefco/section
+    
+        
+    
+    
+    
