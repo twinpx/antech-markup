@@ -60,36 +60,39 @@ block content
   .container
     hr.gray
   
+  
+  
+  .section.bg-gray
+    
+    .container
+      .h2.text-center-xs Как заказать упаковку по&nbsp;своим размерам?
+    
+      //  start include servis puth proizvodstvo
+
+      .hidden-xs
+        hr.i-size-S
+        include ../images/svg/SP_PROIZVODSTVO.svg
+        
+      .visible-xs
+        include ../images/svg/SP_PROIZVODSTVO_XS_PUT1.svg
+        hr.i-size-S
+        include ../images/svg/SP_PROIZVODSTVO_XS_PUT2.svg
+      
+      //  end include servis puth proizvodstvo
+
+    .container
+      Здесь будет сетка каталогов
+      
+      
+  include ../modules/call-me-block/include
+  
   .section
     .container
-      h2 Процесс изготовления картонной упаковки
-      .row.hidden-xs
-        .col-sm-4
-          .h3 1.&nbsp;Разработка
+      h2.text-center-xs Процесс изготовления картонной упаковки
+      .row.production-process
+        .col-sm-4.col-item(style="background-color: #cadfd4;")
           img.img-responsive(src="/img/production/production-process-01.png")
-        .col-sm-4
-          .h3 2.&nbsp;Изготовление
-          img.img-responsive(src="/img/production/production-process-02.png")
-        .col-sm-4
-          .h3 3.&nbsp;Отгрузка
-          img.img-responsive(src="/img/production/production-process-03.png")
-      
-      .row.text-center.visible-xs(style="padding: 0 20px;")
-        .col-xs-4
-          .row
-            .h5 1.&nbsp;Разработка
-            img.img-responsive(src="/img/production/production-process-01.png")
-        .col-xs-4
-          .row
-            .h5 2.&nbsp;Изготовление
-            img.img-responsive(src="/img/production/production-process-02.png")
-        .col-xs-4
-          .row
-            .h5 3.&nbsp;Отгрузка
-            img.img-responsive(src="/img/production/production-process-03.png")
-      .row
-        .col-md-4
-          #razrabotka.h2.visible-sm.visible-xs 1. Разработка
+          #razrabotka.h2 1. Разработка
           h3#razrabotka-block Разработка картонной упаковки
           p Разрабатываем конструкцию и&nbsp;дизайн картонной упаковки с&nbsp;учетом параметров продукта, логистических процессов и&nbsp;маркетинговых задач
           
@@ -99,8 +102,9 @@ block content
             li В&nbsp;процессе разработки предоставляем тестовый образец.
             li Для функционального и&nbsp;маркетингового тестирования изготавливаем промышленные образцы и&nbsp;испытательные партии.
         
-        .col-md-4
-          .h2.visible-sm.visible-xs 2. Изготовление
+        .col-sm-4.col-item(style="background-color: #d2dfea;")
+          img.img-responsive(src="/img/production/production-process-02.png")
+          .h2 2. Изготовление
           h3 Производство и&nbsp;технологии
           p Наше современное оборудование позволяет производить высококачественную гофроупаковку любой сложности и&nbsp;тиража в&nbsp;кратчайшие сроки.
           
@@ -113,8 +117,9 @@ block content
             li Вклейка и&nbsp;вставка пластиковых окошек, деревянных, кожаных вставок
             li Склейка, скобирование, сборка
         
-        .col-md-4
-          .h2.visible-sm.visible-xs 3. Отгрузка
+        .col-sm-4.col-item(style="background-color: #fafbc9;")
+          img.img-responsive(src="/img/production/production-process-03.png")
+          .h2 3. Отгрузка
           h3#delivery-block Доставка
           p Доставляем заказы по&nbsp;Москве и&nbsp;МО собственным специализированным транспортом.
           p В&nbsp;регионы доставку осуществляем через транспортные компании.
@@ -124,8 +129,9 @@ block content
           
           h3#warranty-block Гарантии
           p Мы&nbsp;гарантируем высокое качество продукции, четкие сроки и&nbsp;высокий уровень предоставляемых нами услуг.
+      
     
-  .section.bg-gray-1
+  .section
     .container
       .col-md-6
         .h4 Из чего складывается цена упаковки?
@@ -151,12 +157,6 @@ block content
         p
           | Для подбора размера нужно измерить габаритные размеры упаковываемого предмета по трем направлениям: длина, ширина, высота (в миллиметрах). В дальнейшем это будут внутренние размеры упаковки. Если товар сыпучий — определите размер упаковки, наиболее подходящий Вам для транспортировки и складирования
        
-        
-  .section#order-block
-    .container
-      h2 Как заказать?
-      img.img-responsive(src="/img/svg-test.svg")
-  
            
   
   include ../modules/call-me-block/include
