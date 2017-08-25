@@ -1,0 +1,31 @@
+﻿extends ../../layouts/main.jade
+
+block title
+  title Portfolio | Antech
+
+block content
+  
+  .b-top-panel
+    .container
+      -var header = "FEFCO"
+      include ../../modules/top-header/include
+      include ../../modules/top-menu/include
+      
+  .container
+    include ../../modules/breadcrumbs/portfolio
+    
+    .row
+      .col-md-9.col-md-offset-3
+        h1 Каталог конструкций FEFCO
+          span.h-counter 1270
+    
+    .row
+      .col-md-3
+        .hidden-sm.hidden-xs
+          include ../../modules/side-menu/include
+      .col-md-9
+        include ../../components/fefco/template
+        
+    
+    
+    

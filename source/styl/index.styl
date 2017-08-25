@@ -163,6 +163,10 @@
   &-nowrap
     flex-wrap nowrap
   
+  &-vcenter
+    align-items center
+    
+  
 .index-play-btn
   padding-top 90px
   background-image url(/img/index-video-btn-icon.svg)
@@ -274,4 +278,21 @@
   .step-item
     margin-top 20px
     margin-bottom 20px
-    
+
+.production-process
+  
+  .col-item
+    padding-top 15px
+    padding-bottom 15px
+  
+  @media (min-width: 768px)
+    &
+      display -webkit-flex
+      display flex
+      justify-content flex-start
+      align-items stretch
+      flex-wrap nowrap
+      
+      .col-item
+        margin 0 15px
+  
