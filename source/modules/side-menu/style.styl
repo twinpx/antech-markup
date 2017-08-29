@@ -1,35 +1,44 @@
 @import '../../styl/component-include.styl'
 
-.side-menu
+.left-menu
   
   .root-item
-    border-bottom 1px solid $border-gray
-    padding 15px
+    border 1px solid $border-gray
+    border-radius 5px
+    margin-bottom 5px
     
     .link
       position relative
+      padding 15px 25px 15px 15px
+      font-weight 400
+      color $c-black
+      display block
+      
+      &-icon
+        padding 15px 25px 15px 50px
+        background-position 10px center
+        background-size 30px 30px
+        background-repeat no-repeat
+      
+      &:hover
+        background-color $c-gray-xxs
     
       .togleChildrenBloc
         position absolute
         top 0
         bottom 0
         margin auto 0
-        right -15px
+        right 10px
         width 16px
         height 16px
         font-size 10px
         line-height 10px
-        transition transform 0.5s
         background-image url(images/arrow_menu.svg)
         background-position center center
         background-repeat no-repeat
         background-size 8px 8px
         cursor pointer
         transform rotate(0)
-        
-      &>a
-        font-weight 400
-        color $c-dark-gray
         
     &.opened-children
       .togleChildrenBloc
@@ -39,6 +48,11 @@
     a
       text-decoration none
     
+    .cildterblock
+      border-top 1px solid $border-gray
+      padding 7px 25px 7px 50px
+      padding-left 
+      
     .children
       list-style none
       margin-left 0
@@ -46,7 +60,7 @@
       margin-bottom 0
       
       li
-        padding-top 15px
+        padding 7px 0
         
         .glyphicon
           font-size 0.6em
