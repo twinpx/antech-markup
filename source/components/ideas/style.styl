@@ -3,7 +3,8 @@
 .b-ideas
   
   section &
-    margin-top -40px
+    margin-top -70px
+    margin-bottom -40px
   
   h2
     display inline-block
@@ -51,7 +52,7 @@
     p
       color #666666
       margin 11px 0
-      max-height 76px
+      max-height 100px
       overflow hidden
       
     &__bottom
@@ -74,26 +75,26 @@
       
   .fotorama__arr
     width 30px
-    height 100px
-    top 50%
-    margin-top -50px
+    height 100%
+    top 0
+    margin-top 0
     transition( all 0.3s ease !important )
     
     &--prev
       left 0
-      background embedurl( 'img/arrow-left.png' ) no-repeat center center transparent
+      background embedurl( 'img/arrow-left.png' ) no-repeat center center #e8e8e8
       background-size 30%
     
     &--next
       right 0
-      background embedurl( 'img/arrow-right.png' ) no-repeat center center transparent
+      background embedurl( 'img/arrow-right.png' ) no-repeat center center #e8e8e8
       background-size 30%
       
     &:hover
-      background-color rgba( 204,204,204,.8)
+      background-color #dadada
       
     &:active
-      background-color rgba( 204,204,204,.5)
+      background-color #c3c3c3
       
   .fotorama__nav-wrap
     display none
