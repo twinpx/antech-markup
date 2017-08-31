@@ -1,0 +1,61 @@
+﻿// start /components/construct/
+
+link( rel="stylesheet", href="/components/construct/style.css" )
+script( src="/components/construct/script.js" )
+
+.a-construct
+  .section
+    .row.first-line
+      .col-md-1.col-sm-1.col-xs-2
+        img.h-icon(src="/upload/fefco/fefco_morda_1.svg")
+      .col-md-8.col-sm-11.col-xs-10
+        h1 Каталог конструкций FEFCO
+          span.h-counter 1270
+      .col-md-3.hidden-sm.hidden-xs
+        a.btn.btn-type-3 Скачать каталог FEFCO
+
+  .section.section-lines-top
+    
+    .row.construct-flex-line
+      
+      .col-md-8
+        include description
+      
+      .col-md-4
+        include advantages
+      
+    hr.gray
+  
+  // construct item greed start
+  .row.mord-grid
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+    
+    .col-md-6.col-lg-4.border-line-bottom-xs
+      include card
+  // construct item greed end
+  
+  // include file add text start
+  hr.i-size-S
+  hr.gray
+  .section
+    include addtextfile
+  hr.gray
+  // include file add text end
+  
+  
+
+// end /components/construct/

@@ -120,6 +120,12 @@ hr.i-line-simple
   color $c-high-gray
   font-weight 100
 
+.h-icon
+  width 48px
+  height 48px
+  display inline
+  margin-right 20px
+
 h1,
 .h1,
 .b-h1
@@ -201,6 +207,9 @@ h6,
 
 .text-small
   font-size 14px
+  
+  p
+    margin 0 0 10px
   
 .text-danger
   color #de1f26
@@ -337,6 +346,7 @@ h6,
     border-radius 5px
     color $c-black
     padding 0 20px
+    
   
   &-type-2
     font-size 18px
@@ -351,12 +361,22 @@ h6,
     font-size 14px
     line-height 30px
     padding 0 10px
+    
+  &-type-2
+    
+    &.btn-md
+      line-height 40px
+      padding 0 10px
+    
+    &.btn-sm
+      line-height 30px
+      padding 0 10px
 
   &-type-3
     border-radius 5px
     font-size 14px
-    color c-wawe
-    line-height 37px
+    color $c-wawe
+    line-height 38px
     background none
     border-color $c-wawe
     border-width 1px
@@ -366,6 +386,40 @@ h6,
     &:hover
       background-color $c-grey-2
       color $c-ultramarine
+    
+    &.btn-md
+      line-height 38px
+    
+    &.btn-sm
+      line-height 28px
+
+  &-type-4
+    border-radius 5px
+    font-size 14px
+    color $c-black
+    line-height 46px
+    background none
+    border-color $c-yellow
+    border-width 2px
+    border-style solid
+    padding 0 14px
+    font-weight 400
+    
+    &:hover
+      background-color $c-yellow
+    
+    &.btn-md
+      line-height 36px
+    
+    &.btn-sm
+      line-height 26px
+      
+    &.btn-disabled
+      border-color $c-gray-s
+      cursor default
+      background-color $c-gray-s
+    
+      
       
     
   
@@ -676,6 +730,39 @@ blockquote
 .marker-red-round
   list-style-image url(/img/production-baner-list-img.png)
   
-.bg-gray-1
+.bg-gray-1, .bg-gray-xxs
   background-color $c-gray-xxs
+.bg-gray-2, .bg-gray-xs
+  background-color $c-gray-xs
 
+
+
+.input-wrapper
+  input
+    padding-right 25px
+  
+  .input-step-up,
+  .input-step-down
+    position absolute
+    right 3px
+    width 20px
+    height calc(50% - 4px)
+    background-color $c-gray-xs
+    z-index 10
+    text-align center
+    cursor pointer
+    user-select none
+    background-position center center
+    background-repeat no-repeat
+    background-size 10px 10px
+    
+    &:hover
+      background-color $c-gray-s
+    
+  .input-step-up
+    top 3px
+    background-image url(images/svg/arrow_top.svg)
+    
+  .input-step-down
+    bottom 3px
+    background-image url(images/svg/arrow_bottom.svg)

@@ -1,0 +1,100 @@
+﻿@import '../../styl/component-include.styl'
+
+.a-construct
+  @media (min-width: 991px)
+    .construct-flex-line
+      display -webkit-flex
+      display flex
+      align-items center
+  
+  .first-line
+    display -webkit-flex
+    display flex
+    align-items center
+  
+    h1
+      margin 0
+      line-height 1.5
+      
+    
+  .a-construct-card
+    padding 10px
+    position relative
+    border 1px solid $c-white
+    
+    a
+      color $c-dark-gray
+    
+    .card-name-block
+      position absolute
+      width 100%
+      bottom 10px
+      left 0
+      font-size 14px
+      padding 10px
+      font-weight 400
+      padding-left 60px
+      
+      display -webkit-flex
+      display flex
+      align-items center
+      justify-content space-between
+    
+    .card-price
+      margin-left 10px
+      
+    &:hover
+      border-color $border-gray
+      
+      .image-first
+        display none
+        
+      .image-second
+        display block
+    
+    .card-code
+      background-color $c-blue-l
+      border-radius 100%
+      width 40px
+      height 40px
+      line-height 40px
+      text-align center
+      color $c-white
+      position absolute
+      left 10px
+      top 0
+      bottom 0
+      margin auto 0
+    
+  .mord-grid
+    .image-second
+      display none
+  
+  .construct-preim-container
+    
+    .construct-preim-item
+      background-repeat no-repeat
+      background-position left center
+      background-size 48px 48px
+      font-weight 600
+      font-size 14px
+      padding-left 70px
+      min-height 60px
+      margin-bottom 20px
+      display -webkit-flex
+      display flex
+      justify-content flex-start
+      align-items center
+  
+  .section-grid
+    .a-construct-card
+      padding-bottom 4em
+      
+    .card-name-block
+      font-weight 200
+  
+            
+    
+      
+        
+        

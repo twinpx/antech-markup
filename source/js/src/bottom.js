@@ -1,4 +1,7 @@
 
+  $('[data-toggle="popover"]').popover();
+
+
   });
 
 }( jQuery ));
@@ -56,4 +59,15 @@ function onYouTubeIframeAPIReady() {
   }
 }
 
+
+function roundToMultiple(num, multiple) {
+  return Math.round(num/multiple)*multiple;
+}
+
+function checkToMultiple(num, multiple) {
+  if(Math.round(Number(num) / Number(multiple)) * Number(multiple) == Number(num))
+   return true;
+  else
+   return false;
+}
 

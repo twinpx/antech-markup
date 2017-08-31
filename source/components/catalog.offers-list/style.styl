@@ -1,0 +1,100 @@
+
+  .offers-block
+    font-size 13px
+      
+    @media (max-width: 768px)
+      font-size 14px
+    
+    .offers-header
+      font-weight 600
+      display -webkit-flex
+      display flex
+      align-items stretch
+      text-align center
+      margin 0
+          
+      
+      .header-cell
+        padding 10px 5px
+        border-right 1px solid $c-white
+        display -webkit-flex
+        display flex
+        align-items center
+        justify-content center
+        
+        &:last-of-type
+          border-right none
+        
+        &.flex-wrap
+          flex-wrap wrap
+        
+    .help_icon_round
+      display block
+      border 1px solid
+      border-radius 2em
+      width 1.2em
+      line-height 1.2em
+      height 1.2em
+      text-align center
+      
+      
+    
+    .offers-item
+      border-top 2px solid $c-white
+      font-family Arial
+      margin 0
+      position relative
+      
+      .item-cell
+        padding 10px
+      
+      @media (min-width: 768px)
+        &
+          display -webkit-flex
+          display flex
+          align-items center
+          background-color $c-gray-xxs
+          text-align center
+          
+        .item-cell
+          padding 10px 3px
+        
+      .add-to-cart-cell-vcenter
+        display -webkit-flex
+        display flex
+        align-items center
+        
+        input[type=text],
+        input[type=button],
+        input[type=number],
+        input[type=submit]
+          width 100%
+        
+        .submit-btn
+          padding-left 0
+          padding-right 0
+          
+          &.preorder
+            border-color $c-wawe
+            
+            &:hover
+              background-color $c-wawe
+      
+      .form-control
+        height 50px
+        padding-left 5px
+      
+      .item-cell-articul
+        background-color $c-gray-xxs
+      
+      .quantity-step-name
+        color $c-high-gray
+      
+      .cur-quantity-indikator
+        position absolute
+        left 0
+        bottom 0
+        height 5px
+        background $c-ultramarine
+        z-index 10
+        display none

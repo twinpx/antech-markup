@@ -47,30 +47,109 @@ block content
   .container
     .col-md-12
       h1 Кнопки
-    .col-md-4
+      p Общий класс
+      pre .btn
+    
+    .col-md-3
       h2 Type-1
       p Кнопки по умолчанию
+      
       a.btn.btn-default( href="" ) Основной размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-default
+      hr.i-size-S
+      
       a.btn.btn-default.btn-md( href="" ) Средний размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-default.btn-md
+      hr.i-size-S
+      
       a.btn.btn-default.btn-sm( href="" ) Маленький размер
-    .col-md-4
+      hr.i-size-S
+      pre .btn.btn-default.btn-sm
+    
+    .col-md-3
       h2 Type-2
       p Кнопки квадратные
+      
       a.btn.btn-type-2( href="" ) Основной размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-type-2
+      hr.i-size-S
+      
       a.btn.btn-type-2-md( href="" ) Средний размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-type-2-md
+      hr.i-size-S
+      
       a.btn.btn-type-2-sm( href="" ) Маленький размер
-    .col-md-4
+      hr.i-size-S
+      pre .btn.btn-type-2-sm
+      hr.i-size-S
+      
+    .col-md-3
       h2 Type-3
-      p Кнопки квадратные прозрачные
+      p Кнопки квадратные прозрачные/голубые
+      
       a.btn.btn-type-3( href="" ) Основной размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-type-3
+      hr.i-size-S
+      
       a.btn.btn-type-3.btn-md( href="" ) Средний размер
-      hr
+      hr.i-size-S
+      pre .btn.btn-type-3.btn-md
+      hr.i-size-S
+      
       a.btn.btn-type-3.btn-sm( href="" ) Маленький размер
+      hr.i-size-S
+      pre .btn.btn-type-3.btn-sm
+      hr.i-size-S
+      
+    .col-md-3
+      h2 Type-4
+      p Кнопки квадратные прозрачные/желтые
+      
+      a.btn.btn-type-4( href="" ) Основной размер
+      hr.i-size-S
+      pre .btn.btn-type-4
+      hr.i-size-S
+      
+      a.btn.btn-type-4.btn-md( href="" ) Средний размер
+      hr.i-size-S
+      pre .btn.btn-type-4.btn-md
+      hr.i-size-S
+      
+      a.btn.btn-type-4.btn-sm( href="" ) Маленький размер
+      hr.i-size-S
+      pre .btn.btn-type-4.btn-sm
+      hr.i-size-S
+  
+  .container
+    .col-md-12
+      h2 Формы
+    
+    .col-md-12
+      h3 Поля ввода
+    
+    .col-md-12
+      h3 input type=text (text)
+      input.form-control(name="nameExemple" size="4" type="text")
+      
+    .col-md-12
+      h3 input type=text (number)
+      input.form-control(name="nameExemple" size="4" type="text" data-inputstep="20" data-inputmin="1" data-inputtype="number")
+      
+      hr.i-size-S
+      pre 
+        code.language-html(data-lang="html") 
+          span <
+          span input
+          span  name="nameExemple" size="4" type="text" data-inputtype="number" data-inputstep="20" data-inputmin="1" data-inputmax="" />
+      
+    .col-md-12
+      h3 none
+      
 
 
   h1.center Изготовление упаковки
