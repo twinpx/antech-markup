@@ -9,11 +9,11 @@ script( src="/components/catalog.offers-list/script.js" )
   .row.offers-header.bg-gray-xs.hidden-xs
     .col-sm-1.header-cell Арт
       span.hidden-sm икул
-    .col-sm-3.header-cell Внутренние размеры,<br>(Д) х (Ш) х (В) мм
+    .col-sm-2.header-cell Внутренние размеры,<br>(Д) х (Ш) х (В) мм
     .col-sm-1.header-cell Картон
     .col-sm-3.header-cell Цена/шт при тираже, руб
     .col-sm-1.header-cell Наличие
-    .col-sm-1.header-cell.flex-wrap.hidden
+    .col-sm-1.header-cell.flex-wrap 
       .hidden-lg Печать
       .visible-lg Нанесение печати
       .help_icon_round.popover_teaser( data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на готовые коробки." ) ?
@@ -30,8 +30,8 @@ script( src="/components/catalog.offers-list/script.js" )
           span &nbsp;0200
         
         b.col-xs-5.item-cell.visible-xs Внутренние размеры, мм<br>(Д) х (Ш) х (В)
-        .col-sm-3.col-xs-7.item-cell 
-          a.underline(href="") 750 х 500 х 500
+        .col-sm-2.col-xs-7.item-cell 
+          a(href="") 750 х 500 х 500
         
         .clearfix.visible-xs
         
@@ -67,24 +67,24 @@ script( src="/components/catalog.offers-list/script.js" )
         
         .clearfix.visible-xs
         
-        b.col-xs-5.item-cell.visible-xs В наличии
+        b.col-xs-5.item-cell.visible-xs Наличие
         .col-sm-1.col-xs-7.item-cell.preorder_popower( data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." ) 100
           span.visible-xs-inline &nbsp;шт
         
         .clearfix.visible-xs
         
-        .col-sm-1.hidden-xs.hidden
+        .col-sm-1.hidden-xs
           input.add-pring-chb( type="checkbox" name="addprint_double")
         
         .col-sm-3.col-xs-12.item-cell 
           .row.add-to-cart-cell-vcenter
-            .col-xs-4.hidden
+            .col-xs-4.visible-xs
               .checkbox
                 label
                   input.add-pring-chb( type="checkbox" name="addprint")
                   | Печать
             
-            .col-sm-12.col-xs-12.add-to-cart-cell-vcenter
+            .col-sm-12.col-xs-8.add-to-cart-cell-vcenter
               
               input.form-control.add-to-cart-input-quantity(name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000")
               
