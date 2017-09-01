@@ -1,589 +1,326 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <title>Раздел каталога FEFCO | Antech</title>
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="yandex-verification" content="4965bc585ff9af37">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/template/template_styles.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/template/jscript.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
-    <header class="b-header">
-      <div class="b-header-fixed">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu hidden-md hidden-lg"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
-            <div class="col-sm-5 hidden-sm">
-              <menu class="hidden-xs">
-                <li><a href="">Создание упаковки</a></li>
-                <li class="hidden-sm"><a href="" class="i-active">Магазин</a></li>
-                <li class="hidden-sm"><a href="">Контакты</a></li>
-              </menu>
-            </div>
-            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0">
-              <div class="b-header__basket">
-                <!-- Modal-->
-                <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" class="modal">
-                  <div role="document" class="modal-dialog">
-                    <div class="modal-content text-middle">
-                      <div type="button" data-dismiss="modal" aria-label="Close" class="close"></div>
-                      <div class="modal-body center">
-                        <div class="b-modal-container">
-                          <div class="b-modal-signin">
-                            <div class="b-h2">Вход в аккаунт</div>
-                            <div class="text-danger center"></div>
-                            <div class="row">
-                              <div class="col-sm-8 col-sm-offset-2">
-                                <form action="" method="GET">
-                                  <div class="form-group">
-                                    <input type="text" value="" placeholder="Логин" required class="form-control">
-                                  </div>
-                                  <div class="form-group">
-                                    <input type="password" value="" placeholder="Пароль" required class="form-control">
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-xs-6">
-                                      <div class="checkbox">
-                                        <label>
-                                          <input type="checkbox" value="">Запомнить
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
-                                  </div>
-                                  <div class="center b-form-buttom">
-                                    <button type="submit" class="btn btn-default btn-md">Войти</button>
-                                  </div>
-                                  <div><a href="">Регистрация</a></div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="b-modal-social i-hidden">
-                            <div class="row">
-                              <div class="col-xs-4">Livejournal</div>
-                              <div class="col-xs-4">Mail.Ru</div>
-                              <div class="col-xs-4">Liveinternet</div>
-                            </div>
-                            <hr class="i-size-XS">
-                            <div class="row">
-                              <div class="col-xs-4">Blogger</div>
-                              <div class="col-xs-4">OpenID</div>
-                            </div>
-                          </div>
-                          <div class="b-modal-user">
-                            <div class="b-signin-button">
-                              <div class="b-user-icon"></div>
-                              <div>Войти</div>
-                            </div>
-                            <hr class="i-size-S hidden-xs">
-                            <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
-                              руб
-                               <b>00</b> 
-                              коп
-                            </p>
-                            <hr class="i-size-S"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
-                            <hr class="i-size-S hidden-xs">
-                            <hr class="i-line i-size-L hidden-xs">
-                            <hr class="i-line i-size-M visible-xs-block">
-                            <nav class="row">
-                              <div class="col-xs-3"><a href=""><span class="b-cart-icon"></span>Корзина</a></div>
-                              <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
-                              <div class="col-xs-3"><a href=""><span class="b-order-icon"></span>Заказы</a></div>
-                              <div class="col-xs-3"><a href=""><span class="b-account-icon"></span>Учетная запись</a></div>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs"></span><a href="#" data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
-                  <div class="count_in_cart">121</div>
-                  <script>var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];</script></a>
-              </div>
-              <div class="b-header__phone hidden-xs"><span class="b-header__phone-num">8 800 555-55-70<br><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a></span></div>
-            </div>
-          </div>
-          <div id="callMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="b-call-me modal fade">
-            <div role="document" class="modal-dialog modal-lg">
-              <div style="background-image: url('/upload/portfolio/bg.png')" class="modal-content">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
-                <div class="modal-body">
-                  <div class="b-call-me__form">
-                    <h2>Готовы обсудить детали?</h2>
-                    <hr class="i-size-S">
-                    <form action="/json/call-me.json" method="GET">
-                      <div class="form-group">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 800" class="cb_btn_teaser">
-                          <circle id="cb_bnt_circle_1" r="300" cx="400" cy="400" class="st0"></circle>
-                          <polygon points="665.2,315.2 796.8,398.4 672.3,481.6 " class="st1"></polygon>
-                          <circle r="300" cx="400" cy="400" class="st1"></circle>
-                          <path d="M479.9,437.8c-8.3,2.9-20.6,15.2-25.6,25.6l-12.6,24.4c-56.5-44-102.4-93.4-129.6-152.6l26.8-8.5 c10.2-1.9,24.2-10.4,30.1-19.9l-42.7-91.2c-7.3-2.3-22.8,2-33.3,7.3l0.2,0.4c-22.9,12.4-40.2,27.8-49.3,47.7 c20.7,180.6,124.5,254.2,251.5,297.9c24.6-12.3,44.5-26.9,54-46.8c4.6-6,9.7-19.9,12.9-29.2L479.9,437.8z" class="st2"></path>
-                          <animate xlink:href="#cb_bnt_circle_1" attributename="r" from="300" to="300" dur="2s" begin="0s" values="300; 400; 300" keytimes="0; 0.5; 1" repeatcount="indefinite"></animate>
-                        </svg>
-                        <input name="phone" type="tel" placeholder="Введите Ваш телефон" required class="form-control">
-                        <button type="submit" class="btn btn-default">Жду звонка!</button>
-                      </div>
-                    </form>
-                    <div class="text-large">Мы позвоним за <b>20</b> секунд</div>
-                    <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
-                      <select name="HOUR" class="select">
-                        <option value="9">9</option>
-                        <option value="10" selected="">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                      </select> 
-                      :
-                       
-                      <select name="MINUTE" class="select">
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                    </div>
-                    <div class="i-small">Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.<br><a href="">Пользовательское соглашение</a>.</div>
-                  </div>
-                  <div data-num="20" class="b-call-me__counter"></div>
-                  <div class="b-call-me__feedback">
-                    <h2>Был ли наш специалист полезен?</h2>
-                    <hr class="i-size-S">
-                    <form action="/json/call-me.json" method="GET">
-                      <div class="form-group b-call-me__smiles">
-                        <label>
-                          <input type="radio" name="mark" value="1"><span></span>
-                        </label>
-                        <label>
-                          <input type="radio" name="mark" value="2"><span></span>
-                        </label>
-                        <label>
-                          <input type="radio" name="mark" value="3"><span></span>
-                        </label>
-                      </div>
-                      <div class="form-group">
-                        <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
-                      </div>
-                      <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
-                    </form>
-                  </div>
-                  <div class="b-call-me__thankyou">
-                    <h2>Благодарим за Вашу оценку</h2>
-                  </div>
-                  <div class="b-call-me__once-more">
-                    <h2>Приносим свои извинения</h2>
-                    <hr class="i-size-S">
-                    <p>Возможно, произошел технический сбой.</p>
-                    <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
-                    <hr class="i-size-S">
-                    <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
-                  </div>
-                  <div class="b-call-me__callback">
-                    <div>
-                      <h2>Ваша заявка принята!</h2>
-                      <p class="text-large">
-                        Мы перезвоним Вам в первый рабочий день в
-                         <span id="callMeHour"></span>:<span id="callMeMinute"></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="b-header-menu">
-          <div class="b-header">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
-                <div class="col-sm-6">
-                  <div class="b-header__phone">
-                    8 800 555-55-70
-                     <span>(для звонков по РФ)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="b-header-menu__search">
-              <form action="" method="GET" class="form-inline">
-                <div class="form-group">
-                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
-                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
-                </div>
-              </form>
-            </div>
-            <div class="b-header-menu__links">
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                  <h4><a href="">Изготовление коробок на заказ</a></h4>
-                  <ul>
-                    <li><a href="">Как заказать?</a></li>
-                    <li><a href="">Разработка упаковки</a></li>
-                    <li><a href="">Консультация и выезд эксперта</a></li>
-                    <li><a href="">3D-модель и пробный образец</a></li>
-                    <li><a href="">Сроки изготовления</a></li>
-                    <li><a href="">Доставка</a></li>
-                    <li><a href="">Гарантии</a></li>
-                    <li><a href="">Оплата</a></li>
-                    <li><a href="">Примеры работ</a></li>
-                    <li><a href="">Типовые конструкции</a></li>
-                  </ul>
-                </div>
-                <div class="col-sm-6">
-                  <h4><a href="">Магазин картонных коробок</a></h4>
-                  <ul>
-                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse1" aria-expanded="false" aria-controls="headerMenuCollapse1" class="b-collapse-link">Картонные коробки<i></i></a>
-                      <ul id="headerMenuCollapse1" class="collapse">
-                        <li><a href="">Транспортные</a></li>
-                        <li><a href="">Для переезда</a></li>
-                        <li><a href="">Под пиццу</a></li>
-                        <li><a href="">Архивные</a></li>
-                        <li><a href="">Крупногабаритные</a></li>
-                        <li><a href="">Под одежду</a></li>
-                        <li><a href="">Почтовые коробки</a></li>
-                        <li><a href="">Маленькие</a></li>
-                        <li><a href="">Для цветов</a></li>
-                      </ul>
-                    </li>
-                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse2" aria-expanded="false" aria-controls="headerMenuCollapse2" class="b-collapse-link">Гофрокартон<i></i></a>
-                      <ul id="headerMenuCollapse2" class="collapse">
-                        <li><a href="">Гофронаполнитель</a></li>
-                        <li><a href="">Гофролисты</a></li>
-                        <li><a href="">Изделия из гофрокартона</a></li>
-                      </ul>
-                    </li>
-                    <li><a role="button" data-toggle="collapse" href="#headerMenuCollapse3" aria-expanded="false" aria-controls="headerMenuCollapse3" class="b-collapse-link">Вспомогательная упаковка<i></i></a>
-                      <ul id="headerMenuCollapse3" class="collapse">
-                        <li><a href="">Упаковочные материалы</a></li>
-                        <li><a href="">Упаковочные инструменты</a></li>
-                        <li><a href="">Упаковочный наполнитель</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="">Прайс-лист</a></li>
-                    <li><a href="">Где купить?</a></li>
-                    <li><a href="">Доставка</a></li>
-                    <li><a href="">Гарантии</a></li>
-                    <li><a href="">Оплата</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                  <h4><a href="">Компания</a></h4>
-                  <ul>
-                    <li><a href="">Руководство</a></li>
-                    <li><a href="">Вакансии</a></li>
-                    <li><a href="">Документы</a></li>
-                    <li><a href="">Схема проезда</a></li>
-                    <li><a href="">Контакты</a></li>
-                    <li><a href="">Видео о компании</a></li>
-                  </ul>
-                </div>
-                <div class="col-sm-6">
-                  <h4><a href="">Помощь</a></h4>
-                  <ul>
-                    <li><a href="">ГОСТ</a></li>
-                    <li><a href="">FEFCO</a></li>
-                    <li><a href="">Словарь</a></li>
-                    <li><a href="">Упаковочный обзор</a></li>
-                    <li><a href="">Правила приемки</a></li>
-                    <li><a href="">Методы испытания</a></li>
-                    <li><a href="">Видеоинструкции</a></li>
-                    <li><a href="">Задать вопрос роботу</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                  <h4><a href="">Корзина</a></h4>
-                  <ul>
-                    <li><a href="">Избранное</a></li>
-                    <li><a href="">История заказов</a></li>
-                    <li><a href="">Учетная запись</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+<!-- start /components/construct/-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+<link rel="stylesheet" href="/components/construct/style.css"/>
+<script src="/components/construct/script.js"></script>
+<div class="a-construct">
+  <div class="section">
+    <div class="row first-line">
+      <div class="col-md-1 col-sm-1 col-xs-2"><img src="/upload/fefco/fefco_morda_1.svg" class="h-icon"/></div>
+      <div class="col-md-8 col-sm-11 col-xs-10">
+        <h1 class="h3">0200 - Коробка четырехклапанная со стыкующимися внешними клапанами</h1>
       </div>
-    </header>
-    <div class="b-top-panel">
-      <div class="container">
-        <div class="b-top-header">FEFCO</div>
-        <div class="b-top-menu hidden-xs"><a id="order-link" href="">Как заказать?</a> <a id="payment-link" href="">Оплата</a> <a id="warranty-link" href="">Гарантии</a> <a id="delivery-link" href="">Доставка</a></div>
+      <div class="col-md-3 hidden-sm hidden-xs"><a class="btn btn-type-3">Скачать каталог FEFCO</a></div>
+    </div>
+  </div>
+  <hr class="gray"/>
+  <div class="section">
+    <div class="row">
+      <div class="col-md-7">
+        <div data-nav="thumbs" data-allowfullscreen="native" data-ratio="9/7" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" class="fotorama"><img src="http://s.fotorama.io/1.jpg"/><img src="http://s.fotorama.io/2.jpg"/><img src="http://s.fotorama.io/3.jpg"/><img src="http://s.fotorama.io/4.jpg"/><img src="http://s.fotorama.io/1.jpg"/><img src="http://s.fotorama.io/2.jpg"/><img src="http://s.fotorama.io/3.jpg"/><img src="http://s.fotorama.io/4.jpg"/></div>
+      </div>
+      <div class="col-md-5">
+        <p> <b>Art&nbsp;0200</b></p>
+        <p>Описание конструкции и для чего может применяться данная конструкция.</p>
+        <p>lotted-type boxes или высеченные коробки. Высеченные (высечные) коробки изготавливаются (высекаются) из одного листа гофрокартона, и склеиваются клеем или клейкой лентой, или прошиваются металлическими скобами по боковому, соединительному клапану.</p>
+        <p class="text-small">Цена от&nbsp;<b>40,56</b>&nbsp;руб.</p>
+        <div><a href="" data-scrollto="#callback-block" class="btn btn-default scrollto">Заказать изготовление</a></div>
       </div>
     </div>
-    <!-- breadcrumb & menu start-->
-    <div class="container">
-      <div class="b-breadcrumbs"><a href="">Главная</a> <span class="b-breadcrumbs__sep">/</span> <a href="">Производство</a> <span class="b-breadcrumbs__sep">/</span> <span>Портфолио</span></div>
-    </div>
-    <!-- breadcrumb & menu end-->
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="hidden-sm hidden-xs">
-            <nav class="left-menu text-small">
-              <div class="root-item is-root opened-children"><a href="" style="background-image: url(/img/menu_icon/galya_simbol.svg)" class="link link-icon">Каталог конструкций FEFCO<span class="h-counter">15</span>
-                  <div class="togleChildrenBloc"></div></a>
-                <div class="collapse cildterblock in">
-                  <ul class="children">
-                    <li><a href="">02xx Высеченные коробки и 4-хклапанные коробки<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="" class="selected">003xx Коробки телескопического типа или конструкции<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                  </ul>
-                  <ul id="menuCildBlock-1" class="children collapse sideMenuCollapse">
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                  </ul>
-                  <ul class="children showMoreLink">
-                    <li><a href="javascript:void()" data-toggle="collapse" data-target="#menuCildBlock-1" aria-expanded="false" aria-controls="menuCildBlock-1">Еще&nbsp;<span class="glyphicon glyphicon-menu-down"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="root-item is-root"><a href="" style="background-image: url(/img/menu_icon/galya_simbol.svg)" class="link link-icon">Каталог конструкций GALIA<span class="h-counter">15</span>
-                  <div class="togleChildrenBloc"></div></a>
-                <div class="collapse cildterblock">
-                  <ul class="children">
-                    <li><a href="">02xx Высеченные коробки и 4-хклапанные коробки<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">003xx Коробки телескопического типа или конструкции<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="root-item is-root"><a href="" class="link">Ориганальные конструкции<span class="h-counter">15</span>
-                  <div class="togleChildrenBloc"></div></a>
-                <div class="collapse cildterblock">
-                  <ul class="children">
-                    <li><a href="">02xx Высеченные коробки и 4-хклапанные коробки<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">003xx Коробки телескопического типа или конструкции<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="root-item is-root"><a href="" style="background-image: url(/img/menu_icon/galya_simbol.svg)" class="link link-icon">Маркетинговая упаковка<span class="h-counter">15</span>
-                  <div class="togleChildrenBloc"></div></a>
-                <div class="collapse cildterblock">
-                  <ul class="children">
-                    <li><a href="">02xx Высеченные коробки и 4-хклапанные коробки<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">003xx Коробки телескопического типа или конструкции<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                    <li><a href="">004xx Раздвижные коробки пенашльного типа и сборные ящики<span class="line-counter">&nbsp;(15)</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="root-item"><a href="" style="background-image: url(/img/menu_icon/galya_simbol.svg)" class="link link-icon">Упаковка с печатью</a></div>
-              <div class="root-item"><a href="" style="background-image: url(/img/menu_icon/galya_simbol.svg)" class="link link-icon">Разработка упаковки</a></div>
-            </nav>
-          </div>
+  </div>
+  <hr class="gray"/>
+  <div class="section">
+    <div class="h3">Размеры в наличии</div>
+    <!-- start /components/catalog.offers-list/-->
+    <link rel="stylesheet" href="/components/catalog.offers-list/style.css"/>
+    <script src="/components/catalog.offers-list/script.js"></script>
+    <div class="offers-block">
+      <div class="row offers-header bg-gray-xs hidden-xs">
+        <div class="col-sm-1 header-cell">Арт<span class="hidden-sm">икул</span></div>
+        <div class="col-sm-3 header-cell">Внутренние размеры,<br>(Д) х (Ш) х (В) мм</div>
+        <div class="col-sm-1 header-cell">Картон</div>
+        <div class="col-sm-3 header-cell">Цена/шт при тираже, руб</div>
+        <div class="col-sm-1 header-cell">Наличие</div>
+        <div class="col-sm-1 header-cell flex-wrap hidden">
+          <div class="hidden-lg">Печать</div>
+          <div class="visible-lg">Нанесение печати</div>
+          <div data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на готовые коробки." class="help_icon_round popover_teaser">?</div>
         </div>
-        <div class="col-md-9">
-          <!-- start /components/construct/-->
-          <link rel="stylesheet" href="/components/construct/style.css">
-          <script src="/components/construct/script.js"></script>
-          <div class="a-construct">
-            <div class="section">
-              <div class="row first-line">
-                <div class="col-md-1 col-sm-1 col-xs-2"><img src="/upload/fefco/fefco_morda_1.svg" class="h-icon"></div>
-                <div class="col-md-8 col-sm-11 col-xs-10">
-                  <h1 class="h3">02 - Высеченные коробки и 4-хклапанные коробки<span class="h-counter">1270</span></h1>
-                </div>
-                <div class="col-md-3 hidden-sm hidden-xs"><a class="btn btn-type-3">Скачать каталог FEFCO</a></div>
-              </div>
-            </div>
-            <div class="section section-lines-top">
-              <div class="row construct-flex-line">
-                <div class="col-md-8">
-                  <!-- start /include/construct/description/-->
-                  <p>Размеры упаковочных коробок выбираются с&nbsp;точки зрения рациональной затарки и&nbsp;оптимизации расходов на&nbsp;погрузку, транспортировку, хранение. </p>
-                  <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и&nbsp;внешние габариты в&nbsp;привязке к&nbsp;погрузке на&nbsp;поддоны. </p>
-                  <p>Базовые параметры и&nbsp;критерии при производстве на&nbsp;заказ: тип и&nbsp;габариты единичной тары (бутылка, маленькая коробка, дойпак и&nbsp;т.п.);</p>
-                  <!-- end /include/construct/description/-->
-                </div>
-                <div class="col-md-4">
-                  <!-- start /include/construct/advantages/-->
-                  <div class="construct-preim-container">
-                    <div style="background-image: url(/upload/fefco/fefco_morda_1.svg);" class="construct-preim-item"><span class="text">Мы&nbsp;адаптируем конструкцию к&nbsp;вашему продукту</span></div>
-                    <div style="background-image: url(/upload/fefco/fefco_morda_2.svg);" class="construct-preim-item"><span class="text">Создадим привлекательное оформление</span></div>
-                    <div style="background-image: url(/upload/fefco/fefco_morda_3.svg);" class="construct-preim-item"><span class="text">Сделаем промышленный образец и&nbsp;пробную партию</span></div>
-                  </div>
-                  <!-- end /include/construct/advantages/-->
-                </div>
-              </div>
-              <hr class="gray">
-            </div>
-            <!-- construct item greed start-->
-            <div class="row section-grid">
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-1.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-2.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-3.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-1.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-2.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-3.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-1.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-2.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-3.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-              <div class="col-md-6 border-line-bottom-xs">
-                <div class="a-construct-card"><a href="" class="card-image"><img src="/upload/fefco/section-temp-1.jpg" class="img-responsive">
-                    <div class="card-name-block">
-                      <div class="card-code">07xx</div>
-                      <div class="card-name">Коробки оберточного типа и складные ящики, коробки с крышкой и дном</div>
-                      <div class="card-price">от&nbsp;<b>35,45</b>&nbsp;р</div>
-                    </div></a></div>
-              </div>
-            </div>
-            <!-- construct item greed end-->
-            <div class="row text-center">
-              <!-- include component pagination-->
-              <nav aria-label="Page navigation">
-                <ul class="pagination">
-                  <li><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                  <li><a href="">1</a></li>
-                  <li><a href="">2</a></li>
-                  <li><a href="">3</a></li>
-                  <li><a href="">4</a></li>
-                  <li><a href="">5</a></li>
-                  <li><a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
-              </nav>
-              <!-- include component pagination-->
-            </div>
-            <!-- include file add text start-->
-            <hr class="i-size-S">
-            <hr class="gray">
-            <div class="section">
-              <div class="row text-small">
-                <div class="col-md-6">
-                  <div class="h5">Дополнительные элементы упаковки</div>
-                  <p>Размеры упаковочных коробок выбираются с точки зрения рациональной затарки и оптимизации расходов на погрузку, транспортировку, хранение. </p>
-                  <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
-                  <p>Базовые параметры и критерии при производстве на заказ:</p>
-                  <ul>
-                    <li>тип и габариты единичной тары (бутылка, маленькая коробка, дойпак и т.п.);</li>
-                    <li>тип продукта (вода газированная и без газа, соки, крупы, мука, продукт без индивидуальной упаковки);</li>
-                    <li>условия фасовки (ручная, автомат);</li>
-                    <li>условия хранения и перегрузки (на паллетах и без, с повышением и без).</li>
-                  </ul>
-                  <p>Рекомендуем предоставить образцы индивидуальной упаковки для обмера и проектирования гофротары. Размеры картонных коробок и число единиц товара внутри могут варьироваться с учетом веса одного места, требований к реализации продукта.</p>
-                  <p>Рекомендуем предоставить образцы индивидуальной упаковки для обмера и проектирования гофротары.</p>
-                </div>
-                <div class="col-md-6">
-                  <div class="h5">Дополнительные элементы упаковки</div>
-                  <p>Размеры упаковочных коробок выбираются с точки зрения рациональной затарки и оптимизации расходов на погрузку, транспортировку, хранение. </p>
-                  <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
-                  <p>Базовые параметры и критерии при производстве на заказ:</p>
-                  <ul>
-                    <li>тип и габариты единичной тары (бутылка, маленькая коробка, дойпак и т.п.);</li>
-                    <li>тип продукта (вода газированная и без газа, соки, крупы, мука, продукт без индивидуальной упаковки);</li>
-                    <li>условия фасовки (ручная, автомат);</li>
-                    <li>условия хранения и перегрузки (на паллетах и без, с повышением и без).</li>
-                  </ul>
-                  <p>Рекомендуем предоставить образцы индивидуальной упаковки для обмера и проектирования гофротары. Размеры картонных коробок и число единиц товара внутри могут варьироваться с учетом веса одного места, требований к реализации продукта.</p>
-                  <p>Рекомендуем предоставить образцы индивидуальной упаковки для обмера и проектирования гофротары.</p>
-                </div>
-              </div>
-            </div>
-            <hr class="gray">
-            <!-- include file add text end-->
-          </div>
-          <!-- end /components/construct/-->
-        </div>
+        <div class="col-sm-3 header-cell">Количество</div>
       </div>
+      <form name="add_to_cart_offers_id_0" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
+        <div class="row offers-item">
+          <div class="col-sm-1 col-xs-12 item-cell item-cell-articul"><b class="visible-xs-inline">Артикул</b><span>&nbsp;0200</span></div><b class="col-xs-5 item-cell visible-xs">Внутренние размеры, мм<br>(Д) х (Ш) х (В)</b>
+          <div class="col-sm-3 col-xs-7 item-cell"> <a href="" class="underline">750 х 500 х 500</a></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Картон</b>
+          <div class="col-sm-1 col-xs-7 item-cell">Т-24</div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Цена/шт при тираже, руб</b>
+          <div class="col-sm-3 col-xs-7 item-cell">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"><span class="visible-xs-inline">до&nbsp;</span>500<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"> <span class="visible-xs-inline">до&nbsp;</span>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name">>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1 cur-quantity-indikator"></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">В наличии</b>
+          <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." class="col-sm-1 col-xs-7 item-cell preorder_popower">100<span class="visible-xs-inline">&nbsp;шт</span></div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-1 hidden-xs hidden">
+            <input type="checkbox" name="addprint_double" class="add-pring-chb"/>
+          </div>
+          <div class="col-sm-3 col-xs-12 item-cell"> 
+            <div class="row add-to-cart-cell-vcenter">
+              <div class="col-xs-4 hidden">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="addprint" class="add-pring-chb"/>Печать
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 add-to-cart-cell-vcenter">
+                <input name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" class="form-control add-to-cart-input-quantity"/>&nbsp;
+                <input name="submit" type="submit" value="В корзину" class="btn btn-type-4 submit-btn"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form name="add_to_cart_offers_id_1" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
+        <div class="row offers-item">
+          <div class="col-sm-1 col-xs-12 item-cell item-cell-articul"><b class="visible-xs-inline">Артикул</b><span>&nbsp;0200</span></div><b class="col-xs-5 item-cell visible-xs">Внутренние размеры, мм<br>(Д) х (Ш) х (В)</b>
+          <div class="col-sm-3 col-xs-7 item-cell"> <a href="" class="underline">750 х 500 х 500</a></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Картон</b>
+          <div class="col-sm-1 col-xs-7 item-cell">Т-24</div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Цена/шт при тираже, руб</b>
+          <div class="col-sm-3 col-xs-7 item-cell">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"><span class="visible-xs-inline">до&nbsp;</span>500<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"> <span class="visible-xs-inline">до&nbsp;</span>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name">>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1 cur-quantity-indikator"></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">В наличии</b>
+          <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." class="col-sm-1 col-xs-7 item-cell preorder_popower">100<span class="visible-xs-inline">&nbsp;шт</span></div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-1 hidden-xs hidden">
+            <input type="checkbox" name="addprint_double" class="add-pring-chb"/>
+          </div>
+          <div class="col-sm-3 col-xs-12 item-cell"> 
+            <div class="row add-to-cart-cell-vcenter">
+              <div class="col-xs-4 hidden">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="addprint" class="add-pring-chb"/>Печать
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 add-to-cart-cell-vcenter">
+                <input name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" class="form-control add-to-cart-input-quantity"/>&nbsp;
+                <input name="submit" type="submit" value="В корзину" class="btn btn-type-4 submit-btn"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form name="add_to_cart_offers_id_2" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
+        <div class="row offers-item">
+          <div class="col-sm-1 col-xs-12 item-cell item-cell-articul"><b class="visible-xs-inline">Артикул</b><span>&nbsp;0200</span></div><b class="col-xs-5 item-cell visible-xs">Внутренние размеры, мм<br>(Д) х (Ш) х (В)</b>
+          <div class="col-sm-3 col-xs-7 item-cell"> <a href="" class="underline">750 х 500 х 500</a></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Картон</b>
+          <div class="col-sm-1 col-xs-7 item-cell">Т-24</div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Цена/шт при тираже, руб</b>
+          <div class="col-sm-3 col-xs-7 item-cell">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"><span class="visible-xs-inline">до&nbsp;</span>500<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"> <span class="visible-xs-inline">до&nbsp;</span>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name">>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1 cur-quantity-indikator"></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">В наличии</b>
+          <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." class="col-sm-1 col-xs-7 item-cell preorder_popower">100<span class="visible-xs-inline">&nbsp;шт</span></div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-1 hidden-xs hidden">
+            <input type="checkbox" name="addprint_double" class="add-pring-chb"/>
+          </div>
+          <div class="col-sm-3 col-xs-12 item-cell"> 
+            <div class="row add-to-cart-cell-vcenter">
+              <div class="col-xs-4 hidden">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="addprint" class="add-pring-chb"/>Печать
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 add-to-cart-cell-vcenter">
+                <input name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" class="form-control add-to-cart-input-quantity"/>&nbsp;
+                <input name="submit" type="submit" value="В корзину" class="btn btn-type-4 submit-btn"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form name="add_to_cart_offers_id_3" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
+        <div class="row offers-item">
+          <div class="col-sm-1 col-xs-12 item-cell item-cell-articul"><b class="visible-xs-inline">Артикул</b><span>&nbsp;0200</span></div><b class="col-xs-5 item-cell visible-xs">Внутренние размеры, мм<br>(Д) х (Ш) х (В)</b>
+          <div class="col-sm-3 col-xs-7 item-cell"> <a href="" class="underline">750 х 500 х 500</a></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Картон</b>
+          <div class="col-sm-1 col-xs-7 item-cell">Т-24</div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Цена/шт при тираже, руб</b>
+          <div class="col-sm-3 col-xs-7 item-cell">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"><span class="visible-xs-inline">до&nbsp;</span>500<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"> <span class="visible-xs-inline">до&nbsp;</span>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name">>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1 cur-quantity-indikator"></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">В наличии</b>
+          <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." class="col-sm-1 col-xs-7 item-cell preorder_popower">100<span class="visible-xs-inline">&nbsp;шт</span></div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-1 hidden-xs hidden">
+            <input type="checkbox" name="addprint_double" class="add-pring-chb"/>
+          </div>
+          <div class="col-sm-3 col-xs-12 item-cell"> 
+            <div class="row add-to-cart-cell-vcenter">
+              <div class="col-xs-4 hidden">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="addprint" class="add-pring-chb"/>Печать
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 add-to-cart-cell-vcenter">
+                <input name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" class="form-control add-to-cart-input-quantity"/>&nbsp;
+                <input name="submit" type="submit" value="В корзину" class="btn btn-type-4 submit-btn"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form name="add_to_cart_offers_id_4" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
+        <div class="row offers-item">
+          <div class="col-sm-1 col-xs-12 item-cell item-cell-articul"><b class="visible-xs-inline">Артикул</b><span>&nbsp;0200</span></div><b class="col-xs-5 item-cell visible-xs">Внутренние размеры, мм<br>(Д) х (Ш) х (В)</b>
+          <div class="col-sm-3 col-xs-7 item-cell"> <a href="" class="underline">750 х 500 х 500</a></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Картон</b>
+          <div class="col-sm-1 col-xs-7 item-cell">Т-24</div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">Цена/шт при тираже, руб</b>
+          <div class="col-sm-3 col-xs-7 item-cell">
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"><span class="visible-xs-inline">до&nbsp;</span>500<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name"> <span class="visible-xs-inline">до&nbsp;</span>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12 col-xs-6 quantity-step-name">>1000<span class="visible-xs-inline">&nbsp;шт</span></div>
+                  <div class="col-sm-12 col-xs-6">99,10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1 cur-quantity-indikator"></div>
+          <div class="clearfix visible-xs"></div><b class="col-xs-5 item-cell visible-xs">В наличии</b>
+          <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." class="col-sm-1 col-xs-7 item-cell preorder_popower">100<span class="visible-xs-inline">&nbsp;шт</span></div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-1 hidden-xs hidden">
+            <input type="checkbox" name="addprint_double" class="add-pring-chb"/>
+          </div>
+          <div class="col-sm-3 col-xs-12 item-cell"> 
+            <div class="row add-to-cart-cell-vcenter">
+              <div class="col-xs-4 hidden">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="addprint" class="add-pring-chb"/>Печать
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 add-to-cart-cell-vcenter">
+                <input name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" class="form-control add-to-cart-input-quantity"/>&nbsp;
+                <input name="submit" type="submit" value="В корзину" class="btn btn-type-4 submit-btn"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="container">
-      <div class="section">
-        <!--  start include servis puth proizvodstvo-->
-        <div class="h2 text-center-xs">Как заказать упаковку по&nbsp;своим размерам?</div>
-        <div class="hidden-xs">
-          <hr class="i-size-S"><?xml version="1.0" encoding="utf-8"?>
+    <!-- end /components/catalog.offers-list/-->
+    <div class="section">
+      <!--  start include servis puth proizvodstvo-->
+      <div class="h2 text-center-xs">Как заказать упаковку по&nbsp;своим размерам?</div>
+      <div class="hidden-xs">
+        <hr class="i-size-S"/><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="_x2014_лой_x5F_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0 0 2900.6 759.6" style="enable-background:new 0 0 2900.6 759.6;" xml:space="preserve">
@@ -824,8 +561,8 @@
 </g>
 </svg>
 
-        </div>
-        <div class="visible-xs"><?xml version="1.0" encoding="utf-8"?>
+      </div>
+      <div class="visible-xs"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="_x2014_лой_x5F_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0 0 570.6 528.4" style="enable-background:new 0 0 570.6 528.4;" xml:space="preserve">
@@ -1022,7 +759,7 @@
 <circle style="fill:#6A0084;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" cx="485" cy="216.2" r="3.5"/>
 </svg>
 
-          <hr class="i-size-S"><?xml version="1.0" encoding="utf-8"?>
+        <hr class="i-size-S"/><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="_x2014_лой_x5F_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0 0 536.4 524.6" style="enable-background:new 0 0 536.4 524.6;" xml:space="preserve">
@@ -1215,52 +952,9 @@
 </g>
 </svg>
 
-        </div>
-        <!--  end include servis puth proizvodstvo-->
       </div>
+      <!--  end include servis puth proizvodstvo-->
     </div>
-    <div class="container-fluid bg-gray-1">
-      <div class="section-lg">
-        <div class="container">
-          <div class="col-md-3 col-md-offset-1">
-            <div class="h4">Доставка</div>
-            <div>Доставка по&nbsp;Москве и&nbsp;МО.<br>Минимальная сумма заказа для доставки&nbsp;&mdash; 3&nbsp;000&nbsp;руб.</div>
-          </div>
-          <div class="col-md-3 col-md-offset-1">
-            <div class="h4">Оплата</div>
-            <div>Оплатить заказ вы&nbsp;можете: наличными при получении или по&nbsp;счету.</div>
-          </div>
-          <div class="col-md-3 col-md-offset-1">
-            <div class="h4">Возврат</div>
-            <div>Возврат осуществляется втечение 14-ти дней со&nbsp;дня продажи.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="b-call-me-block">
-      <div class="content">
-        <form action="/json/call-me.json" method="GET"><span class="b-call-me-block__text">Хотите обсудить разработку или подбор упаковки?<br></span>
-          <input name="phone" type="tel" required="" value="+7(" class="form-control">
-          <button type="submit" class="btn btn-type-2">Жду звонка!</button>
-        </form>
-        <div class="b-call-me-block__message">Ваша заявка принята! Мы перезвоним вам через 30 секунд.
-          <!-- Мы перезвоним Вам в первый рабочий день в 10:00-->
-        </div>
-      </div>
-    </div>
-    <footer class="b-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 b-footer__phone">
-            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
-          </div>
-          <div class="col-sm-4">
-            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a></div>
-          </div>
-        </div>
-        <nav><a href="">О компании</a> <a href="">Обзор упаковки</a> <a href="">Помощь</a> <a href="">Контакты</a> <a href="">Схема проезда</a> <a href="">Вакансии</a></nav>
-        <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
-      </div>
-    </footer>
-  </body>
-</html>
+  </div>
+</div>
+<!-- end /components/construct/-->
