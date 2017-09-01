@@ -194,6 +194,14 @@ $('input[type="text"]').each(function(){
 });
 
 
+$('.scrollto').on('click', function(){
+  if($($(this).data('scrollto')).length>0){
+    $.scrollTo($(this).data('scrollto'), 300, {over: $('.b-header-fixed').outerHeight()});
+    return false;
+  }
+  
+});
+
 
 
 
