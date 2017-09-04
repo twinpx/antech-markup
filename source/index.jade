@@ -210,26 +210,21 @@ block content
         
   section.i-clients
     .container
-      h2.b-h1.center Нас выбирают лучшие
+      h2.b-h1 Мы делали упаковку для
       hr
       
-      - var n = 0
-        while n < 4
-          - n++
-          .row
-            - var k = 0
-              while k < 6
-                - k++
-                .col-sm-2.col-xs-4
-                  a( href="" )
-                    img( src="/upload/clients/1.jpg" alt="" ).img-responsive.center-block
-                    
-                if k==3
-                  hr.hidden-sm.visible-xs-block.clearfix
-            
-          hr
+      .row
+        - var k = 0
+          while k < 6
+            - k++
+            .col-sm-2.col-xs-4
+              a( href="" )
+                img( src="/upload/clients/1.jpg" alt="" ).img-responsive.center-block
+                
+            if k==3
+              hr.hidden-sm.visible-xs-block.clearfix
           
-      //-hr.i-line
+      hr.i-line.i-size-M
       
       //-h2.b-h1.center C нами надёжно
         
