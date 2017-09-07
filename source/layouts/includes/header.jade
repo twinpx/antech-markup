@@ -2,139 +2,195 @@
 
 header.b-header
   .b-header-fixed
+  
+    .b-header-top.hidden-xs.hidden-sm
+      .container
+        .b-header-top__menu
+        
+          span.b-header-top__item.dropdown
+            a#headerTopMenuItem1.dropdown-toggle( href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+              span.b-header-top__text О нас
+              span.b-header-top__caret
+            span.dropdown-menu( aria-labelledby="headerTopMenuItem1" )
+              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") Action
+        
+          span.b-header-top__item.dropdown
+            a#headerTopMenuItem2.dropdown-toggle( href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+              span.b-header-top__text Контакты
+              span.b-header-top__caret
+            span.dropdown-menu( aria-labelledby="headerTopMenuItem2" )
+              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") Action
+              
+          span.b-header-top__item
+            a( href="" ) Контакты
+          span.b-header-top__item
+            a( href="" ) Помощь
+          span.b-header-top__item
+            a( href="" ) Доставка
+          span.b-header-top__item
+            a( href="" ) Оплата
+        
     .container
       
-      .row
-        .col-md-4.col-sm-6.col-xs-12
-          span.b-header__menu.hidden-md.hidden-lg( style="background-image: url(/template/images/svg/sandwich-menu.svg)" )
-          
-          a( href="/" ).b-header__logo
-            img.hidden-xs( src="/template/images/svg/logo.svg" width="155" height="69" alt="" )
-            img.visible-xs-inline-block( src="/template/images/svg/logo.svg" width="203" height="57" alt="" )
-          
-        .col-sm-5.hidden-sm
-                              
-          menu.hidden-xs
-            li
-              a( href="" ) Создание упаковки
-            li.hidden-sm
-              a.i-active( href="" ) Магазин
-            li.hidden-sm
-              a( href="" ) Контакты
+      span.b-header__menu.visible-sm-inline-block.visible-xs-inline-block( style="background-image: url(/template/images/svg/sandwich-menu.svg)" )
       
-        .col-md-3.col-sm-5.col-sm-offset-1.col-md-offset-0
+      a( href="/" ).b-header__logo
+        img( src="/template/images/svg/logo.svg" width="203" height="59" alt="" )
+                            
+      menu.b-header-menulist.hidden-xs
+        li
+          a( href="" )
+            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/basket_menu.svg' );" )
+            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" )
+            | Каталог упаковки
+            
+          //Стрелка ставится если мы находимся внутри раздела
+          span.b-header-bottom__arrow
           
-          div.b-header__basket
+        li.i-active
+          a( href="" )
+            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/production_menu.svg' );" )
+            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/production_menu_color.svg' );" )
+            | Изготовить на заказ
             
-            // Modal
-            #cartModal.modal(tabindex='-1', role='dialog', aria-labelledby='cartModalLabel')
-              .modal-dialog(role='document')
-                .modal-content.text-middle
-                
-                  .close(type='button', data-dismiss='modal', aria-label='Close')
-                  .modal-body.center
-                  
-                    .b-modal-container
-                  
-                      .b-modal-signin
-                    
-                        .b-h2 Вход в аккаунт
-                        
-                        .text-danger.center
-                        
-                        .row
-                          .col-sm-8.col-sm-offset-2
-                            form( action="" method="GET" )
-                              .form-group
-                                input.form-control( type="text" value="" placeholder="Логин" required )
-                              .form-group
-                                input.form-control( type="password" value="" placeholder="Пароль" required )
-                              .row
-                                .col-xs-6
-                                  .checkbox
-                                    label
-                                      input( type="checkbox" value="" )
-                                      | Запомнить
-                                .col-xs-6.text-right
-                                  a( href="" ) Забыли пароль?
-                              .center.b-form-buttom
-                                button.btn.btn-default.btn-md( type="submit" ) Войти
-                              div
-                                a( href="" ) Регистрация
-                                
-                      .b-modal-social.i-hidden
-                        .row
-                          .col-xs-4
-                            | Livejournal
-                          .col-xs-4
-                            | Mail.Ru
-                          .col-xs-4
-                            | Liveinternet
-                        hr.i-size-XS
-                        .row
-                          .col-xs-4
-                            | Blogger
-                          .col-xs-4
-                            | OpenID
-                              
-                      .b-modal-user
-                      
-                        .b-signin-button
-                          .b-user-icon
-                          div Войти
-                          
-                        hr.i-size-S.hidden-xs
-                        
-                        p.text-large
-                          b#cartModalCount 12
-                          | 
-                          span#cartModalHasProducts товаров на сумму
-                          span#cartModalNoProducts( style="display: none;" ) Корзина пуста
-                          | 
-                          b#cartModalPrice 2990
-                          | 
-                          | руб
-                          | 
-                          b 00
-                          | 
-                          | коп
-                        
-                        hr.i-size-S
-                        a#cartModalButton.btn.btn-default.btn-md( href="" ) Оформить заказ
-                        hr.i-size-S.hidden-xs
-                        hr.i-line.i-size-L.hidden-xs
-                        hr.i-line.i-size-M.visible-xs-block
-                        nav.row
-                          .col-xs-3
-                            a( href="" )
-                              span.b-cart-icon
-                              | Корзина
-                          .col-xs-3
-                            a( href="" )
-                              span.b-fav-icon
-                              | Избранное
-                          .col-xs-3
-                            a( href="" )
-                              span.b-order-icon
-                              | Заказы
-                          .col-xs-3
-                            a( href="" )
-                              span.b-account-icon
-                              | Учетная запись
-                              
-            span.b-header__search.hidden-xs( style="background-image: url(/template/images/svg/search-icon.svg)" )
+          //Стрелка ставится если мы находимся внутри раздела
+          span.b-header-bottom__arrow
+          
+        li
+          a( href="" )
+            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/ideas_menu.svg' );" )
+            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" )
+            | Идеи
             
-            a.b-header__basket__icon( href="#" data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
-              .count_in_cart 121
+          //Стрелка ставится если мы находимся внутри раздела
+          span.b-header-bottom__arrow
+        
+      div.b-header__basket
+        
+        // Modal
+        #cartModal.modal(tabindex='-1', role='dialog', aria-labelledby='cartModalLabel')
+          .modal-dialog(role='document')
+            .modal-content.text-middle
+            
+              .close(type='button', data-dismiss='modal', aria-label='Close')
+              .modal-body.center
               
-              script
-                | var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];
+                .b-modal-container
+              
+                  .b-modal-signin
                 
-          .b-header__phone.hidden-xs
-            span.b-header__phone-num 8 800 555-55-70<br>
-              a.b-header__phone-popup( href="" data-toggle="modal" data-target="#callMe" ) Заказать звонок
-      
-      include ../../modules/call-me/include
+                    .b-h2 Вход в аккаунт
+                    
+                    .text-danger.center
+                    
+                    .row
+                      .col-sm-8.col-sm-offset-2
+                        form( action="" method="GET" )
+                          .form-group
+                            input.form-control( type="text" value="" placeholder="Логин" required )
+                          .form-group
+                            input.form-control( type="password" value="" placeholder="Пароль" required )
+                          .row
+                            .col-xs-6
+                              .checkbox
+                                label
+                                  input( type="checkbox" value="" )
+                                  | Запомнить
+                            .col-xs-6.text-right
+                              a( href="" ) Забыли пароль?
+                          .center.b-form-buttom
+                            button.btn.btn-default.btn-md( type="submit" ) Войти
+                          div
+                            a( href="" ) Регистрация
+                            
+                  .b-modal-social.i-hidden
+                    .row
+                      .col-xs-4
+                        | Livejournal
+                      .col-xs-4
+                        | Mail.Ru
+                      .col-xs-4
+                        | Liveinternet
+                    hr.i-size-XS
+                    .row
+                      .col-xs-4
+                        | Blogger
+                      .col-xs-4
+                        | OpenID
+                          
+                  .b-modal-user
+                  
+                    .b-signin-button
+                      .b-user-icon
+                      div Войти
+                      
+                    hr.i-size-S.hidden-xs
+                    
+                    p.text-large
+                      b#cartModalCount 12
+                      | 
+                      span#cartModalHasProducts товаров на сумму
+                      span#cartModalNoProducts( style="display: none;" ) Корзина пуста
+                      | 
+                      b#cartModalPrice 2990
+                      | 
+                      | руб
+                      | 
+                      b 00
+                      | 
+                      | коп
+                    
+                    hr.i-size-S
+                    a#cartModalButton.btn.btn-default.btn-md( href="" ) Оформить заказ
+                    hr.i-size-S.hidden-xs
+                    hr.i-line.i-size-L.hidden-xs
+                    hr.i-line.i-size-M.visible-xs-block
+                    nav.row
+                      .col-xs-3
+                        a( href="" )
+                          span.b-cart-icon
+                          | Корзина
+                      .col-xs-3
+                        a( href="" )
+                          span.b-fav-icon
+                          | Избранное
+                      .col-xs-3
+                        a( href="" )
+                          span.b-order-icon
+                          | Заказы
+                      .col-xs-3
+                        a( href="" )
+                          span.b-account-icon
+                          | Учетная запись
+                          
+        span.b-header__search.hidden-xs( style="background-image: url(/template/images/svg/search-icon.svg)" )
+                          
+        a.b-header__profile.hidden-sm.hidden-xs( href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" )
+        
+        a.b-header__basket__icon( href="#" data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
+          .count_in_cart 121
+          
+          script
+            | var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];
+            
+      .b-header__phone.hidden-xs
+          
+        span.b-header__phone-num.dropdown
+          span#phoneDropdown.dropdown-toggle.hidden-sm.hidden-xs( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+            span.b-header__phone-num__text +7 (495) 241-98-28
+            span.b-header__phone-num__caret
+          br.hidden-sm.hidden-xs
+          a.b-header__phone-popup( href="" data-toggle="modal" data-target="#callMe" ) Заказать звонок
+          span.dropdown-menu( aria-labelledby="phoneDropdown" )
+            a.dropdown-item( href="") Action
+            a.dropdown-item( href="") Action
+            a.dropdown-item( href="") Action
+    
+    include ../../modules/call-me/include
 
             
     .b-header-menu
@@ -303,3 +359,19 @@ header.b-header
                   a( href="") История заказов
                 li
                   a( href="") Учетная запись
+  
+    .b-header-bottom.hidden-xs
+      .container
+      
+        .b-header-bottom__menu
+          a( href="" ) Картонные коробки
+          a( href="" ) Гофроупаковка
+          a( href="" ) Гофрокартон
+          a( href="" ) Упаковочные материалы
+          a( href="" ) Упаковочные инструменты
+          a( href="" ) Распродажа
+          a( href="" ) Новинки
+          a( href="" ) Прайс-лист
+          a.visible-sm( href="" )
+            span.b-header-bottom__text Еще
+            span.b-header-bottom__caret
