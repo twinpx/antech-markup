@@ -1,0 +1,45 @@
+// start include/items_grid
+
+
+.row.item-grid.hidden-xs
+  
+  - var k = 0
+  while k++ < 6
+    .col-sm-6.col-md-4.col-lg-3
+      include card
+  
+  
+  .col-sm-6.col-md-4.col-lg-3.border-line-bottom-xs
+    .a-construct-card.add-card
+      a.card-image(href="") 
+        img.img-responsive( src="/img/construction_mord_download_sym.png")
+        .card-name-block
+          span Скачать каталог FEFCO
+    
+  .col-sm-6.col-md-4.col-lg-3
+    .a-construct-card.add-card
+      a.card-image(href="")
+        img.img-responsive(src="/img/construction_mord_more_sym.png")
+        .card-name-block Посмотреть все конструкции
+          
+          
+
+.row.visible-xs
+  .fotorama-tabs(data-ratio="1" data-width="100%")
+    
+    - var k = 0
+    while k++ < 8
+      .col-xs-12
+        include card
+    
+    
+    .col-xs-12
+      .a-construct-card.add-card
+        a.card-image(href="")
+          img.img-responsive(src="/img/construction_mord_more_sym.png")
+          .card-name-block Посмотреть все конструкции
+
+
+
+
+// end include/items_grid
