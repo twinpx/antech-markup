@@ -108,7 +108,7 @@ if ( $.mask ) {
   $( '.b-request-form input.form-control' ).mask("+7 999 999-99-99");
 }
 
-$('.b-nav-tabs.nav-tabs a').click(function (e) {
+$('.nav-tabs a').click(function (e) {
   e.preventDefault();
   $('.nav-tabs a').removeClass( 'active' );
   $(this).addClass( 'active' ).tab('show');
@@ -202,9 +202,7 @@ $('.scrollto').on('click', function(){
   
 });
 
-$('.lazyload').lazyload({
-  effect: "fadeIn",
-});
+
 
 
 

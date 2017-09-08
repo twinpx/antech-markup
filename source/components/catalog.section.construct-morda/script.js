@@ -1,26 +1,46 @@
 ( function($) {
+
   'use strict';
   
   $( function() {
-    
-    $('.construct-section-top .fotorama-tabs').fotorama();
   
-    $('.construct-section-top a').click(function(e){
-      var parents = $(this).parents('.construct-section-top');
-      e.preventDefault();
-      $('.nav-tabs a', parents).removeClass( 'active' );
-      $(this).addClass( 'active' ).tab('show');
-    });
+    var counter = 1;
+  
+    var intervalId = setInterval( function() {
     
-/*
-    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-      e.target // newly activated tab
-      e.relatedTarget // previous active tab
-    })
-*/
+      $( '.b-banner-transition' )
+        .removeClass( 'i-0' )
+        .removeClass( 'i-' + counter );
+      
+      if ( counter >= 1) {
+        counter = 0;
+      }
+      
+      $( '.b-banner-transition' ).addClass( 'i-' + (++counter) );
+      
+      setTimeout( function() {
+        var prev = counter-1;
+      
+        if ( counter === 1) {
+          prev = 1;
+        }
+      
+        $( '.b-banner-transition' )
+          .removeClass( 'i-text-0' )
+          .removeClass( 'i-text-' + prev )
+          .addClass( 'i-text-' + counter );
+          
+      }, 1000);
+      
+    }, 3000 );
     
+    setTimeout( function() {
+      $( '.b-banner-transition img.i-1' ).show();
+    }, 1000);
+  
+    /*if ( window.BX ) {
+      BX.addCustomEvent( "onFrameDataReceived", function () {});
+    }*/
   });
-  
-}( jQuery ));
 
-  
+}( jQuery ));

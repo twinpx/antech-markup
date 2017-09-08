@@ -5,13 +5,6 @@
   });
 
 }( jQuery ));
-/*
-
-
-  $('[data-toggle="tab"]').on('show.bs.tab', function(){
-    alert('hi!')
-  });
-*/
 
 var tag = document.createElement('script');
 
