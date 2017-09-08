@@ -1,40 +1,47 @@
 @import '../../styl/component-include.styl'
 
 .b-top-menu
-  line-height 68px
-  font-size 11pt
-  float right
+  height 40px
+  line-height 40px
+  display flex
+  justify-content space-between
+  font-size 9.5pt
   
   a
-    color #000
-    text-decoration none
-    margin-left 40px
     white-space nowrap
-    display inline-block
-    vertical-align top
+    text-shadow 0 0 2px #fff
     
-    @media( max-width 767px )
-      display none
+    &,
+    &:active,
+    &:focus
+      color #333
+      text-decoration none
       
     &:hover
       color #0086cd
-
+      text-decoration none
+          
+    @media( max-width 991px )
+      
+      &:nth-child(n+5)
+        display none
+      
+      &:last-child
+        display inline
+        
   &__icon
-    display inline-block
-    margin -4px 0 0 33px
     cursor pointer
-    font-size 40pt
+      
+  &__text
+    display inline-block
+    margin-right 7px
+      
+  &__caret
     display inline-block
     vertical-align top
-    
-    .cls-1
-      fill #010101
-      
-    svg
-      width 22px
-      
-    &:hover,
-    &.i-open
-    
-      circle
-        fill #0086cd
+    width 5px
+    height 5px
+    border-left 1px solid #000
+    border-bottom 1px solid #000
+    transform( rotate( -45deg ))
+    margin-top 17px
