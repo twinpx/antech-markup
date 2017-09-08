@@ -12,18 +12,20 @@ header.b-header
               span.b-header-top__text О нас
               span.b-header-top__caret
             span.dropdown-menu( aria-labelledby="headerTopMenuItem1" )
-              a.dropdown-item( href="") Action
-              a.dropdown-item( href="") Action
-              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") О компании
+              a.dropdown-item( href="") Отзывы
+              a.dropdown-item( href="") Документы
+              a.dropdown-item( href="") Вакансии
         
           span.b-header-top__item.dropdown
             a#headerTopMenuItem2.dropdown-toggle( href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
               span.b-header-top__text Контакты
               span.b-header-top__caret
             span.dropdown-menu( aria-labelledby="headerTopMenuItem2" )
-              a.dropdown-item( href="") Action
-              a.dropdown-item( href="") Action
-              a.dropdown-item( href="") Action
+              a.dropdown-item( href="") Адрес и схема проезда
+              span.dropdown-block( href="") <i>Часы работы:</i><b>Пн-Пт:</b> с 9.00-18.00<br><b>Сб:</b> с 10:00-17:00<br><em>Вскр - выходной</em>
+              a.dropdown-item( href="") Доставка
+              a.dropdown-item( href="") Самовывоз
               
           span.b-header-top__item
             a( href="" ) Контакты
@@ -360,18 +362,8 @@ header.b-header
                 li
                   a( href="") Учетная запись
   
-    .b-header-bottom.hidden-xs
+    .b-top-panel.hidden-xs
       .container
-      
-        .b-header-bottom__menu
-          a( href="" ) Картонные коробки
-          a( href="" ) Гофроупаковка
-          a( href="" ) Гофрокартон
-          a( href="" ) Упаковочные материалы
-          a( href="" ) Упаковочные инструменты
-          a( href="" ) Распродажа
-          a( href="" ) Новинки
-          a( href="" ) Прайс-лист
-          a.visible-sm( href="" )
-            span.b-header-bottom__text Еще
-            span.b-header-bottom__caret
+        include ../../modules/top-menu/catalog
+        
+      include ../../modules/top-submenu/include

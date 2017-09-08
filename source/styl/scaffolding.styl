@@ -59,33 +59,53 @@
       border-bottom 1px solid #fff
       transform( rotate( -45deg ))
       
-  &-bottom
-    background-color #e8e8e8
-    height 40px
-    
-    &__menu
-      display flex
-      justify-content space-between
-      font-size 9.5pt
-      line-height 40px
+    .dropdown-menu
+      margin-top 3px
+      border-radius 0
+      box-shadow 0 0 5px rgba( 0,0,0,.3 )
+      border-color #bdbdbd
+      padding 0
+      width 190px
+      left 50%
+      margin-left -95px
       
-      a
-        text-shadow 0 0 2px #fff
+    .dropdown-block
+      display block
+      padding 16px 0 16px 25px
+      border-bottom 1px solid #bdbdbd
+      font-size 10.5pt
+      color #585858
+      line-height 1.2
+      
+      i
+        font-style normal
+        display block
+        margin-bottom 10px
+      
+      b
+        font-weight normal
+        color #000
         
-        &,
-        &:hover,
-        &:active,
-        &:focus
-          color #333
-          text-decoration none
-          
-        @media( max-width 991px )
-          
-          &:nth-child(n+5)
-            display none
-          
-          &:last-child
-            display inline
+      em
+        font-style normal
+        color #e31d1a
+      
+    a.dropdown-item
+      display block
+      padding 11px 0 11px 25px
+      border-bottom 1px solid #bdbdbd
+      font-size 10.5pt
+      color #585858
+      
+      &:hover,
+      &:focus,
+      &:active
+        color #000
+        
+      &:last-child
+        border-bottom none
+      
+  &-bottom
           
     &__arrow
       position absolute
@@ -97,20 +117,6 @@
       border-style solid
       border-width 0 10px 6px 10px
       border-color transparent transparent #e8e8e8 transparent
-      
-    &__text
-      display inline-block
-      vertical-align middle
-      margin-right 7px
-        
-    &__caret
-      display inline-block
-      vertical-align middle
-      width 5px
-      height 5px
-      border-left 1px solid #000
-      border-bottom 1px solid #000
-      transform( rotate( -45deg ))
   
   &__menu
     width 20px
