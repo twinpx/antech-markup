@@ -24,11 +24,17 @@ $('#cartModal').on('shown.bs.modal', function () {
 $( document ).bind( 'click', function(e){
   if ( $(e.target).is( '.modal-backdrop' ) && $('html').hasClass( 'i-cart-modal-open' )) {
     $('#cartModal').modal('hide');
+    $( 'html' ).removeClass( 'i-cart-modal-open' );
   }
 }).bind( 'keyup', function(e) {
   if (e.keyCode === 27 && $('html').hasClass('i-menu-open')) {
     $('.b-header-menu__close').click();
   }
+});
+
+$( '.b-header__phone-popup' ).bind( 'click', function() {
+  $('#cartModal').modal('hide');
+  $( 'html' ).removeClass( 'i-cart-modal-open' );
 });
 
 var scrollBarWidth = window.innerWidth - $(document).width();
