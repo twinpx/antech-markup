@@ -1,0 +1,74 @@
+﻿extends ../../layouts/main.jade
+
+block title
+  title Portfolio Detail | Antech
+
+block content
+  
+  .b-top-panel
+    .container
+      -var header = "Портфолио"
+      include ../../modules/top-header/include
+      
+  .container
+    include ../../modules/breadcrumbs/portfolio
+    
+    hr
+  
+  hr.i-size-S
+  
+  .container
+    
+    h1 Упаковка для комплектов сока The Juice Cleanse
+  
+    .row
+    
+      .col-sm-9
+    
+        include ../../components/ideas.detail/template
+        
+        
+      .col-sm-3.hidden-sm.hidden-xs
+      
+        nav.left-menu.text-small
+          .root-item.is-root
+            a.link( href='/production/fefco/' )
+              | Все идеи
+              span.h-counter 154
+              .togleChildrenBloc
+            .cildterblock.collapse(aria-expanded='false', role="", style='height: 15px;')
+              ul.children
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Про изготовление
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Дизайнерские решения
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Полезные советы
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Лайфхаки
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Как выбрать упаковки
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Про упаковку в деталях
+                  
+          .root-item.is-root
+            a.link( href='/production/galia/' )
+              | По видам продукции
+              span.h-counter 154
+              .togleChildrenBloc
+            .cildterblock.collapse(aria-expanded='false', role="", style='height: 15px;')
+              ul.children
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Про изготовление
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Дизайнерские решения
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Полезные советы
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Лайфхаки
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Как выбрать упаковки
+                li
+                  a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Про упаковку в деталях
+      
+    hr.i-size-L
