@@ -3,11 +3,71 @@
   'use strict';
   
   $( function() {
+    
+    
+    
+    var $fotoramaSection = $( '.fotorama-catalog-section' );
+    var i = 0, j = 0, n = 3, screen = '', resize = '', ratio = 1, thumb = '';
+  
+    $( window ).resize( resizeWindow );
+    
+//       alert('start!')
+      
+    resizeWindow();
+    
+    function resizeWindow() {
+      if ( window.matchMedia( "( min-width: 768px )" ).matches ) {
+        resize = 'sm';
+      } else {
+        resize = 'xs';
+      }
+      
+      if ( screen === resize ) {
+        return;
+      }
+      screen = resize;
+      reInitiateGallery();
+    }
+    
+    function reInitiateGallery() {
+      if ( screen === 'sm' ) {
+        thumb = "thumbs";
+        ratio = 1;
+      } else {
+        thumb = "dots";
+        ratio = 1;
+        
+      }
+      
+      if ( $fotoramaSection.data( 'fotorama' )) {
+        $fotoramaSection.data('fotorama').destroy();
+      }
+      
+      $fotoramaSection.fotorama({
+        ratio: ratio,
+        loop: true,
+        width: '100%',
+        arrows: true,
+        click: false,
+        nav: thumb,
+      });
+    }
+    
+    
+    
+    
   
     $( '.b-catalog-card__image' ).lazyload({
       effect : "fadeIn"
     });
-        
+    
+    
+    
+    
+    
+    
+    /*
+    
     if ( window.productsDelayInCartIDArray ) {
       for ( var k = 0; k < window.productsDelayInCartIDArray.length; k++ ) {
         $( '.b-catalog-card[data-id=' + window.productsDelayInCartIDArray[k] + '] .b-fav-icon' ).addClass( 'i-active' );
@@ -111,6 +171,7 @@
       }
       
     });
+*/
   
     /*if ( window.BX ) {
       BX.addCustomEvent( "onFrameDataReceived", function () {});

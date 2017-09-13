@@ -1,95 +1,97 @@
 @import '../../styl/component-include.styl'
 
-.b-catalog-section
-  position relative
-  
-  &__breadcrumbs
-    position absolute
-    top 0
-    left 0
-    width 100%
-    z-index 10
-    
-    .container
-      position relative
-    
-    .row
-      position absolute
-      top 0
-      left 0
-      width 100%
-      margin 0 !important
-      
-      &,
-      span,
-      a
-        color #aaa
-        mix-blend-mode difference
-        
-    .b-breadcrumbs
-      text-align left
-      
-      @media( max-width 767px )
-        text-align center
-        
-    .b-price-list
-      
-      @media( max-width 767px )
-        text-align center
-        line-height normal
-        margin-top -20px
 
-  &-ill
-    text-align center
-    background-color #020202
-    position relative
-    min-height 614px
+.a-catalog-section
+  .catalog-preim-container
     
-    img
-      width 100%
-      height auto
-    
-    .b-h1
-      position absolute
-      top 45%
-      left 0
-      text-align center
-      width 100%
-      color #fff
-      mix-blend-mode difference
+    .catalog-preim-item
+      background-repeat no-repeat
+      background-position left center
+      background-size 48px 48px
+      font-weight 600
+      font-size 14px
+      padding-left 70px
+      min-height 60px
+      display -webkit-flex
+      display flex
+      justify-content flex-start
+      align-items center
       
-      @media( max-width 767px )
-        font-size 18pt
+  @media ( min-width 768px )
+    .catalog-preim-container
+      display -webkit-flex
+      display flex
+      justify-content space-between
+      align-items center
+
+      .catalog-preim-item
+        margin 10px 0
+        width 25%
         
-  article
-    float none
-    clear both
-    margin 0
-    padding 0
+  .first-line
     
-  &-items
-    margin-top 20px
-        
-  &__load
-    padding 10px 4px 0
-    clear both
+    @media ( min-width 768px )
+      display -webkit-flex
+      display flex
+      align-items stretch
     
-    i,
-    b
-      display block
-      font-size 12pt
-      cursor pointer
-      text-align center
-      font-style normal
-      font-weight 100
-            
-    b
-      display none
-        
-    &.i-preloader
+      .description-block
+        padding-bottom 80px
+      
+        .action-block
+          position absolute
+          bottom 10px
+          margin 0 auto
+          left 0
+          right 0
+
+  .h2-line
+    display -webkit-flex
+    display flex
+    justify-content flex-start
+    align-items center
+    margin 10px 0
     
-      i
-        display none
-        
-      b
-        display block
+    .h2-icon
+      height 48px
+      width 48px
+      margin-right 20px
+    
+  
+  .section-view-mode-item
+    color $c-high-gray
+    margin-left 15px
+    
+    &:hover,
+    &.active
+      color $c-black
+    
+  .a-catalog-card
+    text-align center
+    border 1px solid $c-white
+    padding 10px
+    font-size 14px
+    
+    .card-price
+      text-decoration none
+      font-weight 400
+      color $c-black
+    
+    .card-name
+      color $c-black
+      
+    &:hover
+      border-color $border-gray
+    
+    .card-image,
+    .card-image:hover
+      text-decoration none
+      
+      
+      .card-price
+        color $c-black
+        text-decoration none
+
+
+
+

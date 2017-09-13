@@ -84,19 +84,7 @@ block content
             li Самовывоз сегодня или доставка
           
     .container
-      .h2 Как заказать упаковку?
-      
-      //  start include servis puth gotovie
-      .hidden-xs
-        hr.i-size-S
-        include ./images/svg/SP_GOTOVAYA.svg
-        
-      .visible-xs
-        include ./images/svg/SP_GOTOVAYA_XS_PUT1.svg
-        hr.i-size-S
-        include ./images/svg/SP_GOTOVAYA_XS_PUT2.svg
-    
-      //  end include servis puth gotovie
+      include ./include/serv_puth_gotovye
   
 
     .container
@@ -125,23 +113,13 @@ block content
             li Разработаем дизайн и&nbsp;конструкцию
             li Изготовим пробную партию или промышленный образец
             li Изготовим заказ от&nbsp;1&nbsp;дня
-          
-
-          
+            
+    include ./include/serv_puth_proizvodstvo
+    
     .container
-      .h2 Как заказать упаковку по&nbsp;своим размерам?
+      include ./components/catalog.section.construct-morda/template
       
-      //  start include servis puth proizvodstvo
-      .hidden-xs
-        hr.i-size-S
-        include ./images/svg/SP_PROIZVODSTVO.svg
-        
-      .visible-xs
-        include ./images/svg/SP_PROIZVODSTVO_XS_PUT1.svg
-        hr.i-size-S
-        include ./images/svg/SP_PROIZVODSTVO_XS_PUT2.svg
       
-      //  end include servis puth proizvodstvo
       
   include ./modules/call-me-block/include
   

@@ -1,0 +1,112 @@
+﻿// start /components/catalog.detail/
+
+link( rel="stylesheet", href="/components/catalog.detail/style.css" )
+script( src="/components/catalog.detail/script.js" )
+
+.b-catalog-detail( itemscope itemtype="http://schema.org/Product" )
+  h1.text-center( itemprop="name" ) Четырехклапанная коробка 550х350х350
+  .row
+    .col-sm-6
+      .fotorama( data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" )
+        img( src="http://s.fotorama.io/1.jpg" )
+        img( src="http://s.fotorama.io/2.jpg" )
+        img( src="http://s.fotorama.io/3.jpg" )
+        img( src="http://s.fotorama.io/4.jpg" )
+        
+    hr.i-size-M.visible-xs
+
+    .col-sm-6
+      .row
+        .col-xs-6
+          span.text-muted Артикул:
+          | 
+          | UT533
+        .col-xs-6.text-right
+          include ../../modules/fav-icon/include
+          include ../../modules/compare-icon/include
+      
+      hr.i-size-S
+      
+      p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
+      
+      hr.i-size-S
+    
+      h5 Цена за коробку зависит от  объема заказа
+      
+      hr.i-size-XS
+      
+      .row.b-catalog-detail__price-block( itemprop="offers" itemscope itemtype="http://schema.org/Offer" )
+
+        .col-xs-4
+          .text-center.text-muted от
+            | 
+            i 500
+            | 
+            | шт.
+          .b-catalog-detail__price
+            i 40.02
+            | 
+            | руб
+          .text-center - 4 %
+          
+        .col-xs-4
+          .text-center.text-muted от
+            | 
+            i 1000
+            | 
+            | шт.
+          .b-catalog-detail__price
+            i 38.35
+            | 
+            | руб
+          .text-center - 8 %
+
+        .col-xs-4
+          .text-center.text-muted от
+            | 
+            i 1
+            | 
+            | шт.
+          .b-catalog-detail__price.i-active
+            i( itemprop="price" content="46.39" ) 46.39
+            | 
+            span( itemprop="priceCurrency" content="RUB" ) руб
+      
+      hr.i-size-S
+          
+      .row
+        .col-sm-6.b-catalog-detail__available
+          | Доступно:
+          | 
+          b 2 502
+          | 
+          | шт
+        .col-sm-6.text-right
+          .b-catalog-detail__sum
+            i 46.39
+            | 
+            | руб
+      
+      hr.i-size-S
+          
+      .row
+        .col-sm-6
+          .quantity_input_container
+            input.default_style.quantity_input.input_product_quantity(type='text', name='QUANTITY', value='13', data-stepquantity='13', data-unitvalue='')
+            .up_quantity_btn +
+            .down_quantity_btn -
+            
+        .col-sm-6.text-right
+          a.btn.btn-default.btn-cart( href="/include/ajax/add2cart_new.php" ) В корзину
+      
+      hr.i-size-S
+
+      .b-catalog-detail__note
+        span *
+        | 
+        | Коробки отпускаются в пачках по 13 шт.
+        
+        
+
+
+// end /components/catalog.detail/
