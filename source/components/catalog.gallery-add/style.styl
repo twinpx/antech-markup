@@ -1,0 +1,64 @@
+@import '../../styl/component-include.styl'
+
+.a-catalog-gallery
+
+  .a-catalog-card-add
+    text-align center
+    border 1px solid $c-white
+    padding 10px
+    
+    .card-price
+      text-decoration none
+      font-weight 400
+      color $c-black
+      font-size 14px
+    
+    .card-name
+      color $c-black
+      font-size 14px
+      
+    &:hover
+      border-color $border-gray
+    
+    .card-image,
+    .card-image:hover
+      text-decoration none
+      
+      
+      .card-price
+        color $c-black
+        text-decoration none
+
+  section &
+    margin-top -30px
+
+  .fotorama__html
+    padding 0 20px !important
+  
+  .fotorama__nav__shaft
+    display none
+    
+  .fotorama__arr
+    width 20px
+    height 60px
+    margin-top -30px
+  
+  .fotorama__arr--prev
+    left 0
+    background embedurl( 'img/arrow-left.png' ) no-repeat center
+    
+    &:hover,
+    &:focus
+      //background-image embedurl( 'img/arrow-left-hover.png' )
+      background-color rgba( 0,0,0,0.06 )
+      transform( translate3d(0,0,0)) !important
+  
+  .fotorama__arr--next
+    right 0
+    background embedurl( 'img/arrow-right.png' ) no-repeat center
+    
+    &:hover,
+    &:focus
+      //background-image embedurl( 'img/arrow-right-hover.png' )
+      background-color rgba( 0,0,0,0.06 )
+      transform( translate3d(0,0,0)) !important

@@ -1,0 +1,126 @@
+﻿// start /components/catalog.section.top/
+
+link( rel="stylesheet", href="/components/catalog.section.top/style.css" )
+script( src="/components/catalog.section.top/script.js" )
+
+link( rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css")
+script( src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js")
+
+
+
+include ../../modules/gallery/fotorama
+
+
+.container
+  .row
+    .col-md-3
+      .hidden-sm.hidden-xs
+        include ../../modules/left-menu/include
+        include ../../components/catalog.sections-left-menu/template
+        
+    .col-md-9
+      .a-catalog-top
+        .section
+          .row.first-line
+            .col-md-1.col-sm-1.col-xs-2
+              img.h-icon(src="/img/svg/gotovaya_ico.svg")
+            .col-lg-7.col-md-6.col-sm-11.col-xs-10
+              h1 Каталог упаковки
+                span.h-counter 1270
+            .col-lg-4.col-md-5.hidden-sm.hidden-xs
+              a.btn.btn-type-2.btn-md.btn-justify Заказать упаковку по своим размерам
+      
+        .section.section-lines-top
+          
+          .row.construct-flex-line
+            
+            .col-md-8
+              include description
+            
+            .col-md-4
+              include ../../include/advantages_catalog
+            
+          hr.gray
+        
+        .size-filter
+          .row
+            .col-md-4.text-center
+              span#sfLstart 0
+              input.input-slider(id="sfL" name="sfL" type="text" value="" data-slider-min="0" data-slider-max="3000" data-slider-step="1" data-slider-value="[0,3000]")
+              span#sfLend 3000
+              div
+                b Длина&nbsp;
+                span (мм)
+            
+            .col-md-4.text-center
+              span#sfWstart 0
+              input.input-slider(id="sfW" name="sfW" type="text" value="" data-slider-min="0" data-slider-max="3000" data-slider-step="1" data-slider-value="[0,3000]")
+              span#sfWend 3000
+              div
+                b Ширина&nbsp;
+                span (мм)
+            
+            .col-md-4.text-center
+              span#sfHstart 0
+              input.input-slider(id="sfH" name="sfH" type="text" value="" data-slider-min="0" data-slider-max="3000" data-slider-step="1" data-slider-value="[0,3000]")
+              span#sfHend 3000
+              div
+                b Высота&nbsp;
+                span (мм)
+          
+          hr.i-size-S
+          
+          .row
+            .col-md-10
+              a.btn.btn-type-1(href="") Большие
+              a.btn.btn-type-1(href="") Маленькие
+              a(href="javascript:void(0)") Сбросить фильтр
+            .col-md-2
+              span Вид
+              a(href="").glyphicon.glyphicon-th-large.section-view-mode-item.active
+              a(href="").glyphicon.glyphicon-th-list.section-view-mode-item
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Картонные коробки
+              span.h-counter 1270
+          
+          //-include item_grid
+          include item_list
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Гофроупаковка
+              span.h-counter 1270
+          
+          include item_grid
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Упаковочные материалы
+              span.h-counter 1270
+          
+          include item_grid
+          
+        
+        
+      
+        // include file add text start
+        hr.i-size-S
+        hr.gray
+        .section
+          include ../../include/addtextfile
+        hr.gray
+        // include file add text end
+        
+        
+      
+    
+
+
+
+
+// end /components/catalog.section.top/

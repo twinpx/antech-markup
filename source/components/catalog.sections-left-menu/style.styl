@@ -1,0 +1,67 @@
+@import '../../styl/component-include.styl'
+
+.catalog-chpu
+  
+  .root-item
+    border-bottom 1px solid $border-gray
+    padding 25px 25px 25px 50px
+    
+    .link
+      position relative
+      font-weight 400
+      color $c-black
+      
+      &-icon
+        background-position 10px center
+        background-size 30px 30px
+        background-repeat no-repeat
+    
+      .togleChildrenBloc
+        position absolute
+        top 0
+        bottom 0
+        margin auto 0
+        right 10px
+        width 16px
+        height 16px
+        font-size 10px
+        line-height 10px
+        background-image url(images/arrow_menu.svg)
+        background-position center center
+        background-repeat no-repeat
+        background-size 8px 8px
+        cursor pointer
+        transform rotate(0)
+        
+    &.opened-children
+      .togleChildrenBloc
+        transform rotate(180deg)
+      
+    
+    a
+      text-decoration none
+    
+    .cildterblock
+      padding 5px 0 0
+      
+    .children
+      list-style none
+      margin-left 0
+      padding-left 0
+      margin-bottom 0
+      
+      li
+        padding 10px 0 0
+        margin 0
+        
+        .glyphicon
+          font-size 0.6em
+        
+        a
+          color $c-deep-gray
+          
+          &:hover,
+          &.selected
+            color $c-black
+
+  
