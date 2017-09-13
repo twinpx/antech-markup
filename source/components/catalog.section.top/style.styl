@@ -1,0 +1,82 @@
+@import '../../styl/component-include.styl'
+
+.a-catalog-top
+  .h2-line
+    display -webkit-flex
+    display flex
+    justify-content flex-start
+    align-items center
+    margin 10px 0
+    
+    .h2-icon
+      height 48px
+      width 48px
+      margin-right 20px
+    
+  .catalog-preim-container
+    
+    .catalog-preim-item
+      background-repeat no-repeat
+      background-position left center
+      background-size 48px 48px
+      font-weight 600
+      font-size 14px
+      padding-left 70px
+      min-height 60px
+      margin 10px 0
+      display -webkit-flex
+      display flex
+      justify-content flex-start
+      align-items center
+  
+  .size-filter
+    background-color $c-blue-s
+    padding 20px
+    
+    .slider-horizontal
+      .slider-track
+        height 2px
+        background $c-deep-gray
+        margin-top -6px
+        
+        .slider-selection
+          background $c-deep-gray
+      
+      .slider-handle
+        width 10px
+        height 10px
+        background $c-high-gray
+  
+  .section-view-mode-item
+    color $c-high-gray
+    margin-left 15px
+    
+    &:hover,
+    &.active
+      color $c-black
+    
+  .a-catalog-card
+    text-align center
+    border 1px solid $c-white
+    padding 10px
+    
+    .card-price
+      text-decoration none
+      font-weight 400
+      color $c-black
+    
+    .card-name
+      color $c-black
+      
+    &:hover
+      border-color $border-gray
+    
+    .card-image,
+    .card-image:hover
+      text-decoration none
+      
+      
+      .card-price
+        color $c-black
+        text-decoration none
+      
