@@ -23,7 +23,7 @@ header.b-header
               span.b-header-top__caret
             span.dropdown-menu( aria-labelledby="headerTopMenuItem2" )
               a.dropdown-item( href="") Адрес и схема проезда
-              span.dropdown-block( href="") <i>Часы работы:</i><b>Пн-Пт:</b> с 9.00-18.00<br><b>Сб:</b> с 10:00-17:00<br><em>Вскр - выходной</em>
+              span.dropdown-block <i>Часы работы:</i><b>Пн-Пт:</b> с 9.00-18.00<br><b>Сб:</b> с 10:00-17:00<br><em>Вскр - выходной</em>
               a.dropdown-item( href="") Доставка
               a.dropdown-item( href="") Самовывоз
               
@@ -74,11 +74,11 @@ header.b-header
       div.b-header__basket
         
         // Modal
-        #cartModal.modal(tabindex='-1', role='dialog', aria-labelledby='cartModalLabel')
+        #cartModal.modal(tabindex='-1', role='dialog', aria-labelledby='cartModal')
           .modal-dialog(role='document')
             .modal-content.text-middle
             
-              .close(type='button', data-dismiss='modal', aria-label='Close')
+              .close( data-dismiss='modal', aria-label='Close' )
               .modal-body.center
               
                 .b-modal-container
@@ -91,7 +91,7 @@ header.b-header
                     
                     .row
                       .col-sm-8.col-sm-offset-2
-                        form( action="" method="GET" )
+                        form( action="/" method="GET" )
                           .form-group
                             input.form-control( type="text" value="" placeholder="Логин" required )
                           .form-group
@@ -182,7 +182,7 @@ header.b-header
       .b-header__phone.hidden-xs
           
         span.b-header__phone-num.dropdown
-          span#phoneDropdown.dropdown-toggle.hidden-sm.hidden-xs( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+          span#phoneDropdown.dropdown-toggle.hidden-sm.hidden-xs( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="" )
             span.b-header__phone-num__text +7 (495) 241-98-28
             span.b-header__phone-num__caret
           br.hidden-sm.hidden-xs
