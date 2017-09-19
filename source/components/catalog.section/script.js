@@ -27,6 +27,7 @@
       }
       screen = resize;
       reInitiateGallery();
+      reInitiateCatalogGridCard();
     }
     
     function reInitiateGallery() {
@@ -50,6 +51,23 @@
         arrows: true,
         click: false,
         nav: thumb,
+      });
+    }
+    
+    
+    function reInitiateCatalogGridCard() {
+      $( '.fotorama-catalog-grid-card' ).each(function(){
+        var $fotorama = $(this);
+        
+        if ( $fotorama.data( 'fotorama' )) {
+          $fotorama.data('fotorama').destroy();
+          $('.card-item', $fotorama).show();
+        }
+        
+        if ( screen === 'xs' ) {
+          $(this).fotorama();
+        }
+        
       });
     }
     
