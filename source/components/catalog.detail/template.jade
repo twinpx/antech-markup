@@ -20,10 +20,10 @@ script( src="/components/catalog.detail/script.js" )
         .row.first-line
           .col-sm-6
             .fotorama-catalog-multicard( data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" )
-              img.multicardImage( src="http://s.fotorama.io/1.jpg" )
-              img.multicardImage( src="http://s.fotorama.io/2.jpg" )
-              img.multicardImage( src="http://s.fotorama.io/3.jpg" )
-              img.multicardImage( src="http://s.fotorama.io/4.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
       
           .col-sm-6.description-block
             .row
@@ -37,26 +37,32 @@ script( src="/components/catalog.detail/script.js" )
             
             hr.i-size-S
             
-            p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
+            .text-small
+              p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
             
             hr.i-size-S
             
             .action-block.text-center
-              a.btn.btn-type-2(href="#offersItems-block" id="offersItems-link") Выбрать размер
+            
+              
+              span.price-val от 15,40 руб
+              
+              meta( itemprop="lowPrice" content="7150.00")
+              meta( itemprop="priceCurrency" content="RUB")
+              link( itemprop="availability" href="http://schema.org/InStock")
+              
+              a.btn.btn-type-2.btn-md(href="#offersItems-block" id="offersItems-link") Выбрать размер
               
               hr.i-size-XS
               
               a.ajax-link(href="javascript:void(0)" data-toggle="modal" data-target="#callMe") Заказать изготовление
         
         .row
-          hr.i-size-S
-          hr.gray
           hr.i-size-S.hidden-xs
           hr.i-size-XS.visible-xs
           include ../../include/advantages_catalog
           hr.i-size-S.hidden-xs
           hr.i-size-XS.visible-xs
-          hr.gray
           
         .row( id="offersItems-block")
           .h3 Размеры в наличии

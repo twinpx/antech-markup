@@ -2,13 +2,18 @@
 
 
 .row.item-grid.text-small
-  .fotorama-section-top( data-width="100%" data-ratio="8/9" data-minwidth="300" data-maxwidth="1000" data-minheight="400" data-maxheight="100%")
+  .fotorama-section-top( data-width="100%" data-minwidth="300" data-maxwidth="1000" data-height="350" )
     
   
-    - var k = 0
+    - var k = 0, m = 0
     while k++ < 6
       .col-xs-12.col-sm-6.col-md-4.col-lg-4.card-item
-        include card
+        if m++ == 0
+          include card
+        else
+          - m = 0
+          include card2
+          
       
       
     .col-xs-12.visible-xs

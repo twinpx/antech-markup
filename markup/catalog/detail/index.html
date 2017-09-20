@@ -595,7 +595,7 @@
               <h1 itemprop="name" class="h2">Четырехклапанная коробка 550х350х350</h1>
               <div class="row first-line">
                 <div class="col-sm-6">
-                  <div data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" class="fotorama-catalog-multicard"><img src="http://s.fotorama.io/1.jpg" class="multicardImage"><img src="http://s.fotorama.io/2.jpg" class="multicardImage"><img src="http://s.fotorama.io/3.jpg" class="multicardImage"><img src="http://s.fotorama.io/4.jpg" class="multicardImage"></div>
+                  <div data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" class="fotorama-catalog-multicard"><img itemprop="image" src="http://s.fotorama.io/1.jpg" class="multicardImage"><img itemprop="image" src="http://s.fotorama.io/2.jpg" class="multicardImage"><img itemprop="image" src="http://s.fotorama.io/3.jpg" class="multicardImage"><img itemprop="image" src="http://s.fotorama.io/4.jpg" class="multicardImage"></div>
                 </div>
                 <div class="col-sm-6 description-block">
                   <div class="row">
@@ -611,16 +611,19 @@
                     </div>
                   </div>
                   <hr class="i-size-S">
-                  <p itemprop="description">Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).</p>
+                  <div class="text-small">
+                    <p itemprop="description">Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).</p>
+                  </div>
                   <hr class="i-size-S">
-                  <div class="action-block text-center"><a href="#offersItems-block" id="offersItems-link" class="btn btn-type-2">Выбрать размер</a>
+                  <div class="action-block text-center"><span class="price-val">от 15,40 руб</span>
+                    <meta itemprop="lowPrice" content="7150.00">
+                    <meta itemprop="priceCurrency" content="RUB">
+                    <link itemprop="availability" href="http://schema.org/InStock"><a href="#offersItems-block" id="offersItems-link" class="btn btn-type-2 btn-md">Выбрать размер</a>
                     <hr class="i-size-XS"><a href="javascript:void(0)" data-toggle="modal" data-target="#callMe" class="ajax-link">Заказать изготовление</a>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <hr class="i-size-S">
-                <hr class="gray">
                 <hr class="i-size-S hidden-xs">
                 <hr class="i-size-XS visible-xs">
                 <!-- start /include/construct/advantages/-->
@@ -633,7 +636,6 @@
                 <!-- end /include/construct/advantages/-->
                 <hr class="i-size-S hidden-xs">
                 <hr class="i-size-XS visible-xs">
-                <hr class="gray">
               </div>
               <div id="offersItems-block" class="row">
                 <div class="h3">Размеры в наличии</div>
