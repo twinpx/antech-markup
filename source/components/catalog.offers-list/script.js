@@ -1,8 +1,28 @@
 $(function(){
   $('.add-to-cart-input-quantity, .popover_teaser').popover();
   $('.add-pring-chb').change(function(){
-    var curVal = $(this).prop('checked');
+    var curVal = $(this).prop('checked'),
+    parent = $(this).parents('form'),
+    btnSubmit = $('.add-to-order-btn', parent);
+    
     $('.add-pring-chb', $(this).parents('form')).prop('checked', curVal);
+    
+    if(curVal == true){
+      $('.order-price-print', parent).show();
+      $('.order-price-default', parent).hide();
+      btnSubmit.removeClass('mode-cart').addClass('mode-order');
+      $('.cur-quantity-indikator', parent).hide();
+//       alert('yes')
+    }
+    else{
+      $('.order-price-print', parent).hide();
+      $('.order-price-default', parent).show();
+      btnSubmit.removeClass('mode-order').addClass('mode-cart');
+      if(Number($('input.add-to-cart-input-quantity', parent).val()) > 0)
+        $('.cur-quantity-indikator', parent).show();
+//       alert('no')
+    }
+    
   });
   $('form.offers_item_add2cart').submit(function(){
     var form = $(this);
@@ -13,7 +33,7 @@ $(function(){
       success: function(data){
 //         alert(data.STATUS)
         if(data.STATUS == 'Y'){
-          $('.submit-btn', form).addClass('btn-disabled').removeClass('preorder').val('В корзине');
+          $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('preorder').html('Поставлено<br>в&nbsp;резерв');
           $('.add-to-cart-input-quantity', form).data('oncart', $('.add-to-cart-input-quantity', form).val());
           $('input[name="MODE"]', form).val("UPDATE");
           
@@ -52,12 +72,12 @@ $(function(){
   
   function checkQunatityVal(input){
     var parent = input.parents('form'),
-    btnSubmit = $('.submit-btn', parent),
+    btnSubmit = $('.add-to-order-btn', parent),
     curVal = Number(input.val()),
     freeQuant = Number(input.data('freequantity')),
     inCart = Number(input.data('oncart')),
     submintUpd = false,
-    btnText = 'В корзине',
+    btnText = 'Добавить<br>к&nbsp;заказу',
     qRange1 = Number(input.data('quantityrangeone')),
     qRange2 = Number(input.data('quantityrangetwo')),
     qRange3 = Number(input.data('quantityrangetre')),
@@ -73,10 +93,10 @@ $(function(){
       
     if(inCart > 0) {
       if(inCart == curVal)
-        btnSubmit.addClass('btn-disabled').val('В корзине');
+        btnSubmit.addClass('btn-disabled').html('Поставлено<br>в&nbsp;резерв');
       
       else
-        btnSubmit.removeClass('btn-disabled').val('Обновить');
+        btnSubmit.removeClass('btn-disabled').html('Обновить<br>количество');
       
     }
     else {
@@ -92,7 +112,7 @@ $(function(){
       }
         
     }
-    if($(window).width() > 768){
+    if($(window).width() > 768 && $('.add-pring-chb', parent).prop('checked') == false){
     
     
       if(curVal >= qRange1)
@@ -125,6 +145,10 @@ $(function(){
       input.popover('hide');
     else
       input.popover('show');
+    
+    if(input.val() == 0)
+      input.val("");
+    w
   }
   
   $('body').click(function(){

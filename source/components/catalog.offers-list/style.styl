@@ -29,6 +29,13 @@
         &.flex-wrap
           flex-wrap wrap
         
+        .text-help
+          color $c-high-gray
+          font-weight 200
+        
+        .text-red
+          color $c-red
+        
     .help_icon_round
       display block
       border 1px solid
@@ -65,21 +72,6 @@
         display flex
         align-items center
         
-        input[type=text],
-        input[type=button],
-        input[type=number],
-        input[type=submit]
-          width 100%
-        
-        .submit-btn
-          padding-left 0
-          padding-right 0
-          
-          &.preorder
-            border-color $c-wawe
-            
-            &:hover
-              background-color $c-wawe
       
       .form-control
         height 50px
@@ -98,4 +90,31 @@
         height 5px
         background $c-ultramarine
         z-index 10
+        display none
+      
+      .add-to-order-btn
+        padding 8px 10px
+        padding-left 35px
+        background-position 5px center
+        background-repeat no-repeat
+        background-size 24px 24px
+        line-height 16px
+        font-size 12px
+        width 110px
+        
+        &.mode-cart
+          background-color $c-green
+          background-image url(/img/svg/add2cart_icon1.svg)
+          
+          &:hover
+            background-color darken( $c-green, 5% )
+        
+        &.mode-order
+          background-color $c-yellow
+          background-image url(/img/svg/add2cart_icon2.svg)
+          
+          &:hover
+            background-color darken( $c-yellow, 5% )
+      
+      .order-price-print
         display none
