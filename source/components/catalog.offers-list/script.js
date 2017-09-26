@@ -1,31 +1,16 @@
 $(function(){
   $('.add-to-cart-input-quantity, .popover_teaser').popover();
+  
   $('.add-pring-chb').change(function(){
-    var curVal = $(this).prop('checked'),
-    parent = $(this).parents('form'),
-    btnSubmit = $('.add-to-order-btn', parent);
-    
-    $('.add-pring-chb', $(this).parents('form')).prop('checked', curVal);
-    
-    if(curVal == true){
-      $('.order-price-print', parent).show();
-      $('.order-price-default', parent).hide();
-      btnSubmit.removeClass('mode-cart').addClass('mode-order');
-      $('.cur-quantity-indikator', parent).hide();
-//       alert('yes')
-    }
-    else{
-      $('.order-price-print', parent).hide();
-      $('.order-price-default', parent).show();
-      btnSubmit.removeClass('mode-order').addClass('mode-cart');
-      if(Number($('input.add-to-cart-input-quantity', parent).val()) > 0)
-        $('.cur-quantity-indikator', parent).show();
-//       alert('no')
-    }
-    
+  
+    checkActiveSubmit($('.add-to-order-btn', $(this).parents('form')));
+  
   });
+  
   $('form.offers_item_add2cart').submit(function(){
-    var form = $(this);
+    var form = $(this),
+    addPrint = $('.add-pring-chb', form),
+    addPrintVal = addPrint.prop('checked');
     $.ajax({
       url: form.attr('actions'),
       method: 'POST',
@@ -36,6 +21,13 @@ $(function(){
           $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('preorder').html('Поставлено<br>в&nbsp;резерв');
           $('.add-to-cart-input-quantity', form).data('oncart', $('.add-to-cart-input-quantity', form).val());
           $('input[name="MODE"]', form).val("UPDATE");
+          
+          
+          if(addPrintVal == true)
+            addPrint.data('defaultval', 'Y');
+          else
+            addPrint.data('defaultval', 'N');
+          
           
           if ( data.DATA.COUNT > 0 ) {
 //             $( '#cartModalButton' ).css({ visibility: "visible" });
@@ -70,76 +62,127 @@ $(function(){
     e.stopPropagation();
   });
   
-  function checkQunatityVal(input){
-    var parent = input.parents('form'),
-    btnSubmit = $('.add-to-order-btn', parent),
-    curVal = Number(input.val()),
-    freeQuant = Number(input.data('freequantity')),
-    inCart = Number(input.data('oncart')),
-    submintUpd = false,
+  function checkActiveSubmit(btnSubmit){
+    var parent = btnSubmit.parents('form'),
+    quantInput = $('input.add-to-cart-input-quantity', parent),
+    quantInCart = Number(quantInput.data('oncart')),
+    quantCurVal = Number(quantInput.val()),
+    freeQuant = Number(quantInput.data('freequantity')),
+    chboxPrint = $('.add-pring-chb', parent),
+    chboxPrintCurVal = chboxPrint.prop('checked'),
+    chboxPrintDefault = chboxPrint.data('defaultval'),
+    updateMode = false,
+    updatePrint = false,
+    updateQuant = false,
+    updatePreorder = false,
     btnText = 'Добавить<br>к&nbsp;заказу',
-    qRange1 = Number(input.data('quantityrangeone')),
-    qRange2 = Number(input.data('quantityrangetwo')),
-    qRange3 = Number(input.data('quantityrangetre')),
+    qRange1 = Number(quantInput.data('quantityrangeone')),
+    qRange2 = Number(quantInput.data('quantityrangetwo')),
+    qRange3 = Number(quantInput.data('quantityrangetre')),
     qIndicator = $('.cur-quantity-indikator', parent),
     qIndicatorPosition = 0;
-    
     
     if(freeQuant == 'undefined')
       freeQuant = 0;
     
-    if(inCart == 'undefined' || inCart == 'NaN')
-      inCart = 0;
+    if(quantInCart == 'undefined' || quantInCart == 'NaN')
+      quantInCart = 0;
+    
+    
+    if(freeQuant < quantCurVal){
+      updateMode = true;
+      btnText = 'Сделать<br>предзаказ';
       
-    if(inCart > 0) {
-      if(inCart == curVal)
-        btnSubmit.addClass('btn-disabled').html('Поставлено<br>в&nbsp;резерв');
+      if(!$('.preorder_popower', parent).hasClass('popoverOpen')){
+        $('.preorder_popower', parent).popover('show').addClass('popoverOpen');
+      }
+    }
+    else{
+      updateMode = false;
       
-      else
-        btnSubmit.removeClass('btn-disabled').html('Обновить<br>количество');
+      $('.preorder_popower', parent).popover('hide').removeClass('popoverOpen');
       
     }
-    else {
-      if(freeQuant < curVal){
-        if(!$('.preorder_popower', parent).hasClass('popoverOpen')){
-          $('.preorder_popower', parent).popover('show').addClass('popoverOpen');
-        }
-        btnSubmit.addClass('preorder').val('Предзаказ');
+    
+    if(quantInCart > 0) {
+      if(quantInCart == quantCurVal){
+        updateMode = false;
+        btnText = 'Поставлено<br>в&nbsp;резерв';
       }
+      
       else{
-        btnSubmit.removeClass('preorder').val('В корзинy');
-        $('.preorder_popower', parent).popover('hide').removeClass('popoverOpen');
+        updateMode = true;
+        btnText = 'Обновить<br>количество';
       }
+      
+    }
+    
+    
+    
+    
+    
+    if(chboxPrintCurVal == true){
+      if(chboxPrintDefault == "N"){
+        updateMode = true;
+        btnText = 'Обновить<br>параметры';
+      }
+      
+      
+      $('.order-price-print', parent).show().removeClass('hidden');
+      $('.order-price-default', parent).hide();
+      btnSubmit.removeClass('mode-cart').addClass('mode-order');
+        
+      qIndicator.hide(); 
+      
+    }
+    else{
+      if(chboxPrintDefault == "Y"){
+        updateMode = true;
+        btnText = 'Обновить<br>параметры';
+      }
+      
+      
+      $('.order-price-print', parent).hide();
+      $('.order-price-default', parent).show().removeClass('hidden');
+      btnSubmit.removeClass('mode-order').addClass('mode-cart');
+      
+      if($(window).width() > 768){
+      
+        if(quantCurVal >= qRange1)
+          qIndicatorPosition = 1;
+          
+        if(quantCurVal >= qRange2)
+          qIndicatorPosition = 2;
+          
+        if(quantCurVal >= qRange3)
+          qIndicatorPosition = 3;
+    
+        if(qIndicatorPosition > 0){
+          qIndicator.show().removeClass('col-sm-offset-3').removeClass('col-sm-offset-4').removeClass('col-sm-offset-5').addClass('col-sm-offset-'+(3+qIndicatorPosition));
+          
+        }
+        else
+          qIndicator.hide();
+      }
+      else
+        qIndicator.hide(); 
         
     }
-    if($(window).width() > 768 && $('.add-pring-chb', parent).prop('checked') == false){
     
     
-      if(curVal >= qRange1)
-        qIndicatorPosition = 1;
-  //       qIndicator.addClass('.col-sm-offset-5').removeClass('.col-sm-offset-6, .col-sm-offset-7');
-      if(curVal >= qRange2)
-        qIndicatorPosition = 2;
-  //       qIndicator.addClass('.col-sm-offset-6').removeClass('.col-sm-offset-5, .col-sm-offset-7');
-      if(curVal >= qRange3)
-        qIndicatorPosition = 3;
-  //       qIndicator.addClass('.col-sm-offset-7').removeClass('.col-sm-offset-6, .col-sm-offset-5');
-  
-      if(qIndicatorPosition > 0){
-        qIndicator.show().removeClass('col-sm-offset-4').removeClass('col-sm-offset-5').removeClass('col-sm-offset-6').addClass('col-sm-offset-'+(4+qIndicatorPosition));
-      }
-      else
-        qIndicator.hide();
-    }
+    if(updateMode)
+      btnSubmit.removeClass('btn-disabled').html(btnText);
     else
-      qIndicator.hide();
+      btnSubmit.addClass('btn-disabled').html(btnText);
+
+
+  }
+  
+  function checkQunatityVal(input){
+    var parent = input.parents('form'),
+    btnSubmit = $('.add-to-order-btn', parent);
     
-//     $('#jsmessage').text($(window).width());
-    
-//     $('#jsmessage').text('inCart = '+inCart+'\n freeQuant = '+freeQuant+'\n curVal = '+curVal+'\n btnText = '+btnText);
-    
-    
-    
+    checkActiveSubmit(btnSubmit);
 
     if(checkToMultiple(input.val(), input.data('inputstep')))
       input.popover('hide');
@@ -148,7 +191,7 @@ $(function(){
     
     if(input.val() == 0)
       input.val("");
-    w
+    
   }
   
   $('body').click(function(){
