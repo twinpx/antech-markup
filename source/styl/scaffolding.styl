@@ -2,14 +2,14 @@
   width auto
   background-color rgba( 255,255,255,0.9 )
   border-bottom 1px solid rgba( 0,0,0,.07 )
-  height 142px
+  /*height 142px*/
   position relative
     
-  @media (max-width: 991px)
+  /*@media (max-width: 991px)
     height 115px
     
   @media (max-width: 767px)
-    height 60px
+    height 60px*/
       
   &-fixed
     /*position fixed
@@ -224,7 +224,7 @@
       margin-left 22px
     
     @media (max-width: 991px)
-      margin 0 0 0 14px
+      margin 0 0 0 8px
     
     @media (max-width: 1199px) and (min-width: 768px)
       padding-left 0
@@ -305,15 +305,43 @@
       background embedurl( 'img/header-menulist-sep.gif' ) no-repeat right center
       position relative
       
+      &:nth-child(1)
+        width 188px
+        
+        @media (max-width: 1199px)
+          width 164px
+      
+        @media (max-width: 991px)
+          width 135px
+      
+      &:nth-child(2)
+        width 209px
+        
+        @media (max-width: 1199px)
+          width 185px
+      
+        @media (max-width: 991px)
+          width 152px
+      
+      &:nth-child(3)
+        width 98px
+        
+        @media (max-width: 1199px)
+          width 48px
+      
+        @media (max-width: 991px)
+          width 43px
+      
       a
         display inline-block
-        padding 0 20px 0 15px
+        padding-right 4px
+        //padding 0 20px 0 15px
       
-        @media (max-width: 1199px)
+        /*@media (max-width: 1199px)
           padding 0 15px 0 10px
       
         @media (max-width: 991px)
-          padding 0 13px 0 8px
+          padding 0 13px 0 8px*/
         
       &.i-active
         color #e31d1a
