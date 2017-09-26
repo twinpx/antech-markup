@@ -6,9 +6,9 @@
     $('.b-catalog-card__image').lazyload();
     
     var $fotorama = $( '.a-catalog-gallery__fotorama' );
-    var $cards = $fotorama.find( '.a-catalog-card-add' );
+    var $cards = $fotorama.find( '.a-catalog-card' );
     var html = '';
-    var i = 0, j = 0, n = 3, screen = '', resize = '', ratio = 785/301;
+    var i = 0, j = 0, n = 3, screen = '', resize = '', ratio = '', height = '350';
   
     $( window ).resize( resizeWindow );
     
@@ -36,7 +36,8 @@
       html = '';
       
       if ( screen === 'md' ) {
-        ratio = 665/271;
+        ratio = '';
+        height = '270';
         
         n = Math.ceil( $cards.length / 3 );
         
@@ -55,7 +56,8 @@
       } else if ( screen === 'sm' ) {
         
         n = Math.ceil( $cards.length / 2 );
-        ratio = 680/370;
+        ratio = '';
+        height = '400';
       
         for ( j = 0; j < n; j++ ) {
           html += '<div>\n';
@@ -72,7 +74,8 @@
       } else {
         
         n = $cards.length;
-        ratio = 315/360;
+        ratio = '';
+        height = '350';
       
         for ( j = 0; j < n; j++ ) {
           html += '<div>\n';
@@ -89,7 +92,8 @@
       }
       
       if ( window.matchMedia( "( min-width: 1200px )" ).matches ) {
-        ratio = 785/301;
+        ratio = '';
+        height = '340';
       }
       
       if ( $fotorama.data( 'fotorama' )) {
@@ -107,6 +111,7 @@
         ratio: ratio,
         loop: true,
         width: '100%',
+        height: height,
         arrows: true,
         click: false
       });

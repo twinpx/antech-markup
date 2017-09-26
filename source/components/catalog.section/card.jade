@@ -1,8 +1,13 @@
-﻿.a-catalog-card
-  a.card-image(href="")
+﻿.a-catalog-card(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+  a.card-image(href=""  itemprop="url")
     img.img-responsive( src="/img/fefco-temp-1.jpg")
     .card-name-block
       .card-name Коробки оберточного типа и складные ящики, коробки с крышкой и дном
         span.line-counter &nbsp;(16)
-      .card-price от 15,40 руб
+      .card-price
+        span.price-val от 15,40 руб
+        a(href="").btn.btn-type-2.btn-sm Купить
     
+  meta( itemprop="lowPrice" content="7150.00")
+  meta( itemprop="priceCurrency" content="RUB")
+  link( itemprop="availability" href="http://schema.org/InStock")

@@ -13,7 +13,7 @@ include ../../modules/gallery/fotorama
 
 .container
   .row
-    .col-md-3
+    .col-md-3( style="padding-left: 0;")
       .hidden-sm.hidden-xs
         include ../../modules/left-menu/include
         include ../../components/catalog.sections-left-menu/template
@@ -24,17 +24,17 @@ include ../../modules/gallery/fotorama
           .row.first-line
             .col-md-1.col-sm-1.col-xs-2
               img.h-icon(src="/img/svg/gotovaya_ico.svg")
-            .col-lg-7.col-md-6.col-sm-11.col-xs-10
+            .col-lg-6.col-md-5.col-sm-11.col-xs-10
               h1 Каталог упаковки
                 span.h-counter 1270
-            .col-lg-4.col-md-5.hidden-sm.hidden-xs
+            .col-lg-5.col-md-6.hidden-sm.hidden-xs
               a.btn.btn-type-2.btn-md.btn-justify Заказать упаковку по своим размерам
       
         .section.section-lines-top
           
           .row.construct-flex-line
             
-            .col-md-8
+            .col-md-8.text-small
               include description
             
             .col-md-4
@@ -86,8 +86,8 @@ include ../../modules/gallery/fotorama
             h2 Картонные коробки
               span.h-counter 1270
           
-          //-include item_grid
-          include item_list
+          include item_grid
+          //-include item_list
         
         .cat-section
           .h2-line

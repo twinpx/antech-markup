@@ -1,1 +1,1 @@
-!function(a){"use strict";a(function(){a(".input-slider").slider({})})}(jQuery);
+!function(a){"use strict";a(function(){function b(){f=window.matchMedia("( min-width: 768px )").matches?"sm":"xs",e!==f&&(e=f,c())}function c(){d.each(function(){var b=a(this);b.data("fotorama")&&(b.data("fotorama").destroy(),a(".card-item",b).show()),"xs"===e&&a(this).fotorama()})}a(".input-slider").slider({});var d=a(".fotorama-section-top"),e="",f="";a(window).resize(b),b()})}(jQuery);

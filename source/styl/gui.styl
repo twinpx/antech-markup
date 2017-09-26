@@ -219,6 +219,9 @@ h6,
   
 .bold
   font-weight 400
+  
+.bold-l
+  font-weight 600
 
 .center
   text-align center
@@ -757,33 +760,32 @@ blockquote
 
 .input-wrapper
   input
-    padding-right 25px
+    padding-right 18px
   
   .input-step-up,
   .input-step-down
     position absolute
-    right 3px
-    width 20px
-    height calc(50% - 4px)
-    background-color $c-gray-xs
+    right 2px
+    width 15px
+    height 15px
     z-index 10
     text-align center
     cursor pointer
     user-select none
     background-position center center
     background-repeat no-repeat
-    background-size 10px 10px
+    background-size 8px 8px
     
     &:hover
       background-color $c-gray-s
     
   .input-step-up
-    top 3px
-    background-image url(images/svg/arrow_top.svg)
+    top calc(50% - 17px)
+    background-image url(images/svg/add2cart_quant_up.svg)
     
   .input-step-down
-    bottom 3px
-    background-image url(images/svg/arrow_bottom.svg)
+    bottom calc(50% - 17px)
+    background-image url(images/svg/add2cart_quant_down.svg)
 
 .b-ill-block
 

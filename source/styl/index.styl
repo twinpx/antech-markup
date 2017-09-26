@@ -306,4 +306,69 @@
         
         &:last-of-type
           margin-right 15px
+
+
+.a-catalog-card
+  text-align center
+  border 1px solid $c-white
+  padding 10px
+  position relative
   
+  
+  @media (max-width: 768px)
+    &
+      height 350px
+      
+      img
+        width 250px
+        height 250px
+        margin 0 auto
+
+  @media (min-width: 769px)
+    &
+      height 400px
+  
+  
+  @media (min-width: 992px)
+    &
+      height 270px
+  
+  @media (min-width: 1200px)
+    &
+      height 340px
+
+  
+  .card-name-block
+    position absolute
+    bottom 0
+    left 0
+    padding 10px
+    width 100%
+    
+    
+  
+  .card-price
+    margin-top 10px
+    text-decoration none
+    font-weight 400
+    color $c-black
+    
+    .price-val
+      margin-right 10px
+      color $c-black
+      
+  
+  .card-name
+    color $c-black
+    
+  &:hover
+    border-color $border-gray
+  
+  .card-image,
+  .card-image:hover
+    text-decoration none
+    
+    
+    .card-price
+      color $c-black
+      text-decoration none

@@ -11,15 +11,18 @@ script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
   .row.offers-header.bg-gray-xs.hidden-xs
     .col-sm-1.header-cell Арт
       span.hidden-sm икул
-    .col-sm-3.header-cell Внутренние размеры,<br>(Д) х (Ш) х (В) мм
+    .col-sm-2.header-cell Внутренние размеры,<br>(Д) х (Ш) х (В) мм
     .col-sm-1.header-cell Картон
     .col-sm-3.header-cell Цена/шт при тираже, руб
     .col-sm-1.header-cell Наличие
-    .col-sm-1.header-cell.flex-wrap.hidden
+    .col-sm-1.header-cell.flex-wrap
       .hidden-lg Печать
       .visible-lg Нанесение печати
       .help_icon_round.popover_teaser( data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на готовые коробки." ) ?
-    .col-sm-3.header-cell Количество
+    .col-sm-3.header-cell
+      div Количество<br>
+        span.text-red *
+        span.text-help &nbsp;продается в пачках
   
   
   - for (var i=0; i < 5; i++)
@@ -32,7 +35,7 @@ script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
           span &nbsp;0200
         
         b.col-xs-5.item-cell.visible-xs Внутренние размеры, мм<br>(Д) х (Ш) х (В)
-        .col-sm-3.col-xs-7.item-cell 
+        .col-sm-2.col-xs-7.item-cell 
           a.underline(href="") 750 х 500 х 500
         
         .clearfix.visible-xs
@@ -44,26 +47,25 @@ script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
         
         b.col-xs-5.item-cell.visible-xs Цена/шт при тираже, руб
         .col-sm-3.col-xs-7.item-cell
-          .row
+          .row.order-price-default
             .col-sm-4.col-xs-12
               .row
                 .col-sm-12.col-xs-6.quantity-step-name
-                  span.visible-xs-inline до&nbsp;
-                  | 500
+                  span до&nbsp;500
                   span.visible-xs-inline &nbsp;шт
-                .col-sm-12.col-xs-6 99,10
+                .col-sm-12.col-xs-6.bold-l 99,10
             .col-sm-4.col-xs-12
               .row
                 .col-sm-12.col-xs-6.quantity-step-name 
-                  span.visible-xs-inline до&nbsp;
-                  | 1000
+                  span до&nbsp;1000
                   span.visible-xs-inline &nbsp;шт
-                .col-sm-12.col-xs-6 99,10
+                .col-sm-12.col-xs-6.bold-l 99,10
             .col-sm-4.col-xs-12
               .row
                 .col-sm-12.col-xs-6.quantity-step-name >1000
                   span.visible-xs-inline &nbsp;шт
-                .col-sm-12.col-xs-6 99,10
+                .col-sm-12.col-xs-6.bold-l 99,10
+          .order-price-print.hidden Цена будет рассчитана после оформления предзаказа
         
         .col-sm-1.cur-quantity-indikator
         
@@ -75,27 +77,27 @@ script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
         
         .clearfix.visible-xs
         
-        .col-sm-1.hidden-xs.hidden
+        .col-sm-1.hidden-xs
           input.add-pring-chb( type="checkbox" name="addprint_double")
         
         .col-sm-3.col-xs-12.item-cell 
           .row.add-to-cart-cell-vcenter
-            .col-xs-4.hidden
+            .col-xs-3.visible-xs
               .checkbox
                 label
-                  input.add-pring-chb( type="checkbox" name="addprint")
+                  input.add-pring-chb( type="checkbox" name="addprint" data-defaultval="N")
                   | Печать
             
-            .col-sm-12.col-xs-12.add-to-cart-cell-vcenter
+            .col-sm-12.col-xs-9.add-to-cart-cell-vcenter
               input( type="hidden" name="OFFERS_ID" value="123123" )
               input( type="hidden" name="MODE" value="ADD>")
               input( type="hidden" name="BID" value="2345678" )
             
             
               
-              input.form-control.add-to-cart-input-quantity(name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-oncart="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000")
+              input.form-control.add-to-cart-input-quantity(name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="100" data-inputmin="1" data-inputmax="" value="" data-oncart="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" placeholder="по 10 шт")
               | &nbsp;
-              input(name="submit" type="submit" value="В корзину" ).btn.btn-type-4.submit-btn
+              button(name="submit" type="submit" value="Y" ).btn.add-to-order-btn.mode-cart Добавить<br>к заказу
   
 //-.section
 //-  pre#jsmessage
