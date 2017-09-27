@@ -1,0 +1,120 @@
+// start /components/catalog.offers-list/
+
+link( rel="stylesheet", href="/components/iblock-element-add.new_order_position/style.css" )
+script( src="/components/iblock-element-add.new_order_position/script.js" )
+
+
+
+.order-position-add
+  .row.text-small.table-header.flex-header.hidden-xs
+    .col-sm-4.flex-header-cont
+      .row.flex-header-row
+        .col-xs-4.flex-header-item  Длина, мм
+        .col-xs-4.flex-header-item  Ширина, мм
+        .col-xs-4.flex-header-item  Высота, мм
+    
+    .col-sm-4.flex-header-cont
+      .row.flex-header-row
+        .col-xs-9.flex-header-item Картон
+      
+        .col-xs-3.flex-header-item
+          .text-center Печать
+            .text-center.help_icon_round.popover_teaser( data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на упаковку. Подробное согласование будет проводить менеджер после оформления заказа." )
+    
+    .col-sm-4.flex-header-cont
+      .row.flex-header-row
+        .col-xs-12.flex-header-item
+          .item-button-head Количество
+  .form-block
+    form.add_new_ordering_position(name="ADD_ORDERING_POSITION" action="/json/add-ordering-position.json" method="POST")
+      .row.text-small.table-body
+        
+        .col-xs-12.flex-header-cont.visible-xs.table-header
+          .row.flex-header-row
+            .col-xs-4.flex-header-item Длина, мм
+            .col-xs-4.flex-header-item Ширина, мм
+            .col-xs-4.flex-header-item Высота, мм
+        
+        .col-sm-4.col-xs-12.flex-header-cont
+          .row.flex-header-row
+            .col-xs-4.flex-header-item
+              .form-group
+                input.form-control.required_input(type="text" name="SIZE_L" size="4" data-validation="NUMBER_MM" data-helpnaame="Длина")
+            .col-xs-4.flex-header-item
+              .form-group
+                input.form-control.required_input(type="text" name="SIZE_W" size="4" data-validation="NUMBER_MM" data-helpnaame="Ширина")
+            .col-xs-4.flex-header-item
+              .form-group
+                input.form-control.required_input(type="text" name="SIZE_H" size="4" data-validation="NUMBER_MM" data-helpnaame="Высота")
+          
+        
+        
+        .col-xs-12.flex-header-cont.visible-xs.table-header
+          .row.flex-header-row
+            .col-xs-9.flex-header-item Картон
+          
+            .col-xs-3.flex-header-item Печать
+        
+        
+        .col-sm-4.col-xs-12.flex-header-cont
+          .row.flex-header-row
+            .col-xs-9.flex-header-item
+              .form-group
+                select.form-control.required_input( name="CARTON" data-helpnaame="Картон")
+                  option(value="" selected) Выбрать картон
+                  optgroup(label="Микрогофрокартон")
+                  option(value="1") Белый-Белый микрогофрокартон (МГК)
+                  option(value="2") Белый-Бурый микрогофрокартон (МГК)
+                  option(value="3") Бурый-Бурый микрогофрокартон (МГК)
+                  optgroup(label="Трехслойный")
+                  option(value="4") Белый-Белый трехслойный (Т-24)
+                  option(value="5") Белый-Бурый трехслойный (Т-23)
+                  option(value="6") Бурый-Бурый трехслойный (Т-24)
+                  optgroup(label="Пятислойный")
+                  option(value="7") Белый-Бурый пятислойный (П-32)
+                  option(value="8") Бурый-Бурый пятислойный (П-32)
+                  optgroup(label="Семислойный")
+                  option(value="9") Бурый-Бурый семислойный (С)
+          
+            .col-xs-3.flex-header-item
+              .form-group
+                input( type="checkbox" name="ADD_PRINT")
+        
+        
+        
+        
+        .col-xs-12.flex-header-cont.visible-xs.table-header
+          .row.flex-header-row
+            .col-xs-12.flex-header-item
+              .item-button-head Количество
+              
+        .col-sm-4.col-xs-12.flex-header-cont
+          .row.flex-header-row
+            .col-xs-6.flex-header-item
+              .form-group
+                input.form-control.add-to-cart-input-quantity.required_input(name="quantity" size="4" type="text" data-validation="NUMBER_INT" data-helpnaame="Количество")
+              
+            .col-xs-6.flex-header-item
+              .form-group
+                button(name="submit" type="submit" value="Y" ).btn.add-to-order-btn Добавить<br>к заказу
+  .row
+    .col-sm-12
+      .add-position-sucess-maessage.bg-success.text-small.hidden(style="padding: 20px;")
+        p Позиция успешно добавлена в список заказа!
+        p 
+          | Возможно Вам захочется 
+          a(href="#").ajax-link.add-new-form-ordering-position добавить еще размеры
+          |  этой же формы или выбрать другую форму.
+        p 
+          | Или можно 
+          a(href="") перейти к оформлению заказа
+  
+  .row
+    .col-sm-12
+      .add-position-erroe-maessage.bg-danger.text-small.hidden(style="padding: 20px;") Пример сообщения об ошибке
+
+
+//-.section
+//-  pre#jsmessage
+  
+// end /components/catalog.offers-list/

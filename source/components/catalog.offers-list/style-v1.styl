@@ -1,0 +1,118 @@
+@import '../../styl/component-include.styl'
+
+  .offers-block
+    font-size 13px
+      
+    @media (max-width: 768px)
+      font-size 14px
+    
+    .offers-header
+      font-weight 600
+      display -webkit-flex
+      display flex
+      align-items stretch
+      text-align center
+      margin 0
+          
+      
+      .header-cell
+        padding 10px 5px
+        border-right 1px solid $c-white
+        display -webkit-flex
+        display flex
+        align-items center
+        justify-content center
+        
+        &:last-of-type
+          border-right none
+        
+        &.flex-wrap
+          flex-wrap wrap
+        
+        .text-help
+          color $c-high-gray
+          font-weight 200
+        
+        .text-red
+          color $c-red
+        
+    .help_icon_round
+      display block
+      border 1px solid
+      border-radius 2em
+      width 1.2em
+      line-height 1.2em
+      height 1.2em
+      text-align center
+      
+      
+    
+    .offers-item
+      border-top 2px solid $c-white
+      font-family Arial
+      margin 0
+      position relative
+      
+      .item-cell
+        padding 10px
+      
+      @media (min-width: 768px)
+        &
+          display -webkit-flex
+          display flex
+          align-items center
+          background-color $c-gray-xxs
+          text-align center
+          
+        .item-cell
+          padding 10px 3px
+        
+      .add-to-cart-cell-vcenter
+        display -webkit-flex
+        display flex
+        align-items center
+        
+      
+      .form-control
+        height 50px
+        padding-left 5px
+      
+      .item-cell-articul
+        background-color $c-gray-xxs
+      
+      .quantity-step-name
+        color $c-high-gray
+      
+      .cur-quantity-indikator
+        position absolute
+        left 0
+        bottom 0
+        height 5px
+        background $c-ultramarine
+        z-index 10
+        display none
+      
+      .add-to-order-btn
+        padding 8px 10px
+        padding-left 35px
+        background-position 5px center
+        background-repeat no-repeat
+        background-size 24px 24px
+        line-height 16px
+        font-size 12px
+        width 110px
+        
+        &.mode-cart
+          background-color $c-green
+          background-image url(/img/svg/add2cart_icon1.svg)
+          
+          &:hover
+            background-color darken( $c-green, 5% )
+        
+        &.mode-order
+          background-color $c-yellow
+          background-image url(/img/svg/add2cart_icon2.svg)
+          
+          &:hover
+            background-color darken( $c-yellow, 5% )
+      

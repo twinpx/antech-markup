@@ -1,0 +1,92 @@
+@import '../../styl/component-include.styl'
+
+.order-position-add
+  .table-header
+    background-color $c-gray-s
+    font-size 13px
+    text-align center
+    font-weight 600
+    
+  .flex-header
+    display -webkit-flex
+    display flex
+    align-items stretch
+    justify-content center
+    
+    &-cont
+      text-align center
+      display -webkit-flex
+      display flex
+      align-items center
+      align-items stretch
+      justify-content center
+      
+      @media (min-width: 768px)
+        padding-left 0
+        padding-right 0
+        
+      @media (max-width: 768px)
+        display block
+    
+    &-row
+      text-align center
+      display -webkit-flex
+      display flex
+      align-items center
+      align-items stretch
+      justify-content center
+      
+      @media (min-width: 768px)
+        width 100%
+      
+    &-item
+      text-align center
+      border-right 1px solid $c-white
+      display -webkit-flex
+      display flex
+      align-items center
+      text-align center
+      justify-content center
+      padding 10px 5px
+  
+  .table-body
+    background-color $c-gray-xxs
+    border-bottom 2px solid $c-white
+    
+    .flex-header-item
+      border-right none
+  
+  input[type=text].form-control,
+  select.form-control
+  
+    height 40px
+  
+  .form-group
+    margin-bottom 0
+  
+  .add-to-order-btn
+    padding-left 35px
+    background-position 5px center
+    background-repeat no-repeat
+    background-size 24px 24px
+    line-height 14px
+    font-size 12px
+    width 100%
+    min-width 110px
+    background-color $c-yellow
+    background-image url(/img/svg/add2cart_icon2.svg)
+    
+    &:hover
+      background-color darken( $c-yellow, 5% )
+  
+  .help_icon_round
+    width 10px
+    height 18px
+    display block
+    background-image url(/img/svg/icon_svg_help_info_indicator.svg)
+    background-position center center
+    background-repeat no-repeat
+    background-size contain
+    margin 0 auto
+      
+      
