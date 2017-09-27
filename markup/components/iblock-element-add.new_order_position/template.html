@@ -1,0 +1,141 @@
+
+<!-- start /components/catalog.offers-list/-->
+<link rel="stylesheet" href="/components/iblock-element-add.new_order_position/style.css"/>
+<script src="/components/iblock-element-add.new_order_position/script.js"></script>
+<div class="order-position-add">
+  <div class="row text-small table-header flex-header hidden-xs">
+    <div class="col-sm-4 flex-header-cont">
+      <div class="row flex-header-row">
+        <div class="col-xs-4 flex-header-item"> Длина, мм</div>
+        <div class="col-xs-4 flex-header-item"> Ширина, мм</div>
+        <div class="col-xs-4 flex-header-item"> Высота, мм</div>
+      </div>
+    </div>
+    <div class="col-sm-4 flex-header-cont">
+      <div class="row flex-header-row">
+        <div class="col-xs-9 flex-header-item">Картон</div>
+        <div class="col-xs-3 flex-header-item">
+          <div class="text-center">Печать
+            <div data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на упаковку. Подробное согласование будет проводить менеджер после оформления заказа." class="text-center help_icon_round popover_teaser"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 flex-header-cont">
+      <div class="row flex-header-row">
+        <div class="col-xs-12 flex-header-item">
+          <div class="item-button-head">Количество</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-block">
+    <form name="ADD_ORDERING_POSITION" action="/json/add-ordering-position.json" method="POST" class="add_new_ordering_position">
+      <div class="row text-small table-body">
+        <div class="col-xs-12 flex-header-cont visible-xs table-header">
+          <div class="row flex-header-row">
+            <div class="col-xs-4 flex-header-item">Длина, мм</div>
+            <div class="col-xs-4 flex-header-item">Ширина, мм</div>
+            <div class="col-xs-4 flex-header-item">Высота, мм</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 flex-header-cont">
+          <div class="row flex-header-row">
+            <div class="col-xs-4 flex-header-item">
+              <div class="form-group">
+                <input type="text" name="SIZE_L" size="4" data-validation="NUMBER_MM" data-helpnaame="Длина" class="form-control required_input"/>
+              </div>
+            </div>
+            <div class="col-xs-4 flex-header-item">
+              <div class="form-group">
+                <input type="text" name="SIZE_W" size="4" data-validation="NUMBER_MM" data-helpnaame="Ширина" class="form-control required_input"/>
+              </div>
+            </div>
+            <div class="col-xs-4 flex-header-item">
+              <div class="form-group">
+                <input type="text" name="SIZE_H" size="4" data-validation="NUMBER_MM" data-helpnaame="Высота" class="form-control required_input"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 flex-header-cont visible-xs table-header">
+          <div class="row flex-header-row">
+            <div class="col-xs-9 flex-header-item">Картон</div>
+            <div class="col-xs-3 flex-header-item">Печать</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 flex-header-cont">
+          <div class="row flex-header-row">
+            <div class="col-xs-9 flex-header-item">
+              <div class="form-group">
+                <select name="CARTON" data-helpnaame="Картон" class="form-control required_input">
+                  <option value="" selected="selected">Выбрать картон</option>
+                  <optgroup label="Микрогофрокартон"></optgroup>
+                  <option value="1">Белый-Белый микрогофрокартон (МГК)</option>
+                  <option value="2">Белый-Бурый микрогофрокартон (МГК)</option>
+                  <option value="3">Бурый-Бурый микрогофрокартон (МГК)</option>
+                  <optgroup label="Трехслойный"></optgroup>
+                  <option value="4">Белый-Белый трехслойный (Т-24)</option>
+                  <option value="5">Белый-Бурый трехслойный (Т-23)</option>
+                  <option value="6">Бурый-Бурый трехслойный (Т-24)</option>
+                  <optgroup label="Пятислойный"></optgroup>
+                  <option value="7">Белый-Бурый пятислойный (П-32)</option>
+                  <option value="8">Бурый-Бурый пятислойный (П-32)</option>
+                  <optgroup label="Семислойный"></optgroup>
+                  <option value="9">Бурый-Бурый семислойный (С)</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-3 flex-header-item">
+              <div class="form-group">
+                <input type="checkbox" name="ADD_PRINT"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 flex-header-cont visible-xs table-header">
+          <div class="row flex-header-row">
+            <div class="col-xs-12 flex-header-item">
+              <div class="item-button-head">Количество</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 flex-header-cont">
+          <div class="row flex-header-row">
+            <div class="col-xs-6 flex-header-item">
+              <div class="form-group">
+                <input name="quantity" size="4" type="text" data-validation="NUMBER_INT" data-helpnaame="Количество" class="form-control add-to-cart-input-quantity required_input"/>
+              </div>
+            </div>
+            <div class="col-xs-6 flex-header-item">
+              <div class="form-group">
+                <button name="submit" type="submit" value="Y" class="btn add-to-order-btn">Добавить<br>к заказу</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div style="padding: 20px;" class="add-position-sucess-maessage bg-success text-small hidden">
+        <p>Позиция успешно добавлена в список заказа!</p>
+        <p>
+           
+          Возможно Вам захочется <a href="#" class="ajax-link add-new-form-ordering-position">добавить еще размеры</a> этой же формы или выбрать другую форму.
+        </p>
+        <p>
+           
+          Или можно <a href="">перейти к оформлению заказа</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div style="padding: 20px;" class="add-position-erroe-maessage bg-danger text-small hidden">Пример сообщения об ошибке</div>
+    </div>
+  </div>
+</div>
+<!-- end /components/catalog.offers-list/-->
