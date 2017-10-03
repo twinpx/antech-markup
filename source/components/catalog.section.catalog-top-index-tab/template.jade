@@ -1,0 +1,66 @@
+﻿// start /components/catalog.section.construct-morda/
+
+link( rel="stylesheet", href="/components/catalog.section.catalog-top-index-tab/style.css" )
+script( src="/components/catalog.section.catalog-top-index-tab/script.js" )
+
+
+link( href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet" )
+script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
+
+.row.catalog-top-index-tab
+  .col-md-12
+    .h2 Выберите упаковку
+  .col-md-12
+    //-ul.nav.nav-pills( role="tablist" )
+    //-  li( role="presentation").active
+    //-    a( href="#const-page1" aria-controls="const-page1" role="tab" data-toggle="tab") По стандарту FEFCO
+    //-  li( role="presentation")
+    //-    a( href="#const-page2" aria-controls="const-page2" role="tab" data-toggle="tab") По стандарту GALIA
+    //-  li( role="presentation")
+    //-    a( href="#const-page3" aria-controls="const-page3" role="tab" data-toggle="tab") Оригинальные конструкции
+    //-  li( role="presentation")
+    //-    a( href="#const-page4" aria-controls="const-page4" role="tab" data-toggle="tab") Маркетинговая упаковка
+    //-  li( role="presentation")
+    //-    a( href="#const-page5" aria-controls="const-page5" role="tab" data-toggle="tab") Крупногабаритные
+    
+    
+    .row
+      .nav.nav-tabs( role="tablist" )
+        .col-md-4
+          .btn-group.btn-group-justified.btn-group-justify( role="group" )
+            a#subtabTab.ttab( href="#const-page2" aria-controls="const-page1" role="tab" data-toggle="tab" data-tabtoglemode="first").btn.btn-tabs.active
+              span По типу
+            a.ttab( href="#const-page1" aria-controls="const-page2" role="tab" data-toggle="tab"  data-tabtoglemode="second" ).btn.btn-tabs
+              span По применению
+        
+        .col-md-8
+          .from-form-block
+            a.ttab.active( href="#const-page2" aria-controls="const-page2" role="tab" data-toggle="tab" )
+              span Картонные коробки
+            a.ttab( href="#const-page3" aria-controls="const-page3" role="tab" data-toggle="tab" )
+              span Гофроупаковка
+            a.ttab( href="#const-page4" aria-controls="const-page4" role="tab" data-toggle="tab" )
+              span Гофролисты
+            a.ttab( href="#const-page5" aria-controls="const-page5" role="tab" data-toggle="tab" )
+              span Упаковочные материалы
+      
+          
+          
+  .clearfix
+  hr.i-size-S
+   
+  .col-md-12.tab-content
+    - var i = 0
+    while i < 6
+      - i++
+      - var className="tab-pane"
+      
+      if i==2
+        - className="tab-pane active"
+      div( id="const-page#{i}" role="tabpanel" class="#{className}" )
+      
+        div Вкладка #{i}
+        
+        include item_grid
+
+// end /components/catalog.section.construct-morda/
