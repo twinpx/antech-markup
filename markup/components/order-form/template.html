@@ -1,0 +1,54 @@
+
+<!-- start /components/order-form/-->
+<link rel="stylesheet" href="/components/order-form/style.css"/>
+<script src="/components/order-form/script.js"></script>
+<div class="b-order-form">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Напишите нам какую упаковку Вы бы хотели?</h2>
+      <form action="" method="GET">
+        <div class="row">
+          <div class="col-sm-8">
+            <textarea name="message" class="form-control"></textarea>
+          </div>
+          <div class="col-sm-4">
+            <input name="name" value="" type="text" class="form-control"/>
+            <input name="name" value="" type="tel" class="form-control"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included-->
+            <script src="/template/fileupload/jquery.ui.widget.js"></script>
+            <!-- The Iframe Transport is required for browsers without support for XHR file uploads-->
+            <script src="/template/fileupload/jquery.iframe-transport.js"></script>
+            <!-- The basic File Upload plugin-->
+            <script src="/template/fileupload/jquery.fileupload.js"></script>
+            <!-- The File Upload processing plugin-->
+            <script src="/template/fileupload/jquery.fileupload-process.js"></script>
+            <!-- The File Upload validation plugin-->
+            <script src="/template/fileupload/jquery.fileupload-validate.js"></script>
+            <!-- The File Upload user interface plugin-->
+            <script src="/template/fileupload/jquery.fileupload-ui.js"></script>
+            <!-- The main application script-->
+            <script src="/template/main.js"></script>
+            <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9-->
+            <div class="b-fileupload">
+              <div class="b-fileupload__button btn btn-default">
+                <input id="fileupload" type="file" name="files[]"/>
+                <div id="progress" class="progress">
+                  <div class="progress-bar progress-bar-success"></div>
+                </div>
+              </div>
+              <div id="files" class="files"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-default">Жду звонка!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end /components/order-form/-->

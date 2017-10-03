@@ -1,0 +1,26 @@
+﻿// start /components/order-form/
+
+link( rel="stylesheet", href="/components/order-form/style.css" )
+script( src="/components/order-form/script.js" )
+
+.b-order-form
+  .row
+    .col-sm-8.col-sm-offset-2
+      h2 Напишите нам какую упаковку Вы бы хотели?
+      
+      form( action="" method="GET" )
+        
+        .row
+          .col-sm-8
+            textarea.form-control( name="message" )
+          .col-sm-4
+            input.form-control( name="name" value="" type="text" )
+            input.form-control( name="name" value="" type="tel" )
+            
+        .row
+          .col-sm-8
+            include ../../modules/fileupload/include
+          .col-sm-4
+            button.btn.btn-default( type="submit" ) Жду звонка!
+
+// end /components/order-form/
