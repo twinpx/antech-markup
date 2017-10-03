@@ -1,0 +1,77 @@
+@import '../../styl/component-include.styl'
+
+.catalog-top-index-tab
+  position relative
+  
+  .btn-group-justify
+    
+    .btn-tabs
+      background none
+      font-size 14px
+      border 1px solid $border-gray
+      color $c-black
+      font-weight 400
+      border-radius 2em
+      padding 10px 25px
+      word-wrap normal
+      white-space normal
+      
+      
+      &.active,
+      &.active:hover,
+      &:active
+        background-color $c-blue-m
+        box-shadow none
+    
+      
+    
+    @media (max-width: 768px)
+      display block
+      
+      .btn-tabs
+        display block
+        float none
+        width 100%
+        padding 20px 25px
+        
+        &:first-of-type,
+        &:last-of-type
+          border-radius 0
+  
+  .from-form-block
+    text-align left
+    padding 7px 0
+    
+    .ttab
+      text-decoration none
+      margin 0 5px
+      border-radius 0
+      line-height 1.2
+      font-weight 200
+      border-bottom none
+      color $c-high-gray
+      font-size 14px
+      display inline-block
+      
+      &:hover,
+      &:active,
+      &.active
+        border-bottom 1px dashed
+        color $c-black
+        background none
+        box-shadow none
+        text-decoration none
+      
+      &.active
+        font-weight 400
+  
+  .add-card
+    display -webkit-flex
+    display flex
+    justify-content center
+    align-items center
+  
+  
+  
+  
+  

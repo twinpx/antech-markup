@@ -1,0 +1,20 @@
+// start include/items_grid
+
+
+.row.item-grid
+  .fotorama-tabs( data-width="100%" data-ratio="8/9" data-minwidth="300" data-maxwidth="1000" data-minheight="350" data-maxheight="100%")
+  
+    - var k = 0
+    while k++ < 7
+      .col-xs-12.col-sm-6.col-md-3.col-lg-3.card-item
+        include card
+    
+      
+    .col-xs-12.col-sm-6.col-md-3.col-lg-3.card-item
+      
+      .a-catalog-card.add-card
+        a.btn.btn-type-2(href="") Показать все
+          
+
+
+// end include/items_grid
