@@ -1,4 +1,4 @@
-// The jQuery UI widget factory, can be omitted if jQuery UI is already included
+﻿// The jQuery UI widget factory, can be omitted if jQuery UI is already included
 script(src='/template/fileupload/jquery.ui.widget.js')
 
 //- The Templates plugin is included to render the upload/download listings
@@ -34,13 +34,20 @@ script(src='/template/fileupload/jquery.fileupload-ui.js')
 script(src='/template/main.js')
 // The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9
 
-.b-fileupload
+.b-fileupload( data-url="/template/fileupload/server/php/index.php" )
   
   .b-fileupload__button.btn.btn-default
-    input#fileupload( type="file" name="files[]" )
+    
+    .b-fileupload__button-text Вы можете прикрепить Ваш файл
+      .b-fileupload__button-icon
   
-    #progress.progress
+    #fileUploadProgress
       .progress-bar.progress-bar-success
     
-  #files.files
+    #fileuploadFiles
+  
+    input#fileupload( type="file" name="files[]" )
+    
+  .b-fileupload__ext
+    jpeg, gif, png, tiff , eps, psd, cdr, pdf,
 

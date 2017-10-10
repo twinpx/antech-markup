@@ -531,14 +531,14 @@
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
             <h2>Напишите нам какую упаковку Вы бы хотели?</h2>
-            <form action="" method="GET">
+            <form action="/components/order-form/submit.json" method="GET" class="i-success">
               <div class="row">
                 <div class="col-sm-8">
                   <textarea name="message" class="form-control"></textarea>
                 </div>
                 <div class="col-sm-4">
-                  <input name="name" value="" type="text" class="form-control">
-                  <input name="name" value="" type="tel" class="form-control">
+                  <input name="name" value="" type="text" required placeholder="Ваше имя" class="form-control i-required">
+                  <input name="tel" value="" type="tel" required class="form-control i-required">
                 </div>
               </div>
               <div class="row">
@@ -558,14 +558,20 @@
                   <!-- The main application script-->
                   <script src="/template/main.js"></script>
                   <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9-->
-                  <div class="b-fileupload">
+                  <div data-url="/template/fileupload/server/php/index.php" class="b-fileupload">
                     <div class="b-fileupload__button btn btn-default">
-                      <input id="fileupload" type="file" name="files[]">
-                      <div id="progress" class="progress">
+                      <div class="b-fileupload__button-text">Вы можете прикрепить Ваш файл
+                        <div class="b-fileupload__button-icon"></div>
+                      </div>
+                      <div id="fileUploadProgress">
                         <div class="progress-bar progress-bar-success"></div>
                       </div>
+                      <div id="fileuploadFiles"></div>
+                      <input id="fileupload" type="file" name="files[]">
                     </div>
-                    <div id="files" class="files"></div>
+                    <div class="b-fileupload__ext">
+                      <jpeg>, gif, png, tiff , eps, psd, cdr, pdf,</jpeg>
+                    </div>
                   </div>
                 </div>
                 <div class="col-sm-4">

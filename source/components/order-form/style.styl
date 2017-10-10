@@ -3,6 +3,10 @@
 .b-order-form
   background-color #b2c6d4
   padding-bottom 22px
+  position relative
+  
+  @media( max-width 767px )
+    padding 0 15px 15px 15px
   
   .form-control
     display inline-block
@@ -14,9 +18,34 @@
     font-size 14pt
     box-shadow
     
+    &:invalid
+      background-color #ffe4ec
+      color #ff6161
+      
+      &.i-required
+        background-color #fff
+        color #555
+    
   textarea.form-control
     height 115px
 
   .btn
     border-radius 4px
     width 100%
+    
+  &__message
+    text-align center
+    margin -18px 0 0 0
+    padding 0 15px
+    transform( scale(0))
+    transition( transform 0.5s ease )
+    position absolute
+    top 50%
+    left 0
+    width 100%
+    
+    @media( max-width 767px )
+      margin-top -45px
+    
+    &.i-show
+      transform( scale(1))

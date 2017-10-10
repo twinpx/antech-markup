@@ -8,14 +8,14 @@ script( src="/components/order-form/script.js" )
     .col-sm-8.col-sm-offset-2
       h2 Напишите нам какую упаковку Вы бы хотели?
       
-      form( action="" method="GET" )
+      form.i-success( action="/components/order-form/submit.json" method="GET" )
         
         .row
           .col-sm-8
             textarea.form-control( name="message" )
           .col-sm-4
-            input.form-control( name="name" value="" type="text" )
-            input.form-control( name="name" value="" type="tel" )
+            input.form-control.i-required( name="name" value="" type="text" required placeholder="Ваше имя" )
+            input.form-control.i-required( name="tel" value="" type="tel" required )
             
         .row
           .col-sm-8
