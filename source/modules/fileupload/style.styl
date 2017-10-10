@@ -1,0 +1,75 @@
+@import '../../styl/component-include.styl'
+
+.b-fileupload
+  @media( max-width 767px )
+    margin-bottom 15px
+
+  input
+    position absolute
+    top 0
+    right 0
+    margin 0
+    opacity 0
+    font-size 200px !important
+    direction ltr
+    cursor pointer
+
+  &__button
+    position relative
+    overflow hidden
+    height 46px
+    
+    .btn&
+      background-color #cedbe4
+      
+    &-text
+      position relative
+      
+      @media( max-width 767px )
+        font-size 10.5pt
+        
+    &-icon
+      position absolute
+      top 13px
+      left 0
+      width 20px
+      height 20px
+      background url( '/images/svg/clip.svg' ) no-repeat 0 0
+      background-size cover
+      
+  &__ext
+    text-align center
+    color #566774
+    font-size 9pt
+    font-weight 300
+    margin-top 10px
+    
+    @media( max-width 767px )
+      display none
+    
+    &.i-warning
+      color #cc0000
+
+  #fileUploadProgress
+    position absolute
+    top 0
+    left 0
+    width 100%
+    transition( opacity 0.3s ease )
+    
+    .progress-bar
+      background-color #c1d4e1
+      height 46px
+      border-radius 4px
+      
+    &.i-hide
+      opacity 0
+    
+  #fileuploadFiles
+    position absolute
+    top 0
+    left 0
+    width 100%
+    text-align center
+    color #0273c2
+    line-height 46px
