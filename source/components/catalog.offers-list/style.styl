@@ -53,8 +53,16 @@
       margin 0
       position relative
       
+      .name2line
+        color $c-high-gray
+      
       .item-cell
         padding 10px
+      
+      .sales-icon
+        width 20px
+        height 20px
+        margin-right 10px
       
       @media (min-width: 768px)
         &
@@ -115,4 +123,11 @@
           
           &:hover
             background-color darken( $c-yellow, 5% )
+            
+        
+        &.btn-disabled
+          background-image url(/img/svg/add2cart_icon4.svg)
+          
+        &.in-cart-update
+          background-image url(/img/svg/add2cart_icon3.svg)
       

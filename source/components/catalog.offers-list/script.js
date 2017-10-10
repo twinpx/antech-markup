@@ -18,7 +18,7 @@ $(function(){
       success: function(data){
 //         alert(data.STATUS)
         if(data.STATUS == 'Y'){
-          $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('preorder').html('Поставлено<br>в&nbsp;резерв');
+          $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('in-cart-update').removeClass('preorder').html('Добавлено<br>к заказу');
           $('.add-to-cart-input-quantity', form).data('oncart', $('.add-to-cart-input-quantity', form).val());
           $('input[name="MODE"]', form).val("UPDATE");
           
@@ -54,6 +54,12 @@ $(function(){
   
   $('input.add-to-cart-input-quantity').change(function(){
     checkQunatityVal($(this));
+    
+    var input = $(this);
+    
+    if(input.val() > 0 && input.val() < Number(input.data('inputmin'))){
+      input.val(Number(input.data('inputmin')));
+    }
   }).keyup(function(){
     checkQunatityVal($(this));
   });
@@ -88,26 +94,29 @@ $(function(){
     if(quantInCart == 'undefined' || quantInCart == 'NaN')
       quantInCart = 0;
     
-    
-    if(freeQuant < quantCurVal){
-      updateMode = true;
-      btnText = 'Сделать<br>предзаказ';
-      
-      if(!$('.preorder_popower', parent).hasClass('popoverOpen')){
-        $('.preorder_popower', parent).popover('show').addClass('popoverOpen');
+    if(parent.hasClass('offers_item_preorder') == false){
+      if(freeQuant < quantCurVal){
+        updateMode = true;
+        btnText = 'Сделать<br>предзаказ';
+        
+        if(!$('.preorder_popower', parent).hasClass('popoverOpen')){
+          $('.preorder_popower', parent).popover('show').addClass('popoverOpen');
+        }
       }
-    }
-    else{
-      updateMode = false;
+      else{
+        updateMode = false;
+        
+        $('.preorder_popower', parent).popover('hide').removeClass('popoverOpen');
+        
+      }
       
-      $('.preorder_popower', parent).popover('hide').removeClass('popoverOpen');
-      
     }
+    
     
     if(quantInCart > 0) {
       if(quantInCart == quantCurVal){
         updateMode = false;
-        btnText = 'Поставлено<br>в&nbsp;резерв';
+        btnText = 'Добавлено<br>к заказу';
       }
       
       else{
@@ -116,7 +125,6 @@ $(function(){
       }
       
     }
-    
     
     
     
@@ -130,7 +138,9 @@ $(function(){
       
       $('.order-price-print', parent).show().removeClass('hidden');
       $('.order-price-default', parent).hide();
-      btnSubmit.removeClass('mode-cart').addClass('mode-order');
+      
+      if(parent.hasClass('offers_item_preorder') == false)
+        btnSubmit.removeClass('mode-cart').addClass('mode-order');
         
       qIndicator.hide(); 
       
@@ -144,7 +154,9 @@ $(function(){
       
       $('.order-price-print', parent).hide();
       $('.order-price-default', parent).show().removeClass('hidden');
-      btnSubmit.removeClass('mode-order').addClass('mode-cart');
+      
+      if(parent.hasClass('offers_item_preorder') == false)
+        btnSubmit.removeClass('mode-order').addClass('mode-cart');
       
       if($(window).width() > 768){
       
@@ -170,10 +182,27 @@ $(function(){
     }
     
     
-    if(updateMode)
-      btnSubmit.removeClass('btn-disabled').html(btnText);
-    else
-      btnSubmit.addClass('btn-disabled').html(btnText);
+    btnSubmit.html(btnText);
+      
+    if(updateMode){
+      btnSubmit.removeClass('btn-disabled');
+      
+      
+      if(quantInCart > 0)
+        btnSubmit.addClass('in-cart-update');
+        
+    }
+    else {
+      btnSubmit.removeClass('in-cart-update');
+      
+      if(quantInCart > 0){
+        if(quantInCart == quantCurVal)
+          btnSubmit.addClass('btn-disabled');
+        else
+          btnSubmit.removeClass('btn-disabled');
+        
+      }
+    }
 
 
   }
