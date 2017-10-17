@@ -4,6 +4,9 @@
   border-bottom 1px solid rgba( 0,0,0,.07 )
   /*height 142px*/
   position relative
+  
+  .container
+    position relative
     
   /*@media (max-width: 991px)
     height 115px
@@ -466,8 +469,33 @@
     margin 0 0 20px
     
   &__search
-    text-align center
-    margin 27px 0 60px
+  
+    &__close
+      width 22px
+      height 22px
+      background url( 'images/svg/menu_close.svg' ) no-repeat center
+      background-size cover
+      cursor pointer
+      position absolute
+      top 6px
+      right 14px
+      display none
+  
+    .i-searchshow &
+      animation ac-gn-searchform-slide 1s 200ms both
+  
+    .i-searchshow.i-searchhide &
+      display none
+    
+    &-wrapper
+      position absolute
+      top 0
+      left 252px
+      height 75px
+      width calc(100% - 252px)
+      background-color #fff
+      padding-top 20px
+      display none
     
     .b-search-icon
       display inline-block
@@ -996,3 +1024,74 @@
     margin 0
     padding 0
     line-height normal
+    
+.i-searchshow
+
+  .i-search-hide
+    animation (ac-gn-item-searchshow 400ms both)
+    
+  &.i-searchhide .i-search-hide
+    animation (ac-gn-item-searchhide 400ms both)
+    
+.i-searchshow .b-header__basket .i-search-hide
+  
+  &:nth-child(2)
+    animation-delay 105ms
+  
+  &:nth-child(3)
+    animation-delay 70ms
+  
+  &:nth-child(4)
+    animation-delay 35ms
+    
+.i-searchshow .b-header__phone .i-search-hide
+  
+  &:nth-child(1)
+    animation-delay 140ms
+    
+.i-searchshow .b-header-menulist .i-search-hide
+  
+  &:nth-child(1)
+    animation-delay 245ms
+  
+  &:nth-child(2)
+    animation-delay 210ms
+  
+  &:nth-child(3)
+    animation-delay 175ms
+    
+@keyframes ac-gn-item-searchshow
+  0%
+    opacity 1
+    transform (scale(1))
+    animation-timing-function cubic-bezier(0.2727, 0.0986, 0.8333, 1)
+
+  40%
+    opacity 1
+
+  100%
+    opacity 0
+    transform(scale(0.7))
+
+@keyframes ac-gn-searchform-slide
+  0%
+    transform( translate3d(100px, 0, 0))
+    animation-timing-function cubic-bezier(0.11393, 0.8644, 0.14684, 1)
+    opacity 0
+
+  100%
+    transform( translateZ(0))
+    opacity 1
+
+@keyframes ac-gn-item-searchhide
+  0%
+    opacity 0
+    transform scale(0.7)
+
+  60%
+    opacity 1
+
+  100%
+    opacity 1
+    transform scale(1)
+    animation-timing-function cubic-bezier(0.2727, 0.0986, 0.8333, 1)

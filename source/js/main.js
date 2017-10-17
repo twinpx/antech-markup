@@ -4,11 +4,30 @@ $( '.b-header__menu' ).click( function(e) {
   openMenu();
 });
 
+//apple menu
 $( '.b-header__search' ).click( function(e) {
   e.preventDefault();
-  $( 'html' ).addClass( 'i-menu-open' );
+  /*$( 'html' ).addClass( 'i-menu-open' );
   openMenu();
-  setTimeout( function() {$( '#title-search-input' ).focus();}, 100);
+  setTimeout( function() {$( '#title-search-input' ).focus();}, 100);*/
+  $( '.b-header' ).addClass( 'i-searchshow' );
+  setTimeout( function() {
+    $( '.b-header-menu__search-wrapper' ).show();
+  }, 650 );
+  setTimeout( function() {
+    $( '.b-header-menu__search__close' ).show();
+  }, 1500 );
+});
+
+//close apple menu
+$( '.b-header-menu__search__close' ).click( function(e) {
+  e.preventDefault();
+  $( '.b-header' ).addClass( 'i-searchhide' );
+  $( '.b-header-menu__search-wrapper' ).hide();
+  $( '.b-header-menu__search__close' ).hide();
+  setTimeout( function() {
+    $( '.b-header' ).removeClass( 'i-searchhide' ).removeClass( 'i-searchshow' );
+  }, 650 );
 });
 
 $( '.b-header-menu__close' ).click( function(e) {
@@ -120,14 +139,11 @@ $('.b-nav-tabs.nav-tabs a').click(function (e) {
   $(this).addClass( 'active' ).tab('show');
 });
 
-
-
 $('#aboutVideo').on('hide.bs.modal', function (e) {
   $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 }).on('show.bs.modal', function (e) {
   $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 });
-
 
 $( '#razrabotka-link').on('click', function(e) {
   e.preventDefault();

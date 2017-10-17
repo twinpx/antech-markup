@@ -25,13 +25,13 @@
         </div>
         <div class="container"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu visible-sm-inline-block visible-xs-inline-block"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="203" height="59" alt=""></a>
           <menu class="b-header-menulist hidden-xs">
-            <li><a href=""><span style="background-image: url( 'template/images/svg/basket_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Каталог упаковки</a>
+            <li class="i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/basket_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Каталог упаковки</a>
               <!--Стрелка ставится если мы находимся внутри раздела--><span class="b-header-bottom__arrow"></span>
             </li>
-            <li class="i-active"><a href=""><span style="background-image: url( 'template/images/svg/production_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/production_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Изготовить на заказ</a>
+            <li class="i-active i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/production_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/production_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Изготовить на заказ</a>
               <!--Стрелка ставится если мы находимся внутри раздела--><span class="b-header-bottom__arrow"></span>
             </li>
-            <li><a href=""><span style="background-image: url( 'template/images/svg/ideas_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" class="b-header-menulist__icon-active"></span>WIKI</a>
+            <li class="i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/ideas_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" class="b-header-menulist__icon-active"></span>WIKI</a>
               <!--Стрелка ставится если мы находимся внутри раздела--><span class="b-header-bottom__arrow"></span>
             </li>
           </menu>
@@ -111,11 +111,22 @@
                   </div>
                 </div>
               </div>
-            </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs"></span><a href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" class="b-header__profile hidden-sm hidden-xs"></a><a href="#" data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon">
+            </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs i-search-hide"></span><a href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" class="b-header__profile hidden-sm hidden-xs i-search-hide"></a><a href="#" data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon i-search-hide">
               <div class="count_in_cart">121</div>
               <script>var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];</script></a>
           </div>
-          <div class="b-header__phone hidden-xs"><span class="b-header__phone-num dropdown"><span id="phoneDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="" class="dropdown-toggle hidden-sm hidden-xs"><span class="b-header__phone-num__text">+7 (495) 241-98-28</span><span class="b-header__phone-num__caret"></span></span><br class="hidden-sm hidden-xs"><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a><span aria-labelledby="phoneDropdown" class="dropdown-menu"><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a></span></span></div>
+          <div class="b-header-menu__search-wrapper">
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
+                  <div class="b-header-menu__search__close"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="b-header__phone hidden-xs"><span class="b-header__phone-num dropdown i-search-hide"><span id="phoneDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="" class="dropdown-toggle hidden-sm hidden-xs"><span class="b-header__phone-num__text">+7 (495) 241-98-28</span><span class="b-header__phone-num__caret"></span></span><br class="hidden-sm hidden-xs"><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a><span aria-labelledby="phoneDropdown" class="dropdown-menu"><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a></span></span></div>
         </div>
         <div id="callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" class="b-call-me modal fade">
           <div role="document" class="modal-dialog modal-lg">
@@ -223,14 +234,6 @@
             </div>
           </div>
           <div class="container">
-            <div class="b-header-menu__search">
-              <form action="" method="GET" class="form-inline">
-                <div class="form-group">
-                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
-                  <input id="title-search-input" type="search" placeholder="Поиск..." value="" class="form-control">
-                </div>
-              </form>
-            </div>
             <div class="b-header-menu__links">
               <div class="row">
                 <div class="col-sm-4 col-sm-offset-2">
@@ -1987,5 +1990,80 @@
         <div class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
       </div>
     </footer>
+    <!-- start /components/search-title/-->
+    <link rel="stylesheet" href="/components/search-title/style.css">
+    <script src="/components/search-title/script.js"></script>
+    <div style="position: absolute; top: 92px; left: 25px; width: 1060px;" class="title-search-result">
+      <table class="title-search-result">
+        <tbody>
+          <tr>
+            <th style="width: 122px;" class="title-search-separator"> </th>
+            <td class="title-search-separator"> </td>
+          </tr>
+          <tr id="row_1">
+            <th> Справочник</th>
+            <td class="title-search-item"><a href="/help/fefco/22478/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">06 - Rigid-type boxes - <b>короб</b>ки жесткого типа</a></td>
+          </tr>
+          <tr id="row_2">
+            <th> </th>
+            <td class="title-search-item"><a href="/help/fefco/22470/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">04 - Folder-type boxes - <b>короб</b>ки оберточного типа и складные (штампованные) ящики, <b>короб</b>ки с крышкой и дном</a></td>
+          </tr>
+          <tr id="row_3">
+            <th> </th>
+            <td class="title-search-item"><a href="/help/fefco/22465/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">03 - Telescope-type boxes - <b>короб</b>ки телескопического типа или конструкции</a></td>
+          </tr>
+          <tr id="row_4">
+            <th> </th>
+            <td class="title-search-item"><a href="/help/fefco/22474/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">05 - Slide-type boxes - раздвижные <b>короб</b>ки пенального типа и сборные ящики</a></td>
+          </tr>
+          <tr id="row_5">
+            <th> </th>
+            <td class="title-search-item"><a href="/help/fefco/22487/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">07 - Ready-glued - готовые клеенные <b>короб</b>ки</a></td>
+          </tr>
+          <tr id="row_6">
+            <th> </th>
+            <td class="title-search-more"><a href="/search/?q=%D0%BA%D0%BE%D1%80%D0%BE%D0%B1&amp;f%5B0%5D%5B0%5D%5B%3DMODULE_ID%5D=iblock&amp;f%5B0%5D%5B0%5D%5BPARAM1%5D=projects&amp;f%5B0%5D%5B0%5D%5BPARAM2%5D%5B0%5D=53&amp;f%5B0%5D%5B0%5D%5BPARAM2%5D%5B1%5D=57&amp;f%5B0%5D%5B0%5D%5BPARAM2%5D%5B2%5D=87&amp;f%5B0%5D%5BLOGIC%5D=OR&amp;f%5BCHECK_DATES%5D=Y">остальные</a></td>
+          </tr>
+          <tr>
+            <th class="title-search-separator"> </th>
+            <td class="title-search-separator"> </td>
+          </tr>
+          <tr id="row_8">
+            <th> Прочее</th>
+            <td class="title-search-item"><a href="/production/portfolio/print/korobka-s-pechatyu-kvest-v-korobke/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png"><b>Короб</b>ка с печатью "Квест в <b>короб</b>ке"</a></td>
+          </tr>
+          <tr id="row_9">
+            <th> </th>
+            <td class="title-search-item"><a href="/help/video/5289/23818/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">Самосборный <b>короб</b> "самолет", как собрать <b>короб</b>ку из заготовки</a></td>
+          </tr>
+          <tr id="row_10">
+            <th> </th>
+            <td class="title-search-item"><a href="/wiki/494799/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png">Самосборный <b>короб</b> "самолет", как собрать <b>короб</b>ку из заготовки</a></td>
+          </tr>
+          <tr id="row_11">
+            <th> </th>
+            <td class="title-search-item"><a href="/catalog/korob-evropallet/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png"><b>Короб</b> европаллет 1200 (Д) х 800 (Ш) х 850 (В) гофрокартон пятислойный бурый</a></td>
+          </tr>
+          <tr id="row_12">
+            <th> </th>
+            <td class="title-search-item"><a href="/production/construction/fefco/korobki-zhestkogo-tipa/korob-zhestkogo-tipa-s-otkidnoy-kryshkoy/"><img src="/bitrix/templates/a10_0_7/components/bitrix/search.title/head/images/default.png"><b>Короб</b> жесткого типа с откидной крышкой</a></td>
+          </tr>
+          <tr>
+            <th class="title-search-separator"> </th>
+            <td class="title-search-separator"> </td>
+          </tr>
+          <tr id="row_14">
+            <th> </th>
+            <td class="title-search-all"><a href="/search/?q=%D0%BA%D0%BE%D1%80%D0%BE%D0%B1">Все результаты</a></td>
+          </tr>
+          <tr>
+            <th class="title-search-separator"> </th>
+            <td class="title-search-separator"> </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="left: 1042px; width: 18px; top: 0px; height: 370px; display: block;" class="title-search-fader"></div>
+    </div>
+    <!-- end /components/search-title/-->
   </body>
 </html>

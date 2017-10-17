@@ -42,9 +42,9 @@ header.b-header
       
       a( href="/" ).b-header__logo
         img( src="/template/images/svg/logo.svg" width="203" height="59" alt="" )
-                            
+      
       menu.b-header-menulist.hidden-xs
-        li
+        li.i-search-hide
           a( href="" )
             span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/basket_menu.svg' );" )
             span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" )
@@ -53,7 +53,7 @@ header.b-header
           //Стрелка ставится если мы находимся внутри раздела
           span.b-header-bottom__arrow
           
-        li.i-active
+        li.i-active.i-search-hide
           a( href="" )
             span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/production_menu.svg' );" )
             span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/production_menu_color.svg' );" )
@@ -62,7 +62,7 @@ header.b-header
           //Стрелка ставится если мы находимся внутри раздела
           span.b-header-bottom__arrow
           
-        li
+        li.i-search-hide
           a( href="" )
             span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/ideas_menu.svg' );" )
             span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" )
@@ -168,19 +168,27 @@ header.b-header
                           span.b-account-icon
                           | Учетная запись
                           
-        span.b-header__search.hidden-xs( style="background-image: url(/template/images/svg/search-icon.svg)" )
+        span.b-header__search.hidden-xs.i-search-hide( style="background-image: url(/template/images/svg/search-icon.svg)" )
                           
-        a.b-header__profile.hidden-sm.hidden-xs( href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" )
+        a.b-header__profile.hidden-sm.hidden-xs.i-search-hide( href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" )
         
-        a.b-header__basket__icon( href="#" data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
+        a.b-header__basket__icon.i-search-hide( href="#" data-toggle='modal', data-target='#cartModal' style="background-image: url(/template/images/svg/cart.svg)" )
           .count_in_cart 121
           
           script
             | var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];
             
+      .b-header-menu__search-wrapper
+        .b-header-menu__search
+          form.form-inline( action="" method="GET" )
+            .form-group
+              label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
+              input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
+              .b-header-menu__search__close
+            
       .b-header__phone.hidden-xs
           
-        span.b-header__phone-num.dropdown
+        span.b-header__phone-num.dropdown.i-search-hide
           span#phoneDropdown.dropdown-toggle.hidden-sm.hidden-xs( data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="" )
             span.b-header__phone-num__text +7 (495) 241-98-28
             span.b-header__phone-num__caret
@@ -212,11 +220,11 @@ header.b-header
                 span (для звонков по РФ)
                 
       .container
-        .b-header-menu__search
-          form.form-inline( action="" method="GET" )
-            .form-group
-              label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
-              input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
+        //-.b-header-menu__search
+            form.form-inline( action="" method="GET" )
+              .form-group
+                label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
+                input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
           
         .b-header-menu__links
           .row
