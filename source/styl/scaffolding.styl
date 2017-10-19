@@ -301,11 +301,16 @@
     
     @media( max-width 991px )
       font-size 10.5pt
+      
+    .li
+      display inline-block
+      width 100%
+      height 100%
+      background embedurl( 'img/header-menulist-sep.gif' ) no-repeat right center
     
     li
       list-style-type none
       display inline-block
-      background embedurl( 'img/header-menulist-sep.gif' ) no-repeat right center
       position relative
       
       &:nth-child(1)
@@ -491,7 +496,7 @@
       position absolute
       top 0
       left 252px
-      height 75px
+      height 68px
       width calc(100% - 252px)
       background-color #fff
       padding-top 20px

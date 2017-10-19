@@ -44,29 +44,32 @@ header.b-header
         img( src="/template/images/svg/logo.svg" width="203" height="59" alt="" )
       
       menu.b-header-menulist.hidden-xs
-        li.i-search-hide
-          a( href="" )
-            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/basket_menu.svg' );" )
-            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" )
-            | Каталог упаковки
-            
+        li
+          span.li.i-search-hide
+            a( href="" )
+              span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/basket_menu.svg' );" )
+              span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" )
+              | Каталог упаковки
+              
+            //Стрелка ставится если мы находимся внутри раздела
+          span.b-header-bottom__arrow
+          
+        li.i-active
+          span.li.i-search-hide
+            a( href="" )
+              span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/production_menu.svg' );" )
+              span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/production_menu_color.svg' );" )
+              | Изготовить на заказ
+              
           //Стрелка ставится если мы находимся внутри раздела
           span.b-header-bottom__arrow
           
-        li.i-active.i-search-hide
-          a( href="" )
-            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/production_menu.svg' );" )
-            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/production_menu_color.svg' );" )
-            | Изготовить на заказ
-            
-          //Стрелка ставится если мы находимся внутри раздела
-          span.b-header-bottom__arrow
-          
-        li.i-search-hide
-          a( href="" )
-            span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/ideas_menu.svg' );" )
-            span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" )
-            | WIKI
+        li
+          span.li.i-search-hide
+            a( href="" )
+              span.b-header-menulist__icon( style="background-image: url( 'template/images/svg/ideas_menu.svg' );" )
+              span.b-header-menulist__icon-active( style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" )
+              | WIKI
           //Стрелка ставится если мы находимся внутри раздела
           span.b-header-bottom__arrow
         
