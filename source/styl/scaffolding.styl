@@ -415,6 +415,7 @@
   visibility hidden
   transition( all 1s ease )
   line-height 1.3 !important
+  padding-bottom 15px
   
   .col-sm-4,
   .col-sm-6
@@ -429,6 +430,7 @@
     @media ( max-width 767px )
       width 278px
       margin 0 auto
+      padding-top 12px
   
   .b-header
     @media ( max-width 767px )
@@ -475,6 +477,11 @@
     
   &__search
   
+    .i-menu-open &
+      border-top 1px solid #f6f6f6
+      border-bottom 1px solid #f6f6f6
+      padding 13px 0
+  
     &__close
       width 22px
       height 22px
@@ -508,17 +515,20 @@
       width 24px
       height 24px
       background url(/template/images/svg/search-icon.svg) no-repeat center center
-      margin 2px 25px 0 0        
+      margin 2px 0 0 0        
       
     .form-control
       width 500px
       display inline-block
+      border none
+      box-shadow none
+      font-size 13.5pt
     
     @media ( max-width 767px )
       
       .b-search-icon
         position absolute
-        top 11px
+        top 8px
         left -30px
         
       .form-group
