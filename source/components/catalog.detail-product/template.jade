@@ -1,7 +1,7 @@
 ﻿// start /components/catalog.detail/
 
-link( rel="stylesheet", href="/components/catalog.detail/style.css" )
-script( src="/components/catalog.detail/script.js" )
+link( rel="stylesheet", href="/components/catalog.detail-product/style.css" )
+script( src="/components/catalog.detail-product/script.js" )
 
 
 
@@ -31,31 +31,19 @@ script( src="/components/catalog.detail/script.js" )
                 span.text-muted Артикул:
                 | 
                 | UT533
-              .col-xs-6.text-right
-                include ../../modules/fav-icon/include
-                //-include ../../modules/compare-icon/include
+            - for (var p=0; p<7; p++)
+              .row
+                .col-xs-6 Параметр #{p}:
+                .col-xs-6
+                  span.text-muted Значение #{p}
             
             hr.i-size-S
             
             .text-small
               p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
             
-            hr.i-size-S
-            
-            .action-block.text-center
-            
               
-              span.price-val от 15,40 руб
-              
-              meta( itemprop="lowPrice" content="7150.00")
-              meta( itemprop="priceCurrency" content="RUB")
-              link( itemprop="availability" href="http://schema.org/InStock")
-              
-              a.btn.btn-type-2.btn-md(href="#offersItems-block" id="offersItems-link") Выбрать размер
-              
-              hr.i-size-XS
-              
-              a.ajax-link(href="javascript:void(0)" data-toggle="modal" data-target="#callMe") Заказать изготовление
+        
           
         .row( id="offersItems-block")
           .h3 Размеры в наличии
