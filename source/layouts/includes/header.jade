@@ -186,7 +186,7 @@ header.b-header
           form.form-inline( action="" method="GET" )
             .form-group
               label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
-              input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
+              input#title-search-input.form-control( type="search" placeholder="Поиск по сайту antech.ru" value="" )
               .b-header-menu__search__close
             
       .b-header__phone.hidden-xs
@@ -216,18 +216,8 @@ header.b-header
               a( href="/" ).b-header__logo
                 img.hidden-xs( src="/template/images/svg/logo.svg" width="155" height="69" alt="" )
                 img.visible-xs-inline-block( src="/template/images/svg/logo.svg" width="203" height="57" alt="" )
-          
-            .col-sm-6
-              .b-header__phone 8 800 555-55-70
-                | 
-                span (для звонков по РФ)
                 
       .container
-        //-.b-header-menu__search
-            form.form-inline( action="" method="GET" )
-              .form-group
-                label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
-                input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
           
         .b-header-menu__links
           .row
@@ -371,6 +361,12 @@ header.b-header
                   a( href="") История заказов
                 li
                   a( href="") Учетная запись
+                  
+        .b-header-menu__search
+          form.form-inline( action="" method="GET" )
+            .form-group
+              label.b-search-icon( for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" )
+              input#title-search-input.form-control( type="search" placeholder="Поиск..." value="" )
   
     .b-top-panel.hidden-xs
       .container
