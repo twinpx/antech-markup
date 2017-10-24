@@ -209,8 +209,7 @@
     @media (max-width: 767px)
       display block
       width 158px
-      margin-right auto
-      margin-left auto
+      margin-left 52px
       float none
       line-height 60px
   
@@ -409,7 +408,7 @@
   width 100%
   height 100vh
   background rgba( 255, 255, 255, 0.98 )
-  font-size 13pt
+  font-size 10.5pt
   z-index 10
   opacity 0
   visibility hidden
@@ -429,13 +428,12 @@
   &__links
     @media ( max-width 767px )
       width 278px
-      margin 0 auto
+      margin-left 52px
       padding-top 12px
   
   .b-header
     @media ( max-width 767px )
       height auto
-      padding-bottom 13px
       
       &__logo
         vertical-align bottom
@@ -473,14 +471,15 @@
       margin-right 22px
     
   h4
-    margin 0 0 20px
+    margin 0 0 13px
+    font-size 10.5pt
     
   &__search
   
     .i-menu-open &
       border-top 1px solid #f6f6f6
       border-bottom 1px solid #f6f6f6
-      padding 13px 0
+      padding 8px 0 6px
   
     &__close
       width 22px
@@ -515,7 +514,7 @@
       width 24px
       height 24px
       background url(/template/images/svg/search-icon.svg) no-repeat center center
-      margin 2px 0 0 0        
+      margin 2px 0 0 0
       
     .form-control
       width 500px
@@ -528,16 +527,19 @@
       
       .b-search-icon
         position absolute
-        top 8px
+        top 4px
         left -30px
+        width 22px
+        height 22px
         
       .form-group
         width 278px
-        margin 0 auto
+        margin 0 0 0 40px
         position relative
         
       .form-control
         width 278px
+        font-size 10pt
       
   ul
     margin 0 0 48px
@@ -545,10 +547,10 @@
     list-style-type none
     
     @media ( max-width 767px )
-      margin-bottom 25px
+      margin-bottom 15px
     
     ul
-      font-size 12pt
+      font-size 10.5pt
       margin-left 26px
       margin-bottom 0
       padding-top 18px
