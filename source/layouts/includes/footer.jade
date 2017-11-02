@@ -23,8 +23,15 @@
     
   .container
     include ../../include/footer_menu
-      
+  
+  hr.i-size-XS
   .container
-    .b-copyright &copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки
+    .rov
+      .col-sm-6(style="margin-left: -15px;").text-center-xs
+        span Варианты оплаты:
+        img( src="/img/payment_icons/visa-xs.png" style="margin-left: 10px;")
+        img( src="/img/payment_icons/mastercard-xs.png" style="margin-left: 10px;")
+      .col-sm-6
+        .b-copyright(style="margin-top: 10px;") &copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки
     
 include ../../components/search-title/template
