@@ -1,0 +1,92 @@
+@import '../../styl/component-include.styl'
+.index-baner-1
+  position relative
+  
+  .item
+    height 360px
+    margin 0
+    
+    &-slide-2
+      padding 50px 0 80px
+      background-position center center
+      background-size cover
+      background-repeat no-repeat
+      text-align center
+    
+      .bn-h1,
+      .bn-text
+        color #fff
+        margin 0 0 25px
+    
+    &-slide-1
+      background-position right bottom
+      background-size contain
+      background-repeat no-repeat
+      background-color #b1c5cc
+      background-image url(/upload/banner/baner_anton.jpg)
+      padding 50px 50% 50px 60px
+      
+      .bn-text
+        font-weight 300
+      
+      @media (max-width: 1200px)
+        &
+          padding 30px 50% 30px 60px
+          background-position 120% bottom
+      
+      @media (max-width: 991px)
+        &
+          padding 30px 40% 30px 50px
+          background-size auto 80%
+            
+      @media (max-width: 768px)
+        &
+          text-align center
+          background-image url(/upload/banner/baner_anton-mob.jpg)
+          background-position center bottom
+          background-size 100% auto
+          padding 20px
+        
+        .white-plashka
+          background-color rgba(255, 255, 250, 0.8)
+          padding 10px 30px 20px
+          height 320px
+          
+    &-slide-3
+      margin 0
+      position relative
+      background-image url(/upload/banner/ny18_bg1.jpg)
+      background-position right bottom
+      background-size cover
+      background-repeat no-repeat
+      
+      .baner-content
+        padding 50px 80px
+        
+        
+        @media (max-width: 768px)
+          &
+            padding 20px 40px
+        
+      
+      .header-text
+        width 180px
+        height 84px
+      
+      .text-first
+        color $c-white
+        margin 20px 0
+        font-size 24px
+        font-weight 400
+        
+        @media (max-width: 1200px)
+          &
+            background-color rgba(0, 0, 0, 0.6)
+            text-shadow 0 0 3px #000 
+            padding 10px
+        
+        @media (max-width: 768px)
+          &
+            font-size 20px
+      .btn
+        color $c-black
