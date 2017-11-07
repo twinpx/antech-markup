@@ -1,0 +1,81 @@
+﻿// start /components/catalog.section/
+
+link( rel="stylesheet", href="/components/catalog.section/style.css" )
+script( src="/components/catalog.section/script.js" )
+
+include ../../modules/gallery/fotorama
+
+.container( itemscope itemtype="http://schema.org/Product" )
+  .row
+    .col-md-3
+      .hidden-sm.hidden-xs
+        include ../../modules/left-menu/include
+        include ../../components/catalog.sections-left-menu/template
+        
+    .col-md-9
+      .a-catalog-section
+        h1.h2( itemprop="name") Купить упаковку для промышленного оборудования
+        
+        .row.first-line
+          .col-sm-6
+            .fotorama-catalog-section( data-nav="dots" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
+              img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
+      
+          .col-sm-6.description-block
+            p Здесь собраны конструкции оптимально подходящие под (+ ЧПУ фильтр). (текст 500 знаков). Описываем причины по которым отобраны эти конструкции. Здесь собраны конструкции оптимально подходящие под (+ ЧПУ фильтр). (текст 500 знаков). Описываем причины по которым отобраны эти конструкции. Здесь собраны конструкции оптимально подходящие под (+ ЧПУ фильтр). (текст 500 знаков). Описываем причины по которым отобраны эти конструкции.
+            
+            .action-block.text-center
+              a.btn.btn-type-2(href="javascript:void(0)" data-toggle="modal" data-target="#callMe") Разработать индивидуальную конструкцию
+        
+        
+        // важно выводить количество блоков кратное 6. Тогда на планшете и десктопе блоки выстраиваются в ряды без пробелов.
+        
+        hr.i-size-S
+        hr.gray
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Картонные коробки
+              span.h-counter 1270
+          
+          include item_grid
+          //-include item_list
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Гофроупаковка
+              span.h-counter 1270
+          
+          include item_grid
+        
+        .cat-section
+          .h2-line
+            img.h2-icon(src="/img/svg/gotovaya_ico.svg")
+            h2 Упаковочные материалы
+              span.h-counter 1270
+          
+          include item_grid
+                               
+        
+        div
+          hr.i-size-S
+          hr.gray
+          hr.i-size-S.hidden-xs
+          hr.i-size-XS.visible-xs
+          include ../../include/advantages_catalog
+          hr.i-size-S.hidden-xs
+          hr.i-size-XS.visible-xs
+          hr.gray
+        
+        // include file add text start
+        .section
+          include ../../include/addtextfile
+        hr.gray
+        // include file add text end
+
+// end /components/catalog.section/

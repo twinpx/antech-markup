@@ -19,26 +19,14 @@ script( src="/components/catalog.detail/script.js" )
         h1.h2( itemprop="name" ) Четырехклапанная коробка 550х350х350
         .row.first-line
           .col-sm-6
-            .fotorama-catalog-multicard( data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" )
+            .fotorama-catalog-multicard( data-nav="dots" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" )
               img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
               img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
               img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
               img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
       
           .col-sm-6.description-block
-            .row
-              .col-xs-6
-                span.text-muted Артикул:
-                | 
-                | UT533
-              .col-xs-6.text-right
-                include ../../modules/fav-icon/include
-                //-include ../../modules/compare-icon/include
-            
-            hr.i-size-S
-            
-            .text-small
-              p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
+            p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
             
             hr.i-size-S
             
@@ -55,7 +43,7 @@ script( src="/components/catalog.detail/script.js" )
               
               hr.i-size-XS
               
-              a.ajax-link(href="javascript:void(0)" data-toggle="modal" data-target="#callMe") Заказать изготовление
+              a.ajax-link(href="#offersForm-block" id="offersForm-link") Заказать изготовление
           
         .row( id="offersItems-block")
           .h3 Размеры в наличии
