@@ -1,0 +1,54 @@
+// start /components/construct/
+
+link( href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet" )
+script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
+
+link( rel="stylesheet", href="/components/construct/style.css" )
+script( src="/components/construct/script.js" )
+
+
+
+
+.a-construct
+
+  .section
+    .row.first-line
+      .col-md-1.col-sm-1.col-xs-2
+        img.h-icon(src="/upload/fefco/fefco_morda_1.svg")
+      .col-md-8.col-sm-11.col-xs-10
+        h1.h3 0200 - Коробка четырехклапанная со стыкующимися внешними клапанами
+      .col-md-3.hidden-sm.hidden-xs
+        a.btn.btn-type-3 Скачать каталог FEFCO
+  hr.gray
+  .section
+    .row
+      .col-md-7
+        
+        .fotorama( data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" )
+          img( src="http://s.fotorama.io/1.jpg" )
+          img( src="http://s.fotorama.io/2.jpg" )
+          img( src="http://s.fotorama.io/3.jpg" )
+          img( src="http://s.fotorama.io/4.jpg" )
+          img( src="http://s.fotorama.io/1.jpg" )
+          img( src="http://s.fotorama.io/2.jpg" )
+          img( src="http://s.fotorama.io/3.jpg" )
+          img( src="http://s.fotorama.io/4.jpg" )
+      
+      .col-md-5
+        p 
+          b Art&nbsp;0200
+        p Описание конструкции и для чего может применяться данная конструкция.
+        p lotted-type boxes или высеченные коробки. Высеченные (высечные) коробки изготавливаются (высекаются) из одного листа гофрокартона, и склеиваются клеем или клейкой лентой, или прошиваются металлическими скобами по боковому, соединительному клапану.
+        p.text-small Цена от&nbsp;
+          b 40,56
+          | &nbsp;руб.
+        div
+          a.btn.btn-default.scrollto(href="" data-scrollto="#callback-block") Заказать изготовление
+  hr.gray
+  .section
+    .h3 Размеры в наличии
+    
+    include ../../components/catalog.offers-list/template
+
+
+// end /components/construct/

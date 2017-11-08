@@ -1,0 +1,36 @@
+﻿// start /components/construct/
+
+link( rel="stylesheet", href="/components/construction/style.css" )
+script( src="/components/construction/script.js" )
+
+.a-construct
+  .section
+    h1 Каталог конструкций FEFCO&nbsp;
+      span.h-counter 1270
+      
+  // construct item greed start
+  .row.card-grid
+    
+    - for(i=0; i<5; i++)
+      .col-md-4.col-sm-6
+        include card
+      
+  // construct item greed end
+  
+  div
+    hr.i-size-S
+    hr.gray
+    hr.i-size-S.hidden-xs
+    hr.i-size-XS.visible-xs
+    include ../../include/advantages_catalog
+    hr.i-size-S.hidden-xs
+    hr.i-size-XS.visible-xs
+  
+  // include file add text start
+  hr.gray
+  .section
+    include addtextfile
+  hr.gray
+  // include file add text end
+
+// end /components/construct/

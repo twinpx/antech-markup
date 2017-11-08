@@ -1,0 +1,36 @@
+﻿extends ../../layouts/main.jade
+
+block title
+  title Каталог конструкций | Antech
+
+block content 
+  .b-top-panel
+    .container
+      -var header = "Каталог конструкций"
+      include ../../modules/top-header/include
+      include ../../modules/top-menu/include
+      
+  // breadcrumb & menu start
+  .container
+    include ../../modules/breadcrumbs/portfolio
+  // breadcrumb & menu end
+    
+  
+  .container
+    .row
+      .col-md-3
+        .hidden-sm.hidden-xs
+          include ../../modules/left-menu/include
+      .col-md-9
+        include ../../components/construction/template
+        
+        include ../../include/serv_puth_proizvodstvo
+        hr.i-size-S
+    
+        
+  
+  include ../../include/garantii
+  
+  include ../../modules/call-me-block/include
+    
+    
