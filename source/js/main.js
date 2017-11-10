@@ -233,7 +233,9 @@ $('.lazyload').lazyload({
 });
 
 
-
+if($('[data-toggle="popover"]').length > 0 && typeof popover == 'function'){
+  $('[data-toggle="popover"]').popover();
+}
 
 
 

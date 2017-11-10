@@ -1,10 +1,8 @@
 
-  $('[data-toggle="popover"]').popover();
+  
 
 
-  });
-
-}( jQuery ));
+});
 /*
 
 
@@ -12,6 +10,9 @@
     alert('hi!')
   });
 */
+
+
+
 
 var tag = document.createElement('script');
 

@@ -8,31 +8,55 @@ script( src="/components/catalog.sections-left-menu/script.js" )
     .link По применению
       span.line-counter &nbsp;(15)
       .togleChildrenBloc
-    .collapse.cildterblock.in
-      ul.children
+    .cildterblock(id="catalog_chpu_list")
+      
+      input.search.form-control( placeholder="Найти" )
+      
+      ul.children.itemList.list
         li
-          a( href="" ) Примененеие ....
+          a( href="" ).name Для овощей
             span.line-counter &nbsp;(15)
         li
-          a( href="" ) Примененеие ....
+          a( href="" ).name Для переезда
             span.line-counter &nbsp;(15)
         li
-          a( href="" ) Примененеие ....
-            span.line-counter &nbsp;(15)
-      ul#filterCildBlock-1.children.collapse.sideMenuCollapse
-        li
-          a( href="" ) Примененеие ....
+          a( href="" ).name Примененеие ....
             span.line-counter &nbsp;(15)
         li
-          a( href="" ) Примененеие ....
+          a( href="" ).name Для хранения
             span.line-counter &nbsp;(15)
         li
-          a( href="" ) Примененеие ....
+          a( href="" ).name Для дома
             span.line-counter &nbsp;(15)
-      ul.children.showMoreLink
         li
-          a( href="javascript:void()" data-toggle="collapse" data-target="#filterCildBlock-1" aria-expanded="false" aria-controls="menuCildBlock-1") Еще&nbsp;
+          a( href="" ).name Для гаража
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Для еще чео нибудь
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+        li
+          a( href="" ).name Примененеие ....
+            span.line-counter &nbsp;(15)
+      ul.children.showMoreLink(style="display: none;")
+        li
+          a( href="javascript:void(0)") Еще&nbsp;
             span.glyphicon.glyphicon-menu-down
+            
   .root-item.is-root.opened-children
     .link По функционалу
       span.line-counter &nbsp;(15)
@@ -48,5 +72,7 @@ script( src="/components/catalog.sections-left-menu/script.js" )
         li
           a( href="" ) С печатью
             span.line-counter &nbsp;(15)
+  
+
     
 // end /components/catalog.sections-left-menu-filter/
