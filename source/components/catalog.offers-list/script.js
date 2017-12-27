@@ -10,12 +10,22 @@ $(function(){
   $('form.offers_item_add2cart').submit(function(){
     var form = $(this),
     addPrint = $('.add-pring-chb', form),
-    addPrintVal = addPrint.prop('checked');
+    addPrintVal = addPrint.prop('checked'),
+    qinput = $('.add-to-cart-input-quantity', form);
+    
+    if(Number(qinput.val()) < Number(qinput.data("inputstep"))){
+      qinput.val(qinput.data("inputstep"));
+    }
+    
+//     console.log(form.serialize(), form.attr('action'));
+    
+    
     $.ajax({
-      url: form.attr('actions'),
+      url: form.attr('action'),
       method: 'POST',
       data: form.serialize(),
       success: function(data){
+        
 //         alert(data.STATUS)
         if(data.STATUS == 'Y'){
           $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('in-cart-update').removeClass('preorder').html('Добавлено<br>к заказу');
@@ -28,18 +38,8 @@ $(function(){
           else
             addPrint.data('defaultval', 'N');
           
+          refrashModalCart(data);
           
-          if ( data.DATA.COUNT > 0 ) {
-//             $( '#cartModalButton' ).css({ visibility: "visible" });
-//             $( '#cartModalCount' ).text( data.DATA.COUNT );
-//             $( '#cartModalPrice' ).text( data.DATA.TOTAL_PRICE );
-//             $( '#cartModalNoProducts' ).hide();
-//             $( '#cartModalHasProducts' ).text( store(data.DATA.COUNT) + ' \u043D\u0430 \u0441\u0443\u043C\u043C\u0443' );
-            $( '.count_in_cart' ).show().text( data.DATA.COUNT );
-          } else {
-            $( '.count_in_cart' ).hide().text( data.DATA.COUNT );
-          }
-//           alert(data.DATA.COUNT)
         }
         else if(data.STATUS == 'E'){
           alert(data.MESSAGE)
@@ -228,3 +228,19 @@ $(function(){
   });
   
 });
+
+
+
+function refrashModalCart(data){
+  if ( data.DATA.COUNT > 0 ) {
+    $( '#inCartIndicator' ).show().text( data.DATA.COUNT );
+    
+    $( '#cartModalButton' ).css({ visibility: "visible" });
+    $( '#cartModalCount' ).text( data.DATA.COUNT );
+    $( '#cartModalPrice' ).text( data.DATA.TOTAL_PRICE );
+    $( '#cartModalNoProducts' ).hide();
+//     $( '#cartModalHasProducts' ).text( store(data.DATA.COUNT) + ' \u043D\u0430 \u0441\u0443\u043C\u043C\u0443' );
+  } else {
+    $( '#inCartIndicator' ).hide().text( data.DATA.COUNT );
+  }
+}

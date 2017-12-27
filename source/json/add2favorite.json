@@ -1,0 +1,14 @@
+﻿{
+    "STATUS": "Y",
+    "MESSAGE": "",
+    "DATA": {
+        "COUNT": 77,
+        "ITEMS": [{
+            "PRODUCT_ID": "22361",
+            "QUANTITY": "20.00",
+            "PRICE": "23.8800"
+        }],
+        "ALL_PRICE": 477.6,
+        "TOTAL_PRICE": "477,60 \u0440\u0443\u0431."
+    }
+}

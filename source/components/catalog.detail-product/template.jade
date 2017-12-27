@@ -4,6 +4,8 @@ link( rel="stylesheet", href="/components/catalog.detail-product/style.css" )
 script( src="/components/catalog.detail-product/script.js" )
 
 
+script( src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+script( src="//yastatic.net/share2/share.js")
 
 
 .container
@@ -15,44 +17,236 @@ script( src="/components/catalog.detail-product/script.js" )
         
     .col-md-9
 
-      .a-catalog-detail( itemscope itemtype="http://schema.org/Product" )
-        h1.h2( itemprop="name" ) Четырехклапанная коробка 550х350х350
-        .row.first-line
-          .col-sm-6
-            .fotorama-catalog-multicard( data-nav="thumbs" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="102" data-thumbheight="66" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
-      
-          .col-sm-6.description-block
-            .row
-              .col-xs-6
-                span.text-muted Артикул:
-                | 
-                | UT533
-            - for (var p=0; p<7; p++)
+      .a-catalog-product( itemscope itemtype="http://schema.org/Product" )
+        form.offers_item_add2cart(name="add_to_cart_offers_id_0012" method="POST" actions="/json/add2cart.json")
+          .row.a-catalog-product-head.helvetica-font
+            .col-sm-8
+              h1( itemprop="name" ) Четырехклапанная коробка 550х350х350 мм, Т-24 бурый
+            
+            hr.i-size-XS.visible-xs
+            
+            .col-sm-4
+              select.form-control(name="OTHER_PRODUCTS" id="product_select")
+                option(value="") выбрать другой вариант
+                option(value="/url_1/") Размер 1
+                option(value="/url_2/") Размер 2
+                option(value="/url_3/") Размер 3
+                
+            
+          .row.first-line
+            .col-sm-6.relative
+              .fotorama-catalog-multicard( data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" data-thumbwidth="80" data-thumbheight="80" )
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/1.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/1.jpg" alt="")
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/2.jpg")
+                  .fotorama_item-content
+                    .embed-responsive.embed-responsive-16by9
+                      iframe.embed-responsive-item( src="https://www.youtube.com/embed/kZJnWg6Ma8g" frameborder="0" allowfullscreen)
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/3.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/3.jpg" alt="")
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/4.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/4.jpg" alt="")
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/5.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/5.jpg" alt="")
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/1.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/1.jpg" alt="")
+                
+                .fotorama_item( data-thumb="http://s.fotorama.io/2.jpg")
+                  .fotorama_item-content
+                    img.img-responsive( src="http://s.fotorama.io/2.jpg" alt="")
+                
+              .icon-bar
+                .left-bar
+                  span.bar-icons.icon-sales
+                  span.bar-icons.icon-new
+                  span.bar-icons.icon-hit
+                .right-bar
+                  a(href="javascript:void(0)" id="add2favorites").bar-icons.icon-favorites
+                    span.icon-hover
+                  a(href="javascript:void(0)" id="add2compare").bar-icons.icon-compare
+                    span.icon-hover
+        
+            .col-sm-6.price-colum
+              .row.helvetica-font
+                .col-xs-4.text-small Art.&nbsp;UT533
+                .col-xs-8.text-right
+                  span.icon-star.selected
+                  span.icon-star.selected
+                  span.icon-star.selected
+                  span.icon-star
+                  span.icon-star
+                  span &emsp;
+                  i
+                    a(href="javascript:void(0)").text-small.reviewslink Отзывы (27)
+              .row.helvetica-font
+                .order-price-default.price-range-block
+                  .col-xs-4.price-range-item.price-range-item-1.selected(data-setquantity="10")
+                    .price-range-name до&nbsp;499&nbsp;шт.
+                    .price-range-value
+                      b 2&nbsp;741,90&nbsp;
+                      span.rub.hidden-xs руб.
+                      span.rub.visivle-xs р.
+                  .col-xs-4.price-range-item.price-range-item-2(data-setquantity="500")
+                    .price-range-name до&nbsp;999&nbsp;шт.
+                    .price-range-value
+                      b 2&nbsp;741,90&nbsp;
+                      span.rub.hidden-xs руб.
+                      span.rub.visivle-xs р.
+                  .col-xs-4.price-range-item.price-range-item-3(data-setquantity="1000")
+                    .price-range-name >1000&nbsp;шт.
+                    .price-range-value
+                      b 2&nbsp;741,90&nbsp;
+                      span.rub.hidden-xs руб.
+                      span.rub.visivle-xs р.
+                    .price-range-value-old 1&nbsp;234,56&nbsp;руб.
+                
+                .order-price-print.hidden Цена будет рассчитана после оформления предзаказа
+                
               .row
-                .col-xs-6 Параметр #{p}:
-                .col-xs-6
-                  span.text-muted Значение #{p}
-            
-            hr.i-size-S
-            
-            .text-small
-              p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
-            
+                .col-xs-12
+                  label
+                    input.add-pring-chb( type="checkbox" name="ADD_PRINT" data-defaultval="N")
+                    | &nbsp;
+                    span.text-small Нанесение печати
+                  span.icon-info-gray.popover_teaser( data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на готовые коробки." )
               
-        
+              .row
+                .col-xs-5
+                  .add-quantity-info Кратно: 10
+                    span.hidden-xs &nbsp;шт.
+                
+                .col-xs-7.text-small.text-right
+                  span.param-name В&nbsp;наличии:&nbsp;
+                  span.param-val 1005&nbsp;шт.
+                
+                .clearfix
+                
+                .col-xs-6.input-quantity-block
+                  input.form-control.add-to-cart-input-quantity(name="quantity" size="4" data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="Товар продается кратно 20 шт." type="text" data-inputtype="number" data-inputstep="20" data-inputmin="" data-inputmax="" value="" data-oncart="" data-freequantity="100" data-quantityrangeone="1" data-quantityrangetwo="500" data-quantityrangetre="1000" placeholder="по 10 шт")
+                  span.measure.hidden-xs шт.
+                
+                  
+                .col-xs-6
+                  button(name="submit" type="submit" value="Y" ).btn.add-to-order-btn.mode-cart Добавить<br>к&nbsp;заказу
+                
+                .col-xs-12
+                  hr.i-size-XS
+                
+                .col-xs-12.text-right.text-center-xs
+                  a(href="javascript:void(0)" id="buy1click") Купить в 1 клик
+              
+              hr.i-size-XS.visible-xs
+              
+              .row.order-individual-block
+                .col-xs-12.text-center-xs.order-individual-block-flex
+                  a.btn.btn-type-6.btn-md(href="javascript:void(0)" id="btn2ordercustom-link") 
+                    span Заказать 
+                    span.hidden-xs конструкцию 
+                    span по своим размерам
+                
+                .col-xs-12.visible-xs
+                  hr.i-size-XS
+                
+                .col-xs-12.text-right.text-center-xs.sharebtn-line
+                  .ya-share2( data-services="vkontakte,facebook,odnoklassniki,gplus")
+                
+                
+                  
+                    
+          .row.second-line(id="secondline-block")
+            ul.nav.nav-pills(role="tablist")
+              li.active( role="presentation")
+                a( href="#features" aria-controls="features" role="tab" data-toggle="tab") ХАРАКТЕРИСТИКИ
+              li( role="presentation")
+                a( href="#video" aria-controls="video" role="tab" data-toggle="tab") ВИДЕО&nbsp;
+                  span.text-muted.text-middle (2)
+              li( role="presentation")
+                a( href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab") ОТЗЫВЫ&nbsp;
+                  span.text-muted.text-middle (19)
+            
+              li.icon-tab.icon-return( role="presentation")
+                a( href="#warranty" aria-controls="warranty" role="tab" data-toggle="tab") Возврат
+              li.icon-tab.icon-payment( role="presentation")
+                a( href="#payment" aria-controls="payment" role="tab" data-toggle="tab") Оплата
+              li.icon-tab.icon-delivery( role="presentation")
+                a( href="#delivery" aria-controls="delivery" role="tab" data-toggle="tab") Доставка
+            
+            
+            .tab-content
+              .tab-pane.active( role="tabpanel" id="features")
+                .row
+                  - for (var p=0; p<9; p++)
+                    .col-sm-6
+                      .row
+                        .col-xs-6
+                          span.text-muted Параметр #{p}:
+                        .col-xs-6 Значение #{p}
+                  
+                  .col-sm-9
+                    .h4 Описание
+                    
+                    .desctiption-content( itemprop="description" ) 
+                      p Как собирать, как заклеивать, какие инструкменты и дополнительные материалы применяются для сборки
+                      p Как учитывать рмзмеры
+                      p Различные способы фиксации предметов внутри упаковки
+                      p Размеры упаковочных коробок выбираются с точки зрения рациональной затарки и оптимизации расходов на погрузку, транспортировку, хранение. 
+                      p При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. 
+                      p Базовые параметры и критерии при производстве на заказ:
+                      p При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. 
+                  
+                  .col-sm-3
+                    .download-files
+                      .h4 Скачать инструкцию по сборке:
+                      a(href="") 
+                      
+              .tab-pane( role="tabpanel" id="video")
+                .embed-responsive.embed-responsive-16by9
+                  iframe.embed-responsive-item( src="https://www.youtube.com/embed/kZJnWg6Ma8g" frameborder="0" allowfullscreen)
+                
+              .tab-pane( role="tabpanel" id="reviews")
+                span отзывы
+                
+              .tab-pane( role="tabpanel" id="delivery")
+                span доставка
+              
+              .tab-pane( role="tabpanel" id="payment")
+                span варианты оплаты
+                
+              .tab-pane( role="tabpanel" id="warranty")
+                span Возврат и гарантии
+      
+      .section
+        include ../../include/advantages_catalog_new
           
-        .row( id="offersItems-block")
-          .h3 Размеры в наличии
-          include ../../components/catalog.offers-list/template
+          
+        //-.row( id="offersItems-block")
+        //-  .h3 Размеры в наличии
+        //-  include ../../components/catalog.offers-list/template
         
-          //-.h3 Зказать упаковку по своим размерам
-          //-include ../../components/request-form-individual-boxes/template
+        //-.h3 Зказать упаковку по своим размерам
+        //-include ../../components/request-form-individual-boxes/template
         
-        
+      .row.line_yellow
+        .h3 Закажите эту конструкцию по своим размерам!
+      
+      .bg-white(id="btn2ordercustom-block")
+        include ../../components/iblock-element-add.new_order_position/template
+      
+      
+      .row.bg-white
+        .h3 Рекомендуемые товары
+        include ../../components/catalog.gallery-add/template
 
 
 // end /components/catalog.detail/

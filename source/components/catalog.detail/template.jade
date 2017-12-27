@@ -6,51 +6,48 @@ script( src="/components/catalog.detail/script.js" )
 
 
 
-.container
-  .row
-    .col-md-3
-      .hidden-sm.hidden-xs
-        include ../../modules/left-menu/include
-        include ../../components/catalog.sections-left-menu/template
-        
-    .col-md-9
-
-      .a-catalog-detail( itemscope itemtype="http://schema.org/Product" )
-        h1.h2( itemprop="name" ) Четырехклапанная коробка 550х350х350
-        .row.first-line
-          .col-sm-6
-            .fotorama-catalog-multicard( data-nav="dots" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
-              img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
+.row
+  .col-md-3
+    .hidden-sm.hidden-xs
+      include ../../modules/left-menu/include
+      include ../../components/catalog.sections-left-menu/template
       
-          .col-sm-6.description-block
-            p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
-            
-            hr.i-size-S
-            
-            .action-block.text-center
-            
-              
-              span.price-val от 15,40 руб
-              
-              meta( itemprop="lowPrice" content="7150.00")
-              meta( itemprop="priceCurrency" content="RUB")
-              link( itemprop="availability" href="http://schema.org/InStock")
-              
-              a.btn.btn-type-2.btn-md(href="#offersItems-block" id="offersItems-link") Выбрать размер
-              
-              hr.i-size-XS
-              
-              a.ajax-link(href="#offersForm-block" id="offersForm-link") Заказать изготовление
+  .col-md-9
+
+    .a-catalog-detail( itemscope itemtype="http://schema.org/Product" )
+      h1.h2( itemprop="name" ) Четырехклапанная коробка 550х350х350
+      .row.first-line
+        .col-sm-6
+          .fotorama-catalog-multicard( data-nav="dots" data-allowfullscreen="native" data-ratio="1" data-width="100%" data-loop="true" )
+            img.multicardImage( itemprop="image" src="http://s.fotorama.io/1.jpg" )
+            img.multicardImage( itemprop="image" src="http://s.fotorama.io/2.jpg" )
+            img.multicardImage( itemprop="image" src="http://s.fotorama.io/3.jpg" )
+            img.multicardImage( itemprop="image" src="http://s.fotorama.io/4.jpg" )
+    
+        .col-sm-6.description-block
+          p( itemprop="description" ) Картонная коробка продуктовая, гофрокартон бурый трехслойный, Т-24 В, (упаковка 10 шт) (Внешние размеры).
           
-        .row( id="offersItems-block")
-          .h3 Размеры в наличии
-          include ../../components/catalog.offers-list/template
+          hr.i-size-S
+          
+          .action-block.text-center
+          
+            
+            span.price-val от 15,40 руб
+            
+            meta( itemprop="lowPrice" content="7150.00")
+            meta( itemprop="priceCurrency" content="RUB")
+            link( itemprop="availability" href="http://schema.org/InStock")
+            
+            a.btn.btn-type-2.btn-md(href="#offersItems-block" id="offersItems-link") Выбрать размер
+            
+            hr.i-size-XS
+            
+            a.ajax-link(href="#offersForm-block" id="offersForm-link") Заказать изготовление
         
-          //-.h3 Зказать упаковку по своим размерам
-          //-include ../../components/request-form-individual-boxes/template
+      include ../../components/catalog.offers-list-2/template
+      
+        //-.h3 Зказать упаковку по своим размерам
+        //-include ../../components/request-form-individual-boxes/template
         
         
 

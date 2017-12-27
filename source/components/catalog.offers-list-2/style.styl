@@ -1,0 +1,472 @@
+@import '../../styl/component-include.styl'
+  .offers-block-title
+    @media (max-width: 768px)
+      font-size 20px
+    
+  .offers-block
+    font-size 13px
+    font-family 'Arial', 'Open Sans', sans !important;
+    
+    .help_icon_round
+      display block
+      border 1px solid
+      border-radius 2em
+      width 1.2em
+      line-height 1.2em
+      height 1.2em
+      text-align center
+      margin auto
+      
+      
+    
+    .offers-item
+      border-top 2px solid $c-white
+      font-family Arial
+      margin 0
+      position relative
+      
+      .name2line
+        color $c-high-gray
+      
+      .item-cell
+        padding 10px
+      
+    
+    .sales-icon
+      width 18px
+      height 18px
+      margin-right 5px
+    
+    
+    .quantity-select-indikator
+      position absolute
+      width 33%
+      bottom 0
+      height 5px
+      background $c-ultramarine
+      z-index 10
+      display none
+      
+    .item-cell-price-td.in
+      .quantity-select-indikator
+        display block
+    
+    .mode-standart
+      .order-price
+        display none
+      
+      .standart-price
+        display table
+        width 100%
+    
+    .mode-order
+      .order-price
+        display block
+      
+      .standart-price
+        display none
+        
+      .item-cell-price-td.in
+        .quantity-select-indikator
+          display none
+    
+    .popover_preview_image
+      color $c-high-gray
+      text-decoration none
+      font-size 16px
+      line-height 16px
+      display inline-block
+      width 18px
+      height 18px
+      margin 0
+      top: 4px
+      
+      &:hover
+        color $c-high-gray
+        text-decoration none
+    
+    @media (max-width: 768px)
+      font-size 14px
+      
+      .offers-header
+        display none
+      
+      .panel-offers
+        border-radius 0
+        background-color $c-gray-xxs
+        border none
+        border-top 2px solid $c-white
+        margin-bottom 0
+        
+        .panel-heading
+          border none
+          border-radius none
+          border-top-left-radius none
+          border-top-right-radius none
+          font-size 12px
+          position relative
+          padding 0
+          
+          
+          
+          a
+            color $c-black
+            text-decoration none
+            display block
+            padding 15px
+          
+            .glyphicon
+              position absolute
+              right 5px
+              width 20px
+              height 20px
+              top calc(50% - 6px)
+              color $light-grey
+          
+            &.collapsed
+              .glyphicon-chevron-up
+                display none
+              .glyphicon-chevron-down
+                display block
+            
+            
+            .glyphicon-chevron-up
+              display block
+            .glyphicon-chevron-down
+              display none
+        
+      .panel-collapse
+        border 2px solid $c-gray-xxs
+      
+      
+      .item-cell
+        display table
+        width 100%
+        
+        .sales-icon
+          display none
+        
+        .popover_preview_image
+          display none
+        
+      
+      .item-cell-name,
+      .item-cell-val
+        display table-cell
+        padding 5px 0
+      
+      .item-cell-name
+        font-weight 600
+        width 40%
+        
+      .item-cell-val
+        width 60%
+      
+      .item-cell-price
+        display table
+        width 100%
+        position relative
+        
+        .item-cell-name
+          display table-row
+          width 100%
+          
+        .item-cell-row
+          display table
+          width 100%
+        
+        
+        .item-cell-val,
+          display table-row
+          width 100%
+          
+        
+        .item-cell-price-td
+          display table-cell
+          width 34%
+          padding 3px 5px
+          
+          &:first-of-type
+            padding-left 0
+            
+          &:last-of-type
+            padding-right 0
+        
+        
+        .order-price
+          width 100%
+      
+      
+      .item-cell-print,
+      .item-cell-quantity,
+      .item-cell-button
+        
+        width 25%
+        display inline-table
+        vertical-align middle
+        padding 0 2px
+        
+      .item-cell-print
+        padding-left 0
+          
+      .item-cell-button
+        padding-right 0
+      
+      .item-cell-morelink
+        display block
+        margin 10px 0
+        text-align center
+      
+      .item-cell-size
+        display none
+      
+      .item-cell-material
+        display none
+      
+    
+    @media (min-width: 768px)
+      font-size 12px
+      font-family 'Arial', 'Open Sans', sans !important;
+      
+      .offers-header
+        display block
+        
+      .panel-offers
+        margin-bottom 0
+        
+        .panel-heading
+          display none
+          
+      .panel-collapse
+        display block
+      
+      .panel-body
+        margin 0
+        padding 0
+        display table-row
+        background-color $c-gray-xxs
+      
+      .item-cell,
+      .header-cell
+        display table-cell
+        text-align center
+        padding 5px 2px
+        margin 0
+        vertical-align middle
+        
+      
+      .header-cell
+        border-right 1px solid $c-white
+        font-weight 600
+        
+        &:last-of-type
+          border-right none
+        
+        .text-help
+          color $c-high-gray
+          font-weight 200
+        
+        .text-red
+          color $c-red
+      
+      .item-cell-name
+        display none
+      
+      
+      
+      
+      .item-cell-articul
+        width 63px
+        
+      .item-cell-size
+        width 120px
+      
+      .item-cell-material
+        width 56px
+        
+      .item-cell-price
+        width 205px
+        margin 0
+        padding 0
+        position relative
+        
+        .item-cell-val
+          display table
+          width 100%
+          margin 0
+          padding 0
+          
+          .item-cell-row
+            display table-row
+        
+          .item-cell-price-td
+            display table-cell
+            width 33%
+            padding 5px 2px
+      
+      .item-cell-instock
+        width 58px
+      
+      .item-cell-print
+        width 48px
+      
+      .item-cell-quantity
+        width 70px
+      
+      .item-cell-button
+        width 100px
+      
+      .item-cell-quantity-and-button
+        width 170px
+      
+      .item-cell-morelink
+        display none
+      
+      
+      .mode-standart
+        .order-price
+          display none
+        
+        .standart-price
+          display table
+      
+      .mode-order
+        .order-price
+          display table
+        
+        .standart-price
+          display none
+          
+    
+    @media (min-width: 992px)
+    
+      .item-cell-articul
+        width 62px
+        
+      .item-cell-size
+        width 115px
+      
+      .item-cell-material
+        width 50px
+        
+      .item-cell-price
+        width 200px
+      
+      .item-cell-instock
+        width 55px
+      
+      .item-cell-print
+        width 45px
+      
+      .item-cell-quantity
+        width 70px
+      
+      .item-cell-button
+        width 100px
+      
+      .item-cell-quantity-and-button
+        width 170px
+    
+    
+    @media (min-width: 1200px)
+    
+      .item-cell-articul
+        width 70px
+        
+      .item-cell-size
+        width 145px
+      
+      .item-cell-material
+        width 70px
+        
+      .item-cell-price
+        width 245px
+      
+      .item-cell-instock
+        width 70px
+      
+      .item-cell-print
+        width 60px
+      
+      .item-cell-quantity
+        width 90px
+      
+      .item-cell-button
+        width 100px
+      
+      .item-cell-quantity-and-button
+        width 190px
+      
+    &.mode-preorder
+    
+      @media (min-width: 768px)
+      
+        .item-cell-price
+          width 263px
+      
+      @media (min-width: 992px)
+        .item-cell-price
+          width 255px
+      
+      @media (min-width: 1200px)
+        .item-cell-price
+          width 315px
+      
+    .add-to-cart-cell-vcenter
+      display -webkit-flex
+      display flex
+      align-items center
+      
+    
+    .form-control
+      height 50px
+      padding-left 5px
+    
+      &::-webkit-input-placeholder
+        font-size 10px
+        
+      &::-moz-placeholder
+        font-size 10px
+        
+      &:-moz-placeholder
+        font-size 10px
+        
+      &:-ms-input-placeholder
+        font-size 10px
+    
+    
+    .quantity-step-name
+      color $c-high-gray
+    
+    
+    .add-to-order-btn
+      padding 8px 5px
+      padding-left 25px
+      background-position 3px center
+      background-repeat no-repeat
+      background-size 18px 18px
+      line-height 16px
+      font-size 12px
+      width 90px
+      
+      &.mode-cart
+        background-color $c-green
+        background-image url(/img/svg/add2cart_icon1.svg)
+        
+        &:hover
+          background-color darken( $c-green, 5% )
+      
+      &.mode-order
+        background-color $c-yellow
+        background-image url(/img/svg/add2cart_icon2.svg)
+        
+        &:hover
+          background-color darken( $c-yellow, 5% )
+          
+      
+      &.btn-disabled
+        background-image url(/img/svg/add2cart_icon4.svg)
+        
+      &.in-cart-update
+        background-image url(/img/svg/add2cart_icon3.svg)
+      

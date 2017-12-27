@@ -14,13 +14,15 @@ function FloatHint( elem ) {
         self.scrollIntervalId = undefined;
         self.showTimeoutId = undefined;
         self.showTime = 200;
+        self.cookName = 'AJSCOCK_'+$( elem ).prop('id');
+        
     }
     
     function e() {
         f();
         $(window).bind("scroll", g);
         self.$close.click( function() {
-          Cookies.set( 'hintClose', true, { expires: 365, path: window.location.hostname });
+          Cookies.set( self.cookName, true, { expires: 1, path: window.location.hostname });
           i();
         });
     }
@@ -46,7 +48,7 @@ function FloatHint( elem ) {
     }
     
     function h() {
-      if ( !Cookies.get( 'hintClose' )) {
+      if ( !Cookies.get( self.cookName )) {
         self.$elem.addClass("i-visible");
       }
     }
@@ -58,6 +60,6 @@ function FloatHint( elem ) {
     c();
 }
 
-if ( !Cookies.get( 'hintClose' )) {
+if ( !Cookies.get( 'AJSCOCK_b-float-hint' )) {
   new FloatHint("#b-float-hint");
 }

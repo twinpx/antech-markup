@@ -79,3 +79,20 @@ function checkToMultiple(num, multiple) {
    return false;
 }
 
+
+
+/*
+function refrashModalCart(data){
+  
+  if ( data.DATA.COUNT > 0 ) {
+    $( '#cartModalButton' ).css({ visibility: "visible" });
+    $( '#cartModalCount' ).text( data.DATA.COUNT );
+    $( '#cartModalPrice' ).text( data.DATA.TOTAL_PRICE );
+    $( '#cartModalNoProducts' ).hide();
+    $( '#cartModalHasProducts' ).text( store(data.DATA.COUNT) + ' \u043D\u0430 \u0441\u0443\u043C\u043C\u0443' );
+    $( '.count_in_cart' ).show().text( data.DATA.COUNT );
+  } else {
+    $( '.count_in_cart' ).hide().text( data.DATA.COUNT );
+  }
+}
+*/

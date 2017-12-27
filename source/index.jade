@@ -9,31 +9,32 @@ block content
   //-include ./components/banner-transition/index
   
   
-  .container(style="height: 700px;")
 
   .container.container-fulwidth-xs(style="margin-top: 10px; margin-bottom: 10px;")
-    .col-sm-9
+    .col-xs-12
       .row.row-xs
         include ./components/banner-carousel/template
         
-    .col-sm-3
-      .row.index-col-ord
-        .bn-item.index-baner-2
-          .ib2-name.h3 Упаковка в&nbsp;наличии
-          a.ib2-text(href="/catalog/") Купить коробки<br>в&nbsp;один клик!
-          img.img-responsive.ib2-img(src="/upload/banner/img_banner2_index.png")
-        .bn-item.index-baner-3
-          a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
-            img.play-icon(src="/upload/banner/play_button.svg")
-            span Посмотрите презентацию
-      #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
-        .modal-dialog.modal-lg(role='document')
-          .modal-content.text-middle
-          
-            .close(type='button', data-dismiss='modal', aria-label='Close')
-            .modal-body.center
-              .embed-responsive.embed-responsive-16by9
-                iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen )
+      //-.col-sm-3
+      //-  .row.index-col-ord
+      //-    .bn-item.index-baner-2
+      //-      .ib2-name.h3 Упаковка в&nbsp;наличии
+      //-      a.ib2-text(href="/catalog/") Купить коробки<br>в&nbsp;один клик!
+      //-      img.img-responsive.ib2-img(src="/upload/banner/img_banner2_index.png")
+      //-    .bn-item.index-baner-3
+      //-      a.play-link(href="#" data-toggle="modal" data-target="#aboutVideo")
+      //-        img.play-icon(src="/upload/banner/play_button.svg")
+      //-        span Посмотрите презентацию
+      
+      
+    #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+      .modal-dialog.modal-lg(role='document')
+        .modal-content.text-middle
+        
+          .close(type='button', data-dismiss='modal', aria-label='Close')
+          .modal-body.center
+            .embed-responsive.embed-responsive-16by9
+              iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw" frameborder="0" allowfullscreen )
   
   
   #aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
@@ -115,7 +116,8 @@ block content
             li Изготовим пробную партию или промышленный образец
             li Изготовим заказ от&nbsp;1&nbsp;дня
             
-    include ./include/serv_puth_proizvodstvo
+    .container
+      include ./include/serv_puth_proizvodstvo
     
     .container
       include ./components/catalog.section.construct-morda/template

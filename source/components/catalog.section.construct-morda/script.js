@@ -1,15 +1,25 @@
 $( function() {
     
   
-    $('.construct-section-top a').click(function(e){
+    $('.construct-section-top .nav-tabs a').click(function(e){
       var parents = $(this).parents('.construct-section-top');
       e.preventDefault();
       $('.nav-tabs a', parents).removeClass( 'active' );
       $(this).addClass( 'active' ).tab('show');
+//       resizeWindow();
+//       alert($(this).attr('href'))
+
+      if ( screenProd != 'xs' ) 
+        destroyFotorama($('.fotorama-tabs-new', $($(this).attr('href'))));
+      
+      else
+        satrtFotorama($('.fotorama-tabs-new', $($(this).attr('href'))));
+          
     });
     
     
     
+    $( window ).resize( resizeWindow );
     
     
   
@@ -18,56 +28,69 @@ $( function() {
 //     var $cardsConst = fotoramaConstruct.find( '.a-catalog-card' );
     
     
-    var nConst = 3, screen = '', resize = '', ratioConst = 1, thumbConst = '', heightConst = 350;
-  
-    $( window ).resize( resizeWindow );
-    
 //       alert('start!')
       
     resizeWindow();
     
-    function resizeWindow() {
-      
-      if ( window.matchMedia( "( min-width: 1200px )" ).matches ) {
-        resize = 'lg';
-      } else if ( window.matchMedia( "( min-width: 992px )" ).matches ) {
-        resize = 'md';
-      } else if ( window.matchMedia( "( min-width: 768px )" ).matches ) {
-        resize = 'sm';
-      } else {
-        resize = 'xs';
-      }
-      
-      if ( screen === resize ) {
-        return;
-      }
-      screen = resize;
-      
-      
-      
-      
-      $('.construct-section-top .fotorama-tabs').each(function(){
-        var $fotorama = $(this);
-        
-/*
-        if ( $fotorama.data( 'fotorama' )) {
-          $fotorama.data('fotorama').destroy();
-          $('.card-item', $fotorama).show();
-        }
-*/
-        
-        if ( screen === 'xs' ) {
-          $fotorama.fotorama();
-        }
-        else{
-          $fotorama.data('fotorama').destroy();
-          $('.card-item', $fotorama).show();
-        }
-        
-      });
-      
-      
-      
-    }
        
 });
+
+    
+var screenProd = '', resizeProd = '';
+
+
+function resizeWindow() {
+  
+  if ( window.matchMedia( "( min-width: 1200px )" ).matches ) {
+    resizeProd = 'lg';
+  } else if ( window.matchMedia( "( min-width: 992px )" ).matches ) {
+    resizeProd = 'md';
+  } else if ( window.matchMedia( "( min-width: 768px )" ).matches ) {
+    resizeProd = 'sm';
+  } else {
+    resizeProd = 'xs';
+  }
+  
+/*
+  if ( screen === resize ) {
+    return;
+  }
+*/
+  screenProd = resizeProd;
+  
+//   alert(screen)
+  
+  
+  
+  $('.construct-section-top .active .fotorama-tabs-new').each(function(){
+    
+    var $fotorama2 = $(this);
+    
+    
+    if ( screenProd == 'xs' ) {
+      $fotorama2.fotorama();
+    }
+    else{
+      if ( $fotorama2.data( 'fotorama' )) {
+        $fotorama2.data('fotorama').destroy();
+        $('.card-item', $fotorama2).show();
+      }
+    }
+    
+  });
+  
+  
+  
+}
+
+function satrtFotorama(fotorama){
+  fotorama.fotorama();
+}
+
+function destroyFotorama(fotorama){
+//   alert('destroy')
+  if(fotorama.data('fotorama')){
+    fotorama.data('fotorama').destroy();
+    $('.card-item', fotorama).show();
+  }
+}

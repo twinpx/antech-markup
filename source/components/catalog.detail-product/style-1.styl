@@ -1,0 +1,457 @@
+@import '../../styl/component-include.styl'
+
+body
+  background-color $c-gray-xxs
+  
+  
+.a-catalog-product
+  .helvetica-font
+    font-family 'Helvetica'
+  
+  .a-catalog-product-head
+    background-color $c-white
+    margin-bottom 4px
+    padding-top 15px
+    padding-bottom 15px
+    
+    h1
+      margin-bottom 0
+      margin-top 0
+      font-size 24px
+    
+    
+    @media ( min-width 768px )
+      &
+        display -webkit-flex
+        display flex
+        align-items center
+        
+    
+
+
+
+
+  .price-val
+    color $c-black
+    margin-right 10px
+    font-weight 400
+    
+  .second-line
+    background-color $c-white
+    margin-bottom 4px
+    padding 15px
+        
+  .first-line
+    background-color $c-white
+    margin-bottom 4px
+    padding-top 15px
+    padding-bottom 15px
+    
+    .relative
+      position relative
+    
+    .icon-bar
+      position absolute
+      top 0
+      left 0
+      width 100%
+      padding 0 10px
+      
+      .left-bar
+        float left
+      
+      .right-bar
+        float right
+      
+      .bar-icons
+        display inline-block
+        width 40px
+        height 40px
+        margin 0 5px
+        background-position 50% 50%
+        background-repeat no-repeat
+        background-size contain
+        
+        @media ( max-width 500px )
+          width 30px
+          height 30px
+        
+      .icon-sales
+        background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+        
+      .icon-hit
+        background-image url(/img/svg/svg_catalog_product_icon_hit.svg)
+        
+      .icon-new
+        background-image url(/img/svg/svg_catalog_product_icon_new.svg)
+      
+      .icon-favorites
+        background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+      
+      .icon-compare
+        background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+    
+    .reviewslink,
+    .reviewslink:hover
+      color $c-high-gray
+    
+    .price-range-block
+      padding-right 15px
+      padding-left 15px
+      
+    .price-range-item
+      padding-right 2px
+      padding-left 2px
+      
+      &:first-of-type
+        padding-left 0
+      
+      &:last-of-type
+        padding-right 0
+    
+    .price-range-name
+      font-size 14px
+      color $c-high-gray
+      font-style italic
+    
+    .price-range-value
+      background-color $c-gray-xxs
+      padding 10px 5px
+      text-align center
+      font-size 16px
+      border 3px solid $c-gray-xxs
+      margin-top 10px
+      cursor pointer
+      
+      
+      .rub
+        font-size 14px
+        
+    .price-range-value-old
+      font-size 14px
+      color $c-high-gray
+      text-decoration line-through
+      text-align right
+      margin-top 1em
+      
+      
+    .price-range-item.selected
+      .price-range-value
+        border-color $c-yellow
+    
+    .add-quantity-info
+      font-size 14px
+      margin-bottom 10px
+    
+    .input-quantity-block
+      display -webkit-flex
+      display flex
+      justify-content flex-start
+      align-items center
+      
+      .add-to-cart-input-quantity
+        padding-left 25px
+        padding-right 25px
+        padding-top 10px
+        padding-bottom 10px
+        border-radius 0
+        text-align center
+        font-size 18px
+        height 43px
+        display block
+      
+      .input-step-up,
+      .input-step-down
+        width 24px
+        height calc(100% - 2px)
+        background-color $c-gray-xxs
+        
+        &:hover
+          background-color $c-gray-s
+        
+        &:active
+          background-color $c-gray-xs
+        
+        
+      .input-step-up
+        top 1px
+        right 1px
+      
+      .input-step-down
+        top 1px
+        left 1px
+      
+      .measure
+        margin-left 10px
+      
+    .add-to-order-btn
+      width 100%
+      display block
+      padding 8px 10px
+      padding-left 35px
+      background-position 5px center
+      background-repeat no-repeat
+      background-size 30px 30px
+      line-height 16px
+      font-size 14px
+      height 45px
+      
+      &.mode-cart
+        background-color $c-green
+        background-image url(/img/svg/add2cart_icon1.svg)
+        
+        &:hover
+          background-color darken( $c-green, 5% )
+      
+      &.mode-order
+        background-color $c-yellow
+        background-image url(/img/svg/add2cart_icon2.svg)
+        
+        &:hover
+          background-color darken( $c-yellow, 5% )
+          
+      
+      &.btn-disabled
+        background-image url(/img/svg/add2cart_icon4.svg)
+        
+      &.in-cart-update
+        background-image url(/img/svg/add2cart_icon3.svg)
+    
+      
+      
+      
+    
+    .order-individual-block
+      .btn
+        width 100%
+    
+    
+    
+    @media ( min-width 768px )
+      display -webkit-flex
+      display flex
+      align-items stretch
+      
+      .order-individual-block
+        height 82px
+        position relative
+        
+        .sharebtn-line
+          position absolute
+          bottom 0
+          right 0
+    
+      .description-block
+        padding-bottom 90px
+      
+        .action-block
+          position absolute
+          bottom 0
+          margin 0 auto
+          left 0
+          right 0
+    
+      .price-colum
+        display -webkit-flex
+        display flex
+        flex-direction column
+        justify-content space-between
+  
+  .fotorama-catalog-multicard
+    overflow-y hidden
+    
+  
+  .fotorama_item
+    height 100%
+    display flex
+    
+  .fotorama_item-content
+    position relative
+    margin auto
+    width 100%
+  
+  
+  .second-line
+    .navbar-default
+      background none
+      border none
+      margin-bottom 0
+      
+      .navbar-nav
+      
+        li.active > a
+          background none
+          color $c-black
+          text-decoration underline
+        li:hover > a
+          background none
+        
+        li > a
+          background none
+          padding-left 10px
+          padding-right 10px
+          
+        .icon-tab
+          float right
+          padding-left 30px
+          background-position 0 center
+          background-repeat no-repeat
+          background-size 30px 30px
+          
+          a
+            padding-left 5px
+            padding-right 10px
+        
+        .icon-delivery
+          background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+        
+        .icon-payment
+          background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+        
+        .icon-return
+          background-image url(/img/svg/svg_catalog_product_icon_sale.svg)
+          
+  
+    @media ( min-width 768px )
+      .navbar-header
+        display none
+        
+      .tab-content
+        padding 15px 0
+      
+    
+
+  .fotorama__nav__frame
+    opacity 0.5
+    
+    &.fotorama__active
+      opacity 1
+
+  .fotorama__thumb-border
+    border 1px solid #4299e7 !important
+    
+  .fotorama__stage
+    margin-bottom 2px !important
+    
+  .fotorama__thumb
+    border 1px solid #d8d8d8 !important
+    width 78px !important
+    height 78px !important
+    
+  .fotorama__nav:after,
+  .fotorama__nav:before,
+  .fotorama__stage:after,
+  .fotorama__stage:before
+    display none !important
+    
+  .fotorama__nav-wrap
+    .fotorama__nav__frame--dot
+      height 10px
+      .fotorama__dot
+        width 8px
+        height 8px
+        background-color rgba(255, 255, 255, 0.5)
+        border 1px solid $lightest-grey
+        top 0
+      &.fotorama__active
+        .fotorama__dot
+          background-color rgba(255, 255, 255, 1)
+          border-color $c-high-gray
+    
+    @media ( max-width 768px )
+      .fotorama__nav--thumbs
+        display none
+    
+
+  .fotorama__arr
+    width 15px
+    height 50px
+    margin 0 20px
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+    opacity 0.5
+    top 0
+    bottom 0
+    margin-top auto
+    margin-bottom auto
+    
+    &:hover
+      opacity 1
+    
+    &--prev
+      background-image url(/img/arrow_left.svg)
+    
+    &--next
+      background-image url(/img/arrow_right.svg)
+
+
+
+
+
+
+
+
+
+.line_yellow
+  padding 15px
+  background-color $c-yellow
+  text-align center
+
+.catalog-preim-container
+  background-color $c-white
+  margin-bottom 4px
+    
+  .catalog-preim-item
+    background-repeat no-repeat
+    background-position left center
+    background-size 48px 48px
+    font-weight 600
+    font-size 14px
+    padding-left 70px
+    min-height 60px
+    display -webkit-flex
+    display flex
+    justify-content flex-start
+    align-items center
+    
+@media ( min-width 768px )
+  .catalog-preim-container
+    display -webkit-flex
+    display flex
+    justify-content space-between
+    align-items center
+
+    .catalog-preim-item
+      margin 10px 0
+      width 25%
+
+
+.catalog-advantags
+  background-color $c-white
+  display -webkit-flex
+  display flex
+  flex-wrap wrap
+  padding 20px
+  
+  &-item
+    background-repeat no-repeat
+    background-position left center
+    background-size 65px 65px
+    font-size 14px
+    padding-left 85px
+    min-height 100px
+    display -webkit-flex
+    display flex
+    justify-content flex-start
+    align-items center
+
+
+  @media ( max-width 768px )
+    display block
+    padding 10px
+    
+    &-item
+      min-height 80px
+
+        
