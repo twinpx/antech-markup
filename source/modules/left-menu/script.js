@@ -14,10 +14,3 @@ $('.cildterblock').on('show.bs.collapse', function () {
 $('.cildterblock').on('hide.bs.collapse', function () {
   $(this).parents('.root-item').removeClass('opened-children');
 })
-
-$('.left-menu .is-root a').click(function(){
-  if(!$(this).parents('.root-item').hasClass('opened-children')){
-    $('.cildterblock', $(this).parents('.root-item')).collapse('show');
-    return false;
-  }
-});

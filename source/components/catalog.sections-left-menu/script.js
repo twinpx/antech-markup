@@ -36,7 +36,15 @@ $(function(){
     valueNames: [ 'name' ]
   };
   
-  var catalogFilterList = new List('catalog_chpu_list', chpuListOptions);
+  var catalogFilterList = Object();
+  
+  $('.catalog_chpu_list_root').each(function(){
+    var listItem = $(this);
+    
+    catalogFilterList[listItem.attr('id')] = new List(listItem.attr('id'), chpuListOptions);
+    
+  });
+  
   
 });
 
