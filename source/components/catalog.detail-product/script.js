@@ -69,20 +69,34 @@ $( function() {
   
   });
   
-  $('form.offers_item_add2cart').submit(function(){
+  $('form.offers_item_add2cart_product').submit(function(){
     var form = $(this),
     addPrint = $('.add-pring-chb', form),
-    addPrintVal = addPrint.prop('checked');
+    addPrintVal = addPrint.prop('checked'),
+    qinput = $('.add-to-cart-input-quantity', form);
+    
+    if(Number(qinput.val()) < Number(qinput.data("inputstep"))){
+      qinput.val(qinput.data("inputstep"));
+    }
+    
+    
+//     console.log(form.serialize(), form.attr('action'));
+    
     $.ajax({
-      url: form.attr('actions'),
+      url: form.attr('action'),
       method: 'POST',
       data: form.serialize(),
       success: function(data){
+        
+        
+//           console.log(data);
+        
 //         alert(data.STATUS)
         if(data.STATUS == 'Y'){
           $('.add-to-order-btn', form).addClass('btn-disabled').removeClass('in-cart-update').removeClass('preorder').html('Добавлено<br>к заказу');
           $('.add-to-cart-input-quantity', form).data('oncart', $('.add-to-cart-input-quantity', form).val());
           $('input[name="MODE"]', form).val("UPDATE");
+          $('input[name="BID"]', form).val(data.BID);
           
           
           if(addPrintVal == true)
@@ -104,7 +118,7 @@ $( function() {
 //           alert(data.DATA.COUNT)
         }
         else if(data.STATUS == 'E'){
-          alert(data.MESSAGE)
+          console.log(data.MESSAGE)
         }
       },
       error: function(data){
@@ -301,8 +315,9 @@ $( function() {
   
   
   $('.price-range-item').click(function(){
-    $('input.add-to-cart-input-quantity').val($(this).data('setquantity')).change();
-    checkActiveSubmit($('.add-to-order-btn'));
+    var parent = $(this).parents('form');
+    $('input.add-to-cart-input-quantity', parent).val($(this).data('setquantity')).change();
+    checkActiveSubmit($('.add-to-order-btn', parent));
   });
   
   $('.reviewslink').click(function(){
@@ -324,22 +339,89 @@ $( function() {
   });
   
   $('#add2favorites').click(function(){
-    $(this).toggleClass('selected');
+//     $(this).toggleClass('selected');
+
+    var curMode = 'ADD',
+    linkEl = $(this);
     
+    if (linkEl.hasClass('selected')){
+      curMode = 'DEL';
+      
+    }
     
+    console.log(curMode);
     
+    $.ajax({
+      type: 'POST', 
+      url: '/include/ajax/add2cart_new.php', 
+      data: {
+        OFFERS_ID: linkEl.data('id'),
+        MODE: curMode,
+        DELAY: 'Y',
+        BID: linkEl.data('bid'),
+      }, 
+      success:function(result){
+        console.log(result);
+        if(curMode == 'ADD')
+          linkEl.addClass('selected').data('bid', result.BID);
+        else if(curMode == 'DEL')
+          linkEl.removeClass('selected');
+      }
+    });
   });
+
+
+    
   
   $('#add2compare').click(function(){
     
-    $(this).toggleClass('selected');
+//     $(this).toggleClass('selected');
+
+    var modeCompare = 'ADD',
+    linkEl = $(this),
+    actionCompare = 'ADD_TO_COMPARE_LIST';
+    
+    if (linkEl.hasClass('selected')){
+      modeCompare = 'DEL';
+      actionCompare = 'DELETE_FROM_COMPARE_LIST';
+      
+    }
+    
+    $.ajax({
+      type: 'POST', 
+      url: '/catalog/compare.php', 
+      data: { 
+        id: linkEl.data('id'), 
+        action: actionCompare, 
+      }, 
+      success:function(result){
+        
+        if(modeCompare == 'ADD'){
+          linkEl.addClass('selected').attr("data-content", "Убрать из списка сравнения").data('content', "Убрать из списка сравнения");
+        }
+        else if(modeCompare == 'DEL'){
+          linkEl.removeClass('selected').attr("data-content", "Добавить в список сравнения").data('content', "Добавить в список сравнения");
+          
+        }
+      }
+    });
     
   });
   
   $('#buy1click').click(function(){
-    console.log('buy1click function start');
+//     console.log('buy1click function start');
   });
-    
+  
+  $(".scroll2").click(function(){
+    var a=$(this).attr("href"),
+    b=$(a).offset().top-100;
+    $.scrollTo(b,500);
+    location.hash=a;
+    return false;
+  });
+  
+  
+  
 /*
   
     var priceBlocks = [];

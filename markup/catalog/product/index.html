@@ -507,18 +507,11 @@
           <div itemscope itemtype="http://schema.org/Product" class="a-catalog-product">
             <form name="add_to_cart_offers_id_0012" method="POST" actions="/json/add2cart.json" class="offers_item_add2cart">
               <div class="row a-catalog-product-head helvetica-font">
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                   <h1 itemprop="name">Четырехклапанная коробка 550х350х350 мм, Т-24 бурый</h1>
                 </div>
                 <hr class="i-size-XS visible-xs">
-                <div class="col-sm-4">
-                  <select name="OTHER_PRODUCTS" id="product_select" class="form-control">
-                    <option value="">выбрать другой вариант</option>
-                    <option value="/url_1/">Размер 1</option>
-                    <option value="/url_2/">Размер 2</option>
-                    <option value="/url_3/">Размер 3</option>
-                  </select>
-                </div>
+                <div class="col-sm-2"><b>Art.&nbsp;UT533</b></div>
               </div>
               <div class="row first-line">
                 <div class="col-sm-6 relative">
@@ -551,13 +544,14 @@
                   </div>
                   <div class="icon-bar">
                     <div class="left-bar"><span class="bar-icons icon-sales"></span><span class="bar-icons icon-new"></span><span class="bar-icons icon-hit"></span></div>
-                    <div class="right-bar"><a href="javascript:void(0)" id="add2favorites" class="bar-icons icon-favorites"><span class="icon-hover"></span></a><a href="javascript:void(0)" id="add2compare" class="bar-icons icon-compare"><span class="icon-hover"></span></a></div>
+                    <div class="right-bar"><a href="javascript:void(0)" id="add2favorites" class="bar-icons icon-favorites"><span class="icon-hover"></span></a><a href="javascript:void(0)" id="add2compare" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Добавить в список сравнения" class="popover_teaser bar-icons icon-compare"><span class="icon-hover"></span></a></div>
                   </div>
                 </div>
                 <div class="col-sm-6 price-colum">
-                  <div class="row helvetica-font">
-                    <div class="col-xs-4 text-small">Art.&nbsp;UT533</div>
-                    <div class="col-xs-8 text-right"><span class="icon-star selected"></span><span class="icon-star selected"></span><span class="icon-star selected"></span><span class="icon-star"></span><span class="icon-star"></span><span>&emsp;</span><i><a href="javascript:void(0)" class="text-small reviewslink">Отзывы (27)</a></i></div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <p>Четырехклапанные упаковочные коробки из трехслойного гофрокартона — безусловно, самая популярная модель картонных коробок.</p><a href="#description" class="scroll2 btn btn-type-5 btn-sm">Читать полностью</a>
+                    </div>
                   </div>
                   <div class="row helvetica-font">
                     <div class="order-price-default price-range-block">
@@ -603,110 +597,192 @@
                   </div>
                   <hr class="i-size-XS visible-xs">
                   <div class="row order-individual-block">
-                    <div class="col-xs-12 text-center-xs order-individual-block-flex"><a href="javascript:void(0)" id="btn2ordercustom-link" class="btn btn-type-6 btn-md"> <span>Заказать </span><span class="hidden-xs">конструкцию </span><span>по своим размерам</span></a></div>
+                    <div class="col-xs-12">
+                      <ul class="small_preim">
+                        <li class="icon-tab icon-delivery"><a href="#delivery" data-toggle="modal" data-target="#delivery" class="show2modal">Доставка</a></li>
+                        <li class="icon-tab icon-payment"><a href="#payment" data-toggle="modal" data-target="#payment" class="show2modal">Оплата</a></li>
+                        <li class="icon-tab icon-return"><a href="#warranty" data-toggle="modal" data-target="#warranty" class="show2modal">Возврат</a></li>
+                      </ul>
+                    </div>
                     <div class="col-xs-12 visible-xs">
                       <hr class="i-size-XS">
                     </div>
-                    <div class="col-xs-12 text-right text-center-xs sharebtn-line">
-                      <div data-services="vkontakte,facebook,odnoklassniki,gplus" class="ya-share2"></div>
-                    </div>
+                    <div class="col-xs-12 text-center-xs order-individual-block-flex"><a href="javascript:void(0)" id="btn2ordercustom-link" class="btn btn-type-6 btn-md"> <span>Заказать </span><span class="hidden-xs">конструкцию </span><span>по своим размерам</span></a></div>
                   </div>
                 </div>
               </div>
               <div id="secondline-block" class="row second-line">
-                <ul role="tablist" class="nav nav-pills">
-                  <li role="presentation" class="active"><a href="#features" aria-controls="features" role="tab" data-toggle="tab">ХАРАКТЕРИСТИКИ</a></li>
-                  <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">ВИДЕО&nbsp;<span class="text-muted text-middle">(2)</span></a></li>
-                  <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">ОТЗЫВЫ&nbsp;<span class="text-muted text-middle">(19)</span></a></li>
-                  <li role="presentation" class="icon-tab icon-return"><a href="#warranty" aria-controls="warranty" role="tab" data-toggle="tab">Возврат</a></li>
-                  <li role="presentation" class="icon-tab icon-payment"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">Оплата</a></li>
-                  <li role="presentation" class="icon-tab icon-delivery"><a href="#delivery" aria-controls="delivery" role="tab" data-toggle="tab">Доставка</a></li>
+                <ul class="tabline_header">
+                  <li class="active"><span>Другие размеры</span>
+                    <div class="indicator"></div>
+                  </li>
+                  <li><a href="#features" class="scroll2">Характеристики</a></li>
+                  <li><a href="#description" class="scroll2">Описание</a></li>
+                  <li><a href="#video" class="scroll2">Видео</a></li>
+                  <li><a href="#reviews" class="scroll2">Отзывы</a></li>
+                  <li><a href="#add_offers" class="scroll2">Сопутсвующие товары</a></li>
                 </ul>
-                <div class="tab-content">
-                  <div role="tabpanel" id="features" class="tab-pane active">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 0:</span></div>
-                          <div class="col-xs-6">Значение 0</div>
-                        </div>
+                <div id="alternative_offers" class="tab-content">
+                  <p>таблица с товарами</p>
+                </div>
+                <ul class="tabline_header">
+                  <li><a href="#alternative_offers" class="scroll2">Другие размеры</a></li>
+                  <li class="active"><span>Характеристики</span>
+                    <div class="indicator"></div>
+                  </li>
+                  <li><a href="#description" class="scroll2">Описание</a></li>
+                  <li><a href="#video" class="scroll2">Видео</a></li>
+                  <li><a href="#reviews" class="scroll2">Отзывы</a></li>
+                  <li><a href="#add_offers" class="scroll2">Сопутсвующие товары</a></li>
+                </ul>
+                <div id="features" class="tab-content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 0:</span></div>
+                        <div class="col-xs-6">Значение 0</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 1:</span></div>
-                          <div class="col-xs-6">Значение 1</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 1:</span></div>
+                        <div class="col-xs-6">Значение 1</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 2:</span></div>
-                          <div class="col-xs-6">Значение 2</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 2:</span></div>
+                        <div class="col-xs-6">Значение 2</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 3:</span></div>
-                          <div class="col-xs-6">Значение 3</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 3:</span></div>
+                        <div class="col-xs-6">Значение 3</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 4:</span></div>
-                          <div class="col-xs-6">Значение 4</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 4:</span></div>
+                        <div class="col-xs-6">Значение 4</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 5:</span></div>
-                          <div class="col-xs-6">Значение 5</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 5:</span></div>
+                        <div class="col-xs-6">Значение 5</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 6:</span></div>
-                          <div class="col-xs-6">Значение 6</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 6:</span></div>
+                        <div class="col-xs-6">Значение 6</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 7:</span></div>
-                          <div class="col-xs-6">Значение 7</div>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 7:</span></div>
+                        <div class="col-xs-6">Значение 7</div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="row">
-                          <div class="col-xs-6"><span class="text-muted">Параметр 8:</span></div>
-                          <div class="col-xs-6">Значение 8</div>
-                        </div>
-                      </div>
-                      <div class="col-sm-9">
-                        <div class="h4">Описание</div>
-                        <div itemprop="description" class="desctiption-content"> 
-                          <p>Как собирать, как заклеивать, какие инструкменты и дополнительные материалы применяются для сборки</p>
-                          <p>Как учитывать рмзмеры</p>
-                          <p>Различные способы фиксации предметов внутри упаковки</p>
-                          <p>Размеры упаковочных коробок выбираются с точки зрения рациональной затарки и оптимизации расходов на погрузку, транспортировку, хранение. </p>
-                          <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
-                          <p>Базовые параметры и критерии при производстве на заказ:</p>
-                          <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="download-files">
-                          <div class="h4">Скачать инструкцию по сборке:</div><a href=""> </a>
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="row">
+                        <div class="col-xs-6"><span class="text-muted">Параметр 8:</span></div>
+                        <div class="col-xs-6">Значение 8</div>
                       </div>
                     </div>
                   </div>
-                  <div role="tabpanel" id="video" class="tab-pane">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe src="https://www.youtube.com/embed/kZJnWg6Ma8g" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+                </div>
+                <ul class="tabline_header">
+                  <li><a href="#alternative_offers" class="scroll2">Другие размеры</a></li>
+                  <li><a href="#features" class="scroll2">Характеристики</a></li>
+                  <li class="active"><span>Описание</span>
+                    <div class="indicator"></div>
+                  </li>
+                  <li><a href="#video" class="scroll2">Видео</a></li>
+                  <li><a href="#reviews" class="scroll2">Отзывы</a></li>
+                  <li><a href="#add_offers" class="scroll2">Сопутсвующие товары</a></li>
+                </ul>
+                <div id="description" class="tab-content">
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <div itemprop="description" class="desctiption-content"> 
+                        <p>Как собирать, как заклеивать, какие инструкменты и дополнительные материалы применяются для сборки</p>
+                        <p>Как учитывать рмзмеры</p>
+                        <p>Различные способы фиксации предметов внутри упаковки</p>
+                        <p>Размеры упаковочных коробок выбираются с точки зрения рациональной затарки и оптимизации расходов на погрузку, транспортировку, хранение. </p>
+                        <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
+                        <p>Базовые параметры и критерии при производстве на заказ:</p>
+                        <p>При выборе типовой готовой тары учитывайте прочность, жесткость, возможность усиления каркаса, общую высоту и внешние габариты в привязке к погрузке на поддоны. </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="download-files">
+                        <div class="h4">Скачать инструкцию по сборке:</div><a href=""></a>
+                      </div>
                     </div>
                   </div>
-                  <div role="tabpanel" id="reviews" class="tab-pane"><span>отзывы</span></div>
-                  <div role="tabpanel" id="delivery" class="tab-pane"><span>доставка</span></div>
-                  <div role="tabpanel" id="payment" class="tab-pane"><span>варианты оплаты</span></div>
-                  <div role="tabpanel" id="warranty" class="tab-pane"><span>Возврат и гарантии</span></div>
+                </div>
+                <ul class="tabline_header">
+                  <li><a href="#alternative_offers" class="scroll2">Другие размеры</a></li>
+                  <li><a href="#features" class="scroll2">Характеристики</a></li>
+                  <li><a href="#description" class="scroll2">Описание</a></li>
+                  <li class="active"><span>Видео</span>
+                    <div class="indicator"></div>
+                  </li>
+                  <li><a href="#reviews" class="scroll2">Отзывы</a></li>
+                  <li><a href="#add_offers" class="scroll2">Сопутсвующие товары</a></li>
+                </ul>
+                <div id="video" class="tab-content">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/kZJnWg6Ma8g" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+                  </div>
+                </div>
+                <ul class="tabline_header">
+                  <li><a href="#alternative_offers" class="scroll2">Другие размеры</a></li>
+                  <li><a href="#features" class="scroll2">Характеристики</a></li>
+                  <li><a href="#description" class="scroll2">Описание</a></li>
+                  <li><a href="#video" class="scroll2">Видео</a></li>
+                  <li class="active"><span>Отзывы</span>
+                    <div class="indicator"></div>
+                  </li>
+                  <li><a href="#add_offers" class="scroll2">Сопутсвующие товары</a></li>
+                </ul>
+                <div id="reviews" class="tab-content"><span>отзывы</span></div>
+                <ul class="tabline_header">
+                  <li><a href="#alternative_offers" class="scroll2">Другие размеры</a></li>
+                  <li><a href="#features" class="scroll2">Характеристики</a></li>
+                  <li><a href="#description" class="scroll2">Описание</a></li>
+                  <li><a href="#video" class="scroll2">Видео</a></li>
+                  <li><a href="#reviews" class="scroll2">Отзывы</a></li>
+                  <li class="active"><span>Сопутсвующие товары</span>
+                    <div class="indicator"></div>
+                  </li>
+                </ul>
+                <div id="add_offers" class="tab-content"><span>Сопутсвующие товары</span></div>
+                <div role="dialog" id="delivery" tabindex="-1" class="modal-tab modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+                      <div class="modal-body"><span>доставка</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div role="dialog" id="payment" tabindex="-1" class="modal-tab modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+                      <div class="modal-body"><span>варианты оплаты</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div role="dialog" id="warranty" tabindex="-1" class="modal-tab modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+                      <div class="modal-body"><span>Возврат и гарантии</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>

@@ -10,7 +10,7 @@ body
   
   .a-catalog-product-head
     background-color $c-white
-    margin-bottom 4px
+    margin-bottom 2px
     padding-top 15px
     padding-bottom 15px
     
@@ -36,10 +36,6 @@ body
     margin-right 10px
     font-weight 400
     
-  .second-line
-    background-color $c-white
-    margin-bottom 4px
-    padding 15px
         
   .first-line
     background-color $c-white
@@ -281,6 +277,56 @@ body
     
     
     
+    
+    .small_preim
+      display -webkit-flex
+      display flex
+      justify-content space-between
+      align-items center
+      list-style none
+      padding 0
+      
+      li > a
+        padding-left 10px
+        padding-right 10px
+        color $c-black
+        font-weight 400
+        
+      .icon-tab
+        padding-left 30px
+        background-position 0 center
+        background-repeat no-repeat
+        background-size 25px 25px
+        
+        a
+          padding-left 5px
+          padding-right 10px
+      
+      .icon-delivery
+        background-image url(/img/catalot-tp/delivery.svg)
+      
+      .icon-payment
+        background-image url(/img/catalot-tp/oplata.svg)
+      
+      .icon-return
+        background-image url(/img/catalot-tp/vozvrat.svg)
+      
+      
+      @media ( max-width 768px )
+        
+        li > a
+          padding-left 5px
+          padding-right 5px
+          color $c-black
+          font-weight 400
+          
+        .icon-tab
+          padding-left 20px
+          background-position 5 center
+          background-repeat no-repeat
+          background-size 18px 18px
+    
+    
     @media ( min-width 768px )
       display -webkit-flex
       display flex
@@ -324,110 +370,144 @@ body
     margin auto
     width 100%
   
-  @media ( min-width 768px )
-    .second-line
-      .nav-pills > li.active > a
-        background none
+  .second-line
+    background-color $c-white
+    
+    
+    .tabline_header
+      background-color $c-gray-s-2
+      padding 0
+      margin 0
+      margin-bottom 10px
+      list-style none
+      
+      li>a
+        text-decoration none
         color $c-black
-        text-decoration underline
-      .nav-pills > li:hover > a
-        background none
       
-      .nav-pills
-        li > a
-          padding-left 10px
-          padding-right 10px
-          
-        .icon-tab
-          float right
-          padding-left 30px
-          background-position 0 center
+      li
+        position relative
+        margin 0
+        
+        .indicator
+          background-image url(images/cat_activetab_indicator.png)
+          background-position 50 0
           background-repeat no-repeat
-          background-size 25px 25px
-          
-          a
-            padding-left 5px
-            padding-right 10px
-        
-        .icon-delivery
-          background-image url(/img/catalot-tp/delivery.svg)
-        
-        .icon-payment
-          background-image url(/img/catalot-tp/oplata.svg)
-        
-        .icon-return
-          background-image url(/img/catalot-tp/vozvrat.svg)
+          position absolute
+          bottom -8px
+          left calc(50% - 12px)
+          display block
+          width 24px
+          height 8px
           
           
+        &.active
+          background-color $c-deep-gray
+          font-weight 400
+          color $c-white
         
-      .tab-content
-        padding 15px 0
       
+      @media ( max-width 768px )
+        
+        li
+          display none
+          padding 10px 15px
+          
+          &.active
+            display block
+        
     
-
-  .fotorama__nav__frame
-    opacity 0.5
+      @media ( min-width 768px )
     
-    &.fotorama__active
-      opacity 1
-
-  .fotorama__thumb-border
-    border 1px solid #4299e7 !important
+        
+        &:after
+          content ""
+          display block
+          clear both
+        
+        li
+          padding 10px
+          display block
+          float left
+          
+          &:first-of-type
+            padding-left 30px
     
-  .fotorama__stage
-    margin-bottom 2px !important
+    .tab-content
+      padding 15px
+      
+      @media ( min-width 768px )
+      
+        padding 15px 30px
+        
     
-  .fotorama__thumb
-    border 1px solid #d8d8d8 !important
-    width 78px !important
-    height 78px !important
-    
-  .fotorama__nav:after,
-  .fotorama__nav:before,
-  .fotorama__stage:after,
-  .fotorama__stage:before
-    display none !important
-    
-  .fotorama__nav-wrap
-    .fotorama__nav__frame--dot
-      height 10px
-      .fotorama__dot
-        width 8px
-        height 8px
-        background-color rgba(255, 255, 255, 0.5)
-        border 1px solid $lightest-grey
-        top 0
+  .first-line
+    .fotorama__nav__frame
+      opacity 0.5
+      
       &.fotorama__active
+        opacity 1
+  
+    .fotorama__thumb-border
+      border 1px solid #4299e7 !important
+      
+    .fotorama__stage
+      margin-bottom 2px !important
+      
+    .fotorama__thumb
+      border 1px solid #d8d8d8 !important
+      width 78px !important
+      height 78px !important
+      
+    .fotorama__nav:after,
+    .fotorama__nav:before,
+    .fotorama__stage:after,
+    .fotorama__stage:before
+      display none !important
+      
+    .fotorama__nav-wrap
+      .fotorama__nav__frame--dot
+        height 10px
         .fotorama__dot
-          background-color rgba(255, 255, 255, 1)
-          border-color $c-high-gray
+          width 8px
+          height 8px
+          background-color rgba(255, 255, 255, 0.5)
+          border 1px solid $lightest-grey
+          top 0
+        &.fotorama__active
+          .fotorama__dot
+            background-color rgba(255, 255, 255, 1)
+            border-color $c-high-gray
+      
+      @media ( max-width 768px )
+        .fotorama__nav--thumbs
+          display none
     
-    @media ( max-width 768px )
-      .fotorama__nav--thumbs
-        display none
-    
-
-  .fotorama__arr
-    width 15px
-    height 50px
-    margin 0 20px
-    background-position center center
-    background-repeat no-repeat
-    background-size cover
-    opacity 0.5
-    top 0
-    bottom 0
-    margin-top auto
-    margin-bottom auto
-    
-    &:hover
-      opacity 1
-    
-    &--prev
-      background-image url(/img/arrow_left.svg)
-    
-    &--next
-      background-image url(/img/arrow_right.svg)
+    .fotorama__fullscreen-icon
+      top unset
+      bottom 2px
+  
+    .fotorama__arr
+      width 15px
+      height 50px
+      margin 0 20px
+      background-position center center
+      background-repeat no-repeat
+      background-size cover
+      opacity 0.5
+      top 0
+      bottom 0
+      margin-top auto
+      margin-bottom auto
+      
+      &:hover
+        opacity 1
+      
+      &--prev
+        background-image url(/img/arrow_left.svg)
+      
+      &--next
+        background-image url(/img/arrow_right.svg)
 
 
 

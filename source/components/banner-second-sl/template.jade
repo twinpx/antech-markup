@@ -1,0 +1,20 @@
+﻿// start /components/banner-transition/
+
+link( rel="stylesheet", href="/components/banner-second-sl/style.css" )
+script( src="/components/banner-second-sl/script.js" )
+//- link( rel="stylesheet", href="/components/banner-second-sl/banner-second-sl.css" )
+
+//- link( href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet" )
+//- script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
+
+.banner-second-sl
+  .item.item-slide-1(id="slide-1" style="background-image: url(/upload/banner/banner_8march-bg.jpg); background-repeat: no-repeat; background-position: 50% 0; background-size: cover; cursor: pointer; max-height: 140px;" onclick="window.location.href = '/catalog/'")
+    .row.baner-content
+      .col-sm-5.col-xs-8(style="text-align: right;")
+        img.img-responsive(src="/upload/banner/banner_8march_02.png" style="max-height: 140px; margin-left: auto;")
+      .col-sm-2.col-xs-4(style="text-align: center;")
+        img.img-responsive(src="/upload/banner/banner_8march_03.png" style="max-height: 140px; margin: auto;")
+      .col-sm-5.hidden-xs(style="text-align: left;")
+        img.img-responsive(src="/upload/banner/banner_8march_04.png" style="max-height: 140px; margin-right: auto;")
+      
+// end /components/banner-transition/
