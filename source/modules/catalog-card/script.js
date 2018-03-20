@@ -36,6 +36,7 @@ $( 'body' )
     }
   });
 })
+/*
 .delegate( '.b-fav-icon', 'click', function(e) {
   e.preventDefault();
   var $button = $( this );
@@ -59,6 +60,7 @@ $( 'body' )
     }
   });
 });
+*/
 
 function store( num ) {
   if (/(10|11|12|13|14|15|16|17|18|19)$/.test(num)) {return '\u0442\u043E\u0432\u0430\u0440\u043E\u0432';}

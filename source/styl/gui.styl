@@ -233,6 +233,9 @@ h6,
 
 .text-small
   font-size 14px
+
+.text-small-1
+  font-size 13px
   
   p
     margin 0 0 10px
@@ -251,6 +254,12 @@ h6,
   
 .text-muted
   color #666666
+
+.text-second
+  color $c-dark-grey-3
+
+.text-italic
+  font-style italic
   
   
 .text-sovet
@@ -828,14 +837,15 @@ blockquote
 
 .input-wrapper
   input
-    padding-right 18px
+    padding-right 20px
+    border-radius 0
   
   .input-step-up,
   .input-step-down
     position absolute
-    right 2px
-    width 15px
-    height 15px
+    right 3px
+    width 18px
+    height calc(50% - 4px)
     z-index 10
     text-align center
     cursor pointer
@@ -843,16 +853,17 @@ blockquote
     background-position center center
     background-repeat no-repeat
     background-size 8px 8px
+    background-color $c-grey-2
     
     &:hover
-      background-color $c-gray-s
+      background-color darken($c-grey-2, 5)
     
   .input-step-up
-    top calc(50% - 17px)
+    top 3px
     background-image url(images/svg/add2cart_quant_up.svg)
     
   .input-step-down
-    bottom calc(50% - 17px)
+    bottom 3px
     background-image url(images/svg/add2cart_quant_down.svg)
 
 .b-ill-block

@@ -1,133 +1,537 @@
 @import '../../styl/component-include.styl'
-
+.offersItems-block
+  font-size 13px
+  font-family 'Arial', 'Open Sans', sans !important;
+  
+  .offers-block-title
+    color $c-black
+    margin-bottom 25px
+    
+    .order_time
+      color $grey
+      .text-red
+        color $c-red-2
+  
+  .block-separator
+    height 30px
+    border none
+    margin 0
+    padding 0
+  
+    
   .offers-block
-    font-size 13px
-      
-    @media (max-width: 768px)
-      font-size 14px
     
     .offers-header
-      font-weight 600
-      display -webkit-flex
-      display flex
-      align-items stretch
-      text-align center
-      margin 0
-          
+      background-color $c-gray-s-2
       
-      .header-cell
-        padding 10px 5px
-        border-right 1px solid $c-white
-        display -webkit-flex
-        display flex
-        align-items center
-        justify-content center
+      .item-cell-price-colspan
+        background-color $c-blue-2
+    
+      .table-sort-nav
+        a.sort-btn
+          padding 3px
+          margin 0 2px
+          text-decoration none
+          color inherit
+          font-size 0.75em
+          border-radius 2px
+          &:hover
+            text-decoration none
+            color inherit
+            background-color $lightest-grey
+          
+          &-active
+            background-color $lightest-grey
+          
+    
+      .help_icon_round
+        display block
+        width 16px
+        height 16px
+        background-image url(/img/svg/info_active.svg)
+        background-position center center
+        background-repeat no-repeat
+        background-size contain
+        opacity 0.5
+        margin 0 auto
         
-        &:last-of-type
-          border-right none
-        
-        &.flex-wrap
-          flex-wrap wrap
-        
-        .text-help
-          color $c-high-gray
-          font-weight 200
-        
-        .text-red
-          color $c-red
-        
-    .help_icon_round
-      display block
-      border 1px solid
-      border-radius 2em
-      width 1.2em
-      line-height 1.2em
-      height 1.2em
-      text-align center
+        &:hover
+          opacity 1
       
       
     
     .offers-item
-      border-top 2px solid $c-white
-      font-family Arial
+      bolder none
+      
+    
+      .sales-icon
+        width 18px
+        height 18px
+        margin-right 5px
+        
+      
+      
+      
+      .item-cell-price
+        &.in
+          background-color $c-blue-6
+        
+      
+      
+      &.mode-standart
+        .order-price
+          display none
+        
+        .standart-price
+          display table-cell
+      
+      &.mode-order
+        .order-price
+          display table-cell
+        
+        .standart-price
+          display none
+        
+      
+      .glyphicon-ruble
+        font-size 0.75em
+        
+          
+    
+    .popover_preview_image
+      color $c-high-gray
+      text-decoration none
+      font-size 16px
+      line-height 16px
+      display inline-block
+      width 18px
+      height 18px
       margin 0
-      position relative
+      top: 4px
       
-      .name2line
+      &:hover
         color $c-high-gray
+        text-decoration none
+    
+  @media (max-width: 768px)
+    font-size 14px
+    
+    .offers-header
+      display none
       
-      .item-cell
-        padding 10px
+    
+    .panel-offers
+      border-radius 0
+      background-color $c-gray-xxs
+      border none
+      border-top 2px solid $c-white
+      margin-bottom 0
+      
+      .panel-heading
+        border none
+        border-radius none
+        border-top-left-radius none
+        border-top-right-radius none
+        font-size 12px
+        position relative
+        padding 0
+        
+        
+        
+        a
+          color $c-black
+          text-decoration none
+          display block
+          padding 15px
+        
+          .glyphicon
+            position absolute
+            right 5px
+            width 20px
+            height 20px
+            top calc(50% - 6px)
+            color $light-grey
+        
+          &.collapsed
+            .glyphicon-chevron-up
+              display none
+            .glyphicon-chevron-down
+              display block
+          
+          
+          .glyphicon-chevron-up
+            display block
+          .glyphicon-chevron-down
+            display none
+      
+    .panel-collapse
+      border 2px solid $c-gray-xxs
+    
+    
+    .item-cell
+      display table
+      width 100%
       
       .sales-icon
-        width 20px
-        height 20px
-        margin-right 10px
-      
-      @media (min-width: 768px)
-        &
-          display -webkit-flex
-          display flex
-          align-items center
-          background-color $c-gray-xxs
-          text-align center
-          
-        .item-cell
-          padding 10px 3px
-        
-      .add-to-cart-cell-vcenter
-        display -webkit-flex
-        display flex
-        align-items center
-        
-      
-      .form-control
-        height 50px
-        padding-left 5px
-      
-      .item-cell-articul
-        background-color $c-gray-xxs
-      
-      .quantity-step-name
-        color $c-high-gray
-      
-      .cur-quantity-indikator
-        position absolute
-        left 0
-        bottom 0
-        height 5px
-        background $c-ultramarine
-        z-index 10
         display none
       
-      .add-to-order-btn
-        padding 8px 10px
-        padding-left 35px
-        background-position 5px center
-        background-repeat no-repeat
-        background-size 24px 24px
-        line-height 16px
-        font-size 12px
-        width 110px
+      .popover_preview_image
+        display none
+      
+    
+    .item-cell-name,
+    .item-cell-val
+      display table-cell
+      padding 5px 0
+    
+    .item-cell-name
+      font-weight 600
+      width 40%
+      
+    .item-cell-val
+      width 60%
+    
+    .item-cell-price-name
+      display block
+      
+      .item-cell-name
+        display block
+        width 100%
         
-        &.mode-cart
-          background-color $c-green
-          background-image url(/img/svg/add2cart_icon1.svg)
-          
-          &:hover
-            background-color darken( $c-green, 5% )
+    .item-cell-row
+      display table
+      width 100%
+    
+    
+    .item-cell-val,
+      display table-row
+      width 100%
+      
+    
+    .item-cell-price
+      display block
+      float left
+      width calc(100% / 3)
+      padding 3px 5px
+      text-align center
+      cursor pointer
+      
+      &.price-range-1
+        padding-left 0
         
-        &.mode-order
-          background-color $c-yellow
-          background-image url(/img/svg/add2cart_icon2.svg)
-          
-          &:hover
-            background-color darken( $c-yellow, 5% )
-            
+      &.price-range-3
+        padding-right 0
         
-        &.btn-disabled
-          background-image url(/img/svg/add2cart_icon4.svg)
+    
+    
+    .order-price
+      width 100%
+    
+    
+    .item-cell-print,
+    .item-cell-quantity,
+    .item-cell-button
+      
+      width auto
+      display inline-table
+      vertical-align middle
+      padding 0 2px
+    
+    .item-cell-button
+      width 100px
+      
+    .item-cell-print
+      padding-left 0
+        
+    .item-cell-button
+      padding-right 0
+    
+    .item-cell-morelink
+      display block
+      margin 10px 0
+      text-align center
+    
+    .item-cell-size
+      display none
+    
+    .item-cell-material
+      display none
+    
+  
+  @media (min-width: 768px)
+    font-size 12px
+    font-family 'Arial', 'Open Sans', sans !important;
+    
+    
+    .cat-hidden
+      display none
+    
+    .offers-header
+      display block
+    
+    .offers-item
+      
+      .panel-offers
+        margin-bottom 0
+        
+        .panel-heading
+          display none
           
-        &.in-cart-update
-          background-image url(/img/svg/add2cart_icon3.svg)
+      .panel-collapse
+        display block
+      
+      .panel-body
+        margin 0
+        padding 0
+        display table-row
+        background-color $c-grey-4
+        
+        &:hover
+          background-color $c-light-yellow-1
+      
+      &.btn-disabled
+        .panel-body
+          background-color $c-light-yellow-1
+      
+    
+      .item-cell-price-name
+        display none
+    
+    .item-cell,
+    .header-cell
+      display table-cell
+      text-align center
+      padding 5px 2px
+      margin 0
+      vertical-align middle
+      border-right 1px solid $c-white
+      
+      &:last-of-type
+        border-right none
+    
+    .header-cell
+      font-weight 600
+      
+      .text-help
+        color $c-high-gray
+        font-weight 200
+      
+      .text-red
+        color $c-red
+    
+    .item-cell-name
+      display none
+    
+    
+    
+    
+    .item-cell-articul
+      width 63px
+      
+    .item-cell-size
+      width 120px
+    
+    .item-cell-material
+      width 56px
+    
+    .item-cell-value
+      width 60px
+    
+    .item-cell-price-colspan
+      width 204px
+    
+    .item-cell-price
+      width 68px
+      margin 0
+      position relative
+      padding 5px 2px
+      background-color $c-blue-7
+      cursor pointer
+    
+    .item-cell-instock
+      width 58px
+    
+    .item-cell-print
+      width 48px
+    
+    .item-cell-quantity
+      width 70px
+    
+    .item-cell-button
+      width 100px
+    
+    .item-cell-quantity-and-button
+      width 170px
+    
+    .item-cell-morelink
+      display none
+    
+    .show-all-offers
+      background-color $c-blue-8
+      width 100%
+      padding 15px
+      color inherit
+      display block
+      text-align center
+      margin 0
+      
+      &:hover
+        text-decoration none
+        background-color darken($c-blue-8, 5)
+      
+      .glyphicon
+        font-size 0.75em  
+  
+  @media (min-width: 992px)
+  
+    .item-cell-articul
+      width 62px
+      
+    .item-cell-size
+      width 115px
+    
+    .item-cell-material
+      width 50px
+    
+    .item-cell-value
+      width 60px
+      
+    .item-cell-price-colspan
+      width 201px
+      
+    .item-cell-price
+      width 67px
+    
+    .item-cell-instock
+      width 55px
+    
+    .item-cell-print
+      width 45px
+    
+    .item-cell-quantity
+      width 70px
+    
+    .item-cell-button
+      width 100px
+    
+    .item-cell-quantity-and-button
+      width 170px
+  
+  
+  @media (min-width: 1200px)
+  
+    .item-cell-articul
+      width 70px
+      
+    .item-cell-size
+      width 145px
+    
+    .item-cell-material
+      width 70px
+    
+    .item-cell-value
+      width 70px
+      
+    .item-cell-price-colspan
+      width 246px
+      
+    .item-cell-price
+      width 82px
+    
+    .item-cell-instock
+      width 70px
+    
+    .item-cell-print
+      width 60px
+    
+    .item-cell-quantity
+      width 90px
+    
+    .item-cell-button
+      width 100px
+    
+    .item-cell-quantity-and-button
+      width 190px
+    
+    
+  .add-to-cart-cell-vcenter
+    display -webkit-flex
+    display flex
+    align-items center
+    
+  
+  .form-control
+    height 50px
+    padding-left 5px
+  
+    &::-webkit-input-placeholder
+      font-size 10px
+      
+    &::-moz-placeholder
+      font-size 10px
+      
+    &:-moz-placeholder
+      font-size 10px
+      
+    &:-ms-input-placeholder
+      font-size 10px
+  
+  
+  .quantity-step-name
+    color $c-high-gray
+  
+  .offers-item
+    .add-to-order-btn
+      height 50px
+      width 50px
+      background-position center center
+      background-repeat no-repeat
+      background-size 32px 32px
+      margin 0
+      padding 0
+      
+    &.mode-cart .add-to-order-btn
+      background-color $c-green
+      background-image url(/img/svg/add2cart_icon1.svg)
+      
+      &:hover
+        background-color darken( $c-green, 5% )
+    
+    &.mode-order .add-to-order-btn
+      background-color $c-yellow
+      background-image url(/img/svg/add2cart_icon2.svg)
+      
+      &:hover
+        background-color darken( $c-yellow, 5% )
+    
+    &.mode-preorder .add-to-order-btn
+      background-color $c-yellow
+      
+      &:hover
+        background-color darken( $c-yellow, 5% )
+        
+    
+    &.form-disabled .add-to-order-btn
+      background-image url(/img/svg/add2cart_icon4.svg)
+      
+    &.in-cart-update .add-to-order-btn
+      background-image url(/img/svg/add2cart_icon3.svg)
+    
+  
+  .add-to-favorite-btn
+    height 50px
+    width 35px
+    background-position center center
+    background-repeat no-repeat
+    background-size 24px 24px
+    background-image url(/img/svg/add2favorite_btn_icon.svg)
+    margin 0
+    padding 0
+    margin-left 5px
+    
+    &.active
+      background-color $lightest-grey
+      
+    &:hover
+      background-color darken( $c-grey-1, 5% )
       
