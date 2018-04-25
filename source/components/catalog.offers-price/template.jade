@@ -1,0 +1,310 @@
+// start /components/catalog.offers-list/
+
+link( rel="stylesheet", href="/components/catalog.offers-price/style.css" )
+script( src="/components/catalog.offers-price/script.js" )
+
+
+.row.offersItems-block( id="offersItems-block")
+    
+  .col-xs-5.visible-xs
+    .dropdown
+      button.btn.btn-type-3.btn-sm.dropdown-toggle(type="button" id="sortSelectors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") Сортировка&nbsp;
+        span.glyphicon.glyphicon-sort
+        
+      ul.dropdown-menu(aria-labelledby="sortSelectors")
+        li.dropdown-header
+          span По длине
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order-alt
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order
+            span &nbsp;Вниз
+        li.dropdown-header
+          span По ширине
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order-alt
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order
+            span &nbsp;Вниз
+        li.dropdown-header
+          span По высоте
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order-alt
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order
+            span &nbsp;Вниз
+        li.dropdown-header
+          span По марке картона
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-alphabet
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-alphabet-alt
+            span &nbsp;Вниз
+        li.dropdown-header
+          span По объему
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order-alt
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-order
+            span &nbsp;Вниз
+        li.dropdown-header
+          span По конструкции
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-attributes-alt
+            span &nbsp;Вверх
+        li
+          a( href="#")
+            span.glyphicon.glyphicon-sort-by-attributes
+            span &nbsp;Вниз
+    hr.i-size-XS
+    
+  .col-xs-7.col-sm-12.text-right
+    button.btn.btn-type-3.btn-sm(type="button" id="save_pdf")
+      span.glyphicon.glyphicon-save-file
+      span &nbsp;Скачать прайс
+    hr.i-size-XS
+  
+  .col-xs-12
+  
+    
+    - var maxVisible = 240, curCount = 1, visibleClass = '';
+    
+      
+    - var tempTitle = 'Готовые решения этой конструкции в наличии', tempSrok = '1', tempCount = '19', tempBlockId = 'offersItems';
+    
+    - if(curCount > maxVisible) visibleClass = 'cat-hidden';
+  
+    
+    div( id="#{tempBlockId}" role="tablist" aria-multiselectable="true" class="offers-block #{visibleClass}" )
+    
+      .offers-header
+        
+        .header-cell.item-cell-articul Арт
+          div &nbsp;
+        
+        .header-cell.item-cell-size Размеры,&nbsp;мм
+          .table-sort-nav
+            a( href="" rel="nofollow").sort-btn.glyphicon.glyphicon-triangle-bottom
+            a( href="" rel="nofollow").sort-btn.sort-btn-active.glyphicon.glyphicon-triangle-top
+        
+        .header-cell.item-cell-material Картон
+          .table-sort-nav
+            a( href="" rel="nofollow").sort-btn.glyphicon.glyphicon-triangle-bottom
+            a( href="" rel="nofollow").sort-btn.sort-btn-active.glyphicon.glyphicon-triangle-top
+        
+        .header-cell.item-cell-value Объем, л
+          .table-sort-nav
+            a( href="" rel="nofollow").sort-btn.glyphicon.glyphicon-triangle-bottom
+            a( href="" rel="nofollow").sort-btn.sort-btn-active.glyphicon.glyphicon-triangle-top
+        
+        .header-cell.item-cell-construction Кострукция
+          .table-sort-nav
+            a( href="" rel="nofollow").sort-btn.glyphicon.glyphicon-triangle-bottom
+            a( href="" rel="nofollow").sort-btn.sort-btn-active.glyphicon.glyphicon-triangle-top
+        
+        .header-cell.item-cell-price-colspan Цена при тираже, руб/шт
+          .text-help Розница&nbsp;|&nbsp;Средний&nbsp;опт&nbsp;|&nbsp;Крупный&nbsp;опт
+        
+        .header-cell.item-cell-instock Наличие, шт.
+        
+        //-.header-cell.item-cell-print Печать
+        //-  .help_icon_round.popover_teaser( data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Есть возможность нанести печать на готовые коробки." )
+        .header-cell.item-cell-quantity-and-button
+          div Количество<br>
+            span.text-red *
+            span.text-help &nbsp;продается в пачках
+      
+      - for (var i=0; i < 24; i++)
+        
+        
+        - if(curCount > maxVisible) visibleClass = 'cat-hidden';
+        
+        - curCount++;
+        
+        - var tempClass = 'offers-item offers_item_add2cart mode-cart mode-standart', tempClass2 = '';
+        - if(i == 2) tempClass = 'offers-item offers_item_add2cart mode-cart mode-standart form-disabled';
+        - if(i == 3) tempClass = 'offers-item offers_item_add2cart mode-cart mode-order';
+        
+        - if(b == 1) tempClass2 = 'mode-preorder';
+        
+        
+        form(name="add_to_cart_offers_id_#{b}#{i}" method="POST" action="/json/add2cart.json" class="#{tempClass} #{tempClass2} #{visibleClass}" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer" )
+        
+          .panel.panel-offers
+            .panel-heading( role="tab" id="heading#{i}" )
+              a.collapsed( role="button" data-toggle="collapse" data-parent="#offersItems" href="#collapse#{i}" aria-expanded="true" aria-controls="collapse#{i}")
+                img.sales-icon(src="/img/svg/sale.svg" alt="Спеццена" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Действует специальная сниженная цена" )
+                span 750 х 500 х 500 Т-24B Бел/Бур
+                span.glyphicon.glyphicon-chevron-down( aria-hidden="true")
+                span.glyphicon.glyphicon-chevron-up( aria-hidden="true")
+              
+              
+          .panel-collapse.collapse( id="collapse#{i}" role="tabpanel" aria-labelledby="heading#{i}")
+            .panel-body
+          
+            
+              .item-cell.item-cell-articul
+                
+                img.sales-icon.popover_teaser(src="/img/svg/sale.svg" alt="Спеццена" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Действует специальная сниженная цена" )
+                
+                a.glyphicon.glyphicon-camera.popover_preview_image( href="" data-previewimage="http://s.fotorama.io/3.jpg" data-content="<img src='http://s.fotorama.io/3.jpg' width='200' height='200' />")
+                
+                .item-cell-name Артикул
+                .item-cell-val &nbsp;MSB0200
+              
+              .item-cell.item-cell-size
+                .item-cell-name Размеры,<br>Д х Ш х В<br>(мм)
+                .item-cell-val
+                  .name1line
+                    span( itemprop="offers" itemscope itemtype="http://schema.org/Offer" )
+                      a.underline( href="" property="url" ) 1250 х 1000 х 1500
+                  .name2line внешние
+              
+              
+              .item-cell.item-cell-material
+                .item-cell-name Картон
+                .item-cell-val Т-24B Бел/Бур
+              
+              .item-cell.item-cell-value
+                .item-cell-name Объем,&nbsp;л
+                .item-cell-val 0,242
+              
+              .item-cell.item-cell-construction
+                .item-cell-name Конструкция
+                .item-cell-val
+                  a(href="#") 4-х клапанная
+              
+              
+              .item-cell.item-cell-price-name
+                .item-cell-name Цена/шт при тираже
+                
+                meta( itemprop="lowPrice" content="12")
+                meta( itemprop="highPrice" content="21")
+                meta( itemprop="offerCount" content="123")
+                meta( itemprop="priceCurrency" content="RUB")
+                
+              .item-cell.standart-price.item-cell-price.price-range.price-range-1(data-addquant="10")
+                .quantity-step-name
+                  span 10+
+                .bold-l
+                  span 2&nbsp;099,73&nbsp;
+                  span.glyphicon.glyphicon-ruble
+              
+              .standart-price.item-cell.item-cell-price.price-range.price-range-2(data-addquant="500")
+                .quantity-step-name
+                  span 500+
+                .bold-l
+                  span 2&nbsp;099,73&nbsp;
+                  span.glyphicon.glyphicon-ruble
+              
+              .standart-price.item-cell.item-cell-price.price-range.price-range-3(data-addquant="1000")
+                .quantity-step-name
+                  span 1000+
+                .bold-l
+                  span 2&nbsp;099,73&nbsp;
+                  span.glyphicon.glyphicon-ruble
+                
+              .item-cell.item-cell-price-colspan.order-price Цена будет рассчитана после оформления предзаказа
+              
+              
+              .item-cell.item-cell-instock
+                .item-cell-name В&nbsp;наличии
+                .item-cell-val
+                  .preorder_popower( data-container="body" data-toggle="popover" data-placement="top" data-trigger="manual" data-content="В данный момент на складе 100 единиц товара. Сделайте предзаказ и мы изготовим нужное количество." ) 98&nbsp;765
+              
+              
+              
+              hr.i-size-XS.clearfix.visible-xs
+              
+              //-.item-cell.item-cell-print
+              //-  .checkbox
+              //-    label
+              //-      input.add-pring-chb( type="checkbox" name="addprint" data-defaultval="N")
+              //-      span.visible-xs Печать
+                    
+              .item-cell.item-cell-quantity
+                  
+                input( type="hidden" name="OFFERS_ID" value="123123" )
+                input( type="hidden" name="MODE" value="ADD>")
+                input( type="hidden" name="BID" value="2345678" )
+              
+              
+                
+                input.form-control.add-to-cart-input-quantity(
+                  name="quantity" 
+                  size="4" 
+                  data-container="body" 
+                  data-toggle="popover" 
+                  data-placement="top" 
+                  data-trigger="manual" 
+                  data-content="Товар продается кратно 20 шт." 
+                  type="text" 
+                  data-inputtype="number" 
+                  data-inputstep="20" 
+                  data-inputmin="" 
+                  data-inputmax="" 
+                  value="" 
+                  data-oncart="" 
+                  data-freequantity="100" 
+                  data-quantityrangeone="1" 
+                  data-quantityrangetwo="500" 
+                  data-quantityrangetre="1000" 
+                  placeholder="по 20 шт"
+                )
+              
+              .item-cell.item-cell-button
+                
+                button.btn.add-to-order-btn(
+                  name="submit" 
+                  type="submit" 
+                  value="Y" 
+                  title="Добавить к заказу"
+                )
+                
+                //-- var tempAdd2FavoriteActive = '';
+                //-- if(i == 1) tempAdd2FavoriteActive = 'active';
+                
+                //-button(
+                //-  class="btn btn-type-5 add-to-favorite-btn #{tempAdd2FavoriteActive}"
+                //-  name="ADD2FAVORITE" 
+                //-  type="button" 
+                //-  value="Y" 
+                //-  title="Добавить в список избранных товаров"
+                //-  data-offersid="123"
+                //-  data-actionUrl="/json/add2favorite.json"
+                //-)
+              
+              .clear-fix.visible-xs
+              .item-cell.item-cell-morelink
+                a(href="") Посмотреть фото и характеристики
+          
+    - if(b == 0)
+      hr( class=" #{visibleClass} block-separator")
+    
+  - if(visibleClass == 'cat-hidden')
+    a.show-all-offers.hidden-xs( href="#")
+      b Показать все размеры
+      span &nbsp;(32)&nbsp;
+      span.sort-btn.glyphicon.glyphicon-triangle-bottom
+          
+    
+//-.section
+//-  pre#jsmessage
+  
+// end /components/catalog.offers-list/

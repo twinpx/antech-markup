@@ -11,59 +11,12 @@ script( src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" )
 
   .firstbanerfotorama( data-width="100%" data-height="360" data-arrows="true" data-loop="true" data-autoplay="0" data-swipe="true" data-click="false" )
     
-    .item.item-slide-5(id="slide-5")
-      .baner-content.text-center-xs
-        h1.b-header1 Новогодняя подарочная упаковка
     
+    include slide4
+    include slide3
+    include slide2
+    include slide1
+    include slide5
     
-    
-    .item.item-slide-4(id="slide-1")
-      .video-container
-        video.video-bg(  loop preload="none" poster="/upload/banner/preload_image_ploter_antech1.png" muted)
-          source( src="/upload/banner/ploter_antech2.mp4" type="video/mp4")
-        .mobile-bg(style="background-image: url(/upload/banner/preload_image_ploter_antech1.png);")
-        .shadow-bg
-      .baner-content.text-center-xs
-        h1.bn-h1 Производство упаковки из гофрокантона
-        a(href="#" data-toggle="modal" data-target="#aboutVideo")
-          span.play-link
-            img.play-icon(src="/upload/banner/play_button.svg" alt="play")
-        a(href="#" data-toggle="modal" data-target="#aboutVideo")
-          span.bn-text Посмотреть презентацию
         
-    .item.item-slide-3(id="slide-2")
-      .baner-content.text-center-xs
-        img.header-text(src="/upload/banner/ny18_headtext1.jpg" alt="Пора!")
-        .text-first Мы&nbsp;предлагаем Вам <br class="visible-lg">готовые решения для упаковки <br class="visible-lg">новогодних подарков!
-        a(href="/catalog/novogodnyaya-podarochnaya-upakovka/")
-          span.btn.btn-type-1 Выбрать
-      
-    .item.item-slide-1(id="slide-3")
-      .white-plashka
-        .h2 Добро пожаловать в&nbsp;Антэк!
-        
-        .h4 Мы&nbsp;производители упаковки из&nbsp;гофрокартона.
-        
-        hr
-        
-        .bn-text У&nbsp;нас вы&nbsp;можете 
-          a(href="/production/") сделать заказ
-          |  на&nbsp;изготовление индивидуальной упаковки или 
-          a(href="/catalog/") купить
-          |  типовые картонные коробки.
-    
-    .item.item-slide-2(id="slide-4" style="background-image: url(/upload/banner/index-baner-1.jpg)")
-      .h1.bn-h1 Изготовим коробки<br>на&nbsp;заказ
-      .h3.bn-text Заказать индивидуальную<br>упаковку очень просто!
-      a.btn.btn-default(href="/production/") Подробнее о производстве
-    
-//-    .item(style="background-image: url(/upload/banner/index-baner-1.jpg)")
-//-      .h1.bn-h1 Изготовим коробки<br>на&nbsp;заказ
-//-      .h3.bn-text Заказать индивидуальную<br>упаковку очень просто!
-//-      .btn.btn-default Выбрать конструкцию
-//-    .item
-//-      img(src="/upload/banner/index-baner-1.jpg")
-//-    .item
-//-      img(src="/upload/banner/index-baner-1.jpg")
-
 // end /components/banner-transition/

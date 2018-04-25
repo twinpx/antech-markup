@@ -1,0 +1,282 @@
+@import '../../styl/component-include.styl'
+
+.a-catalog-section
+  .morelink
+    text-decoration none
+    
+    .glyphicon
+      font-size 60%
+        
+  @media ( min-width 768px )
+    .header-row
+    
+      background-color $c-grey-5
+      position relative
+      padding-left 65px
+      padding-right 155px
+      
+      .section-sym
+        width 63px
+        border-right 2px $c-white solid
+        background-position center center
+        background-repeat no-repeat
+        background-size 50px 50px
+        background-color $c-grey-3
+        left 0
+        top 0
+        bottom 0
+        position absolute
+      
+      .section-viewtype
+        width 155px
+        right 0
+        top 0
+        bottom 0
+        position absolute
+        
+        .viewtype-item
+          width 50px
+          text-align center
+          border-left 2px $c-white solid
+          display inline-block
+          height 100%
+          float left
+          padding 0
+          margin 0
+          color inherit
+          opacity 0.2
+          
+          &:hover
+            text-decoration none
+            opacity 1
+          
+          display -webkit-flex
+          display flex
+          align-items center
+          justify-content center
+          
+          
+          
+          &.active
+            background-color $c-grey-3
+            opacity 1
+      
+      .section-text
+        padding 15px
+        
+        .h-inline
+          display inline
+          padding 0
+        
+        .add2headertext
+          color $light-grey
+    
+    .text-row
+      padding-left 80px
+      padding-right 140px
+      margin 20px 0
+    
+    .a-catalog-card-horisontal
+      background-color $c-white
+      position relative
+      padding 20px
+    
+      &:hover
+        z-index 10
+        box-shadow 0 0 4px $c-gray-s
+        
+      .items-fotorama
+        overflow hidden
+        
+      
+        
+      .card-name
+        font-size 21px
+        text-decoration underline
+        line-height 1
+        
+      .offers-count
+        font-size 13px
+        font-style italic
+        font-weight 600
+        margin-top 20px
+      
+      .card-text
+        margin-top 20px
+        color $c-dark-gray
+        font-size 14px
+          
+      .link-block
+        text-align center
+        
+        .minprice
+          font-size 20px
+          font-weight 600
+          margin-top 20px
+          white-space nowrap
+          
+          .text-xs
+            font-size 11px
+            
+          .glyphicon
+            font-size 75%
+          
+          .price-val-cop
+            font-size 0.6em
+            top -0.5em
+            position relative
+            margin-left 2px
+        
+        .link
+          margin-top 10px
+          
+          .btn
+            width 100%
+          
+          .offers-count-dop
+            font-size 12px
+            color $grey
+            margin-top 10px
+            
+            
+  @media ( min-width 992px )
+    .a-catalog-card-horisontal
+      .link-block
+        .minprice
+          margin-top 40px
+        .link
+          margin-top 30px
+          
+  @media ( min-width 1200px )
+    .a-catalog-card-horisontal
+      .link-block
+        .minprice
+          font-size 25px
+          margin-top 40px
+        .link
+          margin-top 50px
+        
+    
+  
+  @media ( max-width 768px )
+    .header-row
+      
+      .section-viewtype
+        height 40px
+        background-color $c-grey-5
+        margin 10px 0
+        
+        .viewtype-item
+          width calc(33.333% - 2px)
+          text-align center
+          border-left 2px $c-white solid
+          display inline-block
+          height 100%
+          float left
+          padding 0
+          margin 0
+          color inherit
+          opacity 0.2
+          &:hover
+            text-decoration none
+            opacity 1
+          
+          display -webkit-flex
+          display flex
+          align-items center
+          justify-content center
+          
+          &.active
+            background-color $c-grey-3
+            opacity 1
+  
+      .section-text
+        
+        .h-inline
+          display inline
+          padding 0
+        
+        .add2headertext
+          color $light-grey
+    
+    .a-catalog-card-horisontal
+      position relative
+      padding 15px 0
+      border-bottom 1px solid $c-gray-s-2
+      
+      .image-colum
+        padding-right 0
+        
+      .items-fotorama
+        overflow hidden
+        
+      
+        
+      .card-name
+        font-size 14px
+        text-decoration underline
+        line-height 1
+        
+      .offers-count
+        font-size 12px
+        font-style italic
+        font-weight 600
+        margin-top 10px
+      
+      .card-text
+        margin-top 10px
+        color $c-dark-gray
+        font-size 12px
+          
+      .link-block
+        text-align center
+        
+        .minprice
+          font-size 20px
+          font-weight 600
+          margin-top 10px
+          white-space nowrap
+          
+          .text-xs
+            font-size 11px
+            
+          .glyphicon
+            font-size 75%
+          
+          .price-val-cop
+            font-size 0.6em
+            top -0.5em
+            position relative
+            margin-left 2px
+            
+        
+        .link
+          margin-top 10px
+          
+          .btn
+            width 100%
+            line-height 2em
+  
+  .fotorama-sm
+    .fotorama__arr
+      opacity 0
+      background-position center center
+      background-size 20px 20px
+      background-repeat no-repeat
+      
+      &--prev
+        background-image url(/img/svg/fotorama1-arrow-prev.svg)
+        left -10px
+        
+      &--next
+        background-image url(/img/svg/fotorama1-arrow-next.svg)
+        right -10px
+    
+    &:hover
+      .fotorama__arr
+        opacity 1
+        
+  .offers-list-on-form
+    display none
+    padding-top 20px
+    

@@ -3,14 +3,16 @@ $('.sideMenuCollapse').on('shown.bs.collapse', function () {
 });
 
 $('.togleChildrenBloc').click(function(e){
-  $('.cildterblock', $(this).parents('.root-item')).collapse('toggle');
+  var parent = $(this).parent();
+  $('.collapse', parent).eq(0).collapse('toggle');
   e.stopPropagation();
   return false;
 });
 
 $('.cildterblock').on('show.bs.collapse', function () {
-  $(this).parents('.root-item').addClass('opened-children');
+  $(this).parent().addClass('opened-children');
 })
+
 $('.cildterblock').on('hide.bs.collapse', function () {
-  $(this).parents('.root-item').removeClass('opened-children');
+  $(this).parent().removeClass('opened-children');
 })

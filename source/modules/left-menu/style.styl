@@ -7,6 +7,7 @@
     border-radius 5px
     margin-bottom 5px
     background-color $c-white
+    position relative
     
     .link
       position relative
@@ -24,22 +25,21 @@
       &:hover
         background-color $c-gray-xxs
     
-      .togleChildrenBloc
-        position absolute
-        top 0
-        bottom 0
-        margin auto 0
-        right 10px
-        width 16px
-        height 16px
-        font-size 10px
-        line-height 10px
-        background-image url(images/arrow_menu.svg)
-        background-position center center
-        background-repeat no-repeat
-        background-size 8px 8px
-        cursor pointer
-        transform rotate(0)
+    .togleChildrenBloc
+      position absolute
+      top calc(0.5em + 5px)
+      padding 15px
+      right 0
+      width 16px
+      height 16px
+      font-size 10px
+      line-height 10px
+      background-image url(images/arrow_menu.svg)
+      background-position center center
+      background-repeat no-repeat
+      background-size 8px 8px
+      cursor pointer
+      transform rotate(0)
         
     &.opened-children
       .togleChildrenBloc
@@ -49,10 +49,16 @@
     a
       text-decoration none
     
+    ul
+      margin 0
+      padding 0
+      list-style none
+      
     .cildterblock
       border-top 1px solid $border-gray
-      padding 7px 25px 7px 50px
-      padding-left 
+      padding 7px 15px
+      
+      
       
     .children
       list-style none
@@ -60,8 +66,15 @@
       padding-left 0
       margin-bottom 0
       
+      .togleChildrenBloc
+        top 1px
+        right -15px
+      
+      
       li
         padding 7px 0
+        padding-left 15px
+        margin 0
         
         .glyphicon
           font-size 0.6em
@@ -72,5 +85,8 @@
           &:hover,
           &.selected
             color $c-black
+    
+    li.rootlevel2
+      position relative
 
   

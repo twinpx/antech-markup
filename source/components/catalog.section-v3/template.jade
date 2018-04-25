@@ -1,0 +1,37 @@
+﻿// start /components/catalog.section/
+
+link( rel="stylesheet", href="/components/catalog.section-v3/style.css" )
+link( rel="stylesheet", href="/components/catalog/style.css" )
+script( src="/components/catalog.section-v3/script.js" )
+
+include ../../modules/gallery/fotorama
+
+.a-catalog-section( itemscope itemtype="http://schema.org/Product" )
+  
+  .header-row
+    .section-sym(style="background-image: url(/img/svg/magazin_morda_2.svg);")
+    .section-text
+      h1.h3.h-inline( itemprop="name") Купить упаковку для промышленного оборудования
+      span.add2headertext &emsp;123 товара
+    
+    .section-viewtype
+      a.viewtype-item.item-greed.active(href="?VIEW_TYPE=TABLE" rel="nofollow")
+        span.glyphicon.glyphicon-align-justify
+      a.viewtype-item.item-list(href="?VIEW_TYPE=LIST" rel="nofollow")
+        span.glyphicon.glyphicon-th-list
+      a.viewtype-item.item-greed(href="?VIEW_TYPE=GREED" rel="nofollow")
+        span.glyphicon.glyphicon-th-large
+  .text-row
+    p Здесь собраны различные демонстрационные лотки, транспортная тара, индвивидуальные коробки для бутылок, все то, что каким-либо образом связано со стеклянными и другими видами бутылок размного обхема и количества
+    p
+      a.scrollto.morelink(href="#detailtext" data-scrollto="#detailtext") Читать подробнее&nbsp;
+        span.glyphicon.glyphicon-menu-right
+  
+  
+  
+  
+  .cat-section( itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer")
+    include ../../components/catalog.offers-price/template
+  
+
+// end /components/catalog.section/

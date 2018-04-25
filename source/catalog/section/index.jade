@@ -8,7 +8,36 @@ block content
   .container
     include ../../modules/breadcrumbs/catalog
     
-  include ../../components/catalog.section/template
+    .row
+      .col-md-3
+        .hidden-sm.hidden-xs
+          include ../../modules/left-menu/include
+          include ../../components/catalog.sections-left-menu/template
+          
+      .col-md-9
+        
+        if(false)
+          include ../../components/catalog.section-v2/template
+        else
+          include ../../components/catalog.section-v3/template
+        
+        
+        // include file add text start
+        .section( id="detailtext" )
+          include ../../include/addtextfile
+        // include file add text end
+                         
+  
+        div
+          hr.i-size-S
+          hr.gray
+          hr.i-size-S.hidden-xs
+          hr.i-size-XS.visible-xs
+          include ../../include/advantages_catalog
+          hr.i-size-S.hidden-xs
+          hr.i-size-XS.visible-xs
+          hr.gray
+        
   
   .container
     include ../../include/serv_puth_gotovye

@@ -33,17 +33,34 @@ script( src="/components/ideas.section/script.js" )
       
     .col-sm-3.hidden-sm.hidden-xs
       nav.left-menu.text-small
-        .root-item.is-root
+        .root-item.is-root.opened-children
           a.link( href='/production/fefco/' )
             | Все идеи
             span.h-counter 154
-            .togleChildrenBloc
-          .cildterblock.collapse(aria-expanded='false', role="", style='height: 15px;')
+          
+          .togleChildrenBloc
+          .cildterblock.collapse.in(aria-expanded='true', role="")
             ul.children
-              li
+              li.rootlevel2
                 a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Про изготовление
-              li
+                .togleChildrenBloc
+                ul.children2.collapse.in
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test1
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test2
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test3
+              li.rootlevel2
                 a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Дизайнерские решения
+                .togleChildrenBloc
+                ul.children2.collapse
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test1
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test2
+                  li
+                    a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) test3
               li
                 a( href='/production/fefco/02-vysechnye-gofrokoroba/' ) Полезные советы
               li
@@ -57,7 +74,8 @@ script( src="/components/ideas.section/script.js" )
           a.link( href='/production/galia/' )
             | По видам продукции
             span.h-counter 154
-            .togleChildrenBloc
+          
+          .togleChildrenBloc
           .cildterblock.collapse(aria-expanded='false', role="", style='height: 15px;')
             ul.children
               li

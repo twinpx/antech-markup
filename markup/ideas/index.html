@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/template/template_styles.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/template/jscript.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/template/jscript.js"></script>
   </head>
   <body>
     <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
@@ -290,12 +290,26 @@
           </div>
           <div class="col-sm-3 hidden-sm hidden-xs">
             <nav class="left-menu text-small">
-              <div class="root-item is-root"><a href="/production/fefco/" class="link">Все идеи<span class="h-counter">154</span>
-                  <div class="togleChildrenBloc"></div></a>
-                <div aria-expanded="false" role="" style="height: 15px;" class="cildterblock collapse">
+              <div class="root-item is-root opened-children"><a href="/production/fefco/" class="link">Все идеи<span class="h-counter">154</span></a>
+                <div class="togleChildrenBloc"></div>
+                <div aria-expanded="true" role="" class="cildterblock collapse in">
                   <ul class="children">
-                    <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Про изготовление</a></li>
-                    <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Дизайнерские решения</a></li>
+                    <li class="rootlevel2"><a href="/production/fefco/02-vysechnye-gofrokoroba/">Про изготовление</a>
+                      <div class="togleChildrenBloc"></div>
+                      <ul class="children2 collapse in">
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test1</a></li>
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test2</a></li>
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test3</a></li>
+                      </ul>
+                    </li>
+                    <li class="rootlevel2"><a href="/production/fefco/02-vysechnye-gofrokoroba/">Дизайнерские решения</a>
+                      <div class="togleChildrenBloc"></div>
+                      <ul class="children2 collapse">
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test1</a></li>
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test2</a></li>
+                        <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">test3</a></li>
+                      </ul>
+                    </li>
                     <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Полезные советы</a></li>
                     <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Лайфхаки</a></li>
                     <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Как выбрать упаковки</a></li>
@@ -303,8 +317,8 @@
                   </ul>
                 </div>
               </div>
-              <div class="root-item is-root"><a href="/production/galia/" class="link">По видам продукции<span class="h-counter">154</span>
-                  <div class="togleChildrenBloc"></div></a>
+              <div class="root-item is-root"><a href="/production/galia/" class="link">По видам продукции<span class="h-counter">154</span></a>
+                <div class="togleChildrenBloc"></div>
                 <div aria-expanded="false" role="" style="height: 15px;" class="cildterblock collapse">
                   <ul class="children">
                     <li><a href="/production/fefco/02-vysechnye-gofrokoroba/">Про изготовление</a></li>

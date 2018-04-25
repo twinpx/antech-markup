@@ -236,15 +236,15 @@
       display inline-table
       vertical-align middle
       padding 0 2px
-    
-    .item-cell-button
-      width 100px
+      
       
     .item-cell-print
       padding-left 0
+      font-size 11px
         
     .item-cell-button
       padding-right 0
+      min-width 70px
     
     .item-cell-morelink
       display block
@@ -483,7 +483,7 @@
   .offers-item
     .add-to-order-btn
       height 50px
-      width 50px
+      width calc(50% - 5px)
       background-position center center
       background-repeat no-repeat
       background-size 32px 32px
@@ -520,7 +520,7 @@
   
   .add-to-favorite-btn
     height 50px
-    width 35px
+    width calc(50% - 5px)
     background-position center center
     background-repeat no-repeat
     background-size 24px 24px
@@ -528,6 +528,8 @@
     margin 0
     padding 0
     margin-left 5px
+    
+      
     
     &.active
       background-color $lightest-grey

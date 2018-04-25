@@ -222,7 +222,8 @@ $('input[type="text"]').each(function(){
 
 $('.scrollto').on('click', function(){
   if($($(this).data('scrollto')).length>0){
-    $.scrollTo($(this).data('scrollto'), 300, {over: $('.b-header-fixed').outerHeight()});
+    var scToTop = $($(this).data('scrollto')).offset().top;
+    $.scrollTo(scToTop, 300, {over: $('.b-header-fixed').outerHeight()});
     return false;
   }
   
@@ -233,6 +234,10 @@ $('.lazyload').lazyload({
 });
 
 
+//   console.log($('[data-toggle="popover"]').length);
+//   console.log(typeof popover);
+//   $('[data-toggle="popover"]').popover();
+  
 if($('[data-toggle="popover"]').length > 0 && typeof popover == 'function'){
   $('[data-toggle="popover"]').popover();
 }

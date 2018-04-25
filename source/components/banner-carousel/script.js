@@ -55,6 +55,8 @@ $(function() {
     ga('send', 'VIDEO', 'VIDEO_PLAY_INDEX');
   });
   
+  $('.index-baner-1 .popover_teaser').popover();
+  
 });
 
 /*
