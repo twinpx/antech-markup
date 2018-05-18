@@ -1,13 +1,24 @@
 @import '../../styl/component-include.styl'
 .index-baner-1
   position relative
-  height 360px
   overflow hidden
   
+  &, .item
+    
+    height 440px
+    
+    @media (max-width: 1200px)
+      height 440px
+    
+    @media (max-width: 992px)
+      height 360px
+    
+    @media (max-width: 768px)
+      height 360px
   
   
   .item
-    height 360px
+    position relative
     margin 0
     
     .present_teaser
@@ -133,14 +144,12 @@
         
     &-slide-4
 
-
       .video-container
         position absolute
         height 100%
         width 100%
         top 0
         left 0
-        z-index 1
         margin auto
         
         video
@@ -179,7 +188,6 @@
       
       .baner-content
         position relative
-        z-index 10
         color $c-white
         padding 80px 80px
         text-align center
@@ -225,4 +233,119 @@
         @media (max-width: 768px)
           padding 100px 20px
           margin-right 0
+    
+    &-slide-6
+      .baner-plashka
+        height 100%
+        background-image url(/upload/banner/slide-6/kgbup_baner_plashka.jpg)
+        background-position right center
+        background-repeat no-repeat
+        background-size cover
       
+          
+        @media (max-width: 767px)
+          background-position 80% top
+          background-size 1200px auto
+          
+        @media (max-width: 550px)
+          background-position 70% top
+          
+        @media (max-width: 450px)
+          background-position 60% top
+          
+          
+        .red-bg
+          
+          color $c-white
+            
+          @media (min-width: 768px)
+          
+            display: -webkit-flex;
+            display flex
+            align-content center
+            flex-direction row
+            flex-wrap wrap
+            justify-content flex-start
+            
+            height 100%
+            background-image url(/upload/banner/slide-6/kgbup_baner_redbg.jpg)
+            background-position right top
+            background-repeat no-repeat
+            background-size cover
+            
+            
+          
+          @media (max-width: 767px)
+            
+            background-color rgba(0, 0, 0, 0.5)
+            padding-top 20px
+            padding-bottom 20px
+            text-align center
+          
+          .baner-video-start
+            color $c-white
+            
+            .baner-video-start-icon
+              background-image url(/img/svg/icon_play_1.svg)
+              background-repeat no-repeat
+              background-position left center
+              background-size contain
+              display inline-block
+              text-align left
+              padding-left 40px
+              height 30px
+              line-height 1
+          
+          .clearfix-sep
+            height 50px
+            @media (max-width: 767px)
+              height 20px
+          
+          .baner-header
+            font-size 34px
+            line-height 1
+            font-weight 400
+            text-shadow -2px 0px 3px $c-dark-grey-3
+            
+            @media (max-width: 1200px)
+              
+              font-size 32px
+            
+            @media (max-width: 992px)
+              
+              font-size 24px
+        .cb-baner-colum
+          
+          color $c-white
+          text-align center
+            
+          
+          @media (min-width: 768px)
+          
+            display: -webkit-flex;
+            display flex
+            align-content center
+            flex-direction column
+            flex-wrap wrap
+            justify-content flex-start
+            
+            height 100%
+          
+          
+          @media (max-width: 768px)
+            display none
+            height 50%
+          
+          
+          .callback-form-plashka
+            background-color rgba(0, 0, 0, 0.7)
+            padding 30px
+            position relative
+            margin auto
+            
+            @media (max-width: 768px)
+              padding 10px 30px
+              width 100%
+              height 100%
+              
+        

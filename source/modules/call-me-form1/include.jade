@@ -1,0 +1,83 @@
+﻿.b-call-me-form
+  .b-call-me-form__form
+    
+    .text-large 
+      | Позвоним
+      br.hidden-xs
+      | &nbsp;за&nbsp;
+      b.text-red 20
+      | &nbsp;секунд
+    
+    .text-large( style="display: none;")
+      | Позвоним завтра
+    
+    div( style="display: none;") Позвоним в удобное время
+      br
+      | ровно в
+      select.select(name='HOUR')
+        option(value='9') 9
+        option(value='10', selected='') 10
+        option(value='11') 11
+        option(value='12') 12
+        option(value='13') 13
+        option(value='14') 14
+        option(value='15') 15
+        option(value='16') 16
+        option(value='17') 17
+      | 
+      | :
+      | 
+      select.select(name='MINUTE')
+        option(value='00') 00
+        option(value='15') 15
+        option(value='30') 30
+        option(value='45') 45  
+    
+    form( action="/json/call-me.json" method="GET" )
+      .form-group
+        input.form-control.input-phone( name="phone" type='text' placeholder="Введите Ваш телефон" required )
+        button.btn.btn-type-2-md( type="submit" ) Жду звонка!
+    
+     
+  .b-call-me-form__counter( data-num="20" )
+  
+  .b-call-me-form__feedback
+    h2 Был ли наш специалист полезен?
+    hr.i-size-S
+    form( action="/json/call-me.json" method="GET" )
+      .form-group.b-call-me__smiles
+        label
+          input( type="radio" name="mark" value="1" )
+          span
+        label
+          input( type="radio" name="mark" value="2" )
+          span
+        label
+          input( type="radio" name="mark" value="3" )
+          span
+      .form-group
+        textarea.form-control( rows='10' cols='10' name='message' )
+      button.btn.btn-default( type="submit" required ) Оценить
+      a( href="" ) Мне не перезвонили
+      
+  .b-call-me-form__thankyou
+    h2 Благодарим за Вашу оценку
+      
+  .b-call-me-form__once-more
+    h2 Приносим свои извинения
+    hr.i-size-S
+    p Возможно, произошел технический сбой.
+    hr.i-size-S
+    a.btn.btn-default( href="" ) Еще раз!
+    hr.i-size-S
+    p Или вы можете позвонить нам по телефону<br>
+      b 8 495 287-45-70
+      
+  .b-call-me-form__callback
+    div
+      h2 Ваша заявка принята!
+      p.text-large Мы перезвоним Вам в первый рабочий день в
+        | 
+        span#callMeHour
+        | :
+        span#callMeMinute

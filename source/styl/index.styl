@@ -38,9 +38,6 @@
     background none
     border-bottom 1px solid #e8e8e8
 
-.index-baner-1
-  height 360px
-
 
 .index-preim-item
   background-repeat no-repeat
@@ -375,3 +372,129 @@
     .card-price
       color $c-black
       text-decoration none
+
+
+.production-items
+  
+  @media (min-width: 768px)
+    
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display flex
+    
+    -webkit-flex-wrap wrap
+    -moz-flex-wrap wrap
+    -ms-flex-wrap wrap
+    -o-flex-wrap wrap
+    flex-wrap wrap
+    
+    &::before,
+    &::after
+      content normal
+      
+  .production-item
+    position relative
+    margin-top 2em
+    
+    .prod-item-cell
+      position relative
+      border 1px solid $c-gray-s-2
+      border-top none
+      height 100%
+    
+    &__text
+      padding 0 40px
+      position relative
+      top -2em
+      
+      .h3
+        margin-top 0
+  
+    &__image
+      position relative
+      
+      width 100%
+      height 0
+      padding 37% 0
+      top -2em
+      
+      .alt-img
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background-position 0 0
+        background-repeat no-repeat
+        background-size cover
+        opacity 1
+        transition-property opacity
+        transition-duration 0.5s
+        transition-delay 0s
+        transition-timing-function linear
+      
+      .first-img
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background-position 0 0
+        background-repeat no-repeat
+        background-size cover
+        
+    &:hover
+      .production-item__image .alt-img
+        opacity 0
+
+.production-process-2
+  .red-columm
+    background-color #fce5e8
+  
+  .yellow-columm
+    background-color #fef5e6
+
+
+.about_block_1
+  
+  @media (min-width: 768px)
+    
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display flex
+    
+    -webkit-align-items center
+    align-items center
+    
+    &::before,
+    &::after
+      content normal
+  
+    .about_block1_text
+      margin 0 30px
+
+
+.page-reviews-block
+  background-color $c-grey-3
+  
+.callback_index2_block
+  background-image url(/img/callback_form_index2_gb.jpg)
+  background-position center center
+  background-repeat no-repeat
+  background-size cover
+
+.preim-container-index-2
+  .preim-index-2-item
+    text-align center
+    
+    .preim-index-2-item-image
+      width 90px
+      height 90px
+      margin 40px auto
+      
+      @media (max-width: 768px)
+        margin 30px auto 0
+      
+  

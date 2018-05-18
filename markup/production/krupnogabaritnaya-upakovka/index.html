@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Main page | antech</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="4965bc585ff9af37">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/template/jscript.js"></script>
+  </head>
+  <body>
+    <div id="bx-panel" style="height: 20px; background-color: pink;"></div>
+    <header class="b-header">
+      <div class="b-header-fixed">
+        <div class="b-header-top hidden-xs hidden-sm">
+          <div class="container">
+            <div class="b-header-top__menu"><span class="b-header-top__item dropdown"><a id="headerTopMenuItem1" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="b-header-top__text">О нас</span><span class="b-header-top__caret"></span></a><span aria-labelledby="headerTopMenuItem1" class="dropdown-menu"><a href="" class="dropdown-item">О компании</a><a href="" class="dropdown-item">Отзывы</a><a href="" class="dropdown-item">Документы</a><a href="" class="dropdown-item">Вакансии</a></span></span><span class="b-header-top__item dropdown"><a id="headerTopMenuItem2" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="b-header-top__text">Контакты</span><span class="b-header-top__caret"></span></a><span aria-labelledby="headerTopMenuItem2" class="dropdown-menu"><a href="" class="dropdown-item">Адрес и схема проезда</a><span class="dropdown-block"><i>Часы работы:</i><b>Пн-Пт:</b> с 9.00-18.00<br><b>Сб:</b> с 10:00-17:00<br><em>Вскр - выходной</em></span><a href="" class="dropdown-item">Доставка</a><a href="" class="dropdown-item">Самовывоз</a></span></span><span class="b-header-top__item"><a href="">Контакты</a></span><span class="b-header-top__item"><a href="">Помощь</a></span><span class="b-header-top__item"><a href="">Доставка</a></span><span class="b-header-top__item"><a href="">Оплата</a></span></div>
+          </div>
+        </div>
+        <div class="container"><span style="background-image: url(/template/images/svg/sandwich-menu.svg)" class="b-header__menu inline-block"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="203" height="59" alt=""></a>
+          <menu class="b-header-menulist hidden-xs">
+            <li><span class="li i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/basket_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/basket_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Каталог упаковки</a>
+                <!--Стрелка ставится если мы находимся внутри раздела--></span><span class="b-header-bottom__arrow"></span></li>
+            <li class="i-active"><span class="li i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/production_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/production_menu_color.svg' );" class="b-header-menulist__icon-active"></span>Изготовить на заказ</a></span>
+              <!--Стрелка ставится если мы находимся внутри раздела--><span class="b-header-bottom__arrow"></span>
+            </li>
+            <li><span class="li i-search-hide"><a href=""><span style="background-image: url( 'template/images/svg/ideas_menu.svg' );" class="b-header-menulist__icon"></span><span style="background-image: url( 'template/images/svg/ideas_menu_color.svg' );" class="b-header-menulist__icon-active"></span>WIKI</a></span>
+              <!--Стрелка ставится если мы находимся внутри раздела--><span class="b-header-bottom__arrow"></span>
+            </li>
+          </menu>
+          <div class="b-header__basket">
+            <!-- Modal-->
+            <div id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModal" class="modal">
+              <div role="document" class="modal-dialog">
+                <div class="modal-content text-middle">
+                  <div data-dismiss="modal" aria-label="Close" class="close"></div>
+                  <div class="modal-body center">
+                    <div class="b-modal-container">
+                      <div class="b-modal-signin">
+                        <div class="b-h2">Вход в аккаунт</div>
+                        <div class="text-danger center"></div>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+                            <form action="/" method="GET">
+                              <div class="form-group">
+                                <input type="text" value="" placeholder="Логин" required class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <input type="password" value="" placeholder="Пароль" required class="form-control">
+                              </div>
+                              <div class="row">
+                                <div class="col-xs-6">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">Запомнить
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-xs-6 text-right"><a href="">Забыли пароль?</a></div>
+                              </div>
+                              <div class="center b-form-buttom">
+                                <button type="submit" class="btn btn-default btn-md">Войти</button>
+                              </div>
+                              <div><a href="">Регистрация</a></div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-modal-social i-hidden">
+                        <div class="row">
+                          <div class="col-xs-4">Livejournal</div>
+                          <div class="col-xs-4">Mail.Ru</div>
+                          <div class="col-xs-4">Liveinternet</div>
+                        </div>
+                        <hr class="i-size-XS">
+                        <div class="row">
+                          <div class="col-xs-4">Blogger</div>
+                          <div class="col-xs-4">OpenID</div>
+                        </div>
+                      </div>
+                      <div class="b-modal-user">
+                        <div class="b-signin-button">
+                          <div class="b-user-icon"></div>
+                          <div>Войти</div>
+                        </div>
+                        <hr class="i-size-S hidden-xs">
+                        <p class="text-large"><b id="cartModalCount">12</b> <span id="cartModalHasProducts">товаров на сумму</span><span id="cartModalNoProducts" style="display: none;">Корзина пуста</span> <b id="cartModalPrice">2990</b> 
+                          руб
+                           <b>00</b> 
+                          коп
+                        </p>
+                        <hr class="i-size-S"><a id="cartModalButton" href="" class="btn btn-default btn-md">Оформить заказ</a>
+                        <hr class="i-size-S hidden-xs">
+                        <hr class="i-line i-size-L hidden-xs">
+                        <hr class="i-line i-size-M visible-xs-block">
+                        <nav class="row">
+                          <div class="col-xs-3"><a href=""><span class="b-cart-icon"></span>Корзина</a></div>
+                          <div class="col-xs-3"><a href=""><span class="b-fav-icon"></span>Избранное</a></div>
+                          <div class="col-xs-3"><a href=""><span class="b-order-icon"></span>Заказы</a></div>
+                          <div class="col-xs-3"><a href=""><span class="b-account-icon"></span>Учетная запись</a></div>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><span style="background-image: url(/template/images/svg/search-icon.svg)" class="b-header__search hidden-xs i-search-hide"></span><a href="/profile/" style="background-image: url(/template/images/svg/header-profile.svg)" class="b-header__profile hidden-sm hidden-xs i-search-hide"></a><a href="#" data-toggle="modal" data-target="#cartModal" style="background-image: url(/template/images/svg/cart.svg)" class="b-header__basket__icon i-search-hide">
+              <div id="inCartIndicator" class="count_in_cart">121</div>
+              <script>var productsInCartIDArray = [ 'id1', 'id2', 'id3', 'id4' ];</script></a>
+          </div>
+          <div class="b-header-menu__search-wrapper">
+            <div class="b-header-menu__search">
+              <form action="" method="GET" class="form-inline">
+                <div class="form-group">
+                  <label for="title-search-input" style="background-image: url(/template/images/svg/search-icon.svg)" class="b-search-icon"></label>
+                  <input id="title-search-input" type="search" placeholder="Поиск по сайту antech.ru" value="" class="form-control">
+                  <div class="b-header-menu__search__close"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="b-header__phone hidden-xs"><span class="b-header__phone-num dropdown i-search-hide"><span id="phoneDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="" class="dropdown-toggle hidden-sm hidden-xs"><span class="b-header__phone-num__text">+7 (495) 241-98-28</span><span class="b-header__phone-num__caret"></span></span><br class="hidden-sm hidden-xs"><a href="" data-toggle="modal" data-target="#callMe" class="b-header__phone-popup">Заказать звонок</a><span aria-labelledby="phoneDropdown" class="dropdown-menu"><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a><a href="" class="dropdown-item">Action</a></span></span></div>
+        </div>
+        <div id="callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" class="b-call-me modal fade">
+          <div role="document" class="modal-dialog modal-lg">
+            <div style="background-image: url('/upload/portfolio/bg.png')" class="modal-content">
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+              <div class="modal-body">
+                <div class="b-call-me__form">
+                  <h2>Готовы обсудить детали?</h2>
+                  <hr class="i-size-S">
+                  <form action="/json/call-me.json" method="GET">
+                    <div class="form-group">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 800" class="cb_btn_teaser">
+                        <circle id="cb_bnt_circle_1" r="300" cx="400" cy="400" class="st0"></circle>
+                        <polygon points="665.2,315.2 796.8,398.4 672.3,481.6 " class="st1"></polygon>
+                        <circle r="300" cx="400" cy="400" class="st1"></circle>
+                        <path d="M479.9,437.8c-8.3,2.9-20.6,15.2-25.6,25.6l-12.6,24.4c-56.5-44-102.4-93.4-129.6-152.6l26.8-8.5 c10.2-1.9,24.2-10.4,30.1-19.9l-42.7-91.2c-7.3-2.3-22.8,2-33.3,7.3l0.2,0.4c-22.9,12.4-40.2,27.8-49.3,47.7 c20.7,180.6,124.5,254.2,251.5,297.9c24.6-12.3,44.5-26.9,54-46.8c4.6-6,9.7-19.9,12.9-29.2L479.9,437.8z" class="st2"></path>
+                        <animate xlink:href="#cb_bnt_circle_1" attributename="r" from="300" to="300" dur="2s" begin="0s" values="300; 400; 300" keytimes="0; 0.5; 1" repeatcount="indefinite"></animate>
+                      </svg>
+                      <input name="phone" type="tel" placeholder="Введите Ваш телефон" required class="form-control">
+                      <button type="submit" class="btn btn-default">Жду звонка!</button>
+                    </div>
+                  </form>
+                  <div class="text-large">Мы позвоним за <b>20</b> секунд</div>
+                  <div class="text-large">Мы позвоним в удобное рабочее время<br>ровно в
+                    <select name="HOUR" class="select">
+                      <option value="9">9</option>
+                      <option value="10" selected="">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select> 
+                    :
+                     
+                    <select name="MINUTE" class="select">
+                      <option value="00">00</option>
+                      <option value="15">15</option>
+                      <option value="30">30</option>
+                      <option value="45">45</option>
+                    </select>
+                  </div>
+                  <div class="i-small">Нажимая на кнопку «Жду звонка», вы даете согласие на обработку своих персональных данных.<br><a href="">Пользовательское соглашение</a>.</div>
+                </div>
+                <div data-num="20" class="b-call-me__counter"></div>
+                <div class="b-call-me__feedback">
+                  <h2>Был ли наш специалист полезен?</h2>
+                  <hr class="i-size-S">
+                  <form action="/json/call-me.json" method="GET">
+                    <div class="form-group b-call-me__smiles">
+                      <label>
+                        <input type="radio" name="mark" value="1"><span></span>
+                      </label>
+                      <label>
+                        <input type="radio" name="mark" value="2"><span></span>
+                      </label>
+                      <label>
+                        <input type="radio" name="mark" value="3"><span></span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+                  </form>
+                </div>
+                <div class="b-call-me__thankyou">
+                  <h2>Благодарим за Вашу оценку</h2>
+                </div>
+                <div class="b-call-me__once-more">
+                  <h2>Приносим свои извинения</h2>
+                  <hr class="i-size-S">
+                  <p>Возможно, произошел технический сбой.</p>
+                  <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+                  <hr class="i-size-S">
+                  <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+                </div>
+                <div class="b-call-me__callback">
+                  <div>
+                    <h2>Ваша заявка принята!</h2>
+                    <p class="text-large">
+                      Мы перезвоним Вам в первый рабочий день в
+                       <span id="callMeHour"></span>:<span id="callMeMinute"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="b-header-menu">
+          <div class="b-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6"><span class="b-header-menu__close b-close-button"></span><a href="/" class="b-header__logo"><img src="/template/images/svg/logo.svg" width="155" height="69" alt="" class="hidden-xs"><img src="/template/images/svg/logo.svg" width="203" height="57" alt="" class="visible-xs-inline-block"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="b-header-menu__content"></div>
+          
+          
+        </div>
+        <div class="b-top-panel hidden-xs">
+          <div class="container">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="b-top-panel">
+      <div class="container">
+        <div class="b-top-header">Крупногабаритная упаоквка</div>
+        <div class="b-top-menu hidden-xs"><a id="order-link" href="">Как заказать?</a> <a id="payment-link" href="">Оплата</a> <a id="warranty-link" href="">Гарантии</a> <a id="delivery-link" href="">Доставка</a></div>
+      </div>
+    </div>
+    <div style="margin-top: 10px; margin-bottom: 10px;" class="container">
+      <div class="row-xs">
+        <!-- start /components/banner-transition/-->
+        <link rel="stylesheet" href="/components/banner-carousel/style.css">
+        <script src="/components/banner-carousel/script.js"></script>
+        <link rel="stylesheet" href="/components/banner-carousel/index-carousel.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
+        <div class="index-baner-1">
+          <div data-width="100%" data-arrows="true" data-loop="true" data-autoplay="0" data-swipe="true" data-click="false" class="firstbanerfotorama">
+            <div id="slide-6" data-ytvideo="-ULvQq7CR58" data-videoid="videoBigupack" data-videoautoplay="true" class="item item-slide-6">
+              <div class="row baner-plashka">
+                <div class="col-sm-7 col-md-7 red-bg">
+                  <div class="col-sm-6 col-md-6 col-lg-7 col-sm-offset-1">
+                    <div class="baner-header h">Мы&nbsp;изготавливаем<br>крупногабаритную упаковку</div>
+                  </div>
+                  <div class="col-sm-12 clearfix-sep"></div>
+                  <div class="col-sm-6 col-md-6 col-lg-8 col-sm-offset-1"><span data-toggle="modal" data-target="#videoBigupack" class="baner-video-start"><span class="baner-video-start-icon">Посмотреть<br>видеопрезентацию</span></span></div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-3 col-lg-offset-1 cb-baner-colum add_cb_form">
+                  <div class="callback-form-plashka">
+                    <div class="b-call-me-form">
+                      <div class="b-call-me-form__form">
+                        <div class="text-large">
+                           
+                          Позвоним<br class="hidden-xs">&nbsp;за&nbsp;<b class="text-red">20</b>&nbsp;секунд
+                        </div>
+                        <div style="display: none;" class="text-large">Позвоним завтра</div>
+                        <div style="display: none;">Позвоним в удобное время<br>ровно в
+                          <select name="HOUR" class="select">
+                            <option value="9">9</option>
+                            <option value="10" selected="">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                          </select> 
+                          :
+                           
+                          <select name="MINUTE" class="select">
+                            <option value="00">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45  </option>
+                          </select>
+                        </div>
+                        <form action="/json/call-me.json" method="GET">
+                          <div class="form-group">
+                            <input name="phone" type="text" placeholder="Введите Ваш телефон" required class="form-control input-phone">
+                            <button type="submit" class="btn btn-type-2-md">Жду звонка!</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div data-num="20" class="b-call-me-form__counter"></div>
+                      <div class="b-call-me-form__feedback">
+                        <h2>Был ли наш специалист полезен?</h2>
+                        <hr class="i-size-S">
+                        <form action="/json/call-me.json" method="GET">
+                          <div class="form-group b-call-me__smiles">
+                            <label>
+                              <input type="radio" name="mark" value="1"><span></span>
+                            </label>
+                            <label>
+                              <input type="radio" name="mark" value="2"><span></span>
+                            </label>
+                            <label>
+                              <input type="radio" name="mark" value="3"><span></span>
+                            </label>
+                          </div>
+                          <div class="form-group">
+                            <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+                          </div>
+                          <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+                        </form>
+                      </div>
+                      <div class="b-call-me-form__thankyou">
+                        <h2>Благодарим за Вашу оценку</h2>
+                      </div>
+                      <div class="b-call-me-form__once-more">
+                        <h2>Приносим свои извинения</h2>
+                        <hr class="i-size-S">
+                        <p>Возможно, произошел технический сбой.</p>
+                        <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+                        <hr class="i-size-S">
+                        <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+                      </div>
+                      <div class="b-call-me-form__callback">
+                        <div>
+                          <h2>Ваша заявка принята!</h2>
+                          <p class="text-large">
+                            Мы перезвоним Вам в первый рабочий день в
+                             <span id="callMeHour"></span>:<span id="callMeMinute"></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="slide-1" data-ytvideo="7DBxtut7Mpw" data-videoid="videoBigupack" data-videoautoplay="true" class="item item-slide-4">
+              <div class="video-container">
+                <video loop preload="none" poster="/upload/banner/preload_image_ploter_antech1.png" muted class="video-bg">
+                  <source src="/upload/banner/ploter_antech2.mp4" type="video/mp4">
+                </video>
+                <div style="background-image: url(/upload/banner/preload_image_ploter_antech1.png);" class="mobile-bg"></div>
+                <div class="shadow-bg"></div>
+              </div>
+              <div class="baner-content text-center-xs">
+                <h1 class="bn-h1">Производство упаковки из гофрокантона</h1><a href="#" data-toggle="modal" data-target="#aboutVideo"><span class="play-link"><img src="/upload/banner/play_button.svg" alt="play" class="play-icon"></span></a><a href="#" data-toggle="modal" data-target="#aboutVideo"><span class="bn-text">Посмотреть презентацию</span></a>
+              </div>
+              <div data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Приезжайте к нам в офис и мы бесплатно изготовим прототип для Вас!" data-original-title="" title="" class="present_teaser popover_teaser"><a href="#" data-toggle="modal" data-target="#callMe"><img src="/upload/banner/baner_obrazec_present.png" alt="Образце в подарок каждому приехавшему на встречу в офис" class="img-responsive"></a></div>
+            </div>
+            <div id="slide-2" class="item item-slide-3">
+              <div class="baner-content text-center-xs"><img src="/upload/banner/ny18_headtext1.jpg" alt="Пора!" class="header-text">
+                <div class="text-first">Мы&nbsp;предлагаем Вам <br class="visible-lg">готовые решения для упаковки <br class="visible-lg">новогодних подарков!</div><a href="/catalog/novogodnyaya-podarochnaya-upakovka/"><span class="btn btn-type-1">Выбрать</span></a>
+              </div>
+            </div>
+            <div id="slide-4" style="background-image: url(/upload/banner/index-baner-1.jpg)" class="item item-slide-2">
+              <div class="h1 bn-h1">Изготовим коробки<br>на&nbsp;заказ</div>
+              <div class="h3 bn-text">Заказать индивидуальную<br>упаковку очень просто!</div><a href="/production/" class="btn btn-default">Подробнее о производстве</a>
+            </div>
+            <div id="slide-3" class="item item-slide-1">
+              <div class="white-plashka">
+                <div class="h2">Добро пожаловать в&nbsp;Антэк!</div>
+                <div class="h4">Мы&nbsp;производители упаковки из&nbsp;гофрокартона.</div>
+                <hr>
+                <div class="bn-text">У&nbsp;нас вы&nbsp;можете <a href="/production/">сделать заказ</a> на&nbsp;изготовление индивидуальной упаковки или <a href="/catalog/">купить</a> типовые картонные коробки.</div>
+              </div>
+            </div>
+            <div id="slide-5" class="item item-slide-5">
+              <div class="baner-content text-center-xs">
+                <h1 class="b-header1">Новогодняя подарочная упаковка</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end /components/banner-transition/-->
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="container">
+      <div class="text-center">
+        <h2>Какие виды упаковки мы изготавливаем?</h2>
+      </div>
+      <div class="row production-items">
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло. Работает он тихо, без шума какого-то, настраивается очень легко, температуру можно настроить так, как вам удобно</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло.</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло. Работает он тихо, без шума какого-то, настраивается очень легко, температуру можно настроить так, как вам удобно</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло.</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло. Работает он тихо, без шума какого-то, настраивается очень легко, температуру можно настроить так, как вам удобно</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 production-item">
+          <div class="prod-item-cell">
+            <div class="production-item__image">
+              <div style="background-image: url(/img/production/kg_product_img-2.jpg);" class="first-img"></div>
+              <div style="background-image: url(/img/production/kg_product_img-1.jpg);" class="alt-img"></div>
+            </div>
+            <div class="production-item__text">
+              <div class="h3">Паллетные гофрокороба</div>
+              <p>Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло. Работает он тихо, без шума какого-то, настраивается очень легко, температуру можно настроить так, как вам удобно</p><a href="#" class="btn btn-type-6 btn-md">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="i-size-M">
+    <div class="container production-process-2">
+      <div class="text-center">
+        <h2>Как мы создаем совершенную упаковку?</h2>
+      </div>
+      <hr class="i-size-S">
+      <div class="row">
+        <div class="col-sm-12"><img src="/img/production/production_process.jpg" alt="" class="img-responsive"></div>
+      </div>
+      <div class="col-sm-6 red-columm">
+        <p>Выявляем потребности.</p>
+      </div>
+      <div class="col-sm-6 yellow-columm">
+        <p>Изготавливаем основной тираж</p>
+      </div>
+    </div>
+    <hr class="i-size-S">
+    <div class="container about_block_1">
+      <div class="col-sm-6"><img src="/img/production/antech_company_partners.jpg" alt="" class="img-responsive"></div>
+      <div class="col-sm-6">
+        <div class="about_block1_text">
+          <p>Мы убеждены в том, что только в непрерывном совершенствовании рождается наполненная особым неповторимым смыслом совершенная упаковка, каждая грань которой обеспечивает неизбежный успех для нас и наших заказчиков.</p><a href="#" class="btn btn-type-6 btn-md">Подробнее о компании</a>
+        </div>
+      </div>
+    </div>
+    <hr class="i-size-S">
+    <div class="page-reviews-block">
+      <div class="container">
+        <hr class="i-size-S">
+        <div class="text-center">
+          <h2>Отзывы наших клиентов</h2>
+        </div>
+        <hr class="i-size-S">
+      </div>
+    </div>
+    <div class="container preim-container-index-2">
+      <hr class="i-size-S">
+      <div class="text-center">
+        <h2>В чем наша ценность?</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 preim-index-2-item"><img src="/img/svg/preim-icon-1.svg" alt="" class="preim-index-2-item-image">
+          <div class="preim-index-2-item-name h3">Открытость забота</div>
+          <div class="preim-index-2-item-text">Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к </div>
+        </div>
+        <div class="col-sm-4 preim-index-2-item"><img src="/img/svg/preim-icon-2.svg" alt="" class="preim-index-2-item-image">
+          <div class="preim-index-2-item-name h3">Разработка с исследованием</div>
+          <div class="preim-index-2-item-text">Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к </div>
+        </div>
+        <div class="col-sm-4 preim-index-2-item"><img src="/img/svg/preim-icon-3.svg" alt="" class="preim-index-2-item-image">
+          <div class="preim-index-2-item-name h3">Бесконечное совершенство</div>
+          <div class="preim-index-2-item-text">Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к </div>
+        </div>
+      </div>
+      <hr class="i-size-M">
+    </div>
+    <div class="container callback_index2_block">
+      <hr class="i-size-S">
+      <div class="text-center">
+        <h2>Приглашаем к сотрудничеству!</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+          <div class="b-call-me-form">
+            <div class="b-call-me-form__form">
+              <div class="text-large">
+                 
+                Позвоним<br class="hidden-xs">&nbsp;за&nbsp;<b class="text-red">20</b>&nbsp;секунд
+              </div>
+              <div style="display: none;" class="text-large">Позвоним завтра</div>
+              <div style="display: none;">Позвоним в удобное время<br>ровно в
+                <select name="HOUR" class="select">
+                  <option value="9">9</option>
+                  <option value="10" selected="">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                </select> 
+                :
+                 
+                <select name="MINUTE" class="select">
+                  <option value="00">00</option>
+                  <option value="15">15</option>
+                  <option value="30">30</option>
+                  <option value="45">45  </option>
+                </select>
+              </div>
+              <form action="/json/call-me.json" method="GET">
+                <div class="form-group">
+                  <input name="phone" type="text" placeholder="Введите Ваш телефон" required class="form-control input-phone">
+                  <button type="submit" class="btn btn-type-2-md">Жду звонка!</button>
+                </div>
+              </form>
+            </div>
+            <div data-num="20" class="b-call-me-form__counter"></div>
+            <div class="b-call-me-form__feedback">
+              <h2>Был ли наш специалист полезен?</h2>
+              <hr class="i-size-S">
+              <form action="/json/call-me.json" method="GET">
+                <div class="form-group b-call-me__smiles">
+                  <label>
+                    <input type="radio" name="mark" value="1"><span></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="mark" value="2"><span></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="mark" value="3"><span></span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <textarea rows="10" cols="10" name="message" class="form-control"></textarea>
+                </div>
+                <button type="submit" required class="btn btn-default">Оценить</button><a href="">Мне не перезвонили</a>
+              </form>
+            </div>
+            <div class="b-call-me-form__thankyou">
+              <h2>Благодарим за Вашу оценку</h2>
+            </div>
+            <div class="b-call-me-form__once-more">
+              <h2>Приносим свои извинения</h2>
+              <hr class="i-size-S">
+              <p>Возможно, произошел технический сбой.</p>
+              <hr class="i-size-S"><a href="" class="btn btn-default">Еще раз!</a>
+              <hr class="i-size-S">
+              <p>Или вы можете позвонить нам по телефону<br><b>8 495 287-45-70</b></p>
+            </div>
+            <div class="b-call-me-form__callback">
+              <div>
+                <h2>Ваша заявка принята!</h2>
+                <p class="text-large">
+                  Мы перезвоним Вам в первый рабочий день в
+                   <span id="callMeHour"></span>:<span id="callMeMinute"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="i-size-S">
+    </div>
+    <hr class="i-size-S">
+    <div class="container">
+      <div class="text-center">
+        <h2>Наши работы</h2>
+      </div>
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+      <div data-width="100%" data-ratio="1300/669" data-arrows="false" class="fotorama hidden-xs">
+        <div>
+          <div class="row">
+            <div class="col-sm-7"><a href="" style="background-image: url(/upload/gallery/1.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>Dazzle</strong></a></div>
+            <div class="col-sm-5"><a href="" style="background-image: url(/upload/gallery/2.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>UfeelGood</strong></a><a href="" style="background-image: url(/upload/gallery/3.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>CHEF</strong></a></div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-sm-7"><a href="" style="background-image: url(/upload/gallery/1.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>Dazzle</strong></a></div>
+            <div class="col-sm-5"><a href="" style="background-image: url(/upload/gallery/2.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>UfeelGood</strong></a><a href="" style="background-image: url(/upload/gallery/3.jpg);" data-big-image="/upload/gallery/2.jpg" class="b-gallery-picture"><strong>CHEF</strong></a></div>
+          </div>
+        </div>
+      </div>
+      <div data-width="100%" data-ratio="422/380" data-arrows="false" class="fotorama visible-xs-block i-mob">
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/1.jpg);" class="b-gallery-picture"><strong>Dazzle</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/2.jpg);" class="b-gallery-picture"><strong>UfeelGood</strong></div>
+        </div>
+        <div>
+          <div style="background-image: url(/upload/gallery/3.jpg);" class="b-gallery-picture"><strong>CHEF</strong></div>
+        </div>
+      </div>
+    </div>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 b-footer__phone">
+            <div class="text-xlarge">8 800 555 55 70 <span class="text-muted text-middle hidden-xs">(для бесплатных звонков по России)</span><span class="text-muted text-middle visible-xs-block">для звонков по России</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="b-networks"><a href="" taget="_blank" title="Facebook" class="b-network-item i-facebook"><span></span></a><a href="" taget="_blank" title="Youtube" class="b-network-item i-youtube"><span></span></a><a href="" taget="_blank" title="Instagram" class="b-network-item i-instagram"><span></span></a><a href="" taget="_blank" title="Vkontakte" class="b-network-item i-vkontakte"><span></span></a><a href="" taget="_blank" title="google+" class="b-network-item i-googleplus"><span></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <nav style="display: block;" class="b-bottom-menu">
+            <div class="col-md-3 col-sm-4">
+              <ul>
+                <li class="h3"><a href="/production/">Изготовление упаковки</a></li>
+                <li><a href="/production/#razrabotka">Разработка упаковки</a></li>
+                <li><a href="/portfolio/">Примеры работ</a></li>
+                <li><a href="/production/fefco/">Упаковка по FEFCO</a></li>
+                <li><a href="/production/galia/">Упаковка по GALIA</a></li>
+                <li><a href="/production/krupnogabaritnaya-tara/">Крупногабаритная упаковка</a></li>
+                <li><a href="/production/lozhementy-i-vstavki/">Ложементы и вставки</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-4">
+              <ul>
+                <li class="h3"><a href="/catalog/">Магазин</a></li>
+                <li><a href="/catalog/cartonnye-korobki/">Картонные коробки</a></li>
+                <li><a href="/catalog/gofrokarton/">Гофрокартон</a></li>
+                <li><a href="/catalog/upakovochnye-materialy/">Вспомогательная упаковка</a></li>
+                <li><a href="/catalog/">Все товары</a></li>
+                <li><a href="/catalog/price/">Прайс-лист</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-4">
+              <ul>
+                <li class="h3"><a href="/help/">Помощь</a></li>
+                <li><a href="/help/standarts/">ГОСТ</a></li>
+                <li><a href="/help/pravila/">Правила приемки</a></li>
+                <li><a href="/help/test-box/">Методы испытания</a></li>
+                <li><a href="/help/delivery/">Доставка</a></li>
+                <li><a href="/help/oplata/">Оплата</a></li>
+                <li><a href="/help/garantii/">Гарантии и возврат</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-4">
+              <ul>
+                <li class="h3"><a href="/blog/">Блог</a></li>
+                <li><a href="/blog/ideas/">Идеи по упаковке</a></li>
+                <li><a href="/blog/wikipack/">Википак</a></li>
+                <li><a href="/blog/wikipack/terminologicheskiy-slovar/">Термины</a></li>
+                <li><a href="/blog/wikipack/spetsifika/">Специфика</a></li>
+                <li><a href="/help/video/">Видеоинструкции</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-4">
+              <ul>
+                <li class="h3"><a href="/about/">О компании</a></li>
+                <li><a href="/about/docs/">Документы</a></li>
+                <li><a href="/contacts/#map">Схема проезда</a></li>
+                <li><a href="/contacts/">Контакты</a></li>
+                <li><a href="/about/vacancy/">Вакансии</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <hr class="i-size-XS">
+      <div class="container">
+        <div class="rov">
+          <div style="margin-left: -15px;" class="col-sm-6 text-center-xs"><span>Варианты оплаты:</span><img src="/img/payment_icons/visa-xs.png" style="margin-left: 10px;"><img src="/img/payment_icons/mastercard-xs.png" style="margin-left: 10px;"></div>
+          <div class="col-sm-6">
+            <div style="margin-top: 10px;" class="b-copyright">&copy; &laquo;Антэк&raquo; 2010-2015 г. Производство упаковки</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

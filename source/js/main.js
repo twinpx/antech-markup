@@ -17,6 +17,9 @@ $( '.b-header__search' ).click( function(e) {
   setTimeout( function() {
     $( '.b-header-menu__search__close' ).show();
   }, 1500 );
+  
+  $( '.b-header-menu__search-wrapper input.form-control' ).focus();
+  
 });
 
 //close apple menu
@@ -148,6 +151,21 @@ $('#aboutVideo').on('hide.bs.modal', function (e) {
 }).on('show.bs.modal', function (e) {
   $('#indexVideoPlay')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 });
+
+
+
+/*
+$('.autoPlayModal').on('hide.bs.modal', function (e) {
+  var parent = e.target;
+  $('iframe', parent)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}).on('show.bs.modal', function (e) {
+  var parent = e.target;
+  $('iframe', parent)[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+});
+*/
+
+
+
 
 $( '#razrabotka-link').on('click', function(e) {
   e.preventDefault();

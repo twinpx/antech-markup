@@ -1,0 +1,144 @@
+@import '../../styl/component-include.styl'
+
+
+.b-call-me-form
+  
+  .i-small
+    font-size 12px
+    margin-top 20px
+    line-height 1.3
+      
+    a
+      text-decoration underline
+      white-space nowrap
+
+
+  
+  
+  &__form
+  
+    .i-counter &,
+    .i-feedback &,
+    .i-thankyou &,
+    .i-once-more &,
+    .i-callback &
+      display none
+      
+    .form-group
+      position relative
+      
+    .input-phone
+      margin 20px 0 10px
+      @media (max-width 768px)
+        margin 10px 0
+    
+    .btn
+      width 100%
+        
+    select
+      font-size 12pt
+
+  &__counter
+    font-size 140px
+    font-weight bold
+    text-align center
+    display none
+    
+    
+    .i-counter &
+      display block
+    
+  &__feedback
+    display none
+    
+    .i-feedback &
+      display block
+      
+    textarea
+      width 60%
+      height 100px
+      color #000
+      font-size 14pt
+      
+      @media (max-width 991px)
+        width 100%
+      
+    .btn
+      margin-right 30px
+      
+  &__smiles
+    margin-bottom 5px !important
+    
+    label
+      width 44px
+      height 44px
+      cursor pointer
+      margin-right 30px
+      position relative
+      
+      &:nth-of-type(1)
+      
+        span
+          background embedurl( 'img/bad-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/bad-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(2)
+      
+        span
+          background embedurl( 'img/normal-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/normal-orange.svg' ) no-repeat 0 0
+      
+      &:nth-of-type(3)
+      
+        span
+          background embedurl( 'img/good-grey.svg' ) no-repeat 0 0
+        
+        &:hover span,
+        input:checked ~ span
+            background embedurl( 'img/good-orange.svg' ) no-repeat 0 0
+          
+      span
+        display inline-block
+        width 44px
+        height 44px
+        position absolute
+        top 0
+        left 0
+      
+      input
+        opacity 0
+    
+  &__thankyou
+    display none
+    height 100%
+    padding-right 250px
+    
+    .i-thankyou &
+      display flex
+      justify-content center
+      align-items center
+      
+    @media (max-width 991px)
+      padding-right 0
+    
+  &__callback
+    display none
+    height 100%
+    
+    .i-callback &
+      display flex
+      justify-content center
+      align-items center
+      
+    
+  &__once-more
+    display none
+    
+    .i-once-more &
+      display block

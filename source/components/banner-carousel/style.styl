@@ -4,6 +4,10 @@
     position absolute
     bottom 30px
     height 8px
+    
+    @media (max-width: 768px)
+      bottom 15px
+    
     .fotorama__nav__frame--dot
       height 8px
       .fotorama__dot
@@ -14,7 +18,7 @@
         top 0
       &.fotorama__active
         .fotorama__dot
-          background-color rgba(255, 255, 255, 1)
+          background-color $c-red
   .fotorama__arr
     width 15px
     height 50px

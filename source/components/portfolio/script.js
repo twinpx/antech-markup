@@ -11,7 +11,8 @@ $( function() {
         $fotorama = $detail.find( '.fotorama' ),
         fotoramaObj,
         searchArray,
-        pageLoad;
+        pageLoad,
+        pageElCount = 4;
         
     //lazyload
     $portfolio.find( '.b-portfolio__item div' ).lazyload({
@@ -32,14 +33,17 @@ $( function() {
           currentIndex;
           
       //align pointer
-      $detail.removeClass( 'i-first' ).removeClass( 'i-second' );
+      $detail.removeClass( 'i-first' ).removeClass( 'i-second' ).removeClass( 'i-triple' );
       
-      switch ( index % 3 ) {
+      switch ( index % pageElCount ) {
         case 0:
           $detail.addClass( 'i-first' );
           break;
         case 1:
           $detail.addClass( 'i-second' );
+          break;
+        case 2:
+          $detail.addClass( 'i-triple' );
           break;
       }
       
@@ -78,7 +82,7 @@ $( function() {
             $detail.slideDown();
           }, 400 );
         } else {
-          if ( Math.floor( activeIndex / 3 ) !== Math.floor( currentIndex / 3 )) {
+          if ( Math.floor( activeIndex / pageElCount ) !== Math.floor( currentIndex / pageElCount )) {
             $detail.slideUp();
             setTimeout( function() {
               appendDetailContent();
@@ -210,7 +214,7 @@ $( function() {
   });
   
   function appendDetail( index, $items, $detail ) {
-    index = Math.ceil( ++index / 3 ) * 3 - 1;
+    index = Math.ceil( ++index / 4 ) * 4 - 1;
     if ( $items.eq( index ).length ) {
       $items.eq( index ).after( $detail );
     } else {

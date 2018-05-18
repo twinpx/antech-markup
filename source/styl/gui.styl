@@ -264,15 +264,37 @@ h6,
   
 .text-sovet
   padding 30px
-  background-color $c-gray-xs
+  background-color $c-grey-5
   font-style italic
   margin 30px 0
   
-  @media ( min-width 767px )
-    padding-left 100px
+  &.icon-idea,
+  &.icon-info
+    background-position 30px 20px
+    background-repeat no-repeat
+    background-size 20px 20px
+    min-height 30px
+  
+    @media ( max-width 767px )
+      padding-top 50px
+    
+    @media ( min-width 768px )
+      padding-left 100px
+      background-position 35px 35px
+      background-size 30px 30px
   
   p
     margin 5px 0
+
+.icon-idea
+  background-image url(/img/svg/icon_idea.svg)
+
+.icon-info
+  background-image url(/img/svg/icon_info.svg)
+
+.image-name
+  font-style italic
+  font-size 0.85em
   
 .clearfix
   clear both
@@ -515,6 +537,32 @@ h6,
       font-size 14px
       color $c-white
     
+  
+  &-type-7
+    font-size 18px
+    line-height 50px
+    border-radius 5px
+    color $c-white
+    padding 0 20px
+    background-color $c-red-2
+    
+    &:hover
+      background-color darken( $c-red-2, 5% )
+      color $c-white
+    
+    &.btn-md,
+    &-md
+      line-height 40px
+      padding 0 10px
+      font-size 14px
+      color $c-white
+    
+    &.btn-sm,
+    &-sm
+      line-height 30px
+      padding 0 10px
+      font-size 14px
+      color $c-white
     
       
     
@@ -796,7 +844,7 @@ blockquote
 
 
 .color-red
-  color $c-red
+  color $c-red-2
 
 .bg-white
   background-color $c-white

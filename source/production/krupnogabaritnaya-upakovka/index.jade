@@ -1,0 +1,143 @@
+﻿extends ../../layouts/main.jade
+
+block title
+  title Main page | antech
+
+block content
+
+  
+  .b-top-panel
+    .container
+      -var header = "Крупногабаритная упаоквка"
+      include ../../modules/top-header/include
+      include ../../modules/top-menu/include
+  
+  
+  .container(style="margin-top: 10px; margin-bottom: 10px;")
+    
+    .row-xs
+      include ../../components/banner-carousel/template
+    
+  
+  //-include ../../modules/call-me-form1/include
+    
+
+  //-#aboutVideo.modal.modal(tabindex='-1', role='dialog', aria-labelledby='aboutVideoLabel')
+  //-  .modal-dialog.modal-lg(role='document')
+  //-    .modal-content.text-middle
+  //-    
+  //-      .close(type='button', data-dismiss='modal', aria-label='Close')
+  //-      .modal-body.center
+  //-        .embed-responsive.embed-responsive-16by9
+  //-          iframe( id="indexVideoPlay" src="https://www.youtube.com/embed/7DBxtut7Mpw?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
+            
+  //-#videoBigupack.modal.modal(tabindex='-1', role='dialog', aria-labelledby='videoBigupackLabel')
+  //-  .modal-dialog.modal-lg(role='document')
+  //-    .modal-content.text-middle
+  //-    
+  //-      .close(type='button', data-dismiss='modal', aria-label='Close')
+  //-      .modal-body.center
+  //-        .embed-responsive.embed-responsive-16by9
+  //-          iframe( id="videoBigupackPlay" src="https://www.youtube.com/embed/-ULvQq7CR58?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen )
+  
+  
+  
+  
+  .container
+    .text-center
+      h2 Какие виды упаковки мы изготавливаем?
+    .row.production-items
+      - var text2 = '';
+      - for(i=0; i<6; i++)
+        - text2 = 'Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло. Работает он тихо, без шума какого-то, настраивается очень легко, температуру можно настроить так, как вам удобно';
+        - if(i == 1 || i == 3) text2 = 'Мама постоянно жаловалась на жару и то, что ей дома дышать тяжело из-за сухого воздуха.  таком месте, чтобы не дуло и, чтобы маму ненарок ом не продуло.';
+          
+        .col-md-4.col-sm-6.production-item
+          .prod-item-cell
+            .production-item__image
+              .first-img( style="background-image: url(/img/production/kg_product_img-2.jpg);")
+              .alt-img( style="background-image: url(/img/production/kg_product_img-1.jpg);")
+              
+            .production-item__text
+              .h3 Паллетные гофрокороба
+              p #{text2}
+              a.btn.btn-type-6.btn-md(href="#") Подробнее
+  
+  hr.i-size-M
+  
+  .container.production-process-2
+    .text-center
+      h2 Как мы создаем совершенную упаковку?
+    
+    hr.i-size-S
+    
+    .row
+      .col-sm-12
+        img.img-responsive(src="/img/production/production_process.jpg" alt="")
+    
+    .col-sm-6.red-columm
+      p Выявляем потребности.
+    
+    .col-sm-6.yellow-columm
+      p Изготавливаем основной тираж
+  
+  
+  hr.i-size-S
+  .container.about_block_1
+    .col-sm-6
+      img.img-responsive(src="/img/production/antech_company_partners.jpg" alt="")
+    .col-sm-6
+      .about_block1_text
+        p Мы убеждены в том, что только в непрерывном совершенствовании рождается наполненная особым неповторимым смыслом совершенная упаковка, каждая грань которой обеспечивает неизбежный успех для нас и наших заказчиков.
+        a.btn.btn-type-6.btn-md(href="#") Подробнее о компании
+  
+  
+  hr.i-size-S
+  
+  .page-reviews-block
+    .container
+      hr.i-size-S
+      .text-center
+        h2 Отзывы наших клиентов
+      hr.i-size-S
+      
+  .container.preim-container-index-2
+    hr.i-size-S
+    .text-center
+      h2 В чем наша ценность?
+      
+    .row
+      .col-sm-4.preim-index-2-item
+        img.preim-index-2-item-image(src="/img/svg/preim-icon-1.svg" alt="")
+        .preim-index-2-item-name.h3 Открытость забота
+        .preim-index-2-item-text Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к 
+      .col-sm-4.preim-index-2-item
+        img.preim-index-2-item-image(src="/img/svg/preim-icon-2.svg" alt="")
+        .preim-index-2-item-name.h3 Разработка с исследованием
+        .preim-index-2-item-text Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к 
+      .col-sm-4.preim-index-2-item
+        img.preim-index-2-item-image(src="/img/svg/preim-icon-3.svg" alt="")
+        .preim-index-2-item-name.h3 Бесконечное совершенство
+        .preim-index-2-item-text Драйв от реализации задуманного. Внимательное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводное бслуживание к пути реализации задуманного. Проводники к 
+  
+    hr.i-size-M
+    
+    
+  .container
+    .callback_index2_block
+      hr.i-size-S
+      .text-center
+        h2 Приглашаем к сотрудничеству!
+      .row
+        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+          include ../../modules/call-me-form1/include
+      hr.i-size-S
+  
+  hr.i-size-S
+  
+  .container
+    .text-center
+      h2 Наши работы
+    include ../../modules/gallery/fotorama
+    include ../../modules/gallery/include
+    include ../../modules/gallery/mob
